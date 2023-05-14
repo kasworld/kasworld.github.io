@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>highscore on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/highscore/</link>
+    <description>Recent content in highscore on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 01 Jul 2018 16:51:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/highscore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike에 역대 플레이어 랭킹 을 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2018-07-01-goguelike%EC%97%90%EC%97%AD%EB%8C%80%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%9E%AD%ED%82%B9%EC%9D%84%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 01 Jul 2018 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-07-01-goguelike%EC%97%90%EC%97%AD%EB%8C%80%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%9E%AD%ED%82%B9%EC%9D%84%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>애초에 그라운드 서버( 여러 타워 관리자 )를 만든 중요한 이유중 하나가 모든 타워를 아우르는 플레이어 랭킹을 표시 하고 싶었기 때문입니다.
+역시 오락이라면 high score가 기록 되어야지! 하고 생각하기 때문이기도 하지요. ^^
+이 플레이어 랭킹은 게임중에 표시되는 랭킹과는 좀 다릅니다. 게임 내에서 표시되는 랭킹은 그 타워 내의 모두 ( npc를 포함) 에서 현재 플레이어 캐릭터의 실시간 랭킹입니다. 그리고 이 high score 는 모든 타워에서 게임을 끝낸 플레이어 들간의 (npc 미포함) 랭킹이 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

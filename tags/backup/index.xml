@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backup on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/backup/</link>
+    <description>Recent content in backup on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 03 Apr 2015 19:17:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike에 대량의 수정을 시도하다가.</title>
+      <link>https://kasworld.github.io/posts/2015-04-03-goguelike%EC%97%90%EB%8C%80%EB%9F%89%EC%9D%98%EC%88%98%EC%A0%95%EC%9D%84%EC%8B%9C%EB%8F%84%ED%95%98%EB%8B%A4%EA%B0%80/</link>
+      <pubDate>Fri, 03 Apr 2015 19:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-04-03-goguelike%EC%97%90%EB%8C%80%EB%9F%89%EC%9D%98%EC%88%98%EC%A0%95%EC%9D%84%EC%8B%9C%EB%8F%84%ED%95%98%EB%8B%A4%EA%B0%80/</guid>
+      <description>말하자면 fork를 해서 작업을 시작할 정도로 대형 수정 작업을 진행하고 있었습니다만.
+( 잠정적으론 goguelike2 가 될 것으로 예상하고 있습니다. )
+습관적으로 *.a 파일을 지우기 위해 ctrl-a , shift-del 을 했다가 소스를 홀라당 날려 먹었습니다. ( pkg 폴더가 아니고 src 폴더더군요. ;; )
+..
+..
+..
+..
+..
+..
+*.a 를 지우는 것은 gosublime 이 background build 해둔 package 파일들이 가끔 문제를 일으켜서 생긴 습관입니다만..
+이것이 문제를 일으킬줄이야. ;;;
+소스를 날려 먹은 것을 깨닿고 침착하게 git 에서 꺼내오려고 하니.</description>
+    </item>
+    
+  </channel>
+</rss>

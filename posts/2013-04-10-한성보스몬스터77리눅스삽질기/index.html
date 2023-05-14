@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>한성 보스몬스터 77 리눅스 삽질기.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
+1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
+이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) , 저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수 있습니다 )
+그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
+전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="한성 보스몬스터 77 리눅스 삽질기. " />
+<meta property="og:description" content="왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
+1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
+이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) , 저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수 있습니다 )
+그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
+전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-04-10T12:58:00+09:00" />
+<meta property="article:modified_time" content="2013-04-10T12:58:00+09:00" />
+<meta itemprop="name" content="한성 보스몬스터 77 리눅스 삽질기. ">
+<meta itemprop="description" content="왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
+1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
+이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) , 저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수 있습니다 )
+그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
+전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네."><meta itemprop="datePublished" content="2013-04-10T12:58:00+09:00" />
+<meta itemprop="dateModified" content="2013-04-10T12:58:00+09:00" />
+<meta itemprop="wordCount" content="339">
+<meta itemprop="keywords" content="삽질,엿먹어라 엔비디아,한성,nvidia optimus,리눅스,옵티머스,보스몬스터,nvidia,삽질기,노트북,그래도 리눅스는 위대해,우분투," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="한성 보스몬스터 77 리눅스 삽질기. "/>
+<meta name="twitter:description" content="왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
+1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
+이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) , 저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수 있습니다 )
+그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
+전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">한성 보스몬스터 77 리눅스 삽질기. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-04-10T12:58:00+09:00">April 10, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;</p>
+<p>1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 
+한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.</p>
+<p>이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) ,
+저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수
+있습니다 )</p>
+<p>그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스
+GTX670MX 가 있습니다.</p>
+<p>전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는
+노트북이라 수령후 
+( MS 에 돈 보테줄일 없으니 좋네.. 이러면서.. ) 
+룰루 랄라 하며 리눅스를 설치 했는데..</p>
+<p>리눅스 설치가 않됩니다. ;;;</p>
+<p>무슨 20세기 시절도 아니고 21세기에 리눅스 설치가 안되는 컴퓨터가 있다니
+하고 놀래서 
+이곳 저곳을 검색해 보았는데.</p>
+<p><a href="http://www.wired.com/wiredenterprise/2012/06/torvalds-nvidia-linux/">http://www.wired.com/wiredenterprise/2012/06/torvalds-nvidia-linux/</a></p>
+<p>이미 토발즈가 o0oo 을 날렸더군요. 
+nvidia에게..</p>
+<p>배포판에 따라서 아주 다양한 증상을 보이며 먹통이 되는데 
+아예 설치 시디 부팅이 실패하는 경우 : ubuntu 12.x desk 
+안전모드로 부팅되지만 설치중 멈추는 경우 : linux mint 14 
+설치 시작전 부팅 옵션 조정으로 설치가 가능한 경우 : ubuntu 12.04 lts
+<em><strong>server</strong></em> 
+네.. 결국 GUI 가 문제를 일으키는 겁니다.</p>
+<p>그 외에 사소한? 문제는 무선랜이 안 잡힌다는 거지만 이건 당장 급한 건
+아니지요. ;;;</p>
+<p>아무튼 문제는 nvidia 가 잘난척하며 낸 optimus 기술 이었고..  혹시나 bios
+에서 끌 방법이 있나하고 봤더니 기능이 거의 없는 썰렁한 bios 화면 만이
+있더군요.</p>
+<p>그래서 검색에 들어 갔습니다. 
+검색해보면 어마무지한 양의 nvidia 욕;;; 과 투덜 거림만이 보이더군요.</p>
+<p>그나마 성공했다고 보이는 기록을 찾았는데.. 
+<a href="http://ubuntuforums.org/showthread.php?t=2083868">http://ubuntuforums.org/showthread.php?t=2083868</a></p>
+<p>읽어 보는 것 만으로도 기가 질려 버립니다.</p>
+<p>일단 회사 일이 바쁜 관계로 윈도우즈를 설치하고 VM으로 리눅스를 돌리기로
+했습니다. 
+그런데 
+이 optimus 란게 일단 비디오 드라이버를 두종을 설치해야 하는데.. 
+윈도우즈에서도 꽤나 자잘한 문제들을 일으킵니다. 
+전 윈도우 타이틀바의 컨트롤들이 깨지는 것을 처음 봤으니까요.</p>
+<p>그런 상태로 포기하고 ( 다음 버전 우분투가 나오면 해결되지 않을까 하는
+희망을 가지며) 살다가.. 
+오늘 갑자기 ( 실은 외장에 설치된 리눅스로라도 부팅해보려고 노트북에
+연결해 부팅하다가 윈도우가 맛이가서.. 역시 망할 윈도우.. )</p>
+<p>에라 모르겠다하고 ubuntu 13.04 beta daily build 를 받아서 설치을
+해봤는데..</p>
+<p>잘됩니다. &hellip; 야호.. 역시나..</p>
+<p>심지어 무선랜도 잘 잡히는 군요.</p>
+<p>아무튼 이것으로 또하나의 삽질이 ( 정작 내가 한것은 없지만 ^^ ) 완료
+되었습니다.</p>
+<p>ps. 이참에 아예 블로그 제목을 &ldquo;세상은 넓고 삽질은 깊다.&rdquo; 로 바꿀까요?
+;;;</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%97%BF%EB%A8%B9%EC%96%B4%EB%9D%BC-%EC%97%94%EB%B9%84%EB%94%94%EC%95%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">엿먹어라 엔비디아</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%95%9C%EC%84%B1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">한성</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nvidia-optimus/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nvidia optimus</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%98%B5%ED%8B%B0%EB%A8%B8%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">옵티머스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">보스몬스터</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nvidia/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nvidia</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%85%B8%ED%8A%B8%EB%B6%81/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">노트북</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B7%B8%EB%9E%98%EB%8F%84-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8A%94-%EC%9C%84%EB%8C%80%ED%95%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">그래도 리눅스는 위대해</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/">postgresql 삽질기;;</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-02-20-%EC%83%88%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">새노트북을 구입했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">우분투/리눅스 민트에서 클라우드 스토리지 사용하기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">리눅스 민트 14 시나몬을 설치했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">sublime text 2 에디터를 구입했습니다. - 수정했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/">wine 설치시 노틸러스의 짜증나는 notepad 연결 제거하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/">우분투 11.10 으로 업그레이드</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-27-opendevdspfailed%EC%97%90%EB%9F%AC%EA%B0%80%EB%82%98%EB%8A%94%EA%B2%BD%EC%9A%B0/">open /dev/dsp failed 에러가 나는 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-03-07-%EB%91%90%EA%B0%9C%EC%9D%98%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A8%B8%EC%8B%A0%EC%82%AC%EC%9D%B4%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%ED%8C%A8%ED%82%A4%EC%A7%80%EB%A5%BC%EC%9D%BC%EC%B9%98%EC%8B%9C%ED%82%A4%EB%8A%94%EB%B2%95/">두개의 우분투 머신사이에서 설치된 패키지를 일치 시키는 법.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-05-02-%EC%9A%B0%EB%B6%84%ED%88%AC1004%EA%B0%80%EB%82%98%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 10.04가 나왔습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/">내가 원하던 진정한 리눅스폰은</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/">5800용 인코딩을 위해서 우분투 9.10에서 추가해줘야 하는 일.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EB%A5%BC%EA%B8%B0%EB%8B%A4%EB%A0%B8%EC%A7%80%EB%A7%8C%EB%AA%A8%ED%86%A0%EB%A1%9C%EC%9D%B4%EB%A5%BC%EC%82%AC%EC%A7%80%EC%95%8A%EC%9D%80%EC%9D%B4%EC%9C%A0/">안드로이드를 기다렸지만 모토로이를 사지 않은이유</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-22-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%ED%94%8C%EB%9E%98%EC%8B%9C%EA%B0%80%ED%81%B4%EB%A6%AD%EC%9D%B4%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94%EB%B2%84%EA%B7%B8%EB%A5%BC%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94%EB%B2%95/">우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/">모두가 아이폰을 외칠때..</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>메모리와 성능간의 trade-off , map vs slice | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="(업데이트)2d slice 를 추가하고 수정하였습니다.
+기존 idpos 라이브러리를 대대적?으로 정리 했습니다.
+idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데 ( 2d 공간에서 object들을 관리 하는 것이 주 목적 )
+기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
+그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
+내부적으론 [2]int를 int로 변환하는 (xlen*y &#43;x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="메모리와 성능간의 trade-off , map vs slice" />
+<meta property="og:description" content="(업데이트)2d slice 를 추가하고 수정하였습니다.
+기존 idpos 라이브러리를 대대적?으로 정리 했습니다.
+idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데 ( 2d 공간에서 object들을 관리 하는 것이 주 목적 )
+기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
+그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
+내부적으론 [2]int를 int로 변환하는 (xlen*y &#43;x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-03-23T14:48:00+09:00" />
+<meta property="article:modified_time" content="2015-03-23T14:48:00+09:00" />
+<meta itemprop="name" content="메모리와 성능간의 trade-off , map vs slice">
+<meta itemprop="description" content="(업데이트)2d slice 를 추가하고 수정하였습니다.
+기존 idpos 라이브러리를 대대적?으로 정리 했습니다.
+idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데 ( 2d 공간에서 object들을 관리 하는 것이 주 목적 )
+기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
+그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
+내부적으론 [2]int를 int로 변환하는 (xlen*y &#43;x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다."><meta itemprop="datePublished" content="2015-03-23T14:48:00+09:00" />
+<meta itemprop="dateModified" content="2015-03-23T14:48:00+09:00" />
+<meta itemprop="wordCount" content="425">
+<meta itemprop="keywords" content="golang,trade-off,map,slice,go programming language," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="메모리와 성능간의 trade-off , map vs slice"/>
+<meta name="twitter:description" content="(업데이트)2d slice 를 추가하고 수정하였습니다.
+기존 idpos 라이브러리를 대대적?으로 정리 했습니다.
+idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데 ( 2d 공간에서 object들을 관리 하는 것이 주 목적 )
+기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
+그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
+내부적으론 [2]int를 int로 변환하는 (xlen*y &#43;x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">메모리와 성능간의 trade-off , map vs slice</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-03-23T14:48:00+09:00">March 23, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>(업데이트)2d slice 를 추가하고 수정하였습니다.</p>
+<p>기존 idpos 라이브러리를 대대적?으로 정리 했습니다.</p>
+<p>idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데 
+(  2d 공간에서 object들을 관리 하는 것이 주 목적 )</p>
+<p>기존 구현은 
+    pos2objs map[[2]int]idposi.IDPosIList 
+과 같이 map을 사용해서 구현 하고 있었습니다.</p>
+<p>그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는
+것을 깨닿고 
+( 25% 정도의 cpu 가 사용되고 있었습니다. ) 
+map들을 가능한 줄인 
+    pos2objs   []idposi.IDPosIList</p>
+<p>내부적으론 [2]int를 int로 변환하는 (xlen*y +x ) hash 함수를 사용하는
+slice 기반으로 수정하였습니다. 
+이렇게 해서 속도의 향상을 성공적으로 이루어 냈습니다만.</p>
+<p>서버에서는 문제가 없는데 같은 data struct를 사용하는 loadtester 에서는
+메모리 사용량이 너무 많아지는 문제가 생기더군요. 
+서버는 1개만 을 만드는데 여러 client를 흉내내는 loadtester에서는 *n
+만큼이 만들어 지고 결국 사용량이 1000 client당 5Gbyte가 되는 문제가
+생깁니다.</p>
+<p>개당으로 나누어 보면 5Mbyte정도니까 많다고 보기는 힘든데 수천 client
+접속을 테스트 하려니 메모리가 부족합니다.</p>
+<p>그래서 결국 
+하나의 idpos를 4가지 형태로 구현하고 interface를 통해서 필요에 따라
+선택할수 있도록 만들었습니다.</p>
+<p>idpos1s : 1차원 slice 형태 구현 , 빠른 속도 , 큰 메모리 소비 
+idpos1m : 1차원 map 형태의 구현 : 적절한 속도, 적절한 메모리 소비 
+idpos2m : 2차원 map 형태의 구현 : 최초 구현체 
+idpos2s : 2차원 slice 최종 구현체 , 가장 빠른 속도,</p>
+<p>idpostest.go를 사용해서 사용 예와 성능 결과를 볼수 있습니다만 
+제기계에서 실행한 결과를 보면 
+( 1024, 1024  크기의 공간에서 1M 개의 object를 만들어 넣고 이동하고
+지우는 테스트입니다.)</p>
+<p>2015/03/23 16:42:01 go # 5 
+init 608.976061ms 
+1d map add 1.191278885s 
+1d map move 5.112887863s 
+1d map del 524.813552ms 
+1d map 6.829087268s</p>
+<p>1d slice add 716.468157ms 
+1d slice move 3.695569533s 
+1d slice del 452.854495ms 
+1d slice 4.864973212s</p>
+<p>2d map add 1.239275357s 
+2d map move 6.039900665s 
+2d map del 564.989011ms 
+2d map 7.844246766s</p>
+<p>2d slice add 700.968548ms 
+2d slice move 3.502773576s 
+2d slice del 422.48469ms 
+2d slice 4.62630397s</p>
+<p>24.789075258s 
+2015/03/23 16:42:26 go # 5</p>
+<p>같은 결과가 나옵니다. 
+가장 많이쓰고 또 중요한 move 의 성능을 보면 
+1d map move 5.112887863s 
+1d slice move 3.695569533s 
+2d map move 6.039900665s 
+2d slice move 3.502773576s</p>
+<p>정도의 결과가 나옵니다.</p>
+<p>마지막으로 재미삼아 만들어본 2d slice가 가장 빠르군요.  ;;;</p>
+<p>이결과를 바탕으로 서버에서는 2d slice 를 클라이언트에서는 1m 을 쓰도록
+수정하였습니다. 
+테스트를 해보니 
+loadtest가 1000 connection 에서 
+메모리 사용량이 5Gbyte에서 2Gbyte정도로 줄어 들었습니다.</p>
+<p>며칠간 고민한것이 해결되니 속이 다 시원 하군요. 
+idpostest 코드의 일부는 아래와 같습니다.</p>
+<pre><code>//start 
+ idp1m := idpos1m.New(xlen, ylen)
+ bench(objs, xlen, ylen, idp1m, &quot;1d map&quot;)
+
+ idp1s := idpos1s.New(xlen, ylen)
+ bench(objs, xlen, ylen, idp1s, &quot;1d slice&quot;)
+
+ idp2m := idpos2m.New(xlen, ylen)
+ bench(objs, xlen, ylen, idp2m, &quot;2d map&quot;)
+
+ idp2s := idpos2s.New(xlen, ylen)
+ bench(objs, xlen, ylen, idp2s, &quot;2d slice&quot;)
+
+func bench(objs []*posobj, xlen, ylen int, idp idposi.IDPosManI, name string) {
+} 
+//end
+</code></pre>
+<p>위치는 기존과 같은 
+<a href="https://github.com/kasworld/idpos">https://github.com/kasworld/idpos</a> 
+입니다만 
+팩키지들은 서브 폴더에 들어 있습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/trade-off/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">trade-off</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/map/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">map</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/slice/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">slice</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/">go 언어용 fortune cookie package</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/">go-sdlgui 에서 한글 표시 지원추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">go언어로 TCP server와 GUI client를 만들어 보기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-24-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Ctcpserverclient%EC%9D%98%EC%A0%84%ED%98%95%EC%A0%81%ED%98%95%ED%83%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%ED%99%94/">go언어에서 tcp server/client 의 전형적 형태. - 라이브러리화.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-20-go%EC%96%B8%EC%96%B4%EB%A1%9Cgui%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EA%B8%B0/">go 언어로 GUI 프로그램을 만들기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-19-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C2dtilebasedspace%EC%9A%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4/">go언어에서 2d tile based space 용 라이브러리들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-17-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cinterface%EC%9D%98%EC%9D%98%EB%AF%B8/">go 언어에서 interface의 의미.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-16-%EC%9A%94%EC%A6%98rust%EB%A5%BC%EC%B6%94%EC%B2%9C%ED%95%98%EB%8A%94%EA%B8%80%EB%93%A4%EC%9D%B4%EB%A7%8E%EC%9D%B4%EC%98%AC%EB%9D%BC%EC%98%A4%EB%8B%88go%EC%97%90%EB%8C%80%ED%95%B4%EC%84%9C%EB%8F%84%EC%B6%94%EC%B2%9C%ED%95%98%EB%8A%94%EA%B8%80%EC%9D%84%EC%8D%A8%EB%B4%85%EB%8B%88%EB%8B%A4/">요즘 Rust를 추천 하는 글들이 많이 올라오니 Go에 대해서도 추천하는 글을 써봅니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-15-go%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%EC%8B%A4%EC%8B%9C%EA%B0%84%ED%86%B5%EA%B3%84%EB%A5%BC%EA%B8%B0%EB%A1%9D%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/">go 프로그램에서 실시간 통계를 기록하고 싶을때 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/">go 언어용 python-like log 모듈 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-13-goguelike%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%86%8D%EB%8F%84/">goguelike의 네트웍 속도</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-05-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98goroutine%EC%9D%84%EB%8F%99%EC%8B%9C%EC%97%90%ED%95%9C%EB%8B%A8%EA%B3%84%EC%94%A9%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어에서 여러개의 goroutine을 동시에 한단계씩 실행하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-04-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cprofiling%ED%95%98%EA%B8%B0/">go 언어에서 profiling 하기</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

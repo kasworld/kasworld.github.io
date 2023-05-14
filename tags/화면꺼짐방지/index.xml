@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>화면꺼짐방지 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%B0%A9%EC%A7%80/</link>
+    <description>Recent content in 화면꺼짐방지 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 30 Apr 2016 15:04:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%B0%A9%EC%A7%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>라즈베리 파이 화면 꺼짐 막기 메모</title>
+      <link>https://kasworld.github.io/posts/2016-04-30-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%A7%89%EA%B8%B0%EB%A9%94%EB%AA%A8/</link>
+      <pubDate>Sat, 30 Apr 2016 15:04:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-04-30-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%A7%89%EA%B8%B0%EB%A9%94%EB%AA%A8/</guid>
+      <description>rpi 2에서는
+/etc/xdg/lxsession/LXDE-pi/autostart 파일에
+@xset s off @xset -dpms @xset s noblank
+추가 하는 것으로 가능했는데 이상하게도 rpi 3에서는 통하지 않는다.
+rpi 3에서는
+/etc/lightdm/lightdm.conf 파일의 SeatDefaults section 에
+[SeatDefaults] xserver-command=X -s 0 -dpms
+을 추가하는 것으로 화면 꺼짐을 막을수 있다. 확인은 xset -q 를 실행해서 가능
+xset이 설치되어 있지 않은경우 sudo apt-get install x11-xserver-utils 로 설치 가능.
+http://raspberrypi.stackexchange.com/questions/2059/disable-screen-blanking-in-x-windows-on-raspbian
+링크에 있는 방법중 성공한 방법 임.</description>
+    </item>
+    
+  </channel>
+</rss>

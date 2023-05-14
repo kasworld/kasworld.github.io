@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dex on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/dex/</link>
+    <description>Recent content in dex on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 10 May 2019 19:26:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/dex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>갤럭시 S 10&#43; 용 Dex/미러링 어댑터? 허브 ? 구입 </title>
+      <link>https://kasworld.github.io/posts/2019-05-10-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs10%EC%9A%A9dex%EB%AF%B8%EB%9F%AC%EB%A7%81%EC%96%B4%EB%8C%91%ED%84%B0%ED%97%88%EB%B8%8C%EA%B5%AC%EC%9E%85/</link>
+      <pubDate>Fri, 10 May 2019 19:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2019-05-10-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs10%EC%9A%A9dex%EB%AF%B8%EB%9F%AC%EB%A7%81%EC%96%B4%EB%8C%91%ED%84%B0%ED%97%88%EB%B8%8C%EA%B5%AC%EC%9E%85/</guid>
+      <description>올해 초에 약 3년간 쓰던 갤럭시 s7 edge를 (업데이트가 종료 되었다는 핑계로 ) 사용종료 하고, S 10+을 (사전예약으로!!!) 구입했습니다.
+s7 은 낀 세대라 모니터 연결이 불가능한데 s8 부터는 dex 라는 것을 지원해서 유선으로 모니터를 연결할수 있다는 것을 알고 있었기에 S10+을 사면서 dex란 것을 사용해 봐야겠다고 생각하고 있었습니다.
+간단히 조사해 보니 S10+ 에서는 그냥 USB type C to HDMI 케이블만 연결하면 dex를 사용할수 있다고 ( 이전 모델들도 파이 업데이트 하면 가능한듯 ) 해서 고민이 시작 되었습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

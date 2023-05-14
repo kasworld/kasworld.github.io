@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike 상태 정보의 추가및 간단 설명.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="동영상으로 보면 색감도 이상하고 해서 스샷을 올려봅니다. 상태 정보를 간단하게 설명하면 맨 위로부터 현재 타워의 이름 , 층(floor) 번호, 층 종류 사용자의 faction(자동으로 지정된 bias 그룹) , karma ( 자신의 bias와 faction간의 차이 ) action point( 행동력 ), hp ( 생명력 ) , 위치 , 현위치의 타일 종류 수동/자동 모드 , 사용자가 선택한 행동 &#43; 방향 현재 층을 얼마나 발견 했는가 % , 죽은 수 , 킬 수 공격력( bias ) , 방어력 ( bias ) 8개 위치의 장비 및 공/방 영향 ( Attack/Defence ) 위칭으로 가는 계단 위치 ( 발견시 표시 ) , 아랫층으로 가는 계단위치 (발견시 표시 ) hp bar , 미니맵 , ap bar ( hp/ap는 중요한 값이라 잘보이게 bar로 표시 )">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike 상태 정보의 추가및 간단 설명. " />
+<meta property="og:description" content="동영상으로 보면 색감도 이상하고 해서 스샷을 올려봅니다. 상태 정보를 간단하게 설명하면 맨 위로부터 현재 타워의 이름 , 층(floor) 번호, 층 종류 사용자의 faction(자동으로 지정된 bias 그룹) , karma ( 자신의 bias와 faction간의 차이 ) action point( 행동력 ), hp ( 생명력 ) , 위치 , 현위치의 타일 종류 수동/자동 모드 , 사용자가 선택한 행동 &#43; 방향 현재 층을 얼마나 발견 했는가 % , 죽은 수 , 킬 수 공격력( bias ) , 방어력 ( bias ) 8개 위치의 장비 및 공/방 영향 ( Attack/Defence ) 위칭으로 가는 계단 위치 ( 발견시 표시 ) , 아랫층으로 가는 계단위치 (발견시 표시 ) hp bar , 미니맵 , ap bar ( hp/ap는 중요한 값이라 잘보이게 bar로 표시 )" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-09-27-goguelike%EC%83%81%ED%83%9C%EC%A0%95%EB%B3%B4%EC%9D%98%EC%B6%94%EA%B0%80%EB%B0%8F%EA%B0%84%EB%8B%A8%EC%84%A4%EB%AA%85/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-09-27T14:34:00+09:00" />
+<meta property="article:modified_time" content="2014-09-27T14:34:00+09:00" />
+<meta itemprop="name" content="goguelike 상태 정보의 추가및 간단 설명. ">
+<meta itemprop="description" content="동영상으로 보면 색감도 이상하고 해서 스샷을 올려봅니다. 상태 정보를 간단하게 설명하면 맨 위로부터 현재 타워의 이름 , 층(floor) 번호, 층 종류 사용자의 faction(자동으로 지정된 bias 그룹) , karma ( 자신의 bias와 faction간의 차이 ) action point( 행동력 ), hp ( 생명력 ) , 위치 , 현위치의 타일 종류 수동/자동 모드 , 사용자가 선택한 행동 &#43; 방향 현재 층을 얼마나 발견 했는가 % , 죽은 수 , 킬 수 공격력( bias ) , 방어력 ( bias ) 8개 위치의 장비 및 공/방 영향 ( Attack/Defence ) 위칭으로 가는 계단 위치 ( 발견시 표시 ) , 아랫층으로 가는 계단위치 (발견시 표시 ) hp bar , 미니맵 , ap bar ( hp/ap는 중요한 값이라 잘보이게 bar로 표시 )"><meta itemprop="datePublished" content="2014-09-27T14:34:00+09:00" />
+<meta itemprop="dateModified" content="2014-09-27T14:34:00+09:00" />
+<meta itemprop="wordCount" content="115">
+<meta itemprop="keywords" content="golang,go programming language,goguelike," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike 상태 정보의 추가및 간단 설명. "/>
+<meta name="twitter:description" content="동영상으로 보면 색감도 이상하고 해서 스샷을 올려봅니다. 상태 정보를 간단하게 설명하면 맨 위로부터 현재 타워의 이름 , 층(floor) 번호, 층 종류 사용자의 faction(자동으로 지정된 bias 그룹) , karma ( 자신의 bias와 faction간의 차이 ) action point( 행동력 ), hp ( 생명력 ) , 위치 , 현위치의 타일 종류 수동/자동 모드 , 사용자가 선택한 행동 &#43; 방향 현재 층을 얼마나 발견 했는가 % , 죽은 수 , 킬 수 공격력( bias ) , 방어력 ( bias ) 8개 위치의 장비 및 공/방 영향 ( Attack/Defence ) 위칭으로 가는 계단 위치 ( 발견시 표시 ) , 아랫층으로 가는 계단위치 (발견시 표시 ) hp bar , 미니맵 , ap bar ( hp/ap는 중요한 값이라 잘보이게 bar로 표시 )"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike 상태 정보의 추가및 간단 설명. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-09-27T14:34:00+09:00">September 27, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>동영상으로 보면 색감도 이상하고 해서 스샷을 올려봅니다. </p>
+<p><a href="../images/2014-09-27-goguelike%EC%83%81%ED%83%9C%EC%A0%95%EB%B3%B4%EC%9D%98%EC%B6%94%EA%B0%80%EB%B0%8F%EA%B0%84%EB%8B%A8%EC%84%A4%EB%AA%85-Screenshot%2Bfrom%2B2014-09-27%2B14%3A25%3A24.png"><img src="../images/thumbnails/2014-09-27-goguelike%EC%83%81%ED%83%9C%EC%A0%95%EB%B3%B4%EC%9D%98%EC%B6%94%EA%B0%80%EB%B0%8F%EA%B0%84%EB%8B%A8%EC%84%A4%EB%AA%85-Screenshot%2Bfrom%2B2014-09-27%2B14%3A25%3A24.png" alt=""></a></p>
+<p>상태 정보를 간단하게 설명하면 
+맨 위로부터 
+현재 타워의 이름 , 층(floor) 번호,  층 종류 
+사용자의 faction(자동으로 지정된 bias 그룹)  , karma ( 자신의 bias와
+faction간의 차이 ) 
+action point( 행동력 ), hp ( 생명력 ) , 위치 , 현위치의 타일 종류 
+수동/자동 모드 , 사용자가 선택한 행동 + 방향 
+현재 층을 얼마나 발견 했는가 % , 죽은 수 , 킬 수 
+공격력( bias ) , 방어력 ( bias ) 
+8개 위치의 장비 및 공/방 영향 ( Attack/Defence ) 
+위칭으로 가는 계단 위치 ( 발견시 표시 ) , 아랫층으로 가는 계단위치
+(발견시 표시 ) 
+hp bar , 미니맵 , ap bar 
+( hp/ap는 중요한 값이라 잘보이게 bar로 표시 )</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-09-25-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike 클라이언트를 개선하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-23-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EA%B0%9C%EC%84%A0/">goguelike 클라이언트 개선 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-22-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%84%9C%EB%B2%84%EB%A1%9C%EC%99%84%EC%A0%84%EB%B6%84%EB%A6%AC%ED%95%9Cgoguelike/">클라이언트/서버로 완전 분리한 goguelike </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-15-goguelike%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-30-goguelike%EB%AF%B8%EB%A1%9C%EC%A7%80%ED%98%95%EC%96%BC%EC%9D%8C%EB%A7%88%EC%9D%84%EC%A7%80%ED%98%95/">goguelike 미로 지형 - 얼음 마을 지형 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-29-goguelike%EB%AF%B8%EB%8B%88%EB%A7%B5%EC%B6%94%EA%B0%80/">goguelike 미니맵 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-28-goguelikeadventureof/">goguelike - adventure of @ </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-25-%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%83%EC%9D%98%EC%83%81%ED%83%9C2%EC%9D%98%EB%AA%A8%ED%97%98/">만들고 있는 것의 상태2 : &#34;@&#34;의 모험 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-20-%EC%9A%94%EC%A6%98%EC%A0%9C%EA%B0%80%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%83/">요즘 제가 만들고 있는 것</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-06-04-go4game%EC%9D%98spatialpartition%EC%9D%84octree%EB%A1%9C%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game의 spatial partition을 octree로 바꿨습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-29-go4game%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD%EB%93%A4%EC%A0%95%EB%A6%AC/">go4game 추가 사항들 정리 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-19-%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99%EC%9D%98%ED%97%9B%EC%A0%90%EC%9D%84%EC%B5%9C%EB%8C%80%ED%95%9C%EC%95%85%EC%9A%A9%ED%99%9C%EC%9A%A9%ED%95%98%EB%8A%94ai/">게임 규칙의 헛점을 최대한 악용(활용)하는 AI </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99/">go4game의 게임 규칙 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-13-go4game%EC%97%90ai%EB%A5%BC%EB%B6%99%EC%9D%B4%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 AI를 붙이고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 웹 클라이언트를 추가 했습니다. </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

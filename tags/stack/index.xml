@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stack on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/stack/</link>
+    <description>Recent content in stack on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 19 Jun 2015 08:32:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike2의 AI에 상전이 엔진을 적용했습니다. </title>
+      <link>https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &amp;ldquo;유한 상태 기계&amp;quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
+상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="취미로 프로그래밍을 하는 사람입니다." />
+      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="취미로 프로그래밍을 하는 사람입니다." />
+      
+    
+    
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kasworld.github.io/posts/" />
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-05-19-%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99%EC%9D%98%ED%97%9B%EC%A0%90%EC%9D%84%EC%B5%9C%EB%8C%80%ED%95%9C%EC%95%85%EC%9A%A9%ED%99%9C%EC%9A%A9%ED%95%98%EB%8A%94ai/" class="link black dim">
+        게임 규칙의 헛점을 최대한 악용(활용)하는 AI 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      설명: 여러개의 월드를 지원하는 요약 페이지
+설명: 하나의 월드의 자세한 상태를 보여주는 페이지
+게임의 규칙을 악용하는 것은 사람만 할 수 있는 것은 아닙니다.
+go4game처럼 단순한 규칙의 게임에서도 룰의 헛점을 찾아내서 그것을 활용하는 것이 가능합니다.
+AI를 만들다 보니 몇가지 고민스러운 것이 생겼는데 그 중 하나는 AI의 강함의 정도를 어떻게 정량화 할 것인가 하는 점입니다. 얼핏 생각하면 하나의 월드에 두개의 AI를 넣고 일정 시간후 승점(격추수) 가 높은 쪽이 강한 것이 아닌 가 생각 되지만 테스트를 하다보면 1:1 에 강한 AI 도 있고 , 다대 다 에 강한 AI 도 있으며 서로 상성이 있는 AI 가 있는 경우도 있습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99/" class="link black dim">
+        go4game의 게임 규칙 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에 적어봅니다. ( 아주 사무적인 문서라 말이 짧습니다. ^^;; _
+설명:업데이트된 게임 상태창.
+설명:새로 추가된 AICloud의 동작모습
+한개의 gameservice 에는 실제 team간 interactaction 이 발생하는 여러개의 World 가 존재
+각각의 world에는 team들이 소속 team은 tcp client , websocket client , ai client 가 존재 world는 60 frame / sec 로 각 팀에게 frame action을 요청 각 팀의 frame action은 goroutine을 사용 concurrent 하게 진행.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-05-13-go4game%EC%97%90ai%EB%A5%BC%EB%B6%99%EC%9D%B4%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        go4game 에 AI를 붙이고 있습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      설명 : go4game webgl client 플레이 동영상.
+사진 설명 : 서버의 상태를 보여주는 페이지 ( 팀 이름 , AI 종류 , 팀 object 수 , 팀 점수, 팀 AP , 팀 패킷 통계 )
+go4game도 이제 wxgame2 정도로 작업이 진행되어 여러 AI끼리 대전을 시키고 그 진행사항과 순위를 볼 수 있는 페이지를 만들었습니다.
+위 와 같은 형태로 만들어서 여러 형태의 AI를 만들고 AI끼리 대전을 시키면서 개선을 해나 가고 있는데 이전 wxgame2 작업할 때도 썼지만 AI를 개량해서 그 AI가 이전에 만든 것보다 좋도록 만드는 것은 참 생각대로 안됩니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        go4game 에 웹 클라이언트를 추가 했습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      사진 설명 : go4game web client
+소스코드는 언제나 처럼 https://github.com/kasworld/go4game 에 있습니다.
+go언어는 서버에서 사용하는 것을 중점으로 하고 있기 때문에 client UI 를 작성할 만한 라이브러리가 적당한 것이 없습니다.
+기본 라이브러리만이 아니고 3rd party 에서도 아직까지는 딱히 이거다 라고 할만한 것이 없더군요.
+그에 반해서 서버를 만들기 위한 라이브러리는 tcp/http 불문하고 넘칠 정도로 많고 또 잘되어 있는데 아마도 go언어로 만든 프로그램의 UI는 당연히 web으로 작성하라는 의미 같습니다.
+그런 관계로 go4game도 client UI는 웹으로 작성해야 겠다는 생각이 들어서 ( 사실은 클라이언트 UI 라이브러리를 찾다 포기하고 ^^; ) 웹 작업을 했습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-04-21-xubuntu1404%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        xubuntu 14.04 로 업그레이드를 했습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드 하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. 작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 ) 일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. ( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니 연습용으론 최적입니다. )
+배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상 까먹습니다. sudo do-release-upgrade 를 사용합니다. 한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든 업그레이드를 완료해줍니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/" class="link black dim">
+        go4game - go 언어로 만드는 게임 서버
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을 시작했습니다.
+일단 첫 번째 작동 버전은 언제나처럼 github에 있습니다. 지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고 받을 수 있는 구조들 정도 입니다. 지금 사용하는 패킷은 int32 len + json 형태의 패킷입니다.
+참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. The Go Programming Language : 2009년 글입니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-04-02-wxgame%EC%9D%98cs%ED%99%94%EB%8A%94twisted%EB%B2%84%EC%A0%84%EC%9D%84%EB%81%9D%EC%9C%BC%EB%A1%9C%EC%9D%BC%EB%8B%A8%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%A9%EB%8B%88%EB%8B%A4/" class="link black dim">
+        wxgame의 C/S화는 twisted 버전을 끝으로 일단 마무리 합니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      앞으로도 자잘한 수정들은 있겠지만 큰 변화나 추가는 없을 듯 합니다.
+이번에 twisted 버전을 작업하면서 오랫만에 다시 twisted를 만져 봤는데 예전에 테스트한 기억 보다 많이 빨라진 듯 합니다.
+twistedtest.py를 보면 테스트 할 때 사용한 코드가 있습니다만 비록 echo 서버긴 하지만 초당 10만 패킷을 넘게 처리 하는 군요. ( intel 2500, pypy 사용, Int32StringReceiver 프로토콜, epoll reactor 사용.) 이 정도면 거의 대부분의 서버에서 필요한 성능을 충족시킬 수 있을 것 같습니다.
+epoll reactor를 사용할 경우 6만 정도의 동시 커넥션 상태에서도 6만 패킷/초 이상을 꾸준히 처리 할 수 있습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        집에서 프로그래밍 환경을 개선 했습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      최근 일신상의 변화로 집에서 작업하는 시간이 늘어난 김에 작업환경을 개선 했습니다.
+벌써 3년 가까이 써서 열도 많이 나고 소음도 커진 nvidia GTX460 을 빼고 조용하고 발열이 적다는 GTX750ti로 바꿨습니다.
+바꾼김에 그동안 묵혀 두고 있던 모니터 두개를 추가해서 triple monitor를 구성했습니다. ( 사실은 이게 목적이었습니다. )
+GTX460에선 duel monitor만 구성해도 굉음을 내서 사용이 거의 불가능했었는데 GTX750ti는 세개를 달아도 조용합니다.
+저는 주 작업환경이 리눅스라 혹시 지원 안되면 어쩌나 하고 살짝 걱정했었지만 nvidia홈페이지에서 드라이버를 받아 설치하니 아무 문제 없이 잘 잡힙니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        wxgame2를 개선 하고 있습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        wxgame2 의 네트웍 버전이 거의 완료 되었습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/17/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/16/" aria-label="Page 16" class="page-link" role="button">16</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/17/" aria-label="Page 17" class="page-link" role="button">17</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 18" class="page-link" role="button">18</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/19/" aria-label="Page 19" class="page-link" role="button">19</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/20/" aria-label="Page 20" class="page-link" role="button">20</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/19/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/30/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>go 언어로 만든 배경이 있는 시계/달력  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="https://github.com/kasworld/wasmclockcal
+go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
+build.sh을 실행하면
+파일을 http로 서비스 해줄 dir2http 와 실제 index.html을 통해 로딩되어 시계/달력을 표시해줄 wasmclock.wasm 파일이 생성됩니다.
+wasm_exec.js 은 wasm을 로딩해서 실행하는 데 사용 됩니다. go를 설치하면 /usr/local/go/misc/wasm 폴더에 설치되어 있습니다. (linux 의 경우 )
+dir2http를 실행하면 접속할 클라이언트 url을 보여 줍니다.
+dir2http dir=. port=:8080 http://localhost:8080/
+open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localhost:8080/?mvid=youtubeid
+클라이언트 접속 URL 에
+bgimg=이미지이름(url) 을 주면 배경그림이 설정되고">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="go 언어로 만든 배경이 있는 시계/달력 " />
+<meta property="og:description" content="https://github.com/kasworld/wasmclockcal
+go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
+build.sh을 실행하면
+파일을 http로 서비스 해줄 dir2http 와 실제 index.html을 통해 로딩되어 시계/달력을 표시해줄 wasmclock.wasm 파일이 생성됩니다.
+wasm_exec.js 은 wasm을 로딩해서 실행하는 데 사용 됩니다. go를 설치하면 /usr/local/go/misc/wasm 폴더에 설치되어 있습니다. (linux 의 경우 )
+dir2http를 실행하면 접속할 클라이언트 url을 보여 줍니다.
+dir2http dir=. port=:8080 http://localhost:8080/
+open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localhost:8080/?mvid=youtubeid
+클라이언트 접속 URL 에
+bgimg=이미지이름(url) 을 주면 배경그림이 설정되고" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-12-06T14:49:00+09:00" />
+<meta property="article:modified_time" content="2019-12-06T14:49:00+09:00" />
+<meta itemprop="name" content="go 언어로 만든 배경이 있는 시계/달력 ">
+<meta itemprop="description" content="https://github.com/kasworld/wasmclockcal
+go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
+build.sh을 실행하면
+파일을 http로 서비스 해줄 dir2http 와 실제 index.html을 통해 로딩되어 시계/달력을 표시해줄 wasmclock.wasm 파일이 생성됩니다.
+wasm_exec.js 은 wasm을 로딩해서 실행하는 데 사용 됩니다. go를 설치하면 /usr/local/go/misc/wasm 폴더에 설치되어 있습니다. (linux 의 경우 )
+dir2http를 실행하면 접속할 클라이언트 url을 보여 줍니다.
+dir2http dir=. port=:8080 http://localhost:8080/
+open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localhost:8080/?mvid=youtubeid
+클라이언트 접속 URL 에
+bgimg=이미지이름(url) 을 주면 배경그림이 설정되고"><meta itemprop="datePublished" content="2019-12-06T14:49:00+09:00" />
+<meta itemprop="dateModified" content="2019-12-06T14:49:00+09:00" />
+<meta itemprop="wordCount" content="128">
+<meta itemprop="keywords" content="golang,calendar,clock,webassembly,go programming language,wasm," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go 언어로 만든 배경이 있는 시계/달력 "/>
+<meta name="twitter:description" content="https://github.com/kasworld/wasmclockcal
+go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
+build.sh을 실행하면
+파일을 http로 서비스 해줄 dir2http 와 실제 index.html을 통해 로딩되어 시계/달력을 표시해줄 wasmclock.wasm 파일이 생성됩니다.
+wasm_exec.js 은 wasm을 로딩해서 실행하는 데 사용 됩니다. go를 설치하면 /usr/local/go/misc/wasm 폴더에 설치되어 있습니다. (linux 의 경우 )
+dir2http를 실행하면 접속할 클라이언트 url을 보여 줍니다.
+dir2http dir=. port=:8080 http://localhost:8080/
+open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localhost:8080/?mvid=youtubeid
+클라이언트 접속 URL 에
+bgimg=이미지이름(url) 을 주면 배경그림이 설정되고"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">go 언어로 만든 배경이 있는 시계/달력 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-06T14:49:00+09:00">December 6, 2019</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/kasworld/wasmclockcal">https://github.com/kasworld/wasmclockcal</a></p>
+<p><a href="../images/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5-clockcalmvid.png"><img src="../images/thumbnails/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5-clockcalmvid.png" alt=""></a></p>
+<p>go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.</p>
+<p>build.sh을 실행하면</p>
+<p>파일을 http로 서비스 해줄 dir2http 와 
+실제 index.html을 통해 로딩되어 시계/달력을 표시해줄 wasmclock.wasm 
+파일이 생성됩니다.</p>
+<p>wasm_exec.js 은 wasm을 로딩해서 실행하는 데 사용 됩니다. 
+go를 설치하면 /usr/local/go/misc/wasm 폴더에 설치되어 있습니다.  (linux
+의 경우 )</p>
+<p>dir2http를 실행하면 접속할 클라이언트 url을 보여 줍니다.</p>
+<p>dir2http dir=. port=:8080 http://localhost:8080/</p>
+<p>open bgclock http://localhost:8080/?bgimg=image 
+open youtube clock http://localhost:8080/?mvid=youtubeid</p>
+<p>클라이언트 접속 URL 에</p>
+<p>bgimg=이미지이름(url) 을 주면 배경그림이 설정되고</p>
+<p>mvid=유투브동영상ID 를 주면 배경 동영상이 실행됩니다.</p>
+<p>firefox등 요즘 브라우저들은 기본 설정이 자동 재생 금지라서 배경 동영상이
+로딩과 동시에 플레이 되게 하고 싶으면 설정을 바꿔 줘야 합니다.</p>
+<p>배경을 위해 글자들을 옆으로 치우기전 스크린 샷입니다.</p>
+<p><a href="../images/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5-firefox.png"><img src="../images/thumbnails/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5-firefox.png" alt=""></a></p>
+<p>3600초 마다 page reload 하게 되어 있는 이유는 이상하게도 페이지를 오래
+(2~3일 정도 ?) 켜두면 멈추는 현상이 발생 하기에 이를 회피 하기 위해서
+입니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/calendar/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">calendar</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/clock/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">clock</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/webassembly/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">webassembly</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wasm/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wasm</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/">golang gopherjs로 만든 시계와 달력 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-09-09-golang%EA%B3%BCgolangwasm%EC%82%AC%EC%9D%B4%EC%97%90websocket%EC%9C%BC%EB%A1%9C%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0/">golang 과 golang wasm 사이에 websocket으로 통신하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-08-26-golang111%EA%B3%BCwasmgopherjs/">golang 1.11 과 wasm , gopherjs </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-04-06-udp%EC%99%80networkjitter/">udp와 network jitter </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-09-18-metaprogramming%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">Meta-programming으로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/">Serial ID 생성기 - 두번째 글 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-07-03-go%EC%9A%A9webframework%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%8A%B9%EC%A7%95/">go 용 web framework 벤치마크, 특징. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/">goguelike2에 소비성아이템, 버프 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/">go 언어에서 goroutine group을 같이 종료 시키기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/">메모리와 성능간의 trade-off , map vs slice</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/">go 언어용 fortune cookie package</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/">go-sdlgui 에서 한글 표시 지원추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">go언어로 TCP server와 GUI client를 만들어 보기. </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

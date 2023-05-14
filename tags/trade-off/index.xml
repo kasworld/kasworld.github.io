@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>trade-off on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/trade-off/</link>
+    <description>Recent content in trade-off on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Mon, 23 Mar 2015 14:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/trade-off/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>메모리와 성능간의 trade-off , map vs slice</title>
+      <link>https://kasworld.github.io/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/</link>
+      <pubDate>Mon, 23 Mar 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/</guid>
+      <description>(업데이트)2d slice 를 추가하고 수정하였습니다.
+기존 idpos 라이브러리를 대대적?으로 정리 했습니다.
+idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데 ( 2d 공간에서 object들을 관리 하는 것이 주 목적 )
+기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
+그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
+내부적으론 [2]int를 int로 변환하는 (xlen*y +x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>노트북 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%85%B8%ED%8A%B8%EB%B6%81/</link>
+    <description>Recent content in 노트북 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 09 Jul 2017 10:38:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%85%B8%ED%8A%B8%EB%B6%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>한성 X57K BossMonster Lv.74 구입,사용기 </title>
+      <link>https://kasworld.github.io/posts/2017-07-09-%ED%95%9C%EC%84%B1x57kbossmonsterlv74%EA%B5%AC%EC%9E%85%EC%82%AC%EC%9A%A9%EA%B8%B0/</link>
+      <pubDate>Sun, 09 Jul 2017 10:38:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2017-07-09-%ED%95%9C%EC%84%B1x57kbossmonsterlv74%EA%B5%AC%EC%9E%85%EC%82%AC%EC%9A%A9%EA%B8%B0/</guid>
+      <description>급히 쓸 일이 생겨서 새 노트북 구입했습니다.
+지난주 화요일에 도착했습니다.
+한성컴퓨터 X57K BossMonster Lv.74 (SSD 120GB)
+저번 한성 노트북을 부셔먹긴 했지만 전 기본적으로 한성 노트북이 꽤나 맘에 드는 관계로 또 한성 노트북을 샀습니다.
+( 가격도 싸고, 불필요한 windows 비용 안내도 되고, 쓸데없는 ODD 도 없고 해서 저한테는 딱입니다. )
+i7 에 8G ram 1050 4G , 120 ssd 를 달고 80만원 대 입니다.
+집에서 쓰는 데스크탑보다 사양이 좋네요. ( ram , ssd 가 작지만 업그레이드 가능하니 )</description>
+    </item>
+    
+    <item>
+      <title>한성 보스몬스터 77 리눅스 삽질기. </title>
+      <link>https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
+      <description>왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
+1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
+이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) , 저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수 있습니다 )
+그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
+전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네.</description>
+    </item>
+    
+    <item>
+      <title>새노트북을 구입했습니다.</title>
+      <link>https://kasworld.github.io/posts/2008-02-20-%EC%83%88%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 20 Feb 2008 21:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2008-02-20-%EC%83%88%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>5년 전에 산 노트북과 이번에 산 노트북 을 비교해본 테이블입니다. 5년 사이에 기술이 얼마나 발전했는지 보면.. 배터리는 5년간 단 65% 만이 발전한데 비해 메모리는 10배가 늘어났군요. ( 무게도 18%나 발전? 했습니다. 쳇.. )
+물론 3일만에 비스타에게 항복하고 (이걸 쓰라고만든 겁니까?) 우분투를 설치했습니다. ^^ 역시 thinkpad 답게 태블릿을 포함 모든 디바이스가 별문제 없이 잡히더군요. ^^</description>
+    </item>
+    
+  </channel>
+</rss>

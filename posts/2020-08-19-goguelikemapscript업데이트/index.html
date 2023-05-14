@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike map script 업데이트  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="map script를 업데이트 했습니다. tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을 tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게 되었습니다.
+기존에는 tile로는 못하고 resource tile로만 가능했었습니다.
+위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
+보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
+tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike map script 업데이트 " />
+<meta property="og:description" content="map script를 업데이트 했습니다. tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을 tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게 되었습니다.
+기존에는 tile로는 못하고 resource tile로만 가능했었습니다.
+위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
+보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
+tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-19T15:32:00+09:00" />
+<meta property="article:modified_time" content="2020-08-19T15:32:00+09:00" />
+<meta itemprop="name" content="goguelike map script 업데이트 ">
+<meta itemprop="description" content="map script를 업데이트 했습니다. tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을 tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게 되었습니다.
+기존에는 tile로는 못하고 resource tile로만 가능했었습니다.
+위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
+보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
+tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다."><meta itemprop="datePublished" content="2020-08-19T15:32:00+09:00" />
+<meta itemprop="dateModified" content="2020-08-19T15:32:00+09:00" />
+<meta itemprop="wordCount" content="80">
+<meta itemprop="keywords" content="ageing,terrain,goguelike," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike map script 업데이트 "/>
+<meta name="twitter:description" content="map script를 업데이트 했습니다. tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을 tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게 되었습니다.
+기존에는 tile로는 못하고 resource tile로만 가능했었습니다.
+위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
+보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
+tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike map script 업데이트 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-08-19T15:32:00+09:00">August 19, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="../images/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-city2.png"><img src="../images/thumbnails/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-city2.png" alt=""></a></p>
+<p><a href="../images/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-city3.png"><img src="../images/thumbnails/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-city3.png" alt=""></a></p>
+<p><a href="../images/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-city.png"><img src="../images/thumbnails/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-city.png" alt=""></a></p>
+<p>map script를 업데이트 했습니다. 
+tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을
+tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게
+되었습니다.</p>
+<p>기존에는 tile로는 못하고 resource tile로만 가능했었습니다.</p>
+<p>위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로
+그린 것입니다.</p>
+<p>보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른
+반응을 보입니다.</p>
+<p>tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 
+resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해
+갑니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ageing/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ageing</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/terrain/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">terrain</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2020-08-17-goguelike%EC%9D%98%EC%8B%9C%EC%95%BC%EB%B2%94%EC%9C%84linesofsight%EB%A5%BCrework%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike의 시야범위 linesofsight 를 rework 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-08-09-goguelike%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B82dclient%EC%A0%9C%EA%B1%B0%ED%83%80%EC%9D%BC%ED%88%AC%EB%AA%85%EB%8F%84%EC%A0%81%EC%9A%A9%EB%93%B1/">goguelike 업데이트, 2d client 제거, 타일 투명도 적용등. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-08-07-goguelikeglclient%EC%97%902dclient%EA%B8%B0%EB%8A%A5%EC%9D%98%EB%8C%80%EB%B6%80%EB%B6%84%EC%9D%84%EA%B5%AC%ED%98%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike glclient에 2d client 기능의 대부분을 구현 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike  개발 진행 사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-07-17-webgl%EB%B2%84%EC%A0%84goguelike%EC%97%90%ED%83%80%EC%9D%BC%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EB%8D%B0%EB%AF%B8%EC%A7%80%ED%91%9C%ED%98%84%ED%96%89%EB%8F%99%EB%A0%A5%EB%B6%80%EC%A1%B1%ED%91%9C%ED%98%84%EC%B6%94%EA%B0%80/">WebGL 버전 goguelike에 타일 애니메이션, 데미지 표현, 행동력 부족 표현 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-07-12-goguelike%EC%97%90%EC%B9%B4%EB%A9%94%EB%9D%BC%EA%B8%B0%EC%9A%B8%EC%9E%84%EA%B8%B0%EB%8A%A5%EC%B6%94%EA%B0%80/">goguelike에 카메라 기울임 기능 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-07-08-goguelike%EC%BF%BC%ED%84%B0%EB%B7%B0/">goguelike 쿼터 뷰 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-06-29-goguelikewebgl%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%9E%91%EC%97%85/">goguelike WebGL 클라이언트 작업 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-06-16-goguelike%EC%9D%98webglclient%EC%9E%91%EC%97%85/">goguelike 의 webgl client 작업</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-05-02-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9A%A9%EC%9C%BC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A4%91%EC%9D%B4%EB%8D%98goguelikeiptimeorg%EC%84%9C%EB%B2%84%EB%A5%BC%EB%82%B4%EB%A6%BD%EB%8B%88%EB%8B%A4/">테스트용으로 서비스 중이던 goguelike.iptime.org 서버를 내립니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/">6년 가까이 작업해온 goguelike 의 소스 코드를 공개 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/">roguelike를 MMO로 만들면</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-03-17-help%ED%88%B4%ED%8C%81%EC%9D%B8%ED%92%8B%EB%A0%89%EA%B2%8C%EC%9E%84%EB%85%B8%ED%8B%B0%EC%9D%98%EA%B0%9C%EC%84%A0/">help, 툴팁, 인풋렉, 게임 노티의 개선 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-03-05-%EC%83%88%ED%83%80%EC%9D%BC%ED%85%8D%EC%8A%A4%EC%B2%98%EC%A0%81%EC%9A%A9%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C%ED%83%80%EC%9D%BC%EC%B6%94%EA%B0%80%EB%90%9C%ED%95%A8%EC%A0%95%EB%93%A4/">새 타일 텍스처 적용, 유니코드 타일 , 추가된 함정들 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-02-29-%EC%83%88%EA%B8%B0%EA%B3%84%EC%9D%98%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98%EA%B8%B0%EB%A1%9D/">새 기계의 성능테스트 의 기록 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tile texture on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/tile-texture/</link>
+    <description>Recent content in tile texture on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 05 Mar 2020 12:22:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/tile-texture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>새 타일 텍스처 적용, 유니코드 타일 , 추가된 함정들 </title>
+      <link>https://kasworld.github.io/posts/2020-03-05-%EC%83%88%ED%83%80%EC%9D%BC%ED%85%8D%EC%8A%A4%EC%B2%98%EC%A0%81%EC%9A%A9%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C%ED%83%80%EC%9D%BC%EC%B6%94%EA%B0%80%EB%90%9C%ED%95%A8%EC%A0%95%EB%93%A4/</link>
+      <pubDate>Thu, 05 Mar 2020 12:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-03-05-%EC%83%88%ED%83%80%EC%9D%BC%ED%85%8D%EC%8A%A4%EC%B2%98%EC%A0%81%EC%9A%A9%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C%ED%83%80%EC%9D%BC%EC%B6%94%EA%B0%80%EB%90%9C%ED%95%A8%EC%A0%95%EB%93%A4/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+이상하게 4k video 를 캡처해서 youtube에 올려도 fhd로만 만들어 주기에 애초에 fhd 60프레임으로 캡처했습니다.
+기존에 있던 어딘가에서 주워온 타일 텍스처를 버리고 GIMP로 새로 만든 (브러시를 사용해서) 타일 텍스처로 교체 했습니다.
+최근 추가된 함정들의 효과도 포함되었으며
+아이템 타일들을 기존의 ASCII 기반 타일에서 unicode emoji 기반 타일로 교체 했습니다.
+🔪 Weapon ⛨ Shield 👑 Helmet 👕 Armor 🧤 Gauntlet 👢 Footwear 💍 Ring 🎀 Amulet 🍾 Potion 📜 Scroll 이런게 되니 좋군요.</description>
+    </item>
+    
+  </channel>
+</rss>

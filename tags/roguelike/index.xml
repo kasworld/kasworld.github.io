@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>roguelike on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/roguelike/</link>
+    <description>Recent content in roguelike on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 08 Apr 2020 12:54:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/roguelike/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>6년 가까이 작업해온 goguelike 의 소스 코드를 공개 합니다. </title>
+      <link>https://kasworld.github.io/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 08 Apr 2020 12:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
+      <description>소스 코드와 문서는 https://github.com/kasworld/goguelike 에 있습니다.
+라이센스는 Apache-2.0 으로 했으니 편하게 쓰시면 될 것 같습니다.
+게임플레이 URL (play URL) http://goguelike.iptime.org/
+( OS 상관없이 web socket, webassembly, unicode 를 지원하는 브라우져면 됩니다. )
+실행가능 서버 다운 (download binary) : linux(debian,ubuntu,mint) 용 http://goguelike.iptime.org/download.zip
+설치는 설치문서에 적어 두었습니다. https://github.com/kasworld/goguelike/blob/master/INSTALL.md
+레포지토리를 공개로 전환하고 설치 테스트를 해보니 의존성 쪽이 이상해서 golang의 module, vendor 를 사용하도록 수정하였습니다. 비공개 버전 goguelike2의 마지막 상태는 5504 commit으로 종료 되었습니다. 기존 작업을 두고 새로 프로젝트를 만들어 옮긴 이유는 이전 코드들이 보여줄만 하지 못하다는 것도 있지만, 누적된 commit이 많아 크기때문에 다운 받는 시간이 길어 진다는 이유도 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>roguelike를 MMO로 만들면</title>
+      <link>https://kasworld.github.io/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/</link>
+      <pubDate>Sat, 28 Mar 2020 14:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/</guid>
+      <description>http://goguelike.iptime.org/
+에서 플레이 할 수 있는 두종류의 서버(tower) 플레이 동영상 roguelike tower
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+goguelike tower
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+roguelike 게임들은 턴 기반으로 행동이 이루어 집니다.
+내가 행동하기 전까지는 게임이 멈춰서서 기다려 주는 거지요.
+그런데 이걸 MMO로 만드려고 하면 모든 플레이어가 행동을 선택하기 전까지 모든 플레이어가 기다려야 한다는 문제가 발생합니다.
+그래서 어쩔 수 없이 또 당연히 실시간 턴제가 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 5000 commit 기념 </title>
+      <link>https://kasworld.github.io/posts/2020-01-18-goguelike5000commit%EA%B8%B0%EB%85%90/</link>
+      <pubDate>Sat, 18 Jan 2020 16:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-01-18-goguelike5000commit%EA%B8%B0%EB%85%90/</guid>
+      <description>2014년 ( 블로그 기준 ) 시작한 프로젝트가 드디어 5000 commit을 달성했기에 기록합니다. ^^
+첫 포스트 https://kasw.blogspot.com/2014/08/blog-post.html</description>
+    </item>
+    
+    <item>
+      <title>2020년 현재 goguelike의 상태 정리 </title>
+      <link>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</link>
+      <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</guid>
+      <description>goguelike - mmo-roguelike golang, websocket, webassembly, htmlcanvas (가능한한) 혼자서 만드는 MMO 서버 관리 서버 ( ground server )
+다중 서버 지원
+서버는 linux에서 golang으로 개발/실행
+클라이언트는 golang으로 webassembly 를 생성
+100% 서버 기반 클라이언트는 viewer , 사용자 입력을 서버로 전달 하는 역할
+websocket을 사용 연결 유지형 클라이언트
+클라이언트를 통한 핵킹/치트 가능성을 원천 봉쇄
+클라이언트는 캐릭터의 현재 위치기준으로 시야내의 지형정보만을 받는다. ( 맵핵의 원천 봉쇄)
+클라이언트 설치 불필요
+webassembly/html5 canvas를 지원하는 web browser 라면 플랫폼 불문하고 플레이 가능</description>
+    </item>
+    
+    <item>
+      <title>goguelike 편향Bias의 color표시 , 지난 1년간 작업량 </title>
+      <link>https://kasworld.github.io/posts/2018-10-02-goguelike%ED%8E%B8%ED%96%A5bias%EC%9D%98color%ED%91%9C%EC%8B%9C%EC%A7%80%EB%82%9C1%EB%85%84%EA%B0%84%EC%9E%91%EC%97%85%EB%9F%89/</link>
+      <pubDate>Tue, 02 Oct 2018 10:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-10-02-goguelike%ED%8E%B8%ED%96%A5bias%EC%9D%98color%ED%91%9C%EC%8B%9C%EC%A7%80%EB%82%9C1%EB%85%84%EA%B0%84%EC%9E%91%EC%97%85%EB%9F%89/</guid>
+      <description>goguelike의 성향은 ( 엄밀히 말하면 편향 bais 입니다. 성향 alignment 이 아니고 )
+리니지의 1축 (lawful, chaotic) 이나 D&amp;amp;D의 2축 ( good - evil 추가 ) 이 아니고 3축입니다. ( 즉 편향은 3차원 벡터 입니다. ^^ )
+성향이 아니고 편향 이기 때문에 축에 특별한 의미를 부여하지는 않았습니다만 대신 각축을 color의 Red , Green, Blue 로 표시 하도록 하였습니다. 색에 - ( 음의 값 ) 은 없으니 중립을 회색으로 정하고 나니 편향을 한개의 색으로 표현할수 있게 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 원형 시야의 적용 </title>
+      <link>https://kasworld.github.io/posts/2018-09-21-goguelike%EC%9B%90%ED%98%95%EC%8B%9C%EC%95%BC%EC%9D%98%EC%A0%81%EC%9A%A9/</link>
+      <pubDate>Fri, 21 Sep 2018 09:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-09-21-goguelike%EC%9B%90%ED%98%95%EC%8B%9C%EC%95%BC%EC%9D%98%EC%A0%81%EC%9A%A9/</guid>
+      <description>흰색 사각형이 기존의 사각형 시야 이고 그 주위로 약간 밝게 보이는 것이 새로 적용된 원형 시야 입니다.
+기존에 구현 편의상 사각형으로 시야를 만들고 있었는데 ( 2차원 배열 ) 아무래도 맘에 들지 않아 ( 리얼해 보이지도 않고 ) 수정했습니다.
+라고 쓰면 간단해보이지만 내부적으로는 꽤나 대규모의 수정 작업이 있었습니다. 약 3일정도 20시간 정도의 작업이 들어갔군요. 덕분에 이제 부터는 비정형 시야 ( 타원 , 별모양등 ) 를 만드는 것도 가능한 구조가 되었습니다. ( 쓸일이야 없겠지만 ^^ )</description>
+    </item>
+    
+    <item>
+      <title>goguelike 기억상실, 각종 함정의 추가 </title>
+      <link>https://kasworld.github.io/posts/2018-09-14-goguelike%EA%B8%B0%EC%96%B5%EC%83%81%EC%8B%A4%EA%B0%81%EC%A2%85%ED%95%A8%EC%A0%95%EC%9D%98%EC%B6%94%EA%B0%80/</link>
+      <pubDate>Fri, 14 Sep 2018 12:31:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-09-14-goguelike%EA%B8%B0%EC%96%B5%EC%83%81%EC%8B%A4%EA%B0%81%EC%A2%85%ED%95%A8%EC%A0%95%EC%9D%98%EC%B6%94%EA%B0%80/</guid>
+      <description>꽤 오랫동안 고민하고 준비했던 기억상실 함정을 추가 했습니다. 기억상실 함정은 두종류로 현재 층의 탐험 기억을 잊는 함정과 그동안 탐험한 층 중 하나의 기억을 랜덤하게 잊는 함정입니다. 기억을 잊게 되면 잊은 만큼의 탐험 경험치도 같이 상실 하게 됩니다.
+goguelike는 경험치의 성장이 2가지 인데 하나는 전투를 통해서 얻는 전투 경험치로 이것은 사망시에 일정 비율로 상실됩니다. 또 하나는 개척/탐험 경험치로 플로어에 아직 가보지 않은 타일을 탐험하게 되면 얻게 됩니다. 추가적으로 새로운 층(floor) 을 발견 하거나 하나의 층을 완전히 탐험하면 보너스 경험치도 얻습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 미니맵의 삭제, 2단 줌의 추가 </title>
+      <link>https://kasworld.github.io/posts/2018-09-04-goguelike%EB%AF%B8%EB%8B%88%EB%A7%B5%EC%9D%98%EC%82%AD%EC%A0%9C2%EB%8B%A8%EC%A4%8C%EC%9D%98%EC%B6%94%EA%B0%80/</link>
+      <pubDate>Tue, 04 Sep 2018 12:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-09-04-goguelike%EB%AF%B8%EB%8B%88%EB%A7%B5%EC%9D%98%EC%82%AD%EC%A0%9C2%EB%8B%A8%EC%A4%8C%EC%9D%98%EC%B6%94%EA%B0%80/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+동영상을 보시면 됩니다.
+전부터 구현이 맘에 안들던 minimap을 삭제하고 플레이 뷰와 플로어 뷰 에서 다단 줌을 지원하게 바꿨습니다.
+큰 필드에서는 zoom out을 하는 것으로 전체를 볼수 없다는 단점은 있지만 나름 bird eye view 라서 느낌이 확 달라집니다.
+꽉 찬 (일반) 플로어 에서 줌 하는 것과 빈공간이 많은 roguelike 플로어에서 줌 해서 보는 것 또한 전혀 다른 느낌을 주는 군요.</description>
+    </item>
+    
+    <item>
+      <title>goguelike에 함정추가, webclient에 뷰포트  줌 추가 등. </title>
+      <link>https://kasworld.github.io/posts/2018-08-31-goguelike%EC%97%90%ED%95%A8%EC%A0%95%EC%B6%94%EA%B0%80webclient%EC%97%90%EB%B7%B0%ED%8F%AC%ED%8A%B8%EC%A4%8C%EC%B6%94%EA%B0%80%EB%93%B1/</link>
+      <pubDate>Fri, 31 Aug 2018 17:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-31-goguelike%EC%97%90%ED%95%A8%EC%A0%95%EC%B6%94%EA%B0%80webclient%EC%97%90%EB%B7%B0%ED%8F%AC%ED%8A%B8%EC%A4%8C%EC%B6%94%EA%B0%80%EB%93%B1/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+위 동영상은 최근에 추가한 grid 와 뷰포트 줌 기능을 시연한것입니다.
+전부터 추가해야 겠다고 생각하고 있던 함정을 추가 했습니다. 함정은 밟기 전까지는 보이지 않으며 일단 밟으면 일정한 효과를 발생합니다. 함정을 추가할 구조를 준비하고 가장 만들고 싶었던 teleport 함정을 만들었습니다. 기존에 있던 자동 진입 포탈 과의 차이점은 포탈은 진입점과 도착 지점이 고정인데 전이함정 은 진입점은 고정이나 도착 지점이 지정된 플로어의 임의의 위치가 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike의 유령 floor </title>
+      <link>https://kasworld.github.io/posts/2018-08-23-goguelike%EC%9D%98%EC%9C%A0%EB%A0%B9floor/</link>
+      <pubDate>Thu, 23 Aug 2018 15:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-23-goguelike%EC%9D%98%EC%9C%A0%EB%A0%B9floor/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+goguelike는 방(room)과 통로(corridor) 의 재질을 여러 가지로 할수 있습니다. 그래서 새로 추가된 유령 층의 방과 통로를 안개(fog)와 연기(smoke) 로 구성해보았습니다.
+그리고 통로를 여러 재질로 만들수 있기에 기존 최근에 추가된 goguelike floor 의 통로에 2가지 재질 통로를 적용해 보았습니다.
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.</description>
+    </item>
+    
+    <item>
+      <title>goguelike - grid의 부활, 화면 버튼의 간소화, 장비 - 팩션의 연결 </title>
+      <link>https://kasworld.github.io/posts/2018-08-21-goguelikegrid%EC%9D%98%EB%B6%80%ED%99%9C%ED%99%94%EB%A9%B4%EB%B2%84%ED%8A%BC%EC%9D%98%EA%B0%84%EC%86%8C%ED%99%94%EC%9E%A5%EB%B9%84%ED%8C%A9%EC%85%98%EC%9D%98%EC%97%B0%EA%B2%B0/</link>
+      <pubDate>Tue, 21 Aug 2018 17:01:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-21-goguelikegrid%EC%9D%98%EB%B6%80%ED%99%9C%ED%99%94%EB%A9%B4%EB%B2%84%ED%8A%BC%EC%9D%98%EA%B0%84%EC%86%8C%ED%99%94%EC%9E%A5%EB%B9%84%ED%8C%A9%EC%85%98%EC%9D%98%EC%97%B0%EA%B2%B0/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+Dark A-Black [-58 -58 -58] Blood B-Maroon [0 -71 -71] Flame C-Red [57 -58 -58] Wild D-Green [-71 0 -71] Void E-Olive [0 0 -100] Galactic F-DarkOrange [70 7 -71] Brilliant G-Lime [-58 57 -58] Cosmic H-Chartreuse [-1 70 -71] Sun I-Yellow [58 58 -58] Aqua J-Navy [-71 -71 0] Abyssal K-Purple [0 -100 0] Hell L-DeepPink [76 -64 11] Ethereal M-Teal [-100 0 0] Ghost N-Salmon [99 0 -11] Celestial O-SpringGreen [-71 70 -1] Astral P-LightGreen [14 98 14] Moon Q-Khaki [74 67 8] Alchemic R-Blue [-58 -58 57] Infernal S-DarkViolet [13 -83 54] Chaotic T-Magenta [58 -58 58] Shadow U-DodgerBlue [-61 10 79] Dream V-MediumSlateBlue [-4 -21 98] Primal W-Violet [71 1 71] Frost X-Cyan [-58 58 58] Holy Y-Aquamarine [-1 83 55] Star Z-White [58 58 58] 위 목록은 팩션과 장비의 재질 수식어를 연결한 관계 입니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 각 타워별, 타워 내의 층 별로 다르게 흐르는 시간 </title>
+      <link>https://kasworld.github.io/posts/2018-08-15-goguelike%EA%B0%81%ED%83%80%EC%9B%8C%EB%B3%84%ED%83%80%EC%9B%8C%EB%82%B4%EC%9D%98%EC%B8%B5%EB%B3%84%EB%A1%9C%EB%8B%A4%EB%A5%B4%EA%B2%8C%ED%9D%90%EB%A5%B4%EB%8A%94%EC%8B%9C%EA%B0%84/</link>
+      <pubDate>Wed, 15 Aug 2018 16:25:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-15-goguelike%EA%B0%81%ED%83%80%EC%9B%8C%EB%B3%84%ED%83%80%EC%9B%8C%EB%82%B4%EC%9D%98%EC%B8%B5%EB%B3%84%EB%A1%9C%EB%8B%A4%EB%A5%B4%EA%B2%8C%ED%9D%90%EB%A5%B4%EB%8A%94%EC%8B%9C%EA%B0%84/</guid>
+      <description>시간과 공간의 비밀? 이 숨어 있다는 인트로 설명대로 각 타워별로 그리고 또 타워 내의 층별로 시간의 흐름을 다르게 했습니다.
+타워 목록에서 타워 이름에 표시된 수자가 초당 흐르는 사건 수 ( 행동 수 ) 이며 타워 내의 층 별로도 이 흐름은 다르게 흘러갑니다.
+그 외의 주요 변경점으로는 뷰 포트를 현재 플레이시점과 미니맵에서 지정한 위치를 보여주는 관찰자 시점간 전환 기능이 들어갔습니다.
+장비 이름에 재질 형용사가 장비의 faction을 따르도록 수정했습니다.
+서버 AI와 클라이언트 AI의 개선/수정이 있었습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 시작타워 (starting tower) 스샷들 </title>
+      <link>https://kasworld.github.io/posts/2018-08-15-goguelike%EC%8B%9C%EC%9E%91%ED%83%80%EC%9B%8Cstartingtower%EC%8A%A4%EC%83%B7%EB%93%A4/</link>
+      <pubDate>Wed, 15 Aug 2018 16:03:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-15-goguelike%EC%8B%9C%EC%9E%91%ED%83%80%EC%9B%8Cstartingtower%EC%8A%A4%EC%83%B7%EB%93%A4/</guid>
+      <description>스크립트를 사용해서 매 서버 시작 시 마다 새로운 지형이 생성되므로 매번 다르게 만들어 지긴 합니다만 그래도 각 층별 테마는 유지 됩니다. </description>
+    </item>
+    
+    <item>
+      <title>goguelike 개발진행 - 중2병스러운 장비이름등  </title>
+      <link>https://kasworld.github.io/posts/2018-08-03-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%A4%912%EB%B3%91%EC%8A%A4%EB%9F%AC%EC%9A%B4%EC%9E%A5%EB%B9%84%EC%9D%B4%EB%A6%84%EB%93%B1/</link>
+      <pubDate>Fri, 03 Aug 2018 12:00:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-03-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%A4%912%EB%B3%91%EC%8A%A4%EB%9F%AC%EC%9A%B4%EC%9E%A5%EB%B9%84%EC%9D%B4%EB%A6%84%EB%93%B1/</guid>
+      <description>약 2주간 진행된 작업 정리 입니다.
+아래 동영상은 최신 버전goguelike 의 4배속 플레이 입니다.
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+보이는 변동사항으로는
+장비 슬롯의 이름과 기능이 바뀌었습니다. 타일 형태 : 슬롯 이름 : 전투기여 { Weapon : Attack [ Shield : Defence ^ Head : Defence % Armor : Defence
+Gauntlet : Defence ; Boots : Defence o Ring : Attack Amulet : Attack 입니다.</description>
+    </item>
+    
+    <item>
+      <title>수다스러워진 goguelike, 2배속 플레이 , damping move </title>
+      <link>https://kasworld.github.io/posts/2018-07-22-%EC%88%98%EB%8B%A4%EC%8A%A4%EB%9F%AC%EC%9B%8C%EC%A7%84goguelike2%EB%B0%B0%EC%86%8D%ED%94%8C%EB%A0%88%EC%9D%B4dampingmove/</link>
+      <pubDate>Sun, 22 Jul 2018 09:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-07-22-%EC%88%98%EB%8B%A4%EC%8A%A4%EB%9F%AC%EC%9B%8C%EC%A7%84goguelike2%EB%B0%B0%EC%86%8D%ED%94%8C%EB%A0%88%EC%9D%B4dampingmove/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+동영상은 2배속으로 플레이 ( 초당 4 action ) 한것을 캡쳐 한것입니다.
+주요 변경사항으로는
+일단 화면에 표시되는 정보가 늘어서 수다스러워 졌습니다. 층이 바뀌고, kill , killed, level up, down, 서버 공지 등의 정보가 뷰포트 아래에 html뿐 아니고 뷰포트 중앙 상단에 크게 표시 됩니다.
+그리고 경험치, hp,ap변화가 작게 플레이 캐릭터 위쪽으로 표시 됩니다. 정보량이 많아지면 마치 불이 타오르는 것 같이 보이기도 합니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 작업 진행 사항, 뷰포트의 변형 테스트 </title>
+      <link>https://kasworld.github.io/posts/2018-07-16-goguelike%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD%EB%B7%B0%ED%8F%AC%ED%8A%B8%EC%9D%98%EB%B3%80%ED%98%95%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Mon, 16 Jul 2018 12:27:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-07-16-goguelike%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD%EB%B7%B0%ED%8F%AC%ED%8A%B8%EC%9D%98%EB%B3%80%ED%98%95%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+추가 업데이트로 가속/정속 스크롤 옵션
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+내부적인 개선 작업이 어느정도 진행되어 또다시 webclient 개선 차례가 돌아 왔습니다.
+위 동영상은 뷰포트의 시인성을 좀 높여 볼까 하고 테스트 해본 뷰포트 변형 입니다. 중앙부를 크게 주변 부를 작게 보이는 변형을 시도 해 봤는데
+&amp;hellip;
+&amp;hellip;
+멀미 나는 군요. ㅠㅠ
+다른 변형들을 좀더 테스트 해봐야 겠습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike에 역대 플레이어 랭킹 을 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2018-07-01-goguelike%EC%97%90%EC%97%AD%EB%8C%80%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%9E%AD%ED%82%B9%EC%9D%84%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 01 Jul 2018 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-07-01-goguelike%EC%97%90%EC%97%AD%EB%8C%80%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%9E%AD%ED%82%B9%EC%9D%84%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>애초에 그라운드 서버( 여러 타워 관리자 )를 만든 중요한 이유중 하나가 모든 타워를 아우르는 플레이어 랭킹을 표시 하고 싶었기 때문입니다.
+역시 오락이라면 high score가 기록 되어야지! 하고 생각하기 때문이기도 하지요. ^^
+이 플레이어 랭킹은 게임중에 표시되는 랭킹과는 좀 다릅니다. 게임 내에서 표시되는 랭킹은 그 타워 내의 모두 ( npc를 포함) 에서 현재 플레이어 캐릭터의 실시간 랭킹입니다. 그리고 이 high score 는 모든 타워에서 게임을 끝낸 플레이어 들간의 (npc 미포함) 랭킹이 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>gogulike에 ground 서버를 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2018-06-28-gogulike%EC%97%90ground%EC%84%9C%EB%B2%84%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Thu, 28 Jun 2018 09:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-06-28-gogulike%EC%97%90ground%EC%84%9C%EB%B2%84%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>외부로 오픈된 여러개의 tower가 생기니 여러개의 tower 를 관리 ( 시작, 중지 , monitor , 배포 ) 해야 할 필요성이 높아 졌습니다.
+그 동안 애써 외면 하고 있었지만 더 미루기는 힘들어서 tower 관리 서버를 만들었습니다.
+가장 어렵고 또 중요한 &amp;ldquo;서버 이름&amp;rdquo; 은 ground 서버로 정했습니다.
+게임 인트로에 나온 여러개의 탑이 있는 장소 이며 또 탑을 세우거나 없애거나 하는 일도 담당해야 하는 서버라 그 역할에 어울리게 ground 입니다.
+외부로 노출될 일은 없을 서버라 ( 노출되면 보안 사고!</description>
+    </item>
+    
+    <item>
+      <title>goguelike에 zombie를 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2018-06-14-goguelike%EC%97%90zombie%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Thu, 14 Jun 2018 08:23:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-06-14-goguelike%EC%97%90zombie%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>goguelike는 로그라이크게임치고는 꽤나 여유로운? 플레이가 가능한 편입니다. 그 이유는 진성 로그라이크와는 달리 플레이중 죽어도 이어서? 플레이가 가능하기 때문입니다. ( 로그라이크의 특징중 하나가 죽으면 새로 시작입니다. ) ( 자비로운? goguelike는 경험치가 좀 깍이고, 아이템을 좀 드랍하는 정도로? 끝납니다. -어디서 많이 본듯하지만 - )
+다만 공개한적 없는 전용 클라이언트(linux - sdl용) 에서 플레이할때와는 달리 웹 클라이언트로 포팅된후 생긴 문제가 하나 있습니다.
+브라우저 페이지를 실수로 reload ( F5를 누르거나 모바일에서 아래로 당겼다가 놓거나 ) 하는 경우 게임이 끝나 버린다는 거지요.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 뷰포트 모드 전환 </title>
+      <link>https://kasworld.github.io/posts/2018-06-10-goguelike%EB%B7%B0%ED%8F%AC%ED%8A%B8%EB%AA%A8%EB%93%9C%EC%A0%84%ED%99%98/</link>
+      <pubDate>Sun, 10 Jun 2018 15:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-06-10-goguelike%EB%B7%B0%ED%8F%AC%ED%8A%B8%EB%AA%A8%EB%93%9C%EC%A0%84%ED%99%98/</guid>
+      <description>명령버튼을 누르기 편하도록 뷰포트가 차지하는 공간을 선택할수 있도록 했습니다. 실제로는 가로 모드와 세로 모드도 동적으로 변환되는데 동영상 캡쳐가 안되어서 따로 캡쳐했습니다. 오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+그 외에 추가로 웹 쿠키 를 사용하여 플레이용 닉네임을 기억하도록 하였습니다.
+roguelike 라는 장르의 특성상 게임 플레이가 끝나면 사용자가 플레이한 캐릭터도 사라지기 때문에 기본적으로 goguelike는 사용자 정보를 서버에 저장하지 않습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 가로모드, 인트로 추가</title>
+      <link>https://kasworld.github.io/posts/2018-06-09-goguelike%EA%B0%80%EB%A1%9C%EB%AA%A8%EB%93%9C%EC%9D%B8%ED%8A%B8%EB%A1%9C%EC%B6%94%EA%B0%80/</link>
+      <pubDate>Sat, 09 Jun 2018 15:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-06-09-goguelike%EA%B0%80%EB%A1%9C%EB%AA%A8%EB%93%9C%EC%9D%B8%ED%8A%B8%EB%A1%9C%EC%B6%94%EA%B0%80/</guid>
+      <description>눈에 띄는 변화는 가로 세로 모드를 지원합니다. css grid와 Responsive Web Design 이란것을 적용한것인데 의외로 쓸만했습니다.
+휴대폰에서도 크롬을 사용하면 플레이가 가능한데 화면이 보기 불편해서 뷰포트를 기존 wide(16:9?)에서 정사각형이 되도록 조정하고 추가로 landscape 모드도 지원하게 했습니다. 즉 뷰포트는 정사각형이고 그외 명령, 정보 공간들이 아래와 오른쪽으로 이동합니다.
+명령버튼들을 사용하여 키보드 없이도 터치와 버튼을 사용하여 플레이가 가능하도록 모든 명령을 화면 버튼으로 실행가능하도록 했습니다.
+그리고 간단하게나마 인트로가 생겼습니다.
+그리고 자세히 보면 보입니다만 ^^ 플레이 할수 있는 탑이 2개 입니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike2에 sound effect를 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2018-05-31-goguelike2%EC%97%90soundeffect%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Thu, 31 May 2018 18:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-05-31-goguelike2%EC%97%90soundeffect%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>그냥 링크를 들어가서 버튼만 누르면 게임 화면을 볼수 있다고 생각해서 그림한장 없이 소개글을 썼더라구요. 그래서 간단한 스샷 입니다. 사용한 사운드 파일들은 ( 19개나 됩니다. ) 적당한 것을 ( 라이선스 문제도 있고 해서 ) 찾기 힘들어서 일단 리눅스 민트에 있는 효과음들을 사용했습니다. 그래도 어울리는 곳에 사용하긴 했는데 역시 어설픕니다. 그리고 소리 파일들 때문에 접속시 다운받는 용량이 500kbyte정도 늘어났습니다.
+플레이 링크는 여전히 http://goguelike.iptime.org/?authkey=659b63f3-4c3d-9327-5c29-069de2d8b4f0 입니다.</description>
+    </item>
+    
+    <item>
+      <title>Goguelike2 pre-alpha 테스트 플레이 오픈합니다. </title>
+      <link>https://kasworld.github.io/posts/2018-05-30-goguelike2prealpha%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 30 May 2018 10:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-05-30-goguelike2prealpha%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
+      <description>( 동일한 글이 제 블로그 http://kasw.blogspot.com/2018/05/goguelike2-pre-alpha.html 에도 올라가 있습니다. )
+Goguelike2 pre-alpha 테스트 플레이 설명
+그동안 혼자서 만드는 MMO 라는 목적으로 작업한 goguelike2 가 프리 알파 정도 상태긴 하지만 일단 테스트 플레이가 가능한 수준이 되어서? 공개합니다.
+MMO 지만 MMORPG 는 아닙니다. roguelike를 MMO 로 만들어보는 것이라 MMORLG 라고 할수 있습니다.
+접속 방법은 브라우저를 사용해서 아래있는 링크로 접속하시면 됩니다. 접속시 10Mbyte 좀 넘는 데이터를 다운 받게 되니 주의해주세요.
+다만 firefox 는 느려서 잘 안되는 것 같고 개발에 사용중인 chrome에서는 잘됩니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike2 의 몇몇 스크린 샷들. 작업 진행 사항. </title>
+      <link>https://kasworld.github.io/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</link>
+      <pubDate>Sat, 09 May 2015 17:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</guid>
+      <description>(거의) 재작성한 goguelike는 일단 goguelike2로 부르고 있습니다.
+goguelike : version 0.x ~ goguelike2 : version 1.x ~
+인셈이지요. 현재는 inventory 와 status effect(버프) 작업을 진행하고 있는데 ( 기존엔 장비와 장비 슬롯 은 있었지만 인벤토리는 없었습니다. )
+진도가 잘 안나가는 관계로 기분전환삼아 작성하는 포스트 입니다. ;; 일단 실시간 서버모니터링 툴인 towerviewer 의 스샷들입니다. 최근 새로한 texture가 적용된 플레이맵 - observer mode라 시야 제한이 없는 view입니다. 층 전체가 보이는 map view
+또다른 playmap</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>goroutine on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/goroutine/</link>
+    <description>Recent content in goroutine on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 25 Mar 2015 14:05:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/goroutine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go 언어에서 goroutine group을 같이 종료 시키기 </title>
+      <link>https://kasworld.github.io/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
+      <pubDate>Wed, 25 Mar 2015 14:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
+      <description>update 15-03-29) http://blog.labix.org/2011/10/09/death-of-goroutines-under-control 를 같이 보시는 것도 재밌을것 같습니다. 비슷한 고민을 다르게 해결한 경우라고나 할까요.
+update) 페북에 올라온 의견을 읽다보니 이글의 설명이 부족한듯 합니다. 아래 상황은 같은 context를 공유하는 goroutine들 간에 종료 신호를 주고 받기위한 방법중 (아마도 )가장 가볍고 빠른 방법을 만들어본것입니다. 이 제한이 없다면 다른 무수한 방법들이 가능할것입니다. 당장 map + mutex를 사용해서도 동일한 효과를 볼수 있을껍니다. ( 크고 무겁겠지요 ^^ ) 여기서 context를 공유한다는 것은 runstate를 struct의 field로 만들고 만들어진 object를 공유하는 여러 goroutine을 생각하시면 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>pycrust의 split 이 가로로 되는 것을 세로로 바꾸기.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="pycrust는 wxpython에 따라오는 ( wxtools 에있음 ) interactive python shell로 ipython을 쓰기 전에 잘 쓰던 것이었습니다.
+최근 ipython 이 살짝 이상해진 관계로 다시 pycrust를 쓰고 있는데 역시 wide 화면에서 가로 분할 윈도우는 짜증 나는 관계로 수정을 시도 하였습니다.
+패치가 이루어진 다음엔
+과 같이 와이드 화면에 어울리게 된 것을 볼 수 있습니다. /usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/wx/py 에 존재하는 crust.py 내의
+self.SplitHorizontally(self.shell, self.notebook, -self.sashoffset) 를 self.SplitVertically(self.shell, self.notebook, -self.sashoffset) 로 바꾸면 됩니다.
+( 두번 나옵니다. , _CheckShouldSplit 와 ToggleTools 함수 )">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="pycrust의 split 이 가로로 되는 것을 세로로 바꾸기. " />
+<meta property="og:description" content="pycrust는 wxpython에 따라오는 ( wxtools 에있음 ) interactive python shell로 ipython을 쓰기 전에 잘 쓰던 것이었습니다.
+최근 ipython 이 살짝 이상해진 관계로 다시 pycrust를 쓰고 있는데 역시 wide 화면에서 가로 분할 윈도우는 짜증 나는 관계로 수정을 시도 하였습니다.
+패치가 이루어진 다음엔
+과 같이 와이드 화면에 어울리게 된 것을 볼 수 있습니다. /usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/wx/py 에 존재하는 crust.py 내의
+self.SplitHorizontally(self.shell, self.notebook, -self.sashoffset) 를 self.SplitVertically(self.shell, self.notebook, -self.sashoffset) 로 바꾸면 됩니다.
+( 두번 나옵니다. , _CheckShouldSplit 와 ToggleTools 함수 )" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-11-28-pycrust%EC%9D%98split%EC%9D%B4%EA%B0%80%EB%A1%9C%EB%A1%9C%EB%90%98%EB%8A%94%EA%B2%83%EC%9D%84%EC%84%B8%EB%A1%9C%EB%A1%9C%EB%B0%94%EA%BE%B8%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-11-28T20:38:00+09:00" />
+<meta property="article:modified_time" content="2014-11-28T20:38:00+09:00" />
+<meta itemprop="name" content="pycrust의 split 이 가로로 되는 것을 세로로 바꾸기. ">
+<meta itemprop="description" content="pycrust는 wxpython에 따라오는 ( wxtools 에있음 ) interactive python shell로 ipython을 쓰기 전에 잘 쓰던 것이었습니다.
+최근 ipython 이 살짝 이상해진 관계로 다시 pycrust를 쓰고 있는데 역시 wide 화면에서 가로 분할 윈도우는 짜증 나는 관계로 수정을 시도 하였습니다.
+패치가 이루어진 다음엔
+과 같이 와이드 화면에 어울리게 된 것을 볼 수 있습니다. /usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/wx/py 에 존재하는 crust.py 내의
+self.SplitHorizontally(self.shell, self.notebook, -self.sashoffset) 를 self.SplitVertically(self.shell, self.notebook, -self.sashoffset) 로 바꾸면 됩니다.
+( 두번 나옵니다. , _CheckShouldSplit 와 ToggleTools 함수 )"><meta itemprop="datePublished" content="2014-11-28T20:38:00+09:00" />
+<meta itemprop="dateModified" content="2014-11-28T20:38:00+09:00" />
+<meta itemprop="wordCount" content="96">
+<meta itemprop="keywords" content="파이썬,python,wxpython," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="pycrust의 split 이 가로로 되는 것을 세로로 바꾸기. "/>
+<meta name="twitter:description" content="pycrust는 wxpython에 따라오는 ( wxtools 에있음 ) interactive python shell로 ipython을 쓰기 전에 잘 쓰던 것이었습니다.
+최근 ipython 이 살짝 이상해진 관계로 다시 pycrust를 쓰고 있는데 역시 wide 화면에서 가로 분할 윈도우는 짜증 나는 관계로 수정을 시도 하였습니다.
+패치가 이루어진 다음엔
+과 같이 와이드 화면에 어울리게 된 것을 볼 수 있습니다. /usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/wx/py 에 존재하는 crust.py 내의
+self.SplitHorizontally(self.shell, self.notebook, -self.sashoffset) 를 self.SplitVertically(self.shell, self.notebook, -self.sashoffset) 로 바꾸면 됩니다.
+( 두번 나옵니다. , _CheckShouldSplit 와 ToggleTools 함수 )"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">pycrust의 split 이 가로로 되는 것을 세로로 바꾸기. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-11-28T20:38:00+09:00">November 28, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>pycrust는 wxpython에 따라오는 ( wxtools 에있음 )  interactive python
+shell로 ipython을 쓰기 전에 잘 쓰던 것이었습니다.</p>
+<p>최근 ipython 이 살짝 이상해진 관계로 다시 pycrust를 쓰고 있는데 역시
+wide 화면에서 가로 분할 윈도우는 짜증 나는 관계로 수정을 시도
+하였습니다.</p>
+<p>패치가 이루어진 다음엔</p>
+<p><a href="../images/2014-11-28-pycrust%EC%9D%98split%EC%9D%B4%EA%B0%80%EB%A1%9C%EB%A1%9C%EB%90%98%EB%8A%94%EA%B2%83%EC%9D%84%EC%84%B8%EB%A1%9C%EB%A1%9C%EB%B0%94%EA%BE%B8%EA%B8%B0-Screenshot%2Bfrom%2B2014-11-28%2B20%3A35%3A47.png"><img src="../images/thumbnails/2014-11-28-pycrust%EC%9D%98split%EC%9D%B4%EA%B0%80%EB%A1%9C%EB%A1%9C%EB%90%98%EB%8A%94%EA%B2%83%EC%9D%84%EC%84%B8%EB%A1%9C%EB%A1%9C%EB%B0%94%EA%BE%B8%EA%B8%B0-Screenshot%2Bfrom%2B2014-11-28%2B20%3A35%3A47.png" alt=""></a></p>
+<p> 과 같이 와이드 화면에 어울리게 된 것을 볼 수 있습니다. </p>
+<p>/usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/wx/py 
+에 존재하는 
+crust.py 
+내의</p>
+<p>            self.SplitHorizontally(self.shell, self.notebook,
+-self.sashoffset) 
+를 
+            self.SplitVertically(self.shell, self.notebook,
+-self.sashoffset) 
+로 바꾸면 됩니다.</p>
+<p>( 두번 나옵니다.  , _CheckShouldSplit 와 ToggleTools 함수 )</p>
+<p>패치를 정식으로 만들거나 
+메뉴로 on/off하게 만들면 좋겟지만 그럴 정성이 부족한 관계로 직접 수정을
+했습니다.</p>
+<p>( 나중에 시간이 나면 고민해봐야 할듯. )</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2를 개선 하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-02-wxgame%EC%9D%98cs%ED%99%94%EB%8A%94twisted%EB%B2%84%EC%A0%84%EC%9D%84%EB%81%9D%EC%9C%BC%EB%A1%9C%EC%9D%BC%EB%8B%A8%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%A9%EB%8B%88%EB%8B%A4/">wxgame의 C/S화는 twisted 버전을 끝으로 일단 마무리 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-05-%EA%B5%AC%EA%B8%80%EB%A6%AC%EB%8D%94%EA%B0%80%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A2%85%EB%A3%8C%ED%95%9C%EB%8B%A4%EB%8A%94%EC%86%8C%EC%8B%9D%EC%9D%84%EB%93%A3%EA%B3%A0/">구글 리더가 서비스 종료한다는 소식을 듣고</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">windows의 vim에서 python 활성화 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

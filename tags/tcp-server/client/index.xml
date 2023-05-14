@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tcp server/client on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/tcp-server/client/</link>
+    <description>Recent content in tcp server/client on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language><atom:link href="https://kasworld.github.io/tags/tcp-server/client/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>150000 (150k) packet/sec 를 처리하는 서버 </title>
+      <link>https://kasworld.github.io/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/</link>
+      <pubDate>Sun, 29 Nov 2020 12:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/</guid>
+      <description>https://github.com/kasworld/massecho
+를 조금 더 이리 저리 수정해 봤습니다. 각 connection이 보내는 초당 패킷수를 100으로 고정한 상태에서 connection 수를 1000 과 1500으로 바꿔가며 테스트 할때 marshaler로 표준 라이브러리의 json 이나 gob를 사용하면 AMD Ryzen 3700X (8c16t) 에서 간단한 echo protocol 을 사용해도 // Echo simple echo
+type ReqEcho_data struct {
+Msg string
+}
+// Echo simple echo
+type RspEcho_data struct {
+Msg string
+}
+98000 (98k) packet/sec정도가 한계입니다. 이를 messagepack (https://github.com/tinylib/msgp) 으로 바꾸면 처리량이 150000 (150k) packet/sec 정도로 증가합니다.</description>
+    </item>
+    
+    <item>
+      <title>udp와 network jitter </title>
+      <link>https://kasworld.github.io/posts/2018-04-06-udp%EC%99%80networkjitter/</link>
+      <pubDate>Fri, 06 Apr 2018 14:36:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-04-06-udp%EC%99%80networkjitter/</guid>
+      <description>지난글 http://kasw.blogspot.com/2018/01/tcp-udp.html
+이후로 goguelike2에 udp 지원을 넣기 위해 작업을 계속하고 있었는데 드디어 오늘 udp로 goguelike2 server 와client을 연결 tcp와 똑같이 작동시키는데 성공했습니다.
+udp 작업만 한것은 아니고 필요한 다른 작업들도 동시에 하고 있었기 대문에 생각보다 좀 오래 걸린듯 합니다.
+좀 집중해서 작업했으면 2주 정도는 당길수 있었을것 같지만 이런 저런 일들을 처리 하기도 하느라 시간을 좀 썼습니다.
+그리고 부산물로 tcp 와 udp 를 동시에 지원 가능한 net 라이브러리가 생겼습니다. ^^
+udp를 지원 하도록 바꾸면 tcp와의 차이를 비교 하는 것이 힘들 것 같아서 고민하다가 두가지를 거의 같은 구조로 지원 할수 있게 기반 작업들이 이루어지고 나니 그러면 동시에 지원하게 하면 좋겠네?</description>
+    </item>
+    
+    <item>
+      <title>tcp 와 udp </title>
+      <link>https://kasworld.github.io/posts/2018-01-28-tcp%EC%99%80udp/</link>
+      <pubDate>Sun, 28 Jan 2018 20:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-01-28-tcp%EC%99%80udp/</guid>
+      <description>goguelike2는 서버 클라이언트간 패킷전송을 초당 2 번, 즉 2 frame / sec 로 하고 있습니다.
+사용자 행동(입력)은 각 frame 마다 서버로 전송되고
+서버에서는 각 frame 별로 사용자 액션을 실행 결과를 돌려주는 동시에 그 결과로 변화된 field 상황을 viewport로 만들어 각 클라이언트에 전송합니다.
+처음에는 초당 3번을 하도록 했었는데
+local 이 아닌 wifi로 연결된 서버와 클라이언트에서 테스트라 했더니
+서버 - 클라이언트간 전송 latency가 들쑥날쑥해서 클라이언트가 처리하기가 애매 했습니다.
+frame jitter(?) 가 100% 가 넘는 경우가 생기더군요.</description>
+    </item>
+    
+    <item>
+      <title>go언어로 TCP server와 GUI client를 만들어 보기. </title>
+      <link>https://kasworld.github.io/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/</link>
+      <pubDate>Fri, 27 Feb 2015 14:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/</guid>
+      <description>3000라인 이상을 공용 package로 분리해 내고도 goguelike에 남은 코드가 아직도 9000라인이 넘기 때문에
+TCP server 와 GUI client로 사용할만한 예제를 따로 만들었습니다.
+결과적으로는 http://kasw.blogspot.kr/2015/02/go-tcp-serverclient.html http://kasw.blogspot.kr/2015/02/go-gui.html 을 합치는 프로그램을 만드는 것이됩니다.
+원래 계획으로는 framework으로 만들어 볼 생각이 있었는데 생각보다 framework과 custom logic의 분리가 까다로운 관계로 그냥 server와 client의 예제가 되었습니다. 코드는 새로 작성된 것이지만 전체 적인 구조와 작동은 goguelike와 거의 같은 형태입니다. ( 적당히 단순화 되긴 했지만 )
+예제가 하는 일은 ( logic을 가능한 단순한것으로 선택했습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

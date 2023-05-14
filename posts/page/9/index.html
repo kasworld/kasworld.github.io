@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="취미로 프로그래밍을 하는 사람입니다." />
+      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="취미로 프로그래밍을 하는 사람입니다." />
+      
+    
+    
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kasworld.github.io/posts/" />
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-11-29-%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%EC%99%80%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%EC%9D%98%EA%B2%B0%EA%B3%BC%EA%B0%80%EC%84%9C%EB%A1%9C%EC%83%81%EC%B6%A9%EB%90%A0%EB%95%8C/" class="link black dim">
+        벤치마크와 프로파일링의 결과가 서로 상충될때 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개 repository 에 올렸습니다.
+https://github.com/kasworld/wrapper
+인데
+내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한 패키지입니다.
+패키지의 기능은 최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는 것입니다.
+실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를 만들기 위한 기능을 제공하기 위해서 만든 것인데.
+원래는 func WrapInt(v, l int) int { return (v%l + l) % l }
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-09-18-metaprogramming%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/" class="link black dim">
+        Meta-programming으로 만드는 게임 서버
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      지난 2년간 회사에서 개발한 게임서버 개발을 한번 정도 정리 해보고 싶다고 생각 하고 있었습니다만.
+몇주전에 golang korea 에 올라온 GDG seoul meetup 발표자 모집 글을 보고 (꽤나 즉흥적으로 ) 신청을 했더니 덜컥 발표자로 등록 되어 버렸습니다.
+https://www.facebook.com/groups/golangko/
+결국 지난주 토요일 (2017-09-16) &ldquo;Meta-programming으로 만드는 게임 서버&rdquo; 라는 주제로 발표를 했습니다. https://www.meetup.com/GDG-Seoul/events/242054608/
+https://docs.google.com/presentation/d/1P6wykg33jnbTM0GVB3AwXUJZlkp20yC0i6XcbOfPlG4/edit?usp=sharing
+발표 준비를 하면서 &ldquo;너무 실무적 내용들이고 또 자세한 설명은 생략한다. 식이라 이래도 좋은가?&rdquo; 라는 걱정을 좀 했는데 다들 열심히 들어 주시고 해서 어떻게 무사히 끝냈습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-07-09-%ED%95%9C%EC%84%B1x57kbossmonsterlv74%EA%B5%AC%EC%9E%85%EC%82%AC%EC%9A%A9%EA%B8%B0/" class="link black dim">
+        한성 X57K BossMonster Lv.74 구입,사용기 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      급히 쓸 일이 생겨서 새 노트북 구입했습니다.
+지난주 화요일에 도착했습니다.
+한성컴퓨터 X57K BossMonster Lv.74 (SSD 120GB)
+저번 한성 노트북을 부셔먹긴 했지만 전 기본적으로 한성 노트북이 꽤나 맘에 드는 관계로 또 한성 노트북을 샀습니다.
+( 가격도 싸고, 불필요한 windows 비용 안내도 되고, 쓸데없는 ODD 도 없고 해서 저한테는 딱입니다. )
+i7 에 8G ram 1050 4G , 120 ssd 를 달고 80만원 대 입니다.
+집에서 쓰는 데스크탑보다 사양이 좋네요. ( ram , ssd 가 작지만 업그레이드 가능하니 )
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-05-28-gosdlgui%EC%9D%98%EC%83%88%EB%B2%84%EC%A0%84%EC%9D%84%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
+        go sdl gui 의 새버전을 작업하고 있습니다. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+https://github.com/veandco/go-sdl2 를 기반으로 만들었던
+https://github.com/kasworld/go-sdlgui 가 별로 맘에 안들어서 아예 새로 작업을 조금씩 해보고 있습니다.
+go-sdlgui 와는 기반이 되는 design decision 이 달라서 아예 다른 형태의 구현이 될것 같습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-05-09-%EC%96%B4%EB%96%A4%EC%A7%88%EB%AC%B8%EC%A7%80%EC%9D%98%EB%8B%B5%EB%B3%80%EB%AC%B8%EC%84%9C/" class="link black dim">
+        어떤 질문지의 답변문서
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      어쩌다 쓰게된 질문지의 답변을 적다보니 재밌어서 (허락을 얻은후) 블로그에도 공유해봅니다. 1. 자기 소개를 해주세요. – 경력이어도 좋고 그냥 자신이 생각하는 자기 얘기여도 좋습니다.
+** **
+프로그래밍이란걸 시작한지 30년이 좀 넘은 낡은 프로그래머로 유부남 - SINK 족 ( single income no kid ) 이며 돈많이 벌어서 은퇴해서 프로그램 짜며 여생을 보내고 싶어하는 사람 입니다. ** **
+2. 지금 무슨 일을 하고 계신가요?
+조그마한 게임 회사(40명정도?) 에서 모바일 게임 서버 개발을 하고 있습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-05-07-golangsdlgui/" class="link black dim">
+        golang sdlgui 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      // runtime.LockOSThread() gc := guiclient.New(cconfig) // runtime.UnlockOSThread()
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-05-05-%EC%97%B0%ED%9C%B4%EB%A5%BC%EB%9C%BB%EC%9E%88%EA%B2%8C%EB%B3%B4%EB%82%B4%EA%B8%B0/" class="link black dim">
+        연휴를 뜻있게 보내기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      어쩌다보니 9일의 연휴를 얻게되어 ( 감사합니다. 대표님 - 우리회사 좋은 회사 ^^)
+어떻게 보내면 좋을까 잠시 고민하다 2년간 손대지 못하고 밀려 있던 goguelike2를 재 정비 하기로 했습니다. 이 글을 쓰는 시점이 (주말만이남은) 금요일 저녁 시간이라 그동안의 진행 결과를 정리하는 글입니다.
+지금 회사에 합류할때 조건으로 건 것이 개인 프로젝트인 goguelike는 시간 나는 대로 계속하겠다. 는 것과 goguelike의 권리는 계속 내가 가지겠다. 였는데 대표님께서 혼쾌히 동의해 주셔서 안심하고 합류했었는데. 정작 회사 일을 시작하니 시간이 전혀 없어서 손을 거의 대지 못하고 있었습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-03-13-golangcontext%EC%82%AC%EC%9A%A9/" class="link black dim">
+        golang context 사용 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      someobj.ctxCancelFn = func() { log.Error(&ldquo;Too early contex cancel call %v&rdquo;,someobj) }
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-03-07-golangflagpackage%EC%9D%98%ED%95%A8%EC%A0%95/" class="link black dim">
+        golang flag package 의 함정 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
+AccountPool int
+AccountOverlap bool
+LimitStartCount int
+LimitEndCount int
+RetryDelayTimeOut int
+Storyname string
+일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
+go run rundriver/client_story.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-02-04-%EC%83%88%ED%95%B4%EB%A7%9E%EC%9D%B4%EC%A7%80%EB%A6%84%EB%93%A4%ED%82%A4%EB%B3%B4%EB%93%9C/" class="link black dim">
+        새해 맞이 지름들 - 키보드 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      페이스 북에 올렸더니 관심 있는 분들이 좀 있는 것 같아서 좀더 자세히 써보는 글. 작년 부터 관심있게 보고 있던 물건이긴 했는데 새해 기념이라는 핑계로 허가를 얻어 질러본 잉여로운 물품들 레트로 키캡 과 기계식 블루투스 미니 키보드 기존에 사용중이 키보드에 레트로 키캡을 적용한 사진 써보니 역시 불편한듯 하여 원래 키캡으로 돌렸음.
+레트로 키캡 사진 ( 박스와 내용물 )
+기계식 블루투스 미니 키보드 적축 ( 남자는 핑크 ) 실은 기존에 청,갈,흑 축키보드는 이미 있는 관계로 ( 첫 사진이 갈축, 그녀님이 쓰는게 청축 , 회사에서 쓰는게 흑축 ) 안써본 적축으로 선택 키감은 나쁘지 않은 정도.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/8/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/7/" aria-label="Page 7" class="page-link" role="button">7</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 9" class="page-link" role="button">9</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/10/" aria-label="Page 10" class="page-link" role="button">10</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/11/" aria-label="Page 11" class="page-link" role="button">11</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/10/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/30/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

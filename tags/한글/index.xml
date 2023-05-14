@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>한글 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%ED%95%9C%EA%B8%80/</link>
+    <description>Recent content in 한글 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 26 Nov 2014 09:49:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%ED%95%9C%EA%B8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기.</title>
+      <link>https://kasworld.github.io/posts/2014-11-26-%ED%95%9C%EA%B8%80identifier%EB%A5%BC%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EB%A1%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%A7%9C%EA%B8%B0/</link>
+      <pubDate>Wed, 26 Nov 2014 09:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-11-26-%ED%95%9C%EA%B8%80identifier%EB%A5%BC%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EB%A1%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%A7%9C%EA%B8%B0/</guid>
+      <description>요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원 하는 경우가 많습니다. http://rosettacode.org/wiki/Unicode_variable_names
+애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게 이상한것이겠지요.
+아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게 된것은 java 였던 것 같습니다. 뭐 그전에 &amp;ldquo;씨앗&amp;quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..
+그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명 클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.
+그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글 이름 파일명을 사용하는지 궁금합니다.</description>
+    </item>
+    
+    <item>
+      <title>우분투 sublime text2에서 한글을 입력하기. </title>
+      <link>https://kasworld.github.io/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Thu, 30 May 2013 20:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/</guid>
+      <description>안되는 거라고 생각하고 포기 하고 있었는데 같이 일하는 동료의 제보로 약간 불편하지만 일단 입력이 가능하게 되어 기록하기 위한 포스트. ;;;
+일단 한글 입력이 안되는 원인은 ibus의 버그 때문 이라고 합니다.
+실제로 windows/OSX 에서는 한글 입력이 잘된다고하는 군요.
+그럼 ibus가 아니고 다른 IME를 쓰면 해결 되지 않을까? 에서 시작합니다.
+한줄 요약하면
+http://www.interoasis.net/post.php?No=15
+에 나와있듯이
+sudo apt-get install uim uim-hangul im-switch -c /* 한글입력기 변경 */ 그리고 X 재시작 ( 로그아웃 또는 재부팅 )</description>
+    </item>
+    
+  </channel>
+</rss>

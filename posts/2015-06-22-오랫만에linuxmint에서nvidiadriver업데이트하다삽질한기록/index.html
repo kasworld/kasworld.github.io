@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
+http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
+시간이 난 김에 설치하면서 삽질한 기록입니다.
+그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
+기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 " />
+<meta property="og:description" content="linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
+http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
+시간이 난 김에 설치하면서 삽질한 기록입니다.
+그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
+기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-06-22T14:01:00+09:00" />
+<meta property="article:modified_time" content="2015-06-22T14:01:00+09:00" />
+<meta itemprop="name" content="오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 ">
+<meta itemprop="description" content="linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
+http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
+시간이 난 김에 설치하면서 삽질한 기록입니다.
+그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
+기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요."><meta itemprop="datePublished" content="2015-06-22T14:01:00+09:00" />
+<meta itemprop="dateModified" content="2015-06-22T14:01:00+09:00" />
+<meta itemprop="wordCount" content="256">
+<meta itemprop="keywords" content="driver,mint,nvidia,삽질,linux,리눅스,민트,nouveau," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 "/>
+<meta name="twitter:description" content="linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
+http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
+시간이 난 김에 설치하면서 삽질한 기록입니다.
+그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
+기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-06-22T14:01:00+09:00">June 22, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가</p>
+<p><a href="http://www.nvidia.com/Download/driverResults.aspx/86390/en-us">http://www.nvidia.com/Download/driverResults.aspx/86390/en-us</a></p>
+<p>시간이 난 김에 설치하면서 삽질한 기록입니다.</p>
+<p>그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾
+아봤더니 별 이야기가 없더군요.</p>
+<p>기억에 의하면 
+root 로 설치 해야 하고 
+display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 
+따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6
+으로 들어가는 -을 사용하건  ) 에서 설치를 진행해야 한다는 것 정도가
+기억나더군요.</p>
+<p>mint는 mdm 이니까 
+콘솔로 전환해서 
+sudo service mdm stop 
+을 실행하면 됩니다.</p>
+<p>그리고 받아둔 
+NVIDIA-Linux-x86_64-352.21.run 
+은 실행 플래그가 안 켜저 있으니 
+chmod +x NVIDIA-Linux-x86_64-352.21.run 
+로 켜주면 되고 . 
+실행이야 
+sudo ./NVIDIA-Linux-x86_64-352.21.run 
+로 실행하면 됩니다.</p>
+<p>그리고는 화면 안내에 따라 yes를 대충 연타 해주면 되어야 할텐데..</p>
+<p>이전 블로그에 적어둔 
+<a href="http://www.yourownlinux.com/2014/04/how-to-install-nvidia-337-12-graphics-driver-in-linux.html">http://www.yourownlinux.com/2014/04/how-to-install-nvidia-337-12-graphics-driver-in-linux.html</a> 
+에 따라</p>
+<p>시작 하기 전에 
+sudo apt-get purge nvidia* 
+를 하니 먹통이 되는 군요.</p>
+<p>일단 뭔가 잘못되어 가는 느낌이 듭니다. ;;; 
+제 linux는 워낙 이런저런 손을 많이 본 상태라 무언가와 꼬인 것인지도
+모르겠습니다.</p>
+<p>그 다음부터는 문제를 찾기 위해 이런 저런 검색과 시도들을 했는데.. 
+아래 링크가 힌트를 주었습니다.</p>
+<p><a href="http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/">http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/</a></p>
+<p>어이없게도 문제의 원인은 
+virtual console이 작동하지 않는 탓이었고 
+또 그 원인은 
+오픈소스 nvidia driver가 실행되고 있는 탓이었고 
+이를 막기위해서는 
+/etc/modprobe.d/blacklist-nouveau.conf 
+파일을 만들고 
+sudo gvim /etc/modprobe.d/blacklist-nouveau.conf 
+그 내용을 
+blacklist nouveau 
+blacklist lbm-nouveau 
+options nouveau modeset=0 
+alias nouveau off 
+alias lbm-nouveau off 
+같이 만들어서 nouveau 드라이버의 커널 로딩을 막는 것입니다. 
+그리고 initramfs 에 업데이트를 위해 
+sudo update-initramfs -u 
+를 실행해주면 됩니다.</p>
+<p>정리하면 보통 정상적인 상황이라면 콘솔로 전환 한후 
+sudo apt-get purge nvidia* 
+sudo service mdm stop 
+sudo ./NVIDIA-Linux-x86_64-352.21.run 
+sudo reboot 
+으로 끝날 일입니다. 
+전 한 3시간 걸린듯 하군요. 삽질하느라. ;;;</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/driver/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">driver</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/mint/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">mint</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nvidia/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nvidia</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%AF%BC%ED%8A%B8/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">민트</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nouveau/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nouveau</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/">postgresql 삽질기;;</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-19-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EA%B0%80%EB%A7%90%EC%8D%BD%EC%9D%84%EC%9D%BC%EC%9C%BC%ED%82%A8%EC%9D%B4%EC%95%BC%EA%B8%B0%EA%B8%B0%EB%A1%9D%EC%9A%A9/">오랫만에 리눅스가 말썽을 일으킨 이야기. - 기록용 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-07-21-%EB%AF%BC%ED%8A%B8%EB%A1%9C%EC%A0%84%ED%99%98%ED%95%9C%ED%9B%84%EC%9D%B4%EB%9F%B0%EC%A0%80%EB%9F%B0%EA%B8%B0%EB%A1%9D%EB%93%A4%EC%9E%85%EB%8B%88%EB%8B%A4/">민트로 전환한 후 이런 저런 기록들입니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/">한성 보스몬스터 77 리눅스 삽질기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">리눅스 민트 14 시나몬을 설치했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-21-xubuntu1404%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">xubuntu 14.04 로 업그레이드를 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">집에서 프로그래밍 환경을 개선 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/">DIY 전자 장난감 2 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">결국 nas를 샀습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-07-%ED%95%9C%EC%84%B1%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">한성 인민 에어 를 샀습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-24-%ED%95%9C%EC%84%B1gboard89%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0/">한성 gboard 8.9에 리눅스를 설치하고.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-06-01-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/">리눅스 엔트로피?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/">우분투 sublime text2에서 한글을 입력하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-26-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%A3%BC%EB%B6%84%ED%88%AC%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9Cgui%EC%97%86%EC%9D%B4%ED%82%A4%EB%B3%B4%EB%93%9C%EC%98%B5%EC%85%98%EC%9D%84%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94%EB%B2%95/">우분투/주분투/민트 에서 GUI 없이 키보드 옵션을 설정하는 법 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

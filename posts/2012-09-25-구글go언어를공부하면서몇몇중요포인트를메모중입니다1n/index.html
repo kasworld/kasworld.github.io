@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N) | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="다음 프로젝트에 go 언어를 쓸 생각이어서 공부하는 김에 몇가지 중요 포인트들을 메모 하고 있습니다. 원래는 다 끝나면 한꺼번에 블로그에 올리려고 했는데 적다보니 양이 많아져서 일단 앞부분만 먼저 정리합니다.
+주의 할 것은 제가 보기 위해 적은 것이라 기본적으로 C/C&#43;&#43;/java/C# 에대한 지식과 추가로 python 같은 스크립트언어도 안다고 가정한 상태에서 적은 것입니다. 게다가 go 언어의 구체적인 syntax 에 대해서도 http://golang.org/ref/spec 같은 곳에서 한번 정도 읽어 봤다고 가정합니다. ( 조건이 너무 까다롭군요. ;; )">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)" />
+<meta property="og:description" content="다음 프로젝트에 go 언어를 쓸 생각이어서 공부하는 김에 몇가지 중요 포인트들을 메모 하고 있습니다. 원래는 다 끝나면 한꺼번에 블로그에 올리려고 했는데 적다보니 양이 많아져서 일단 앞부분만 먼저 정리합니다.
+주의 할 것은 제가 보기 위해 적은 것이라 기본적으로 C/C&#43;&#43;/java/C# 에대한 지식과 추가로 python 같은 스크립트언어도 안다고 가정한 상태에서 적은 것입니다. 게다가 go 언어의 구체적인 syntax 에 대해서도 http://golang.org/ref/spec 같은 곳에서 한번 정도 읽어 봤다고 가정합니다. ( 조건이 너무 까다롭군요. ;; )" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2012-09-25T16:14:00+09:00" />
+<meta property="article:modified_time" content="2012-09-25T16:14:00+09:00" />
+<meta itemprop="name" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)">
+<meta itemprop="description" content="다음 프로젝트에 go 언어를 쓸 생각이어서 공부하는 김에 몇가지 중요 포인트들을 메모 하고 있습니다. 원래는 다 끝나면 한꺼번에 블로그에 올리려고 했는데 적다보니 양이 많아져서 일단 앞부분만 먼저 정리합니다.
+주의 할 것은 제가 보기 위해 적은 것이라 기본적으로 C/C&#43;&#43;/java/C# 에대한 지식과 추가로 python 같은 스크립트언어도 안다고 가정한 상태에서 적은 것입니다. 게다가 go 언어의 구체적인 syntax 에 대해서도 http://golang.org/ref/spec 같은 곳에서 한번 정도 읽어 봤다고 가정합니다. ( 조건이 너무 까다롭군요. ;; )"><meta itemprop="datePublished" content="2012-09-25T16:14:00+09:00" />
+<meta itemprop="dateModified" content="2012-09-25T16:14:00+09:00" />
+<meta itemprop="wordCount" content="561">
+<meta itemprop="keywords" content="golang,go,언어,go programming language," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)"/>
+<meta name="twitter:description" content="다음 프로젝트에 go 언어를 쓸 생각이어서 공부하는 김에 몇가지 중요 포인트들을 메모 하고 있습니다. 원래는 다 끝나면 한꺼번에 블로그에 올리려고 했는데 적다보니 양이 많아져서 일단 앞부분만 먼저 정리합니다.
+주의 할 것은 제가 보기 위해 적은 것이라 기본적으로 C/C&#43;&#43;/java/C# 에대한 지식과 추가로 python 같은 스크립트언어도 안다고 가정한 상태에서 적은 것입니다. 게다가 go 언어의 구체적인 syntax 에 대해서도 http://golang.org/ref/spec 같은 곳에서 한번 정도 읽어 봤다고 가정합니다. ( 조건이 너무 까다롭군요. ;; )"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2012-09-25T16:14:00+09:00">September 25, 2012</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>다음 프로젝트에 go 언어를 쓸 생각이어서 공부하는 김에 몇가지 중요
+포인트들을 메모 하고 있습니다. 
+원래는 다 끝나면 한꺼번에 블로그에 올리려고 했는데 적다보니 양이
+많아져서 일단 앞부분만 먼저 정리합니다.</p>
+<p>주의 할 것은 제가 보기 위해 적은 것이라 기본적으로 C/C++/java/C# 에대한
+지식과 추가로 python 같은 스크립트언어도 안다고 가정한 상태에서 적은
+것입니다. 
+게다가 go 언어의 구체적인 syntax 에
+대해서도 <a href="http://golang.org/ref/spec">http://golang.org/ref/spec</a> 같은 곳에서 한번 정도 읽어 봤다고
+가정합니다. ( 조건이 너무 까다롭군요. ;; )</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>소스
+코드의 구성</strong><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<strong><!-- raw HTML omitted -->소스
+코드는 utf8임<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->identifier
+를 utf8로 만들수 있다 .<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->모든
+소스파일은 package에 포함<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->main
+package의 main function 에서 시작 : main.main()<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->package의
+하나의 init() function 이 존재<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->여러
+소스코드가 하나의 package 를 구성할수 있다.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->Function
+정의 순서는 필요 없음<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->소스
+코드는 case-sensitive 임 .<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->모든
+{ 은 라인의 끝에 } 은 시작 statement의 맞춰서 indent : 강제
+사항임.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->사용하지
+않는 변수 , import는 compile error <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->package
+외부로 expose하려면 첫 글자를 대문자로 : ExposedIdentifier ,
+notExposedIdentifier<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->semicolon
+은 선택적 : 여러 statement를 한라인에 쓰려면 필요.<!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></strong>
+<strong><!-- raw HTML omitted -->전반적
+언어적 특징<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->모든
+변수/오브젝트는 항상 초기화 된다. 0, nil, 0.0<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->overloading은
+없다. Inheritance 역시 없다. Implicit conversion 역시 없다.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->String
+은 byte array 로 utf8로 encoded 된다.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->String
+은 length 가 포함 , immutable<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->pointer
+/ reference가 존재하나 arithmetic은 불가<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->function은
+first-class value : 타입/변수를 선언하거나 인자로 넘길수 있다.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->더미
+변수(blank identifier ) _ 가 존재 사용하고 싶지 않은 결과값을 무시할때
+사용 : write only<!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></strong> <!-- raw HTML omitted --><!-- raw HTML omitted --><strong>Statement
+, control flow, function</strong> <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->Function
+can return multiple value, assignment 역시 가능 <!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->result
+, err := somefunction()<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->switch
+case는 default 가 break ( 즉 쓸필요 없음 ) , 아니면 fallthrough 를 사용
+할것 ( C style 이됨 )<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->label
+은 goto,break,continue 용 , 안쓰는 label 역시 error 임.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->function의
+return 선언에 이름을 주면 (named return value ) return statement 에서 그
+변수의 현재 값을 return 한다.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->func
+getX2AndX3_2(input int) (x2 int, x3 int) {<!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->return<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->물론
+명시적으로 지정해서 return 할수도 있다.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->function
+call 은 기본적으로 call by value , call by reference를 쓰고 싶으면 &amp;와
+*를 사용할것.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->variable
+number of parameters (variadic parameter ) 는 variablename &hellip;type
+형태로 정의<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->for
+_,v := range variablename 형태로 사용.<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->defer를
+사용해서 function 의 종료직전에 실행할 statement를 예약 할수 있다. (
+LIFO 순 ) : return 다음에 실행됩니다. <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<strong><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></strong>
+<strong><!-- raw HTML omitted -->Array
+and slice<!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->array
+의 길이는 type의 일부 이며 선언할때 꼭 필요(at compile time) .:
+[5]int.(type) != [10]int.(type)<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+arr1 [5]int  // type [5]int <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+arr1 = new([5]int) // type *[5]int<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->array
+는 value type , slice 는 reference type<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->array는
+1-dimensional : composed to form multidimensional arrays ,
+rectangular<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->slice
+can non-rectangular <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->zero
+based index <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->max
+length 2G : <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+intarray1 [5]int<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->array의
+내용물은 mutable <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->for
+i:=0 i &lt; len(arr1) ; i ++ {<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->for
+i,v := range arr1 {<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->형태로
+enumeration 한다. : slice에 대해서도 가능<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+arrAge = [5]int{18, 20, 15, 22, 16}<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+arrLazy = [&hellip;]int{5, 6, 7, 8, 22}<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->//
+var arrLazy = []int{5, 6, 7, 8, 22} // slice <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+arrKeyValue = [5]string{3: “Chris”, 4: “Ron”}<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->//var
+arrKeyValue = []string{3: “Chris”, 4: “Ron”} // slice<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->slice는
+그 아래에 있는 (unnamed) array의 표시되는 windows 다. <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->cap(s)는
+s가 가리키는 array의 끝까지의 양을 표시 : len(arr1) 보다 작거나 같다.
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->여러
+slice가 같은 array를 가리킬수 있다. : data가 공유됨. <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+slice1 []int = arr1[3:7] 형태<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->slice1[0]
+== arr1[3] <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->slice1
+== slice1[:i] + slice1[i:]<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->len(slice1)
+&lt;= cap(slice1)<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->index로 -
+는 불가능 <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->var
+slice1 []type = make([]type, len,cap)<!-- raw HTML omitted --></strong> 
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->어쩐지
+쓰면 쓸수록 한글이 적어 지는 것 같지만 기분 탓 입니다. ;;; <!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%96%B8%EC%96%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">언어</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-15-thegoprogramminglanguage/">The Go Programming Language</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

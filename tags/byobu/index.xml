@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>byobu on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/byobu/</link>
+    <description>Recent content in byobu on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 29 Dec 2017 08:50:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/byobu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>병풍과 물고기</title>
+      <link>https://kasworld.github.io/posts/2017-12-29-%EB%B3%91%ED%92%8D%EA%B3%BC%EB%AC%BC%EA%B3%A0%EA%B8%B0/</link>
+      <pubDate>Fri, 29 Dec 2017 08:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2017-12-29-%EB%B3%91%ED%92%8D%EA%B3%BC%EB%AC%BC%EA%B3%A0%EA%B8%B0/</guid>
+      <description>라고 쓰면 뭔소리여 하고 궁금해들 하실꺼라고 생각해서.^^
+fish shell 과 byobu 이야깁니다.
+사용자 친화적 21세기 다운 명령행 처리기 ( command line shell ) https://fishshell.com/
+tmux 나 screen을 쓰기 편하게 wrapping한 byobu ( 일본어로 병풍이라는 군요. ) 홈페이지가 죽어 있는 관계로 https://en.wikipedia.org/wiki/Byobu_(software)
+저는 linux를 주 작업용으로 쓰는 관계로 shell 에서 작업할 일이 많습니다. ( 윈도는 아예 안씁니다. - 라이선스는 사둔 것이 있지만 )
+fish shell은 아마도 bash에서 git prompt 를 설정하다가 우연히 발견 했던 것 같습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

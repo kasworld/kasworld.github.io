@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apple ][gs on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/apple-gs/</link>
+    <description>Recent content in apple ][gs on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Mon, 15 Aug 2016 15:50:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/apple-gs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux 에서 apple ][gs 프로그램 실행하기.</title>
+      <link>https://kasworld.github.io/posts/2016-08-15-linux%EC%97%90%EC%84%9Capplegs%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Mon, 15 Aug 2016 15:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-08-15-linux%EC%97%90%EC%84%9Capplegs%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/</guid>
+      <description>kegs 를 사용하면 됩니다. ( apple ][ gs emulator )
+다운로드는 http://kegs.sourceforge.net/
+linux 64bit에서 빌드 하려면
+다운로드 http://kegs.sourceforge.net/kegs.0.91.tar.gz
+(다운로드된 파일 폴더에서) 압축 풀기 ( 아마도 ~/Downloads 폴더일것임 ) tar zxfv kegs.0.91.tar.gz
+빌드에 필요한 파일 설치 sudo apt-get install build-essential xorg-dev
+빌드를 할 폴더로 이동 cd kegs.0.91/src
+빌드 설정 수정 rm vars; ln -s vars_x86linux vars
+파일 권한 변경 ( 수정 가능으로 ) chmod u=rw vars
+파일 내용 수정 vars 파일 내부에서 CCOPTS = -O2 -Wall -fomit-frame-pointer -march=pentium</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>잉여짓 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EC%9E%89%EC%97%AC%EC%A7%93/</link>
+    <description>Recent content in 잉여짓 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 06 Aug 2011 17:57:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%9E%89%EC%97%AC%EC%A7%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>완전히 쓸데 없는 지식? ( 계산)</title>
+      <link>https://kasworld.github.io/posts/2011-08-06-%EC%99%84%EC%A0%84%ED%9E%88%EC%93%B8%EB%8D%B0%EC%97%86%EB%8A%94%EC%A7%80%EC%8B%9D%EA%B3%84%EC%82%B0/</link>
+      <pubDate>Sat, 06 Aug 2011 17:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2011-08-06-%EC%99%84%EC%A0%84%ED%9E%88%EC%93%B8%EB%8D%B0%EC%97%86%EB%8A%94%EC%A7%80%EC%8B%9D%EA%B3%84%EC%82%B0/</guid>
+      <description>날도 덥고 해서 잉여짓 한가지.
+요즘 세상에 500원 크기만한 금화를 만들면 한개에 얼마짜리가 될까?
+오늘(11.08.06) 금시세는 3.75g : 204000원 1g : 54400원
+금의 비중은 19.3
+500원 동전의 부피는 http://blog.naver.com/PostView.nhn?blogId=mabaks7&amp;amp;logNo=90096773617 에 의하면 약 1.103 ml
+54400x19.3x1.103 = 1158061원 정도
+그러니까 약 116만원 정도
+그럼 TRPG에 나오던 1gp는 100만원?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>라즈베리파이2 감상기  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="라즈베리파이 2를 구입한지 약 한달이 되었으니 써보는 감상기입니다. ( 리뷰, 사용, 분석 기 가 아닙니다. ^^ )
+실제로 한달이라곤 하지만 실제로 라즈베리파이로 뭔가 한것은 아무것도 없고 단지 설치 이미지를 다운로드 집에 굴러다니던 sd에 복사 (인터넷에 있는 설명대로 dd &hellip; 로 )
+부팅후 잘되나 확인
+이거 완전히 걍 linux네?
+하는 감상후 지극히 debian 스러운 업데이트 실행 apt-get &hellip;
+예전에 wxpython으로 만들어둔 시계/달력 프로그램을 github에서 clone
+실행확인후 좀 느리군 하고
+이것 저것 빼서 가볍게 만들기.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="라즈베리파이2 감상기 " />
+<meta property="og:description" content="라즈베리파이 2를 구입한지 약 한달이 되었으니 써보는 감상기입니다. ( 리뷰, 사용, 분석 기 가 아닙니다. ^^ )
+실제로 한달이라곤 하지만 실제로 라즈베리파이로 뭔가 한것은 아무것도 없고 단지 설치 이미지를 다운로드 집에 굴러다니던 sd에 복사 (인터넷에 있는 설명대로 dd &hellip; 로 )
+부팅후 잘되나 확인
+이거 완전히 걍 linux네?
+하는 감상후 지극히 debian 스러운 업데이트 실행 apt-get &hellip;
+예전에 wxpython으로 만들어둔 시계/달력 프로그램을 github에서 clone
+실행확인후 좀 느리군 하고
+이것 저것 빼서 가볍게 만들기." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2016-03-13-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B42%EA%B0%90%EC%83%81%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-03-13T16:14:00+09:00" />
+<meta property="article:modified_time" content="2016-03-13T16:14:00+09:00" />
+<meta itemprop="name" content="라즈베리파이2 감상기 ">
+<meta itemprop="description" content="라즈베리파이 2를 구입한지 약 한달이 되었으니 써보는 감상기입니다. ( 리뷰, 사용, 분석 기 가 아닙니다. ^^ )
+실제로 한달이라곤 하지만 실제로 라즈베리파이로 뭔가 한것은 아무것도 없고 단지 설치 이미지를 다운로드 집에 굴러다니던 sd에 복사 (인터넷에 있는 설명대로 dd &hellip; 로 )
+부팅후 잘되나 확인
+이거 완전히 걍 linux네?
+하는 감상후 지극히 debian 스러운 업데이트 실행 apt-get &hellip;
+예전에 wxpython으로 만들어둔 시계/달력 프로그램을 github에서 clone
+실행확인후 좀 느리군 하고
+이것 저것 빼서 가볍게 만들기."><meta itemprop="datePublished" content="2016-03-13T16:14:00+09:00" />
+<meta itemprop="dateModified" content="2016-03-13T16:14:00+09:00" />
+<meta itemprop="wordCount" content="372">
+<meta itemprop="keywords" content="라즈베리파이,리눅스," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="라즈베리파이2 감상기 "/>
+<meta name="twitter:description" content="라즈베리파이 2를 구입한지 약 한달이 되었으니 써보는 감상기입니다. ( 리뷰, 사용, 분석 기 가 아닙니다. ^^ )
+실제로 한달이라곤 하지만 실제로 라즈베리파이로 뭔가 한것은 아무것도 없고 단지 설치 이미지를 다운로드 집에 굴러다니던 sd에 복사 (인터넷에 있는 설명대로 dd &hellip; 로 )
+부팅후 잘되나 확인
+이거 완전히 걍 linux네?
+하는 감상후 지극히 debian 스러운 업데이트 실행 apt-get &hellip;
+예전에 wxpython으로 만들어둔 시계/달력 프로그램을 github에서 clone
+실행확인후 좀 느리군 하고
+이것 저것 빼서 가볍게 만들기."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">라즈베리파이2 감상기 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-03-13T16:14:00+09:00">March 13, 2016</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>라즈베리파이 2를 구입한지 약 한달이 되었으니 써보는 감상기입니다. 
+( 리뷰, 사용, 분석 기 가 아닙니다. ^^ )</p>
+<p>실제로 
+한달이라곤 하지만 실제로 라즈베리파이로 뭔가 한것은 아무것도 없고 
+단지 설치 이미지를 다운로드 
+집에 굴러다니던 sd에 복사 
+(인터넷에 있는 설명대로 dd &hellip; 로 )</p>
+<p>부팅후 잘되나 확인</p>
+<p>이거 완전히 걍 linux네?</p>
+<p>하는 감상후 
+지극히 debian 스러운 업데이트 실행  apt-get &hellip;</p>
+<p>예전에 wxpython으로 만들어둔 시계/달력 프로그램을 github에서 clone</p>
+<p>실행확인후 좀 느리군 하고</p>
+<p>이것 저것 빼서 가볍게 만들기.</p>
+<p>계획대로 놀고 있는 모니터에 연결 마루에 설치.</p>
+<p>기존 11g 무선랜 카드가 걍 잘 작동하는 것을 확인후 새로산 11n 무선랜
+카드를 들고 절망.. ㅠㅠ 
+( 돈 아까워라 )</p>
+<p>기존 11g 무선랜 카드가 3일정도 되면 죽는 것을 발견 ( 아마도 발열 문제
+겠지만 ) 속으로 쾌재를 부르고 ..</p>
+<p>신나서 11n 무선랜 카드(n500u solo) 를 연결 작동하지 않는 것을 확인하고 (
+원래 기본상태에서 작동하지 않는 것을 알고 있었음 )</p>
+<p>즐거운! 삽질후 작동 성공.</p>
+<p>약간의 추가 삽질을 이야기 하면 이 무선랜 카드는 2.4g 와 5g를 모두 지원
+할뿐 아니라 2t-2r 카드로 
+5g 설정을 하면 블루투스 간섭 이 없고 속도는 300Mbps 까지 낼수 있는
+것인데</p>
+<p>연결을 해보니 30Mbps 정도밖에 속도가 안납니다. 
+( 11g 카드는 20Mbps 정도 나옵니다. ;; )</p>
+<p>연결 정보는 분명이 300Mbps 로 연결된다고 나오고요.</p>
+<p>혹시나 해서 윈도 기계에 연결해보니 100Mbps 속도가 나오 더군요. ;;;</p>
+<p>( 모두 내부 유선 기가 망에 연결된 데스크 탑에  iperf로 확인 한 것입니다.
+)</p>
+<p>이리 저리 고민하다 
+아직 linux에서 무선 랜은 (저번 intel 무선랜 삽질도 그렇고 ) 부족한
+점들이 많다..</p>
+<p>정도로 결론 내렸습니다.</p>
+<p>아무튼 이카드는 1주일이 지나도 안죽는 군요. 그래서 잘연결해 두고 쓰고
+있습니다.</p>
+<p>그리고 다른 모든 embedded os 장비와 비교해서 
+(제 기준에서 ) 
+라즈베리파이가 가지는 강점은</p>
+<p> sd 카드로 부팅이 가능하다.</p>
+<p>입니다.</p>
+<p>이게 왜 강점이냐 하면 (embedded 하시는 분들은 공감하실것 같은데.)</p>
+<p>안심하고 이런 저런 삽질을 해볼수 있다는 점 때문입니다.</p>
+<p>embedded system에서 펌웨어나 부트 로더를 말아먹어서 벽돌이 되는 경험은
+의외로 많이 하게 되는 것인데 .( 이경우 각종 다양한 삽질을 통해서
+복구하게 됩니다. 불가능한 경우도 많고요. ) 
+라즈베리파이는 그냥 새 sd카드에 부트이미지를 쓰고 카드를 갈아 끼면
+되니 
+안심하고 이런 저런 실험을 맘껏 할수 있는 것이지요.</p>
+<p>그리고 덤으로 
+apple ][와  (hdd가 나오기 이전) 초기 PC dos시절에 부팅 플로피를 만들어
+드라이브에 넣고 컴퓨터를 켜던 추억도 생각나더군요. 
+용도별로 부팅 플로피를 만들어 쓸때 마다 바꿔 넣던 기억 말이죠..</p>
+<p>ps) sd 카드 슬롯이 있는 노트북들이 sd 카드 부팅을 왜 지원 하지 않는지
+정말로 궁금하긴 합니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">라즈베리파이</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2016-03-01-%EC%A0%80%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43%EC%9D%80%EC%8B%9C%EB%8B%A4/">저 라즈베리파이 3은 시다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-03-13-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%ED%99%88%ED%8F%B4%EB%8D%94%EB%A5%BC%EC%95%94%ED%98%B8%ED%99%94%ED%95%B4%EC%84%9C%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%A5%BC%EB%B3%B4%ED%98%B8%ED%95%98%EA%B8%B0/">리눅스에서 홈폴더를 암호화해서 개인 정보를 보호하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/">라즈베리 파이와 go언어. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-03-01-2%EC%A3%BC%EC%A0%84%EC%97%90%EA%B5%AC%EC%9E%85%ED%95%9C40%EC%9D%B8%EC%B9%98%EB%AA%A8%EB%8B%88%ED%84%B0/">2주 전에 구입한 40인치 모니터</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-07-04-mint172%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">mint 17.2 로 업그레이드를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/">오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-19-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EA%B0%80%EB%A7%90%EC%8D%BD%EC%9D%84%EC%9D%BC%EC%9C%BC%ED%82%A8%EC%9D%B4%EC%95%BC%EA%B8%B0%EA%B8%B0%EB%A1%9D%EC%9A%A9/">오랫만에 리눅스가 말썽을 일으킨 이야기. - 기록용 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-07-21-%EB%AF%BC%ED%8A%B8%EB%A1%9C%EC%A0%84%ED%99%98%ED%95%9C%ED%9B%84%EC%9D%B4%EB%9F%B0%EC%A0%80%EB%9F%B0%EA%B8%B0%EB%A1%9D%EB%93%A4%EC%9E%85%EB%8B%88%EB%8B%A4/">민트로 전환한 후 이런 저런 기록들입니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-21-xubuntu1404%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">xubuntu 14.04 로 업그레이드를 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">집에서 프로그래밍 환경을 개선 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/">DIY 전자 장난감 2 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">결국 nas를 샀습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-12-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%90/">DIY 전자 장난감 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-07-%ED%95%9C%EC%84%B1%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">한성 인민 에어 를 샀습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-10-27-%ED%95%9C%EC%84%B1gboard89%EC%9D%98%EA%B8%B0%EC%88%A0%EC%A0%81%EB%AC%B8%EC%A0%9C/">한성 gboard 8.9의 기술적 문제 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

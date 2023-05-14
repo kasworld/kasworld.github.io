@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fortune cookie on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/fortune-cookie/</link>
+    <description>Recent content in fortune cookie on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 21 Mar 2015 16:42:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/fortune-cookie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go 언어용 fortune cookie package</title>
+      <link>https://kasworld.github.io/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/</link>
+      <pubDate>Sat, 21 Mar 2015 16:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/</guid>
+      <description>만들고 보니 너무 간단한것이라 별로 적을 내용이 없지만..
+linux/unix 계열에 들어 있는 fortune cookie 파일을 읽어 주는 패키지 입니다. 단 binary file(strfile) 인 .dat 파일이 아니고 확장자가 없는 text 파일을 읽어줍니다.
+사용예는 fortune_test.go를 보시면 됩니다.
+소스 코드는 https://github.com/kasworld/fortune 에 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

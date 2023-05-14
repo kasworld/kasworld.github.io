@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>go 언어로 만든 코드를 웹 브라우저에서 실행하기 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="asm.js를 보다가 갑자기 궁금해져서 기록삼아 적는 포스트
+google 의 chrome/V8 에 이어서 mozilla 가 야심차게 밀고 있는 http://asmjs.org/ : http://ejohn.org/blog/asmjs-javascript-compile-target/ 와 이를 활용하는 http://kripken.github.io/emscripten-site/
+등이 나오고 있는 와중에
+요즘 주로 작업하고 있는 golang도 이 대세에 동참할수 있을까 하고 찾아본 기록들 .
+더이상 개발이 진행되고 있지 않은 https://github.com/kless/go2js
+emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 go 를 llvm으로 변환 하는 ( Go -&gt; LLVM -&gt; Emscripten -&gt; asm.js ) https://github.com/axw/llgo">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="go 언어로 만든 코드를 웹 브라우저에서 실행하기" />
+<meta property="og:description" content="asm.js를 보다가 갑자기 궁금해져서 기록삼아 적는 포스트
+google 의 chrome/V8 에 이어서 mozilla 가 야심차게 밀고 있는 http://asmjs.org/ : http://ejohn.org/blog/asmjs-javascript-compile-target/ 와 이를 활용하는 http://kripken.github.io/emscripten-site/
+등이 나오고 있는 와중에
+요즘 주로 작업하고 있는 golang도 이 대세에 동참할수 있을까 하고 찾아본 기록들 .
+더이상 개발이 진행되고 있지 않은 https://github.com/kless/go2js
+emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 go 를 llvm으로 변환 하는 ( Go -&gt; LLVM -&gt; Emscripten -&gt; asm.js ) https://github.com/axw/llgo" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-11-05T11:43:00+09:00" />
+<meta property="article:modified_time" content="2014-11-05T11:43:00+09:00" />
+<meta itemprop="name" content="go 언어로 만든 코드를 웹 브라우저에서 실행하기">
+<meta itemprop="description" content="asm.js를 보다가 갑자기 궁금해져서 기록삼아 적는 포스트
+google 의 chrome/V8 에 이어서 mozilla 가 야심차게 밀고 있는 http://asmjs.org/ : http://ejohn.org/blog/asmjs-javascript-compile-target/ 와 이를 활용하는 http://kripken.github.io/emscripten-site/
+등이 나오고 있는 와중에
+요즘 주로 작업하고 있는 golang도 이 대세에 동참할수 있을까 하고 찾아본 기록들 .
+더이상 개발이 진행되고 있지 않은 https://github.com/kless/go2js
+emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 go 를 llvm으로 변환 하는 ( Go -&gt; LLVM -&gt; Emscripten -&gt; asm.js ) https://github.com/axw/llgo"><meta itemprop="datePublished" content="2014-11-05T11:43:00+09:00" />
+<meta itemprop="dateModified" content="2014-11-05T11:43:00+09:00" />
+<meta itemprop="wordCount" content="137">
+<meta itemprop="keywords" content="golang,go,javascript,go programming language,web," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go 언어로 만든 코드를 웹 브라우저에서 실행하기"/>
+<meta name="twitter:description" content="asm.js를 보다가 갑자기 궁금해져서 기록삼아 적는 포스트
+google 의 chrome/V8 에 이어서 mozilla 가 야심차게 밀고 있는 http://asmjs.org/ : http://ejohn.org/blog/asmjs-javascript-compile-target/ 와 이를 활용하는 http://kripken.github.io/emscripten-site/
+등이 나오고 있는 와중에
+요즘 주로 작업하고 있는 golang도 이 대세에 동참할수 있을까 하고 찾아본 기록들 .
+더이상 개발이 진행되고 있지 않은 https://github.com/kless/go2js
+emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 go 를 llvm으로 변환 하는 ( Go -&gt; LLVM -&gt; Emscripten -&gt; asm.js ) https://github.com/axw/llgo"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">go 언어로 만든 코드를 웹 브라우저에서 실행하기</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-11-05T11:43:00+09:00">November 5, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>asm.js를 보다가 갑자기 궁금해져서 기록삼아 적는 포스트</p>
+<p>google 의 chrome/V8 에 이어서 
+mozilla 가 야심차게 밀고 있는 
+<a href="http://asmjs.org/">http://asmjs.org/</a> : <a href="http://ejohn.org/blog/asmjs-javascript-compile-target/">http://ejohn.org/blog/asmjs-javascript-compile-target/</a> 
+와 이를 활용하는 
+<a href="http://kripken.github.io/emscripten-site/">http://kripken.github.io/emscripten-site/</a></p>
+<p>등이 나오고 있는 와중에</p>
+<p>요즘 주로 작업하고 있는 golang도 이 대세에 동참할수 있을까 하고 찾아본
+기록들 .</p>
+<p>더이상 개발이 진행되고 있지 않은 
+<a href="https://github.com/kless/go2js">https://github.com/kless/go2js</a></p>
+<p>emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 
+go 를 llvm으로 변환 하는 (  Go -&gt; LLVM -&gt; Emscripten -&gt; asm.js
+) 
+<a href="https://github.com/axw/llgo">https://github.com/axw/llgo</a></p>
+<p>asm.js와 무관하게 javascript로의 변환을 하는 
+<a href="https://github.com/gopherjs/gopherjs">https://github.com/gopherjs/gopherjs</a></p>
+<p>아주 복잡한? 과정을 거치는 것 같은 ( Go-&gt; Haxe -&gt; javascript
+) <a href="http://haxe.org/">http://haxe.org/</a> 
+<a href="http://tardisgo.github.io/">http://tardisgo.github.io/</a> 
+haxe 가 얼마나 많이 쓰이는지 ( 꽤 성숙한 프로젝트인것을 몇년 전에봐서
+알고 있지만)  잘 모르겠고.</p>
+<p>검색하다보면 그 와중에 NaCl / PNaCl 쓰라는 글도 보이고 ^^ 
+표준 go 라이브러리인 <a href="http://golang.org/pkg/go/parser/">http://golang.org/pkg/go/parser/</a> 써서 하나 만들어
+쓰란 이야기도 있고. ;;;</p>
+<p>일단 현재로는 gopherjs가 제일 관심도 많이 받고 기대 되는 것 같다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/javascript/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">javascript</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/web/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">web</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 웹 클라이언트를 추가 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-25-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike 클라이언트를 개선하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-23-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EA%B0%9C%EC%84%A0/">goguelike 클라이언트 개선 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-15-goguelike%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-06-04-go4game%EC%9D%98spatialpartition%EC%9D%84octree%EB%A1%9C%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game의 spatial partition을 octree로 바꿨습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-29-go4game%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD%EB%93%A4%EC%A0%95%EB%A6%AC/">go4game 추가 사항들 정리 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">go4game - go 언어로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

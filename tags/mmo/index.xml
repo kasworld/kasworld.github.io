@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mmo on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/mmo/</link>
+    <description>Recent content in mmo on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 08 Apr 2020 12:54:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/mmo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>6년 가까이 작업해온 goguelike 의 소스 코드를 공개 합니다. </title>
+      <link>https://kasworld.github.io/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 08 Apr 2020 12:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
+      <description>소스 코드와 문서는 https://github.com/kasworld/goguelike 에 있습니다.
+라이센스는 Apache-2.0 으로 했으니 편하게 쓰시면 될 것 같습니다.
+게임플레이 URL (play URL) http://goguelike.iptime.org/
+( OS 상관없이 web socket, webassembly, unicode 를 지원하는 브라우져면 됩니다. )
+실행가능 서버 다운 (download binary) : linux(debian,ubuntu,mint) 용 http://goguelike.iptime.org/download.zip
+설치는 설치문서에 적어 두었습니다. https://github.com/kasworld/goguelike/blob/master/INSTALL.md
+레포지토리를 공개로 전환하고 설치 테스트를 해보니 의존성 쪽이 이상해서 golang의 module, vendor 를 사용하도록 수정하였습니다. 비공개 버전 goguelike2의 마지막 상태는 5504 commit으로 종료 되었습니다. 기존 작업을 두고 새로 프로젝트를 만들어 옮긴 이유는 이전 코드들이 보여줄만 하지 못하다는 것도 있지만, 누적된 commit이 많아 크기때문에 다운 받는 시간이 길어 진다는 이유도 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>roguelike를 MMO로 만들면</title>
+      <link>https://kasworld.github.io/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/</link>
+      <pubDate>Sat, 28 Mar 2020 14:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/</guid>
+      <description>http://goguelike.iptime.org/
+에서 플레이 할 수 있는 두종류의 서버(tower) 플레이 동영상 roguelike tower
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+goguelike tower
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+roguelike 게임들은 턴 기반으로 행동이 이루어 집니다.
+내가 행동하기 전까지는 게임이 멈춰서서 기다려 주는 거지요.
+그런데 이걸 MMO로 만드려고 하면 모든 플레이어가 행동을 선택하기 전까지 모든 플레이어가 기다려야 한다는 문제가 발생합니다.
+그래서 어쩔 수 없이 또 당연히 실시간 턴제가 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 5000 commit 기념 </title>
+      <link>https://kasworld.github.io/posts/2020-01-18-goguelike5000commit%EA%B8%B0%EB%85%90/</link>
+      <pubDate>Sat, 18 Jan 2020 16:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-01-18-goguelike5000commit%EA%B8%B0%EB%85%90/</guid>
+      <description>2014년 ( 블로그 기준 ) 시작한 프로젝트가 드디어 5000 commit을 달성했기에 기록합니다. ^^
+첫 포스트 https://kasw.blogspot.com/2014/08/blog-post.html</description>
+    </item>
+    
+    <item>
+      <title>MMO를 만드는 것에 로망이 있다면 .</title>
+      <link>https://kasworld.github.io/posts/2015-04-21-mmo%EB%A5%BC%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%83%EC%97%90%EB%A1%9C%EB%A7%9D%EC%9D%B4%EC%9E%88%EB%8B%A4%EB%A9%B4/</link>
+      <pubDate>Tue, 21 Apr 2015 13:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-04-21-mmo%EB%A5%BC%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%83%EC%97%90%EB%A1%9C%EB%A7%9D%EC%9D%B4%EC%9E%88%EB%8B%A4%EB%A9%B4/</guid>
+      <description>세상을 만들고 그 세상의 규칙을 정하는 경험을 해볼수 있다는 점일 것입니다.
+goguelike도 일단 MMO의 범주에 들어가기때문에 ( MMORLG - mmo RogueLike Game ^^ ) 그런 경험을 즐길수 있습니다.
+그를 위해서 terrain을 만든는 map script도 만들고 그 안에서 살아갈 AI들도 만들고 있습니다만 .. 역시 글자(log)로만 봐서는 확 하고 느낌이 오지 않는 관계로
+기존의 webinfo 페이지 이외에 실시간으로 서버내 상황을 볼수 있는 viewer를 만들었습니다.
+최근에 만들었던 terrainviewer를 확장해서 terrain만이 아니고 그 속의 AO/PO 들까지 볼수 있게 확장 한것입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

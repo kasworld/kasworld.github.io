@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/ai/</link>
+    <description>Recent content in AI on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 19 Jun 2015 08:32:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike2의 AI에 상전이 엔진을 적용했습니다. </title>
+      <link>https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &amp;ldquo;유한 상태 기계&amp;quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
+상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>go4game의 게임 규칙 </title>
+      <link>https://kasworld.github.io/posts/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99/</link>
+      <pubDate>Thu, 15 May 2014 14:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99/</guid>
+      <description>AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에 적어봅니다. ( 아주 사무적인 문서라 말이 짧습니다. ^^;; _
+설명:업데이트된 게임 상태창.
+설명:새로 추가된 AICloud의 동작모습
+한개의 gameservice 에는 실제 team간 interactaction 이 발생하는 여러개의 World 가 존재
+각각의 world에는 team들이 소속 team은 tcp client , websocket client , ai client 가 존재 world는 60 frame / sec 로 각 팀에게 frame action을 요청 각 팀의 frame action은 goroutine을 사용 concurrent 하게 진행.</description>
+    </item>
+    
+    <item>
+      <title>go4game 에 AI를 붙이고 있습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-05-13-go4game%EC%97%90ai%EB%A5%BC%EB%B6%99%EC%9D%B4%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Tue, 13 May 2014 17:07:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-05-13-go4game%EC%97%90ai%EB%A5%BC%EB%B6%99%EC%9D%B4%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>설명 : go4game webgl client 플레이 동영상.
+사진 설명 : 서버의 상태를 보여주는 페이지 ( 팀 이름 , AI 종류 , 팀 object 수 , 팀 점수, 팀 AP , 팀 패킷 통계 )
+go4game도 이제 wxgame2 정도로 작업이 진행되어 여러 AI끼리 대전을 시키고 그 진행사항과 순위를 볼 수 있는 페이지를 만들었습니다.
+위 와 같은 형태로 만들어서 여러 형태의 AI를 만들고 AI끼리 대전을 시키면서 개선을 해나 가고 있는데 이전 wxgame2 작업할 때도 썼지만 AI를 개량해서 그 AI가 이전에 만든 것보다 좋도록 만드는 것은 참 생각대로 안됩니다.</description>
+    </item>
+    
+    <item>
+      <title>wxgame2를 개선 하고 있습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sat, 22 Mar 2014 17:13:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다.</description>
+    </item>
+    
+    <item>
+      <title>wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sat, 15 Mar 2014 18:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다.</description>
+    </item>
+    
+    <item>
+      <title>wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 02 Mar 2014 14:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
+지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
+현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&amp;gt; 클라이언트간 정보를 전달하고 있습니다.
+코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</title>
+      <link>https://kasworld.github.io/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 19 Feb 2014 21:31:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>고려 대학교 고공 겨울학기의 한 꼭지로 게임 프로그래밍 이란 주제로 2시간 짜리 강의를 진행했습니다.
+원래는 4일간 2시간씩 총 8시간 짜리 강의지만 첫날 2시간만 제가 하고 이후는 능력 좋고 경험 많은 후배가 강의를 진행하고 있습니다.
+이전에 썼던 글 게임프로그래밍이라는 주제로
+과 예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. 을 사용해서 강의를 진행 했으며
+강의에 사용했던 프리젠테이션은 https://docs.google.com/presentation/d/1fNa2hY5qGE_bGnsT0NhmnVQQC6kjLuUb4i3HtQATJCI/edit#slide=id.p 에서 볼 수 있습니다.
+전산 실습실에서 진행해서 실습과 병행하여 진행할 생각으로 실습 준비를 해갔으나 생각만큼 잘 되지는 않은 것 같습니다.</description>
+    </item>
+    
+    <item>
+      <title>예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 19 Jan 2014 17:03:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는 프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.
+코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.
+그 동안 python홍보용으로 잘 써먹었던 프로젝트입니다. ( 파이썬으로 이런 게임도 만들 수 있어. 너도 배워 보지 않을래? 등 ^^ )
+원래는 더 일찍 공개하려고 했으나 코드 정리등이 귀찮아서 미루다가 모 후배의 압박으로 대충 정리해서 올립니다.
+관심 있으신 분은 https://github.com/kasworld/wxgame2 에서 받으면 됩니다.
+원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을 사용하도록 되어 있는데 github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면 import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트 내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다.</description>
+    </item>
+    
+    <item>
+      <title>게임프로그래밍이라는 주제로 </title>
+      <link>https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/</link>
+      <pubDate>Wed, 08 Jan 2014 10:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/</guid>
+      <description>지인으로 부터 뜬금 없이 &amp;ldquo;게임프로그래밍&amp;quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
+&amp;ldquo;게임을 만든다는 것은 무엇일까?&amp;rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다.</description>
+    </item>
+    
+    <item>
+      <title>좋은 AI 만들기?</title>
+      <link>https://kasworld.github.io/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Sun, 03 Jul 2011 19:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description>시간 날때마다 집에서 간단한 슈팅 게임? 을 만들고 있습니다만.. ( 엄밀히 말하면 2D 게임을 위한 프레임웍 )
+전 게임을 하는 것보다 구경하는 것을 더 좋아하는 편이기 때문에 대신 플레이해줄 AI들을 몇가지 만들고 있습니다.
+몇종의 AI를 만들고(허접하지만) 각각의 AI끼리 대전을 시켜보며 구경을 하고 있는데..
+만든 입장에서 더 실력이 좋을 거라고 생각하면 만든 AI 보다 대충 머리수 채우기로만든 AI가 더 점수가 좋은 경우가 꽤 있군요.
+그러면 다시 코드를 보면서 이유를 생각하고 그 결과를 다시 반영해보고 하면서 즐기고 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

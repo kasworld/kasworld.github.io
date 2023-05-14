@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>driver on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/driver/</link>
+    <description>Recent content in driver on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Mon, 22 Jun 2015 14:01:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/driver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 </title>
+      <link>https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/</link>
+      <pubDate>Mon, 22 Jun 2015 14:01:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/</guid>
+      <description>linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
+http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
+시간이 난 김에 설치하면서 삽질한 기록입니다.
+그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
+기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요.</description>
+    </item>
+    
+  </channel>
+</rss>

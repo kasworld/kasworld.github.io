@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>언어 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EC%96%B8%EC%96%B4/</link>
+    <description>Recent content in 언어 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 22 Mar 2014 17:13:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%96%B8%EC%96%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wxgame2를 개선 하고 있습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sat, 22 Mar 2014 17:13:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다.</description>
+    </item>
+    
+    <item>
+      <title>wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sat, 15 Mar 2014 18:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다.</description>
+    </item>
+    
+    <item>
+      <title>wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 02 Mar 2014 14:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
+지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
+현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&amp;gt; 클라이언트간 정보를 전달하고 있습니다.
+코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다.</description>
+    </item>
+    
+    <item>
+      <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</title>
+      <link>https://kasworld.github.io/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/</link>
+      <pubDate>Sun, 25 Aug 2013 12:35:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/</guid>
+      <description>오랫만에 다시 go 이야깁니다.
+오랬만에 기억을 되살리기 위해 이런 저런 이야기를 잠깐 해보면 go 언어의 특징중 가장 두드러지는 것을 하나 들면 goroutine을 들 수 있을 텐데요.
+많은 서버와 대용량의 데이터(소위 big data)를 처리 하고 있는 구글은 이를 위해서 여러 언어를 사용하고 있다고 알려져 있습니다. 하지만 각각의 언어들은 장단점이 있는 관계로 구미에 딱 맞는 언어가 필요하여 go 언어를 만들었다는 게 사람들의 짐작 입니다.
+그래서 go 언어에는 구글이 가장 필요로 하는 goroutine 과 channel 이 기본으로 존재합니다.</description>
+    </item>
+    
+    <item>
+      <title>우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </title>
+      <link>https://kasworld.github.io/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/</link>
+      <pubDate>Sat, 27 Apr 2013 21:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/</guid>
+      <description>서브라임 에디터로 go 개발을 하기 위해 필요한 패키지를 찾아보면 바로 보이는 것이 go build 패키지라서 일단 설치는 해두었습니다. 이번 주말에 집에서 오랫 만에 go 코드를 만질 일이 있어서 ( 실은 요즘 매일 python 만 하고 있어서 go 도 좀 해두려고.. )
+서브라임에서 전에 만들어둔 go 소스를 열고 작업을 시작했습니다. 이왕 하는 김에 제대로 환경을 세팅하려고 프로젝트도 만들고 빌드를 했는데 아무 반응이 없습니다. 물론 터미널을 열고 빌드하면 당연히 잘 되고 .. 에디터 내의 빌드 명령인 &amp;lt;ctrl-b&amp;gt; 로 빌드를 시도하면 아무 반응이 없는 겁니다.</description>
+    </item>
+    
+    <item>
+      <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </title>
+      <link>https://kasworld.github.io/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/</link>
+      <pubDate>Thu, 18 Oct 2012 22:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/</guid>
+      <description>금방 끝날줄 알았는데 남은것이 많더군요.
+이제부터는 좀 두서없는 내용이 이어집니다.
+reflection package 를 사용해서 func TypeOf(i interface{}) Type func ValueOf(i interface{}) Value 를 사용할수 있습니다. 이런게 얻어진 Value object에 대해서 struct object 였다면 Method( 2 ).Call( some args ) 형태로 실행을 시킬수도 있습니다.
+os.Stdin : 표준 입력입니다. os.Open 을 사용해서 파일을 열수 있습니다. io/ioutil 패키지에 ReadFile 을 사용하면 파일을 한번에 읽고, WriteFile로 한번에 씁니다. fmt.Fscanln을 사용하면 space separated file 을 편하게 읽을수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </title>
+      <link>https://kasworld.github.io/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/</link>
+      <pubDate>Wed, 26 Sep 2012 17:07:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/</guid>
+      <description>그 세번째 입니다.
+이전글은 http://kasw.blogspot.com/2012/09/go-2n.html
+Interface Interface는 object의 behavior 를 규정한다. ( 수행 가능한 method 들의 signature 를 정의한다. ) type InterfaceNamer interface { Method1( params ) returns Method2( params ) returns } 관용적으로 er로 끝나는 이름을 사용한다. ( Printer, Reader, Logger 등등 ) 가능한 짦게 만든다 ( primitive 하게 만든다 ) var interfaceReference InterFaceNamer = someObject struct를 정의할때 어떤 interface를 구현하는지 지정할 필요가 없다. interface에 정의된 method가 구현되어 있다면 자동으로 사용가능하다.</description>
+    </item>
+    
+    <item>
+      <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) </title>
+      <link>https://kasworld.github.io/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/</link>
+      <pubDate>Wed, 26 Sep 2012 11:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/</guid>
+      <description>그 두번째 입니다. ( 총 몇회가 될지 모르니 2/N 입니다. ^^ )
+첫 글은 http://kasw.blogspot.com/2012/09/go.html 를 보시면 됩니다.
+Maps key 로 사용 가능한 것은 == , != 이 정의 된 type string,int,float 는 가능 array,slice,struct 는 불가능 pointer, interface 는 가능 struct 를 key로 쓰고 싶으면 Key() 나 Hash() method 를 만들고 그 결과를 키로 사용할것. value 는 아무거나 사용 가능 var map1 map[keytype]valuetype = make( map[keytype]valuetype , capacity ) map1 := map[keytype]valuetype{} map is reference type len(map1) map1[notInMapKey] is zero-value of value type not error val1,isPresent = map1[key1] 형태로 존재하는지 확인 가능 delete(map1, key1) 로 항목을 삭제 가능하면 없는 항목이어도 에러는 없다.</description>
+    </item>
+    
+    <item>
+      <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)</title>
+      <link>https://kasworld.github.io/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/</link>
+      <pubDate>Tue, 25 Sep 2012 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/</guid>
+      <description>다음 프로젝트에 go 언어를 쓸 생각이어서 공부하는 김에 몇가지 중요 포인트들을 메모 하고 있습니다. 원래는 다 끝나면 한꺼번에 블로그에 올리려고 했는데 적다보니 양이 많아져서 일단 앞부분만 먼저 정리합니다.
+주의 할 것은 제가 보기 위해 적은 것이라 기본적으로 C/C++/java/C# 에대한 지식과 추가로 python 같은 스크립트언어도 안다고 가정한 상태에서 적은 것입니다. 게다가 go 언어의 구체적인 syntax 에 대해서도 http://golang.org/ref/spec 같은 곳에서 한번 정도 읽어 봤다고 가정합니다. ( 조건이 너무 까다롭군요. ;; )</description>
+    </item>
+    
+    <item>
+      <title>현재 까지 언어별 투자시간</title>
+      <link>https://kasworld.github.io/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/</link>
+      <pubDate>Wed, 11 Jul 2012 22:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/</guid>
+      <description>세월이 하수상하지만 ( 정치건 it 판이건 ) 곰곰히 생각해보니 python을 실무에 적용해서 써 온지도 어느덧 10000시간이 넘어간듯 합니다.
+얼마전 아는 후배가 첫 8bit kid들이 아직 프로그래밍을 하고 있으면 대충 30년이 되었다고 하는글을 올렸는데 그 글을 보면서 만감이 교차 하더군요.
+정말로 30년이 된겁니다. ㅠㅠ 살아온 시간의 3/4 이상을 컴퓨터와 함께 지낸거지요.
+그래서 생각해본 언어별 투자? 시간입니다. ( 중복 시간이 있으니 총합은 30년이 넘을수 있습니다 ) basic ( apple soft ) : 5년 Assembly : ( 6502 ) : 3년 ?</description>
+    </item>
+    
+    <item>
+      <title>The Go Programming Language</title>
+      <link>https://kasworld.github.io/posts/2009-11-15-thegoprogramminglanguage/</link>
+      <pubDate>Sun, 15 Nov 2009 21:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2009-11-15-thegoprogramminglanguage/</guid>
+      <description>구글에서 만든 언어랩니다. ^^ http://golang.org/ 구글정도되면 이미 충분한 파워와 실력이 있으니 궁금해서 조금(^^) 공부해 봤습니다. 블럭으로 {}를 써서 마치 C/C++/java/C# 유사품 처럼 보이지만 ^^ 내용은 pascal/modula 2의 후계자에 더 가까운듯 합니다.
+coroutine의 강화(?)판인 goroutine이 있는것도 재미있고, 컴파일이 빠르다고 주장(표준 라이브러리를 풀빌드하는데 10초가 안걸립니다.)하는것도 turbo pascal 생각이 나구 말이죠. 덤으로 대입 연산이 := 입니다. ㅋㅋㅋ native binary를 만들면서 garbage collection이 되는 점은 D language가 생각 나기도 하고 말이죠. ^^ 무어보다 맘에 드는건 생성된 바이너리의 속도가 C의 80~90%속도가 난다는 점입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>게임프로그래밍이라는 주제로  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="지인으로 부터 뜬금 없이 &ldquo;게임프로그래밍&quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
+&ldquo;게임을 만든다는 것은 무엇일까?&rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="게임프로그래밍이라는 주제로 " />
+<meta property="og:description" content="지인으로 부터 뜬금 없이 &ldquo;게임프로그래밍&quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
+&ldquo;게임을 만든다는 것은 무엇일까?&rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-01-08T10:42:00+09:00" />
+<meta property="article:modified_time" content="2014-01-08T10:42:00+09:00" />
+<meta itemprop="name" content="게임프로그래밍이라는 주제로 ">
+<meta itemprop="description" content="지인으로 부터 뜬금 없이 &ldquo;게임프로그래밍&quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
+&ldquo;게임을 만든다는 것은 무엇일까?&rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다."><meta itemprop="datePublished" content="2014-01-08T10:42:00+09:00" />
+<meta itemprop="dateModified" content="2014-01-08T10:42:00+09:00" />
+<meta itemprop="wordCount" content="647">
+<meta itemprop="keywords" content="게임,파이썬,프로그래밍,강의,python,wxgame,AI,게임프로그래밍,개발,교육,세미나,게임개발,게임만들기,직능,wxpython," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="게임프로그래밍이라는 주제로 "/>
+<meta name="twitter:description" content="지인으로 부터 뜬금 없이 &ldquo;게임프로그래밍&quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
+&ldquo;게임을 만든다는 것은 무엇일까?&rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">게임프로그래밍이라는 주제로 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-01-08T10:42:00+09:00">January 8, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>지인으로 부터 뜬금 없이 &ldquo;게임프로그래밍&quot;라는 주제로 특강을 해달라는
+부탁을 받아서 
+( 아직 할지 말지는 미정이긴 하지만 ) 
+이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.</p>
+<p>&ldquo;<!-- raw HTML omitted -->게임을
+만든다는 것은 무엇일까?&rdquo; <!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->게임이란
+무엇일까?<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->게임의
+정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로
+하고 ^^;;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted -->게임을
+만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을
+생각해보면 <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted -->게임을
+만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을
+것 같습니다. <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted -->이게
+뭔소리래? 라는 의문은 잠시 접어두고 <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->그러면
+게임을 만들기 위한 직능(직무 능력)에는 어떤 것들이 있기에? 란 것을
+적어봅니다. <!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted -->즉
+이 글은 MMORPG기준으로 게임을 만들고 서비스까지 도달하는데 필요한 직무를
+나열하는 글입니다. ;;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+( 결국 강의 준비와는 아무 관계 없을 듯한 글입니다.;; )</p>
+<p><!-- raw HTML omitted -->일단
+회사/조직에서 필요한 기본 직능을 제외 하겠습니다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->(
+회사를 창업하려면 필요하겠지만 이글에선 필요 없겠지요.)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->인사,
+총무, 사내 전산, 회계, 경영 , 법무  등.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->그러면
+일단 게임 개발 및 서비스에 필요한 직능( 그리고 그대로 조직도가 될
+가능성이 높은) 목록 입니다.<!-- raw HTML omitted --></p>
+<p>** 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->**
+당연한 이야기지만 이것만이 정답이란 건 아니고 한 가지 예라고 생각하시면
+됩니다.</p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->사업
+/ 영업 - 잘 모르는 부분이니 대충 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->마케팅,
+홍보 , 영업 , 세일즈 , <!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->퍼블리싱
+계약 , 해외 담당 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->게임
+제작 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->프로듀싱
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->그래픽 -
+전체 게임 제작 인력의 80% 정도 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->아트
+디렉팅 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->시각적
+방향성, 일관성 관리 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->아트
+매니지먼트 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->조직
+/ 스케줄 관리 <!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->워크
+파이프 라인 관리 - <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->원화 -
+컨셉 아트 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->배경,
+캐릭터, 아이템 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->3D
+모델링 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->폴리곤
+, 텍스처 , 애니메이션 ( 키프레임 )<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->모션
+캡쳐 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->동영상<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->컷인
+동영상 , 홍보 동영상, 트레일러 제작 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->테크니컬
+아티스트 - TA <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->그래픽
+이펙트 , 쉐이더 프로그래밍 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->레벨
+디자인 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->지형
+제작 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->UI
+디자인 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->메뉴,
+UI control<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->아트
+외주 관리 - 외주를 주는 경우<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->게임
+디자인(기획)<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->시나리오
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->배경
+설정, 종족 , 역사.<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->시스템
+밸런스 -  성장에서 강함을 조정한다. <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->pvp
+, pve <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->레벨,지역
+디자인 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->플레이
+난이도 설정 ( 몬스터 )<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->컨텐츠
+디자인 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->퀘스트
+, 아이템 , 캐릭터 , <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->사운드
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->보이스,
+배경음, 효과음 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->프로그래밍
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->서버
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->서버
+프레임웍 - <!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->게임
+컨텐츠 ( AI , 퀘스트 스크립팅 , 기획 데이터 적용
+)<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->클라이언트
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->클라이언트
+프레임웍<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->게임
+컨텐츠 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->3D
+엔진 , 물리 엔진 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->개발
+또는 적용.<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->인테그레이션
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->게임
+릴리즈/버전 관리 <!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->인테그레이션
+테스트 - 아트 , 기획, 프로그램의 통합 테스트 <!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->서비스
+준비 / 퍼블리싱 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li>
+<p>QA / TEST</p>
+</li>
+<li>
+<ul>
+<li>게임 컨텐츠 QA</li>
+<li>게임 시스템 QA</li>
+<li>플랫폼 QA</li>
+<li>펀 QA</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->플랫폼
+개발<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->운영용
+계정,권한 시스템<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->운영
+툴 , 서비스 통계, 모니터링 , <!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->런처
+, 업데이트 패쳐 , <!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->빌링
+, 부분 유료화 , 아이템 중계소, <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->deployment
+( 배포 ) 관리<!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->서비스
+스테이지 별 배포 , 버전 관리 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->game
+dev, service dev , alpha, release candidate , test
+server , service server <!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->퍼블리셔별
+관리 <!-- raw HTML omitted --></p>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->번역
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted --><!-- raw HTML omitted -->리소스
+번역 ( text, art , sound )<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+<li>서비스 툴 번역 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><!-- raw HTML omitted -->서비스
+운영 <!-- raw HTML omitted --></p>
+</li>
+<li>
+<ul>
+<li><!-- raw HTML omitted -->CS<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->GM<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->OP<!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ul>
+<p><strong><!-- raw HTML omitted --><!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --><!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --><!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --><!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --><!-- raw HTML omitted --></strong> 
+<strong><!-- raw HTML omitted --><!-- raw HTML omitted --></strong> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->뭐가
+어마 무지 하게 많은 직능이 존재 하는데 이를 실제로 확인 하기 가장 좋은
+방법은 대형 게임의 엔딩 크레딧을 보는 겁니다. <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->아직도
+있는지 모르겠지만 와우 엔딩 크레딧에는 와우 개발진의 팀 이름과 구성원,
+맡은 직무에 대해 나오니 게임 개발에 필요한 직능이 무엇일지 어느 정도
+인력이 필요할지 미루어 짐작하기 좋지요.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->결국
+게임을 만든다는 것을 이 많은 직능을 모두 익혀 수행하는 것 이라고 하면
+평생 걸려도 힘들 지도 모릅니다. <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->(
+조그마한 개인 프로젝트라면 가능할지도 모르지만 )<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->게임을
+만든다는 것(그리고 서비스/판매를 한다는 것)은 <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->재미를
+만든다. - 컨텐츠 제작 - 예술의 영역 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->재미를
+제공할수 있는 환경(시스템) 을 만들 능력을 갖춘다. - 시스템 제작  -
+엔지니어링의 영역 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->만들어진
+것을 고객과 연결한다. - 사업 , 퍼블리싱  - 사업(비즈니스)의 영역 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->만들어진
+제품(서비스)의 품질(상품성)을 검증한다.  - 비평가 의 영역 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->영역으로
+나누어 볼 수 있고 본인이 어느 쪽 영역을 원하는 지를 생각해 보는 것이
+좋다고 봅니다.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->현실적인
+타협을 찾아 본다면
+<!-- raw HTML omitted --><!-- raw HTML omitted -->필드에
+나가기 전에 또는 개인 프로젝트로 할 수 있는 것을 찾아볼 수 있을
+것입니다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->생산성이
+높은 언어, 프레임웍, 라이브러리를 선정해서 본인의 취향에 맞는 게임
+제작을 해볼 수 있습니다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->(
+python , wxpython , pygame, renpy 
+unity - 3D  영역 )<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->게임
+제작에서 아트 디자인이 차지하는 부분 은 80% 이상 . <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->조직과
+시스템으로 커버 해야 하니 개인이 하기는 힘들다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->프로그래머
+개인이 할 수 있는 부분은 아트를 최대한 단순화 해서 처리(기하학적
+도형사용) 하거나 아니면 텍스트기반으로 제작해봐도 좋을 것 같습니다.
+<!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%95%EC%9D%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">강의</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B5%90%EC%9C%A1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">교육</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B8%EB%AF%B8%EB%82%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">세미나</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%A7%81%EB%8A%A5/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">직능</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-26-%EC%A0%9C%ED%92%88%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B0%9C%EB%B0%9C%EC%9D%98%EB%8B%A8%EA%B3%84/">제품/서비스 개발의 단계</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-05-%EA%B5%AC%EA%B8%80%EB%A6%AC%EB%8D%94%EA%B0%80%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A2%85%EB%A3%8C%ED%95%9C%EB%8B%A4%EB%8A%94%EC%86%8C%EC%8B%9D%EC%9D%84%EB%93%A3%EA%B3%A0/">구글 리더가 서비스 종료한다는 소식을 듣고</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-19-%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84%EC%97%90%EC%84%9C%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%80%EC%96%B4%EB%96%BB%EA%B2%8C%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C/">모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">windows의 vim에서 python 활성화 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/">우분투에서 로컬에 설치된 문서를 편하게 보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

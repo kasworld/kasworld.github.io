@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>netis WF2881 유무선공유기 일주일 사용 감상기.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="2015-11-08추가 이후 설정/삽질에 대한 글이 있습니다. http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html
+지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트 하던중 공유기가 사망했습니다.
+같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한 주말을 보낼수 밖에 없었는데. ( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간 3Gbyte를 썼더군요. )
+하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든 상황이었습니다. 그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전 물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="netis WF2881 유무선공유기 일주일 사용 감상기. " />
+<meta property="og:description" content="2015-11-08추가 이후 설정/삽질에 대한 글이 있습니다. http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html
+지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트 하던중 공유기가 사망했습니다.
+같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한 주말을 보낼수 밖에 없었는데. ( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간 3Gbyte를 썼더군요. )
+하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든 상황이었습니다. 그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전 물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-08-01-netiswf2881%EC%9C%A0%EB%AC%B4%EC%84%A0%EA%B3%B5%EC%9C%A0%EA%B8%B0%EC%9D%BC%EC%A3%BC%EC%9D%BC%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-08-01T15:18:00+09:00" />
+<meta property="article:modified_time" content="2015-08-01T15:18:00+09:00" />
+<meta itemprop="name" content="netis WF2881 유무선공유기 일주일 사용 감상기. ">
+<meta itemprop="description" content="2015-11-08추가 이후 설정/삽질에 대한 글이 있습니다. http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html
+지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트 하던중 공유기가 사망했습니다.
+같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한 주말을 보낼수 밖에 없었는데. ( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간 3Gbyte를 썼더군요. )
+하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든 상황이었습니다. 그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전 물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요."><meta itemprop="datePublished" content="2015-08-01T15:18:00+09:00" />
+<meta itemprop="dateModified" content="2015-08-01T15:18:00+09:00" />
+<meta itemprop="wordCount" content="564">
+<meta itemprop="keywords" content="소니타이머,netis,공유기,n8004r,iptime,gpl,wf2881," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="netis WF2881 유무선공유기 일주일 사용 감상기. "/>
+<meta name="twitter:description" content="2015-11-08추가 이후 설정/삽질에 대한 글이 있습니다. http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html
+지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트 하던중 공유기가 사망했습니다.
+같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한 주말을 보낼수 밖에 없었는데. ( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간 3Gbyte를 썼더군요. )
+하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든 상황이었습니다. 그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전 물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">netis WF2881 유무선공유기 일주일 사용 감상기. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-08-01T15:18:00+09:00">August 1, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>2015-11-08추가 
+이후 설정/삽질에 대한 글이 있습니다. 
+<a href="http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html">http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html</a></p>
+<p>지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트
+하던중 공유기가 사망했습니다.</p>
+<p>같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한
+주말을 보낼수 밖에 없었는데. </p>
+<p>( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간
+3Gbyte를 썼더군요. )</p>
+<p>하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든
+상황이었습니다. </p>
+<p>그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전
+물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요. ( 5만 몇천원 짜리를
+10만 몇천원에 )</p>
+<p>AS 기간을 확인해보니 구입한지 2년 6개월 정도가 지난 상태였고 이래저래
+귀찮았던 관계로 ( 신상을 써보고 싶다던지 ;;; ) 공유기를 잘 분해하여
+버렸습니다. </p>
+<p>( 중요하진 않을지 모르지만 내부에 데이터가 남아 있는 관계로 - 무선랜
+암호 같은 ) </p>
+<p>그래서 새로 살 신상 공유기를 (내심 기뻐하며) 고르고 있었는데 이왕 사는거
+이정도(A5004ns - 15만원 짜리 ) 는 사야지 하고 처에게 말했더니 - &ldquo;비싸!&rdquo;
+한마디로 기각 당했습니다. </p>
+<p>ㅠㅠ </p>
+<p>그전 n8004r 도 10만원이 안되게 주고 샀다더군요. ( 그 전전 d-link 655는
+20만원을 넘게 준 기억이 있는데 )</p>
+<p>어차피 공유기는 내구성이 다들 별로고(기술발전으로 다들 소니타이머를
+장비하는군요.) 필요 스펙도 점점 올라가는 관계로 싼거 사서 자주 바꾸자는
+쪽으로 의견이 모였습니다. </p>
+<p>그래서 아래 두 모델을 놓고 고민 한결과 </p>
+<p>ipTIME A2004NS plus : 최저가 58000 : usb 2.0 : 싱글코어 : flash 8m : ram
+64m</p>
+<p>netis WF2881 : 최저가 61400 : usb 3.0 : 듀얼코어 : flash 128m !!! : ram
+128m </p>
+<p>점보 프레임을 iptime만 지원한다는데 어차피 사용하지 않는 기능이라패스. </p>
+<p><a href="https://en.wikipedia.org/wiki/Jumbo">https://en.wikipedia.org/wiki/Jumbo</a>_frame</p>
+<p>그외 스펙은 대동소이 </p>
+<p>성능쪽은 확실히 wf2881이 좋을듯  </p>
+<p>확실히 iptime은 공유기계의 삼성 갤럭시 같은 느낌 - 확실한 원가절감과
+적정한 (심리적)안정감. </p>
+<p>이번엔 iptime이 아닌 것으로 해보자. netis WF2881 로 결정하고 주문해서
+화요일(7월 28일)에 받아서 설정/설치를 했습니다. </p>
+<p>주의 할점은 스펙에서 잘못된것으로 보이는 것이 있는데 </p>
+<p>flash 128m는 128mbit 인것 같습니다. 즉 16m byte </p>
+<p>일단 128mbyte일 가능성이 없는게 동급 모델간에 용량차이가 16배가 날리가
+없을뿐더러 홈페이지에서 펌웨어를 받아보면 9Mbyte 정도의 파일이
+다운됩니다. </p>
+<p>128mbit 면 즉 16mbyte 란 이야기고 iptime의 두배 , 펌웨어 용량도 이해되는
+크기가 되지요. </p>
+<p>내부 칩이 MT7621A+7602E+7612E 라고 해서 찾아 봤더니 </p>
+<p>MT7621A는 32bit mips soc고 뒤의 두개는 무선 통신관련 칩인것 같습니다. </p>
+<p>약 5일간 써본 감상은 .. </p>
+<p>초반 설정때 약간 불안 했습니다. 네트웍 접속이 끊어졌다 연결된다
+하더군요. 가슴이 덜컥 했는데 </p>
+<p>펌웨어 올리고 설정을 변경하는 동안에 네트웍을 끊는 식으로 만들어진듯
+합니다.</p>
+<p>S/W 기술이 딸리는 거겠지요. ;;; </p>
+<p>그리고 부팅이 느립니다. 느긋한 맘으로 기다리면 되긴하지만 좀
+답답합니다. </p>
+<p>그리고 설정페이지를 도메인으로 접속( 2881.com 같은 )하게 해두 었는데
+공유기 dns를 사용하지 않는 경우 (전 구글 dns 8.8.8.8, 8.8.4.4 를 씁니다.
+) 접속을 하려면 </p>
+<p>192.168.1.1로 접속하면 됩니다. </p>
+<p>iptime은 192.168.0.X 였는데 이걸 모두 192.168.1.X 로 바꾸느라 무지하게
+귀찮았습니다. </p>
+<p>그리고 전반적으로 기능은 다 있는데 확실히 S/W 완성도가 떨어집니다.</p>
+<p>아마 최고는 펌웨어 업데이트 할때마나 공초를 해야 한다고(메뉴얼에
+써있습니다.) 하는 점일것입니다. </p>
+<p>안전을 위해서는 맞는 말인데. S/W에 자신이 없단 이야기이기도 하겠지요. </p>
+<p>그리고 최초 로그인 화면에서 ip/password  외에도 무조건 captcha 를 입력해
+로그인해야 하는 점이 귀찮군요.</p>
+<p>( 공유기가 외부 접속이 없는 경우 어떻게 하고 있는지 궁금합니다. )</p>
+<p>그리고 무선을 통해서 관리 화면으로 못들어오게 하는 방법이 없습니다. </p>
+<p>모처럼 802.11ac 를 지원하는 공유기를 장만했지만 정작 802.11ac를 지원하는
+장비가 집에 하나도 없다는 것도 문제? 이긴 합니다. </p>
+<p>이참에 802.11ac를 지원하는 장비를 하나 정도 사야하나? 하는는 고민을 하고
+있습니다. ;;;;; </p>
+<p>그리고 예상대로 펌웨어 소스는 공개하고 있지 않으며 - GPL좀 지켜라.. -
+ssh 연결도 지원 하지 않는 것으로 보입니다. </p>
+<p>정작 포트는 
+PORT     STATE SERVICE 
+53/tcp   open  domain 
+80/tcp   open  http 
+6352/tcp open  unknown 
+8888/tcp open  sun-answerbook</p>
+<p>의 4개를 열어 놓고 있습니다. </p>
+<p>뒤의 두 포트 (6353, 8888 )무슨 용도 인지 살짝 걱정하고 있습니다. </p>
+<p>성능은 뭐 딱히 문제 될부분은 없어 보입니다. iperf 테스트를 해보면 제대로
+나옵니다. ;;</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%86%8C%EB%8B%88%ED%83%80%EC%9D%B4%EB%A8%B8/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">소니타이머</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/netis/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">netis</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B3%B5%EC%9C%A0%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">공유기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/n8004r/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">n8004r</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/iptime/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">iptime</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/gpl/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gpl</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wf2881/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wf2881</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/">지름은 지름을 부릅니다. 역시;;;</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">결국 nas를 샀습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-03-25-%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%9D%80%EC%95%84%EB%AC%B4%EB%A6%AC%ED%95%B4%EB%8F%84%EC%96%B4%EB%A0%B5%EA%B5%B0%EC%9A%94/">네트웍은 아무리해도 어렵군요.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

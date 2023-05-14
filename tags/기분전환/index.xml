@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>기분전환 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EA%B8%B0%EB%B6%84%EC%A0%84%ED%99%98/</link>
+    <description>Recent content in 기분전환 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 15 Apr 2020 12:40:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B8%B0%EB%B6%84%EC%A0%84%ED%99%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>가칭 gofieldwar 작업을 시작했습니다.</title>
+      <link>https://kasworld.github.io/posts/2020-04-15-%EA%B0%80%EC%B9%ADgofieldwar%EC%9E%91%EC%97%85%EC%9D%84%EC%8B%9C%EC%9E%91%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 15 Apr 2020 12:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-04-15-%EA%B0%80%EC%B9%ADgofieldwar%EC%9E%91%EC%97%85%EC%9D%84%EC%8B%9C%EC%9E%91%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>예전에 go-sdl로 만들다 치워둔 프로젝트로 goguelike 가 어느정도 정리 되면 이어서 작업할 생각이었던 프로젝트 입니다.
+일단은 MMO RTS 로 생각하고 있습니다만 어떻게 바뀔지는 모르겠습니다.
+어쩌면 RTS 라기보다는 땅따먹기 에 가까울 것 같지만 그것도 RTS 의 일종이라고 생각합니다. ^^
+goguelike가 완료 되거나 종료 된것 은 아니고 한가지만 하면 지겨우니 기분 전환 삼아 다른 프로젝트도 병행 하는 것입니다.
+비슷한 이유로 만들어진것이 gowasm3dgame 이나 gowasm2dgame 입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

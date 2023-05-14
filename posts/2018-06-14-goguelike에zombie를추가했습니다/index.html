@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike에 zombie를 추가 했습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="goguelike는 로그라이크게임치고는 꽤나 여유로운? 플레이가 가능한 편입니다. 그 이유는 진성 로그라이크와는 달리 플레이중 죽어도 이어서? 플레이가 가능하기 때문입니다. ( 로그라이크의 특징중 하나가 죽으면 새로 시작입니다. ) ( 자비로운? goguelike는 경험치가 좀 깍이고, 아이템을 좀 드랍하는 정도로? 끝납니다. -어디서 많이 본듯하지만 - )
+다만 공개한적 없는 전용 클라이언트(linux - sdl용) 에서 플레이할때와는 달리 웹 클라이언트로 포팅된후 생긴 문제가 하나 있습니다.
+브라우저 페이지를 실수로 reload ( F5를 누르거나 모바일에서 아래로 당겼다가 놓거나 ) 하는 경우 게임이 끝나 버린다는 거지요.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike에 zombie를 추가 했습니다. " />
+<meta property="og:description" content="goguelike는 로그라이크게임치고는 꽤나 여유로운? 플레이가 가능한 편입니다. 그 이유는 진성 로그라이크와는 달리 플레이중 죽어도 이어서? 플레이가 가능하기 때문입니다. ( 로그라이크의 특징중 하나가 죽으면 새로 시작입니다. ) ( 자비로운? goguelike는 경험치가 좀 깍이고, 아이템을 좀 드랍하는 정도로? 끝납니다. -어디서 많이 본듯하지만 - )
+다만 공개한적 없는 전용 클라이언트(linux - sdl용) 에서 플레이할때와는 달리 웹 클라이언트로 포팅된후 생긴 문제가 하나 있습니다.
+브라우저 페이지를 실수로 reload ( F5를 누르거나 모바일에서 아래로 당겼다가 놓거나 ) 하는 경우 게임이 끝나 버린다는 거지요." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2018-06-14-goguelike%EC%97%90zombie%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-06-14T08:23:00+09:00" />
+<meta property="article:modified_time" content="2018-06-14T08:23:00+09:00" />
+<meta itemprop="name" content="goguelike에 zombie를 추가 했습니다. ">
+<meta itemprop="description" content="goguelike는 로그라이크게임치고는 꽤나 여유로운? 플레이가 가능한 편입니다. 그 이유는 진성 로그라이크와는 달리 플레이중 죽어도 이어서? 플레이가 가능하기 때문입니다. ( 로그라이크의 특징중 하나가 죽으면 새로 시작입니다. ) ( 자비로운? goguelike는 경험치가 좀 깍이고, 아이템을 좀 드랍하는 정도로? 끝납니다. -어디서 많이 본듯하지만 - )
+다만 공개한적 없는 전용 클라이언트(linux - sdl용) 에서 플레이할때와는 달리 웹 클라이언트로 포팅된후 생긴 문제가 하나 있습니다.
+브라우저 페이지를 실수로 reload ( F5를 누르거나 모바일에서 아래로 당겼다가 놓거나 ) 하는 경우 게임이 끝나 버린다는 거지요."><meta itemprop="datePublished" content="2018-06-14T08:23:00+09:00" />
+<meta itemprop="dateModified" content="2018-06-14T08:23:00+09:00" />
+<meta itemprop="wordCount" content="311">
+<meta itemprop="keywords" content="zombie,좀비,roguelike,goguelike,mmorlg," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike에 zombie를 추가 했습니다. "/>
+<meta name="twitter:description" content="goguelike는 로그라이크게임치고는 꽤나 여유로운? 플레이가 가능한 편입니다. 그 이유는 진성 로그라이크와는 달리 플레이중 죽어도 이어서? 플레이가 가능하기 때문입니다. ( 로그라이크의 특징중 하나가 죽으면 새로 시작입니다. ) ( 자비로운? goguelike는 경험치가 좀 깍이고, 아이템을 좀 드랍하는 정도로? 끝납니다. -어디서 많이 본듯하지만 - )
+다만 공개한적 없는 전용 클라이언트(linux - sdl용) 에서 플레이할때와는 달리 웹 클라이언트로 포팅된후 생긴 문제가 하나 있습니다.
+브라우저 페이지를 실수로 reload ( F5를 누르거나 모바일에서 아래로 당겼다가 놓거나 ) 하는 경우 게임이 끝나 버린다는 거지요."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike에 zombie를 추가 했습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-06-14T08:23:00+09:00">June 14, 2018</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="../images/2018-06-14-goguelike%EC%97%90zombie%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-zombie.png"><img src="../images/thumbnails/2018-06-14-goguelike%EC%97%90zombie%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-zombie.png" alt=""></a></p>
+<p>goguelike는 로그라이크게임치고는 꽤나 여유로운? 플레이가 가능한
+편입니다. 
+그 이유는 진성 로그라이크와는 달리 플레이중 죽어도 이어서? 플레이가
+가능하기 때문입니다. 
+( 로그라이크의 특징중 하나가 죽으면 새로 시작입니다. ) 
+( 자비로운? goguelike는 경험치가 좀 깍이고, 아이템을 좀 드랍하는 정도로?
+끝납니다. -어디서 많이 본듯하지만 - )</p>
+<p>다만 공개한적 없는 전용 클라이언트(linux - sdl용) 에서 플레이할때와는
+달리 웹 클라이언트로 포팅된후 생긴 문제가 하나 있습니다.</p>
+<p>브라우저 페이지를  실수로 reload ( F5를 누르거나 모바일에서 아래로
+당겼다가 놓거나 ) 하는 경우 게임이 끝나 버린다는 거지요.</p>
+<p>클라이언트 프로그램상에서 어떻게 해볼수 있지 않을까 하고 고민 했었는데
+브라우저내에서 실행된다는 한계상 클라이언트에서 어찌 해볼 방법이 없다는
+결론에 도착 했습니다.</p>
+<p>그래서 서버에서 어떻게 해보려면 일단 클라이언트가 끊기면 서버에서
+클라이언트에서 사용하던 캐릭터 를 지워 버린다. 는 것부터 바꿔야
+합니다.</p>
+<p>일반적 MMORPG라면 서버에서 캐릭터를 빼버리더라도 disk/db에 저장되어
+있으니 문제가 없겠지만 goguelike는 캐릭터를 저장하지 않습니다.</p>
+<p>그러면 메모리상에 유지하는 수 밖에 없는데 클라이언트가 끊긴 캐릭터가
+서버에서 살아 움직이면?</p>
+<p>좀비!</p>
+<p>해서 좀비가 되었습니다.</p>
+<p>이 좀비상태인 캐릭터에 클라이언트가 다시 연결되면 다시 정상 캐릭터로
+돌아 옵니다.</p>
+<p>그래서 바뀐 시작 화면이 위의 그림입니다.</p>
+<p>시작할때 버튼이 두종류가 되었는데 
+기존 좀비가 있으면 연결하고 없으면 새로 시작 버튼이 [Enter] 
+기존 좀비와 연결이 있으면 끊음 버튼이 [Clear session] 
+입니다.</p>
+<p>클라이언트가 sessionkey를  저장하고 있고 서버는 그 sessionkey를 가지고
+기존 캐릭터에 연결할지 여부를 결정 기존 캐릭터가 뭐였는지 알아내는
+정보로 사용합니다.</p>
+<p>따라서 브라우저가 바뀌면 이어서 플레이가 안됩니다.</p>
+<p>아무튼 이 좀비 상태 캐릭터는 서버내에서 살아 움직이기는 하는데 몇몇
+제한이 걸릴니다. ( 추가로 더 제한을 걸 생각입니다. )</p>
+<p>이게 잘못하면 그냥 작업장을 공식 지원 ( 클라이언트가 끊긴 상태에서도
+파밍과 성장을? ) 하게 되는 것이라 아이템 사용, 획득, 캐릭터  성장,
+층간이동 등을 모두 제한 할 생각입니다. 
+AI도 좀비 전용 AI로 바뀌게 됩니다. ( 어리 버리하게 행동하도록 )</p>
+<p>좀비를 지원 해서 이어 하기가 가능하게 되긴 했지만 여전히 저장하진 않기
+때문에 서버가 새로 시작되거나 업데이트 되면 기존 정보는 모두 지워
+집니다. 
+그리고 세션은 서버 (타워 ) 별로 따로 입니다.</p>
+<p>위 그림에서 타워별로 버튼이 2개씩 있는 이유입니다.</p>
+<p>일단은 플레이 가능상태까지 개발되어서 서버에 올려 두었습니다.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="http://goguelike.iptime.org/?authkey=659b63f3-4c3d-9327-5c29-069de2d8b4f0">http://goguelike.iptime.org/?authkey=659b63f3-4c3d-9327-5c29-069de2d8b4f0</a><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/zombie/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">zombie</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%A2%80%EB%B9%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">좀비</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/roguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">roguelike</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/mmorlg/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">mmorlg</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2018-06-10-goguelike%EB%B7%B0%ED%8F%AC%ED%8A%B8%EB%AA%A8%EB%93%9C%EC%A0%84%ED%99%98/">goguelike 뷰포트 모드 전환 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-06-09-goguelike%EA%B0%80%EB%A1%9C%EB%AA%A8%EB%93%9C%EC%9D%B8%ED%8A%B8%EB%A1%9C%EC%B6%94%EA%B0%80/">goguelike 가로모드, 인트로 추가</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-05-30-goguelike2prealpha%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4/">Goguelike2 pre-alpha 테스트 플레이 오픈합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-05-31-goguelike2%EC%97%90soundeffect%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike2에 sound effect를 추가 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike2 의 몇몇 스크린 샷들. 작업 진행 사항. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-04-03-goguelike%EC%97%90%EB%8C%80%EB%9F%89%EC%9D%98%EC%88%98%EC%A0%95%EC%9D%84%EC%8B%9C%EB%8F%84%ED%95%98%EB%8B%A4%EA%B0%80/">goguelike에 대량의 수정을 시도하다가.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">go언어로 TCP server와 GUI client를 만들어 보기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-24-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Ctcpserverclient%EC%9D%98%EC%A0%84%ED%98%95%EC%A0%81%ED%98%95%ED%83%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%ED%99%94/">go언어에서 tcp server/client 의 전형적 형태. - 라이브러리화.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-20-go%EC%96%B8%EC%96%B4%EB%A1%9Cgui%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EA%B8%B0/">go 언어로 GUI 프로그램을 만들기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-19-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C2dtilebasedspace%EC%9A%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4/">go언어에서 2d tile based space 용 라이브러리들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-15-go%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%EC%8B%A4%EC%8B%9C%EA%B0%84%ED%86%B5%EA%B3%84%EB%A5%BC%EA%B8%B0%EB%A1%9D%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/">go 프로그램에서 실시간 통계를 기록하고 싶을때 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/">go 언어용 python-like log 모듈 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-05-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98goroutine%EC%9D%84%EB%8F%99%EC%8B%9C%EC%97%90%ED%95%9C%EB%8B%A8%EA%B3%84%EC%94%A9%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어에서 여러개의 goroutine을 동시에 한단계씩 실행하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-03-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%8F%99%EC%8B%9C%EC%97%90%EC%8B%A4%ED%96%89%EB%90%98%EB%8A%94goroutine%EC%9D%98%EC%88%98%EB%A5%BC%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0/">go 언어에서 동시에 실행되는 goroutine의 수를 제어 하기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

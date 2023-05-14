@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>벤치마크와 프로파일링의 결과가 서로 상충될때  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개 repository 에 올렸습니다.
+https://github.com/kasworld/wrapper
+인데
+내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한 패키지입니다.
+패키지의 기능은 최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는 것입니다.
+실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를 만들기 위한 기능을 제공하기 위해서 만든 것인데.
+원래는 func WrapInt(v, l int) int { return (v%l &#43; l) % l }">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="벤치마크와 프로파일링의 결과가 서로 상충될때 " />
+<meta property="og:description" content="작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개 repository 에 올렸습니다.
+https://github.com/kasworld/wrapper
+인데
+내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한 패키지입니다.
+패키지의 기능은 최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는 것입니다.
+실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를 만들기 위한 기능을 제공하기 위해서 만든 것인데.
+원래는 func WrapInt(v, l int) int { return (v%l &#43; l) % l }" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2017-11-29-%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%EC%99%80%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%EC%9D%98%EA%B2%B0%EA%B3%BC%EA%B0%80%EC%84%9C%EB%A1%9C%EC%83%81%EC%B6%A9%EB%90%A0%EB%95%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-11-29T16:51:00+09:00" />
+<meta property="article:modified_time" content="2017-11-29T16:51:00+09:00" />
+<meta itemprop="name" content="벤치마크와 프로파일링의 결과가 서로 상충될때 ">
+<meta itemprop="description" content="작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개 repository 에 올렸습니다.
+https://github.com/kasworld/wrapper
+인데
+내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한 패키지입니다.
+패키지의 기능은 최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는 것입니다.
+실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를 만들기 위한 기능을 제공하기 위해서 만든 것인데.
+원래는 func WrapInt(v, l int) int { return (v%l &#43; l) % l }"><meta itemprop="datePublished" content="2017-11-29T16:51:00+09:00" />
+<meta itemprop="dateModified" content="2017-11-29T16:51:00+09:00" />
+<meta itemprop="wordCount" content="254">
+<meta itemprop="keywords" content="golang,benchmark,profiling," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="벤치마크와 프로파일링의 결과가 서로 상충될때 "/>
+<meta name="twitter:description" content="작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개 repository 에 올렸습니다.
+https://github.com/kasworld/wrapper
+인데
+내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한 패키지입니다.
+패키지의 기능은 최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는 것입니다.
+실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를 만들기 위한 기능을 제공하기 위해서 만든 것인데.
+원래는 func WrapInt(v, l int) int { return (v%l &#43; l) % l }"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">벤치마크와 프로파일링의 결과가 서로 상충될때 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-11-29T16:51:00+09:00">November 29, 2017</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개
+repository 에 올렸습니다.</p>
+<p><a href="https://github.com/kasworld/wrapper">https://github.com/kasworld/wrapper</a></p>
+<p>인데</p>
+<p>내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한
+패키지입니다.</p>
+<p>패키지의 기능은 
+최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는
+것입니다.</p>
+<p>실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를
+만들기 위한 기능을 제공하기 위해서 만든 것인데.</p>
+<p>원래는 
+<!-- raw HTML omitted -->func
+WrapInt(v, l int) int {<!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->return (v%l + l) % l<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<p>같이 아주 간단한 함수를 만들어 사용하고 있었습니다. </p>
+<p>그나마 위 함수도 v의 값이 아주 크거나 아주 작을 때도 작동하게 하기 위한
+고려가 되어 있습니다. </p>
+<p>문제는 언제 나처럼 </p>
+<p>go tool pprof &ldquo;http://localhost:9002/debug/pprof/profile&rdquo;</p>
+<p>같이 프로파일을 돌려 보니 </p>
+<p>어마 무지한 시간을 (거의 25% 정도? ) 잡아 먹고 있던 것이었습니다. </p>
+<p>어라 % 가 비록 나누셈 이긴 하지만 현대의 x86-64가 나누기가 그렇게
+느리다고? </p>
+<p>그럼 테이블 기반으로 바꿔볼까? 하고 만든 것이 wrapper 입니다. </p>
+<p>다만 테이블 기반이기 때문에 상정 범위 밖 일때는 에러가 ( out of index
+같은 ) 나게 됩니다. </p>
+<p>상정 범위는 프로그램상 제어 가능한 범위인 </p>
+<p>폭이 W 일때 -W 에서 +2*W 이내 입니다. </p>
+<p>그리고 프로파일을 돌렸더니 기대한대로 사용량이 확 줄어 들더군요. </p>
+<p>그래서 한껀 해결! 하고 있었는데 좀 찜찜해서 여러 형태의 wrapper 함수들을
+만들고 </p>
+<p>benchmark 를 해보았습니다. </p>
+<p>go test -bench=. </p>
+<p>goos: linux</p>
+<p>goarch: amd64</p>
+<p>pkg: github.com/kasworld/wrapper</p>
+<p>BenchmarkWrap-8           <!-- raw HTML omitted --> <!-- raw HTML omitted -->
+1000000<!-- raw HTML omitted --> <!-- raw HTML omitted -->      1634 ns/op</p>
+<p>BenchmarkWrapTable-8      <!-- raw HTML omitted --> <!-- raw HTML omitted -->
+1000000<!-- raw HTML omitted --> <!-- raw HTML omitted -->      1645 ns/op</p>
+<p>BenchmarkWrapSimple-8     <!-- raw HTML omitted --> <!-- raw HTML omitted -->
+1000000<!-- raw HTML omitted --> <!-- raw HTML omitted -->      1635 ns/op</p>
+<p>BenchmarkWrapFull-8       <!-- raw HTML omitted --> <!-- raw HTML omitted -->
+1000000<!-- raw HTML omitted --> <!-- raw HTML omitted -->      1227 ns/op</p>
+<p>BenchmarkWrapIf-8         <!-- raw HTML omitted --> <!-- raw HTML omitted --> 
+500000<!-- raw HTML omitted --> <!-- raw HTML omitted -->      2494 ns/op</p>
+<p>BenchmarkWrapIfSimple-8   <!-- raw HTML omitted --> <!-- raw HTML omitted -->
+1000000<!-- raw HTML omitted --> <!-- raw HTML omitted -->      1546 ns/op</p>
+<p>PASS</p>
+<p>ok  <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->github.com/kasworld/wrapper<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->9.053s</p>
+<p>과 같이 나옵니다. </p>
+<p>wrapfull함수가 위의 wrapint함수의 구현 입니다. 가장 빠르지요. </p>
+<p>뭔가 이상해서 ( 프로파일 결과와 벤치마크 결과가 상충되는 ) 살펴봐도
+현재까지는 이유를 못 찾고 있습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/benchmark/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">benchmark</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/profiling/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">profiling</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-04-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cprofiling%ED%95%98%EA%B8%B0/">go 언어에서 profiling 하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-09-18-metaprogramming%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">Meta-programming으로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-05-28-gosdlgui%EC%9D%98%EC%83%88%EB%B2%84%EC%A0%84%EC%9D%84%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go sdl gui 의 새버전을 작업하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-05-05-%EC%97%B0%ED%9C%B4%EB%A5%BC%EB%9C%BB%EC%9E%88%EA%B2%8C%EB%B3%B4%EB%82%B4%EA%B8%B0/">연휴를 뜻있게 보내기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-03-07-golangflagpackage%EC%9D%98%ED%95%A8%EC%A0%95/">golang flag package 의 함정 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-10-15-%ED%98%84%EC%9E%AC%EA%B7%BC%ED%99%A9%EA%B2%B8%EC%A7%80%EA%B8%88%ED%95%98%EA%B3%A0%EC%9E%88%EB%8A%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%ED%86%B5%EA%B3%84golang%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">현재 근황 겸 지금 하고있는 프로젝트의 통계 (golang으로 만들고 있는 게임 서버 )</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/">라즈베리 파이와 go언어. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/">Serial ID 생성기 - 두번째 글 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-07-03-go%EC%9A%A9webframework%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%8A%B9%EC%A7%95/">go 용 web framework 벤치마크, 특징. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike2의 AI에 상전이 엔진을 적용했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/">goguelike2에 소비성아이템, 버프 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/">go 언어에서 goroutine group을 같이 종료 시키기 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는 프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.
+코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.
+그 동안 python홍보용으로 잘 써먹었던 프로젝트입니다. ( 파이썬으로 이런 게임도 만들 수 있어. 너도 배워 보지 않을래? 등 ^^ )
+원래는 더 일찍 공개하려고 했으나 코드 정리등이 귀찮아서 미루다가 모 후배의 압박으로 대충 정리해서 올립니다.
+관심 있으신 분은 https://github.com/kasworld/wxgame2 에서 받으면 됩니다.
+원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을 사용하도록 되어 있는데 github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면 import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트 내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. " />
+<meta property="og:description" content="파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는 프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.
+코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.
+그 동안 python홍보용으로 잘 써먹었던 프로젝트입니다. ( 파이썬으로 이런 게임도 만들 수 있어. 너도 배워 보지 않을래? 등 ^^ )
+원래는 더 일찍 공개하려고 했으나 코드 정리등이 귀찮아서 미루다가 모 후배의 압박으로 대충 정리해서 올립니다.
+관심 있으신 분은 https://github.com/kasworld/wxgame2 에서 받으면 됩니다.
+원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을 사용하도록 되어 있는데 github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면 import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트 내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-01-19T17:03:00+09:00" />
+<meta property="article:modified_time" content="2014-01-19T17:03:00+09:00" />
+<meta itemprop="name" content="예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. ">
+<meta itemprop="description" content="파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는 프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.
+코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.
+그 동안 python홍보용으로 잘 써먹었던 프로젝트입니다. ( 파이썬으로 이런 게임도 만들 수 있어. 너도 배워 보지 않을래? 등 ^^ )
+원래는 더 일찍 공개하려고 했으나 코드 정리등이 귀찮아서 미루다가 모 후배의 압박으로 대충 정리해서 올립니다.
+관심 있으신 분은 https://github.com/kasworld/wxgame2 에서 받으면 됩니다.
+원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을 사용하도록 되어 있는데 github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면 import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트 내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다."><meta itemprop="datePublished" content="2014-01-19T17:03:00+09:00" />
+<meta itemprop="dateModified" content="2014-01-19T17:03:00+09:00" />
+<meta itemprop="wordCount" content="226">
+<meta itemprop="keywords" content="게임,파이썬,프로그래밍,강의,python,wxgame,AI,게임프로그래밍,개발,교육,세미나,게임개발,게임만들기,wxpython,github," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. "/>
+<meta name="twitter:description" content="파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는 프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.
+코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.
+그 동안 python홍보용으로 잘 써먹었던 프로젝트입니다. ( 파이썬으로 이런 게임도 만들 수 있어. 너도 배워 보지 않을래? 등 ^^ )
+원래는 더 일찍 공개하려고 했으나 코드 정리등이 귀찮아서 미루다가 모 후배의 압박으로 대충 정리해서 올립니다.
+관심 있으신 분은 https://github.com/kasworld/wxgame2 에서 받으면 됩니다.
+원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을 사용하도록 되어 있는데 github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면 import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트 내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-01-19T17:03:00+09:00">January 19, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는
+프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.</p>
+<p>코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.</p>
+<p>그 동안 python홍보용으로 잘 써먹었던 프로젝트입니다. 
+( 파이썬으로 이런 게임도 만들 수 있어. 너도 배워 보지 않을래? 등 ^^ )</p>
+<p>원래는 더 일찍 공개하려고 했으나 코드 정리등이 귀찮아서 미루다가 모
+후배의 압박으로 대충 정리해서 올립니다.</p>
+<p>관심 있으신 분은 
+<a href="https://github.com/kasworld/wxgame2">https://github.com/kasworld/wxgame2</a> 
+에서 받으면 됩니다.</p>
+<p>원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을
+사용하도록 되어 있는데 
+github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면
+import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트
+내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다.</p>
+<p>만들게된 동기는 python에서 게임용으로 많이 사용하는 pygame이 써보니 영
+별로고 또 업데이트도 오랫동안 멈춰 있는 관계로 pygame 정도의 기능이라면
+wxpython으로도 충분히 만들 수 있겠다 싶어서 만들었습니다.</p>
+<p>코드 작성의 의 주 방향은 
+나중에 다른 게임 만들일 있을때 재사용 하기 좋게 만든다. 
+가능한 OOP스럽게 만들어 본다. 
+였습니다.</p>
+<p>원래는 object hierarchy 가 더 깊었는데 ( pos 만 있는 class , move 만
+되는 class, display 만 하는 class 등 ) 너무 깊은 것도 오버질 인것 같아서
+적당히 합쳤습니다.</p>
+<p>너무 깊으니까 유지보수/개선 도 힘들고 읽고 쓰기도 힘들더군요.</p>
+<p>일단 현재 상황은 사용자가 조정하는 기능을 뺀 슈팅/탄막 게임을 만들기
+위한 대부분의 기능이 들어 있습니다.</p>
+<p>중간에 네트웍 버전으로 개선 하려다 만 흔적이 좀 남아 있을 거구요.</p>
+<p>실행하면 8개의 AI 끼리 대전을 하고 점수/통계을 옆에 보여 줍니다.</p>
+<p><a href="../images/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4-screenshot.jpg"><img src="../images/thumbnails/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4-screenshot.jpg" alt=""></a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%95%EC%9D%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">강의</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B5%90%EC%9C%A1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">교육</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B8%EB%AF%B8%EB%82%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">세미나</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/github/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">github</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-26-%EC%A0%9C%ED%92%88%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B0%9C%EB%B0%9C%EC%9D%98%EB%8B%A8%EA%B3%84/">제품/서비스 개발의 단계</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-05-%EA%B5%AC%EA%B8%80%EB%A6%AC%EB%8D%94%EA%B0%80%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A2%85%EB%A3%8C%ED%95%9C%EB%8B%A4%EB%8A%94%EC%86%8C%EC%8B%9D%EC%9D%84%EB%93%A3%EA%B3%A0/">구글 리더가 서비스 종료한다는 소식을 듣고</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-19-%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84%EC%97%90%EC%84%9C%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%80%EC%96%B4%EB%96%BB%EA%B2%8C%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C/">모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">windows의 vim에서 python 활성화 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/">우분투에서 로컬에 설치된 문서를 편하게 보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

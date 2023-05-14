@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike에 대량의 수정을 시도하다가. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="말하자면 fork를 해서 작업을 시작할 정도로 대형 수정 작업을 진행하고 있었습니다만.
+( 잠정적으론 goguelike2 가 될 것으로 예상하고 있습니다. )
+습관적으로 *.a 파일을 지우기 위해 ctrl-a , shift-del 을 했다가 소스를 홀라당 날려 먹었습니다. ( pkg 폴더가 아니고 src 폴더더군요. ;; )
+..
+..
+..
+..
+..
+..
+*.a 를 지우는 것은 gosublime 이 background build 해둔 package 파일들이 가끔 문제를 일으켜서 생긴 습관입니다만..
+이것이 문제를 일으킬줄이야. ;;;
+소스를 날려 먹은 것을 깨닿고 침착하게 git 에서 꺼내오려고 하니.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike에 대량의 수정을 시도하다가." />
+<meta property="og:description" content="말하자면 fork를 해서 작업을 시작할 정도로 대형 수정 작업을 진행하고 있었습니다만.
+( 잠정적으론 goguelike2 가 될 것으로 예상하고 있습니다. )
+습관적으로 *.a 파일을 지우기 위해 ctrl-a , shift-del 을 했다가 소스를 홀라당 날려 먹었습니다. ( pkg 폴더가 아니고 src 폴더더군요. ;; )
+..
+..
+..
+..
+..
+..
+*.a 를 지우는 것은 gosublime 이 background build 해둔 package 파일들이 가끔 문제를 일으켜서 생긴 습관입니다만..
+이것이 문제를 일으킬줄이야. ;;;
+소스를 날려 먹은 것을 깨닿고 침착하게 git 에서 꺼내오려고 하니." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-04-03-goguelike%EC%97%90%EB%8C%80%EB%9F%89%EC%9D%98%EC%88%98%EC%A0%95%EC%9D%84%EC%8B%9C%EB%8F%84%ED%95%98%EB%8B%A4%EA%B0%80/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-04-03T19:17:00+09:00" />
+<meta property="article:modified_time" content="2015-04-03T19:17:00+09:00" />
+<meta itemprop="name" content="goguelike에 대량의 수정을 시도하다가.">
+<meta itemprop="description" content="말하자면 fork를 해서 작업을 시작할 정도로 대형 수정 작업을 진행하고 있었습니다만.
+( 잠정적으론 goguelike2 가 될 것으로 예상하고 있습니다. )
+습관적으로 *.a 파일을 지우기 위해 ctrl-a , shift-del 을 했다가 소스를 홀라당 날려 먹었습니다. ( pkg 폴더가 아니고 src 폴더더군요. ;; )
+..
+..
+..
+..
+..
+..
+*.a 를 지우는 것은 gosublime 이 background build 해둔 package 파일들이 가끔 문제를 일으켜서 생긴 습관입니다만..
+이것이 문제를 일으킬줄이야. ;;;
+소스를 날려 먹은 것을 깨닿고 침착하게 git 에서 꺼내오려고 하니."><meta itemprop="datePublished" content="2015-04-03T19:17:00+09:00" />
+<meta itemprop="dateModified" content="2015-04-03T19:17:00+09:00" />
+<meta itemprop="wordCount" content="141">
+<meta itemprop="keywords" content="backup,goguelike," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike에 대량의 수정을 시도하다가."/>
+<meta name="twitter:description" content="말하자면 fork를 해서 작업을 시작할 정도로 대형 수정 작업을 진행하고 있었습니다만.
+( 잠정적으론 goguelike2 가 될 것으로 예상하고 있습니다. )
+습관적으로 *.a 파일을 지우기 위해 ctrl-a , shift-del 을 했다가 소스를 홀라당 날려 먹었습니다. ( pkg 폴더가 아니고 src 폴더더군요. ;; )
+..
+..
+..
+..
+..
+..
+*.a 를 지우는 것은 gosublime 이 background build 해둔 package 파일들이 가끔 문제를 일으켜서 생긴 습관입니다만..
+이것이 문제를 일으킬줄이야. ;;;
+소스를 날려 먹은 것을 깨닿고 침착하게 git 에서 꺼내오려고 하니."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike에 대량의 수정을 시도하다가.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-04-03T19:17:00+09:00">April 3, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>말하자면 fork를 해서 작업을 시작할 정도로 대형 수정 작업을 진행하고
+있었습니다만.</p>
+<p>( 잠정적으론 goguelike2 가 될 것으로 예상하고 있습니다. )</p>
+<p>습관적으로 *.a 파일을 지우기 위해 ctrl-a , shift-del 을 했다가 
+소스를 홀라당 날려 먹었습니다. 
+( pkg 폴더가 아니고 src 폴더더군요. ;; )</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>*.a 를 지우는 것은 gosublime 이 background build 해둔 package 파일들이
+가끔 문제를 일으켜서 생긴 습관입니다만..</p>
+<p>이것이 문제를 일으킬줄이야. ;;;</p>
+<p>소스를 날려 먹은 것을 깨닿고 침착하게 git 에서 꺼내오려고 하니..</p>
+<p>마침.. hidden folder 가 보이는 상태에서 shift-del 을 했더군요. 
+.git 폴더도 같이 지워 졌습니다.</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>..</p>
+<p>사고가 일어나려면 이렇게도 일어나는 군요. ;;;</p>
+<p>다행히 gitlab 서버에 저장되어 있던 것은 (당연히도 ) 멀쩡해서 goguelike
+소스코드는 모두 무사합니다만..</p>
+<p>fork해서 작업하던 goguelike2(가칭) 은 다 날라갔군요.</p>
+<p>기가 막혀 크크크크 웃으며 다시 작업해서 날려 먹기 전까지 작업이 이제야
+끝났습니다.</p>
+<p>이런 식의 불금은 전혀 반갑지 않은데 말이죠.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/backup/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">backup</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">go언어로 TCP server와 GUI client를 만들어 보기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-24-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Ctcpserverclient%EC%9D%98%EC%A0%84%ED%98%95%EC%A0%81%ED%98%95%ED%83%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%ED%99%94/">go언어에서 tcp server/client 의 전형적 형태. - 라이브러리화.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-20-go%EC%96%B8%EC%96%B4%EB%A1%9Cgui%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EA%B8%B0/">go 언어로 GUI 프로그램을 만들기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-19-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C2dtilebasedspace%EC%9A%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4/">go언어에서 2d tile based space 용 라이브러리들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-15-go%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%EC%8B%A4%EC%8B%9C%EA%B0%84%ED%86%B5%EA%B3%84%EB%A5%BC%EA%B8%B0%EB%A1%9D%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/">go 프로그램에서 실시간 통계를 기록하고 싶을때 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/">go 언어용 python-like log 모듈 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-05-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98goroutine%EC%9D%84%EB%8F%99%EC%8B%9C%EC%97%90%ED%95%9C%EB%8B%A8%EA%B3%84%EC%94%A9%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어에서 여러개의 goroutine을 동시에 한단계씩 실행하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-03-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%8F%99%EC%8B%9C%EC%97%90%EC%8B%A4%ED%96%89%EB%90%98%EB%8A%94goroutine%EC%9D%98%EC%88%98%EB%A5%BC%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0/">go 언어에서 동시에 실행되는 goroutine의 수를 제어 하기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-02-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cfunctionobject%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0%EB%B0%98%EB%B3%B5%EB%A3%A8%ED%94%84%EC%9C%84%EC%9E%84%ED%8C%A8%ED%84%B4delegateloop/">go 언어에서 function object 사용하기. 반복루프 위임 패턴? (delegate loop)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-01-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%ED%91%9C%EC%A4%80%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%A5%BC%ED%99%95%EC%9E%A5%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/">go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-01-31-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%EC%A3%BC%EC%9D%98%ED%95%A0%EB%B6%80%EB%B6%84/">go언어를 사용하면서 주의 할 부분 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-01-30-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EC%9E%90%EC%A3%BC%EC%93%B0%EA%B2%8C%EB%90%98%EB%8A%94%EC%BD%94%EB%93%9C%ED%8C%A8%ED%84%B4%EB%93%A4serialid%EC%83%9D%EC%84%B1/">go 언어를 사용 할때  자주 쓰게 되는 코드 패턴들. serial ID 생성 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-24-goguelikebaised%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike:baised 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-23-goguelikebiased%EC%9D%98%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%B2%84%EC%A0%84%EC%9D%84%EB%A6%B4%EB%A6%AC%EC%A6%88%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike:Biased의 테스트 버전을 릴리즈 했습니다. </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

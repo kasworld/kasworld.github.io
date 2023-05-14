@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>wxgame2 의 네트웍 버전이 거의 완료 되었습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="wxgame2 의 네트웍 버전이 거의 완료 되었습니다. " />
+<meta property="og:description" content="사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-03-15T18:48:00+09:00" />
+<meta property="article:modified_time" content="2014-03-15T18:48:00+09:00" />
+<meta itemprop="name" content="wxgame2 의 네트웍 버전이 거의 완료 되었습니다. ">
+<meta itemprop="description" content="사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다."><meta itemprop="datePublished" content="2014-03-15T18:48:00+09:00" />
+<meta itemprop="dateModified" content="2014-03-15T18:48:00+09:00" />
+<meta itemprop="wordCount" content="254">
+<meta itemprop="keywords" content="AI,게임프로그래밍,개발,언어,파이썬,프로그래밍,python,게임개발,wxgame,게임만들기,wxpython," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wxgame2 의 네트웍 버전이 거의 완료 되었습니다. "/>
+<meta name="twitter:description" content="사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
+이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
+github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
+정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-03-15T18:48:00+09:00">March 15, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="../images/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4-IMG_20140315_180727653.jpg"><img src="../images/thumbnails/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4-IMG_20140315_180727653.jpg" alt=""></a></p>
+<p>사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.</p>
+<p><a href="http://kasw.blogspot.kr/search/label/wxgame">이전 글들</a> 이후로 개인적
+여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) 
+wxgame2 의 네트웍 버전을 거의다 만들었습니다.</p>
+<p><a href="https://github.com/kasworld/wxgame2">github의 코드</a> 를 보시면 알게
+되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽
+코드도 수차례 재 작성하였습니다.</p>
+<p>정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와
+클라이언트 AI 만 작동하는 형태 입니다. 
+서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는
+것입니다.</p>
+<p>기존 코드의 수정은 대부분 네트웍 용으로 로직과 AI, 시각화를 분리 하는
+작업이었으며 
+기존 설계의 결정사항들이 이제와서 보니 맘에 들지 않아 단순화, 명료화
+시키는 작업들 이었습니다.</p>
+<p>아직 남아 있는 문제점들은 
+<!-- raw HTML omitted -->호밍 미슬이 오작동하고 있습니다.<!-- raw HTML omitted --> 
+네트웍쪽을 select를 쓰도록 수정하였는데 cpu 사용율이 너무 높습니다. 
+가능하면 twisted가 아닌 다른 방법을 사용해보고 싶어 선택한 것인데 역시
+한계가 있는 듯 합니다. 
+현재는 thread를 사용하여 async IO(network 전용 thread) 를 구현하고
+있는데   gevent 를 사용해 보면 어떨까 싶기도 합니다.</p>
+<p>그리고 클라이언트를 실행하면 무조건 AI(플레이어 시뮬레이션)가 같이
+실행되는데 AI없이 순수 관찰모드(observer mode) 클라이언트를 지원하면
+좋을 것 같습니다.</p>
+<p>플레이어가 직접 조종하는 클라이언트가 없으니 아직 까지는 게임
+시뮬레이터지 게임이라고는 할 수 없는 상태입니다. 
+언젠가 만들 생각은 있지만 플레이어가 저 AI들 사이에서 살아남을 수 있을지
+모르겠네요. ^^</p>
+<p>기존 설계에서 수정하고 싶은데 아직 못한 것 . 
+게임내 주 오브젝트들의 class를 dict와 list로부터 상속받은 클래스로
+만들었는데 이게 이점보다 개념의 혼돈에 따른 단점이 더 많이 발생합니다. 
+상속보다는 소유형태가 더 좋은 선택이었을 것 같습니다만 수정하려면 좀
+양이 될 듯 하여 ( 일단 급하지도 않고 ) 수정하지 않았습니다.</p>
+<p>2014-03-16 update 
+hommingbullet bug fixed 
+초기화시 파라미터를 잘못 설정한 탓이더군요. 
+덕분에 코드 refactoring 을 더 했습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%96%B8%EC%96%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">언어</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-05-%EA%B5%AC%EA%B8%80%EB%A6%AC%EB%8D%94%EA%B0%80%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A2%85%EB%A3%8C%ED%95%9C%EB%8B%A4%EB%8A%94%EC%86%8C%EC%8B%9D%EC%9D%84%EB%93%A3%EA%B3%A0/">구글 리더가 서비스 종료한다는 소식을 듣고</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">windows의 vim에서 python 활성화 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-26-%EC%A0%9C%ED%92%88%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B0%9C%EB%B0%9C%EC%9D%98%EB%8B%A8%EA%B3%84/">제품/서비스 개발의 단계</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

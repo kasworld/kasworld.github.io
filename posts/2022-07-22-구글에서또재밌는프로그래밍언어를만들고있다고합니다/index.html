@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.
+https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design
+C/C&#43;&#43; 과 상호 연결이 쉽게 되게 하는 것이 주 목적중 하나라고 하는데 Rust는 좋은 언어지만 C/C&#43;&#43; 상호 연동이 그리 편하지 않아서 새로 만든듯 합니다. 그래서인지 Rust의 syntax를 많이 가져온 듯한 부분이 보입니다. 덕분에 C/C&#43;&#43;의 가독성을 떨어 트리는 주범중하나인 변수/인자의 type 선언 형태가 타입이름 변수이름 형태에서 var 변수이름: 타입이름 형태로 바뀌었습니다. (이거 아주 맘에 드는 군요. ) javascript -&gt; dart python -&gt; golang 에 이어서 C/C&#43;&#43; -&gt; carbon 이 될지 기대 됩니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다." />
+<meta property="og:description" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.
+https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design
+C/C&#43;&#43; 과 상호 연결이 쉽게 되게 하는 것이 주 목적중 하나라고 하는데 Rust는 좋은 언어지만 C/C&#43;&#43; 상호 연동이 그리 편하지 않아서 새로 만든듯 합니다. 그래서인지 Rust의 syntax를 많이 가져온 듯한 부분이 보입니다. 덕분에 C/C&#43;&#43;의 가독성을 떨어 트리는 주범중하나인 변수/인자의 type 선언 형태가 타입이름 변수이름 형태에서 var 변수이름: 타입이름 형태로 바뀌었습니다. (이거 아주 맘에 드는 군요. ) javascript -&gt; dart python -&gt; golang 에 이어서 C/C&#43;&#43; -&gt; carbon 이 될지 기대 됩니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2022-07-22-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C%EB%98%90%EC%9E%AC%EB%B0%8C%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4%EB%A5%BC%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8B%A4%EA%B3%A0%ED%95%A9%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-22T07:26:00+09:00" />
+<meta property="article:modified_time" content="2022-07-22T07:26:00+09:00" />
+<meta itemprop="name" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.">
+<meta itemprop="description" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.
+https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design
+C/C&#43;&#43; 과 상호 연결이 쉽게 되게 하는 것이 주 목적중 하나라고 하는데 Rust는 좋은 언어지만 C/C&#43;&#43; 상호 연동이 그리 편하지 않아서 새로 만든듯 합니다. 그래서인지 Rust의 syntax를 많이 가져온 듯한 부분이 보입니다. 덕분에 C/C&#43;&#43;의 가독성을 떨어 트리는 주범중하나인 변수/인자의 type 선언 형태가 타입이름 변수이름 형태에서 var 변수이름: 타입이름 형태로 바뀌었습니다. (이거 아주 맘에 드는 군요. ) javascript -&gt; dart python -&gt; golang 에 이어서 C/C&#43;&#43; -&gt; carbon 이 될지 기대 됩니다."><meta itemprop="datePublished" content="2022-07-22T07:26:00+09:00" />
+<meta itemprop="dateModified" content="2022-07-22T07:26:00+09:00" />
+<meta itemprop="wordCount" content="80">
+<meta itemprop="keywords" content="golang,carbon,python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다."/>
+<meta name="twitter:description" content="구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.
+https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design
+C/C&#43;&#43; 과 상호 연결이 쉽게 되게 하는 것이 주 목적중 하나라고 하는데 Rust는 좋은 언어지만 C/C&#43;&#43; 상호 연동이 그리 편하지 않아서 새로 만든듯 합니다. 그래서인지 Rust의 syntax를 많이 가져온 듯한 부분이 보입니다. 덕분에 C/C&#43;&#43;의 가독성을 떨어 트리는 주범중하나인 변수/인자의 type 선언 형태가 타입이름 변수이름 형태에서 var 변수이름: 타입이름 형태로 바뀌었습니다. (이거 아주 맘에 드는 군요. ) javascript -&gt; dart python -&gt; golang 에 이어서 C/C&#43;&#43; -&gt; carbon 이 될지 기대 됩니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-22T07:26:00+09:00">July 22, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.</p>
+<p><!-- raw HTML omitted --><a href="https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design">https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design</a><!-- raw HTML omitted --></p>
+<p>C/C++ 과 상호 연결이 쉽게 되게 하는 것이 주 목적중 하나라고 하는데
+Rust는 좋은 언어지만 C/C++ 상호 연동이 그리 편하지 않아서 새로 만든듯
+합니다. 
+그래서인지 Rust의 syntax를 많이 가져온 듯한 부분이 보입니다. 
+덕분에 C/C++의 가독성을 떨어 트리는 주범중하나인 변수/인자의 type 선언
+형태가 
+타입이름 변수이름 형태에서 
+var 변수이름: 타입이름 형태로 바뀌었습니다. 
+(이거 아주 맘에 드는 군요. ) 
+javascript -&gt; dart 
+python -&gt; golang 
+에 이어서 
+C/C++ -&gt; carbon 
+이 될지 기대 됩니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/carbon/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">carbon</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/">wxgame2의 go 언어 포팅 gowasm2dgame </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-13-goguelike%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%86%8D%EB%8F%84/">goguelike의 네트웍 속도</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/">하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/">6년 가까이 작업해온 goguelike 의 소스 코드를 공개 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-01-18-goguelike5000commit%EA%B8%B0%EB%85%90/">goguelike 5000 commit 기념 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/">2020년 현재 goguelike의 상태 정리 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-12-15-%EA%B7%B8%EC%A0%803d%EA%B3%B5%EA%B0%84%EC%97%90%EA%B3%B5%EB%93%A4%EC%9D%B4%EB%8F%8C%EC%95%84%EB%8B%A4%EB%8B%90%EB%BF%90%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/">그저 3d 공간에 공들이 돌아다닐 뿐인 프로젝트</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/">go 언어로 만든 배경이 있는 시계/달력 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-10-09-golang%EB%84%A4%ED%8A%B8%EC%9B%8D%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%83%9D%EC%84%B1%EA%B8%B0/">golang (네트웍) 프로토콜 생성기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-09-09-golang%EA%B3%BCgolangwasm%EC%82%AC%EC%9D%B4%EC%97%90websocket%EC%9C%BC%EB%A1%9C%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0/">golang 과 golang wasm 사이에 websocket으로 통신하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/">goguelike 2를 개발하면서 만들어진 라이브러리들의 일부를  공개/업데이트 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/">golang gopherjs로 만든 시계와 달력 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-10-02-goguelike%ED%8E%B8%ED%96%A5bias%EC%9D%98color%ED%91%9C%EC%8B%9C%EC%A7%80%EB%82%9C1%EB%85%84%EA%B0%84%EC%9E%91%EC%97%85%EB%9F%89/">goguelike 편향Bias의 color표시 , 지난 1년간 작업량 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

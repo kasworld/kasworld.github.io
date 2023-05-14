@@ -1,14 +1,3557 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on github pages with hugo test</title>
+    <title>Tags on 취미로 프로그래밍을 하는 사람입니다.</title>
     <link>https://kasworld.github.io/tags/</link>
-    <description>Recent content in Tags on github pages with hugo test</description>
+    <description>Recent content in Tags on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 22 Jul 2022 07:26:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>carbon</title>
+      <link>https://kasworld.github.io/tags/carbon/</link>
+      <pubDate>Fri, 22 Jul 2022 07:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/carbon/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://kasworld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang</title>
+      <link>https://kasworld.github.io/tags/golang/</link>
+      <pubDate>Fri, 22 Jul 2022 07:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>python</title>
+      <link>https://kasworld.github.io/tags/python/</link>
+      <pubDate>Fri, 22 Jul 2022 07:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ff15</title>
+      <link>https://kasworld.github.io/tags/ff15/</link>
+      <pubDate>Mon, 11 Jul 2022 07:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ff15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>감상기</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%90%EC%83%81%EA%B8%B0/</link>
+      <pubDate>Mon, 11 Jul 2022 07:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%90%EC%83%81%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>성능테스트</title>
+      <link>https://kasworld.github.io/tags/%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Fri, 04 Dec 2020 14:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>messagepack</title>
+      <link>https://kasworld.github.io/tags/messagepack/</link>
+      <pubDate>Sun, 29 Nov 2020 12:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/messagepack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packet</title>
+      <link>https://kasworld.github.io/tags/packet/</link>
+      <pubDate>Sun, 29 Nov 2020 12:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/packet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>connection</title>
+      <link>https://kasworld.github.io/tags/connection/</link>
+      <pubDate>Sun, 22 Nov 2020 17:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/connection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://kasworld.github.io/tags/linux/</link>
+      <pubDate>Sun, 22 Nov 2020 17:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socket</title>
+      <link>https://kasworld.github.io/tags/socket/</link>
+      <pubDate>Sun, 22 Nov 2020 17:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/socket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://kasworld.github.io/tags/windows/</link>
+      <pubDate>Sun, 22 Nov 2020 17:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goguelike</title>
+      <link>https://kasworld.github.io/tags/goguelike/</link>
+      <pubDate>Sun, 04 Oct 2020 12:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/goguelike/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>공격방식</title>
+      <link>https://kasworld.github.io/tags/%EA%B3%B5%EA%B2%A9%EB%B0%A9%EC%8B%9D/</link>
+      <pubDate>Sun, 06 Sep 2020 16:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B3%B5%EA%B2%A9%EB%B0%A9%EC%8B%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>범위공격</title>
+      <link>https://kasworld.github.io/tags/%EB%B2%94%EC%9C%84%EA%B3%B5%EA%B2%A9/</link>
+      <pubDate>Sun, 06 Sep 2020 16:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B2%94%EC%9C%84%EA%B3%B5%EA%B2%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>area attack</title>
+      <link>https://kasworld.github.io/tags/area-attack/</link>
+      <pubDate>Wed, 02 Sep 2020 12:55:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/area-attack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>danger object</title>
+      <link>https://kasworld.github.io/tags/danger-object/</link>
+      <pubDate>Wed, 02 Sep 2020 12:55:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/danger-object/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>리눅스</title>
+      <link>https://kasworld.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/</link>
+      <pubDate>Tue, 25 Aug 2020 11:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>윈도우</title>
+      <link>https://kasworld.github.io/tags/%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
+      <pubDate>Tue, 25 Aug 2020 11:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flight simulator</title>
+      <link>https://kasworld.github.io/tags/flight-simulator/</link>
+      <pubDate>Thu, 20 Aug 2020 22:04:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/flight-simulator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ageing</title>
+      <link>https://kasworld.github.io/tags/ageing/</link>
+      <pubDate>Wed, 19 Aug 2020 15:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ageing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terrain</title>
+      <link>https://kasworld.github.io/tags/terrain/</link>
+      <pubDate>Wed, 19 Aug 2020 15:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/terrain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lineofsight</title>
+      <link>https://kasworld.github.io/tags/lineofsight/</link>
+      <pubDate>Mon, 17 Aug 2020 10:43:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/lineofsight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rework</title>
+      <link>https://kasworld.github.io/tags/rework/</link>
+      <pubDate>Mon, 17 Aug 2020 10:43:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/rework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webgl</title>
+      <link>https://kasworld.github.io/tags/webgl/</link>
+      <pubDate>Sun, 09 Aug 2020 18:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/webgl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>towermaker</title>
+      <link>https://kasworld.github.io/tags/towermaker/</link>
+      <pubDate>Fri, 07 Aug 2020 12:34:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/towermaker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>glclient</title>
+      <link>https://kasworld.github.io/tags/glclient/</link>
+      <pubDate>Tue, 28 Jul 2020 16:35:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/glclient/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://kasworld.github.io/tags/github/</link>
+      <pubDate>Sat, 18 Jul 2020 15:13:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>camera</title>
+      <link>https://kasworld.github.io/tags/camera/</link>
+      <pubDate>Sun, 12 Jul 2020 17:25:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/camera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slide angle</title>
+      <link>https://kasworld.github.io/tags/slide-angle/</link>
+      <pubDate>Sun, 12 Jul 2020 17:25:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/slide-angle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>쿼터뷰</title>
+      <link>https://kasworld.github.io/tags/%EC%BF%BC%ED%84%B0%EB%B7%B0/</link>
+      <pubDate>Wed, 08 Jul 2020 15:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%BF%BC%ED%84%B0%EB%B7%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game framework</title>
+      <link>https://kasworld.github.io/tags/game-framework/</link>
+      <pubDate>Thu, 28 May 2020 15:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/game-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>websocket</title>
+      <link>https://kasworld.github.io/tags/websocket/</link>
+      <pubDate>Thu, 28 May 2020 15:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/websocket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gofieldwar</title>
+      <link>https://kasworld.github.io/tags/gofieldwar/</link>
+      <pubDate>Sat, 02 May 2020 15:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gofieldwar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>서비스</title>
+      <link>https://kasworld.github.io/tags/%EC%84%9C%EB%B9%84%EC%8A%A4/</link>
+      <pubDate>Sat, 02 May 2020 11:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%9C%EB%B9%84%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>defense formation</title>
+      <link>https://kasworld.github.io/tags/defense-formation/</link>
+      <pubDate>Wed, 29 Apr 2020 11:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/defense-formation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prototype</title>
+      <link>https://kasworld.github.io/tags/prototype/</link>
+      <pubDate>Wed, 29 Apr 2020 11:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/prototype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mmorts</title>
+      <link>https://kasworld.github.io/tags/mmorts/</link>
+      <pubDate>Wed, 15 Apr 2020 12:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mmorts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>기분전환</title>
+      <link>https://kasworld.github.io/tags/%EA%B8%B0%EB%B6%84%EC%A0%84%ED%99%98/</link>
+      <pubDate>Wed, 15 Apr 2020 12:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B8%B0%EB%B6%84%EC%A0%84%ED%99%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mmo</title>
+      <link>https://kasworld.github.io/tags/mmo/</link>
+      <pubDate>Wed, 08 Apr 2020 12:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mmo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>roguelike</title>
+      <link>https://kasworld.github.io/tags/roguelike/</link>
+      <pubDate>Wed, 08 Apr 2020 12:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/roguelike/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>실시간 턴제</title>
+      <link>https://kasworld.github.io/tags/%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%84%B4%EC%A0%9C/</link>
+      <pubDate>Sat, 28 Mar 2020 14:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%84%B4%EC%A0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>턴제 게임</title>
+      <link>https://kasworld.github.io/tags/%ED%84%B4%EC%A0%9C-%EA%B2%8C%EC%9E%84/</link>
+      <pubDate>Sat, 28 Mar 2020 14:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%84%B4%EC%A0%9C-%EA%B2%8C%EC%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>인풋렉</title>
+      <link>https://kasworld.github.io/tags/%EC%9D%B8%ED%92%8B%EB%A0%89/</link>
+      <pubDate>Tue, 17 Mar 2020 13:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9D%B8%ED%92%8B%EB%A0%89/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emoji</title>
+      <link>https://kasworld.github.io/tags/emoji/</link>
+      <pubDate>Tue, 10 Mar 2020 16:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>줄간격</title>
+      <link>https://kasworld.github.io/tags/%EC%A4%84%EA%B0%84%EA%B2%A9/</link>
+      <pubDate>Tue, 10 Mar 2020 16:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A4%84%EA%B0%84%EA%B2%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tile texture</title>
+      <link>https://kasworld.github.io/tags/tile-texture/</link>
+      <pubDate>Thu, 05 Mar 2020 12:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/tile-texture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ryzen</title>
+      <link>https://kasworld.github.io/tags/ryzen/</link>
+      <pubDate>Sat, 29 Feb 2020 15:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ryzen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>라이젠</title>
+      <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EC%A0%A0/</link>
+      <pubDate>Sat, 29 Feb 2020 15:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EC%A0%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kazam</title>
+      <link>https://kasworld.github.io/tags/kazam/</link>
+      <pubDate>Fri, 28 Feb 2020 10:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/kazam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>업그레이드</title>
+      <link>https://kasworld.github.io/tags/%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/</link>
+      <pubDate>Fri, 28 Feb 2020 10:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>condition</title>
+      <link>https://kasworld.github.io/tags/condition/</link>
+      <pubDate>Tue, 18 Feb 2020 14:43:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/condition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>naming</title>
+      <link>https://kasworld.github.io/tags/naming/</link>
+      <pubDate>Tue, 18 Feb 2020 14:43:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/naming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goguelike2</title>
+      <link>https://kasworld.github.io/tags/goguelike2/</link>
+      <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/goguelike2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mmorlg</title>
+      <link>https://kasworld.github.io/tags/mmorlg/</link>
+      <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mmorlg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wasm</title>
+      <link>https://kasworld.github.io/tags/wasm/</link>
+      <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wasm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webassembly</title>
+      <link>https://kasworld.github.io/tags/webassembly/</link>
+      <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/webassembly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3d</title>
+      <link>https://kasworld.github.io/tags/3d/</link>
+      <pubDate>Sun, 15 Dec 2019 14:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gl</title>
+      <link>https://kasworld.github.io/tags/gl/</link>
+      <pubDate>Sun, 15 Dec 2019 14:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gowasm3dgame</title>
+      <link>https://kasworld.github.io/tags/gowasm3dgame/</link>
+      <pubDate>Sun, 15 Dec 2019 14:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gowasm3dgame/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calendar</title>
+      <link>https://kasworld.github.io/tags/calendar/</link>
+      <pubDate>Fri, 06 Dec 2019 14:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/calendar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clock</title>
+      <link>https://kasworld.github.io/tags/clock/</link>
+      <pubDate>Fri, 06 Dec 2019 14:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/clock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go programming language</title>
+      <link>https://kasworld.github.io/tags/go-programming-language/</link>
+      <pubDate>Fri, 06 Dec 2019 14:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/go-programming-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meta-programming</title>
+      <link>https://kasworld.github.io/tags/meta-programming/</link>
+      <pubDate>Thu, 05 Dec 2019 10:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/meta-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wxgame</title>
+      <link>https://kasworld.github.io/tags/wxgame/</link>
+      <pubDate>Thu, 05 Dec 2019 10:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wxgame/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wxpy</title>
+      <link>https://kasworld.github.io/tags/wxpy/</link>
+      <pubDate>Thu, 05 Dec 2019 10:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wxpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code generation</title>
+      <link>https://kasworld.github.io/tags/code-generation/</link>
+      <pubDate>Wed, 09 Oct 2019 12:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/code-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>https://kasworld.github.io/tags/network/</link>
+      <pubDate>Wed, 09 Oct 2019 12:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>protocol</title>
+      <link>https://kasworld.github.io/tags/protocol/</link>
+      <pubDate>Wed, 09 Oct 2019 12:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/protocol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dex</title>
+      <link>https://kasworld.github.io/tags/dex/</link>
+      <pubDate>Fri, 10 May 2019 19:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/dex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>type C</title>
+      <link>https://kasworld.github.io/tags/type-c/</link>
+      <pubDate>Fri, 10 May 2019 19:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/type-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>갤럭시</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%A4%EB%9F%AD%EC%8B%9C/</link>
+      <pubDate>Fri, 10 May 2019 19:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%A4%EB%9F%AD%EC%8B%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>안드로이드</title>
+      <link>https://kasworld.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/</link>
+      <pubDate>Fri, 10 May 2019 19:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>파이</title>
+      <link>https://kasworld.github.io/tags/%ED%8C%8C%EC%9D%B4/</link>
+      <pubDate>Fri, 10 May 2019 19:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8C%8C%EC%9D%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>라이브러리</title>
+      <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/</link>
+      <pubDate>Wed, 08 May 2019 11:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>사후지원</title>
+      <link>https://kasworld.github.io/tags/%EC%82%AC%ED%9B%84%EC%A7%80%EC%9B%90/</link>
+      <pubDate>Sun, 05 May 2019 16:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%AC%ED%9B%84%EC%A7%80%EC%9B%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>키보드</title>
+      <link>https://kasworld.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C/</link>
+      <pubDate>Sun, 05 May 2019 16:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>펌웨어</title>
+      <link>https://kasworld.github.io/tags/%ED%8E%8C%EC%9B%A8%EC%96%B4/</link>
+      <pubDate>Sun, 05 May 2019 16:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8E%8C%EC%9B%A8%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>해킹시도</title>
+      <link>https://kasworld.github.io/tags/%ED%95%B4%ED%82%B9%EC%8B%9C%EB%8F%84/</link>
+      <pubDate>Sun, 05 May 2019 16:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%B4%ED%82%B9%EC%8B%9C%EB%8F%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beamforming</title>
+      <link>https://kasworld.github.io/tags/beamforming/</link>
+      <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/beamforming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MU-MIMO</title>
+      <link>https://kasworld.github.io/tags/mu-mimo/</link>
+      <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mu-mimo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s7e</title>
+      <link>https://kasworld.github.io/tags/s7e/</link>
+      <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/s7e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wifi</title>
+      <link>https://kasworld.github.io/tags/wifi/</link>
+      <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wifi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>무선랜</title>
+      <link>https://kasworld.github.io/tags/%EB%AC%B4%EC%84%A0%EB%9E%9C/</link>
+      <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AC%B4%EC%84%A0%EB%9E%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gopherjs</title>
+      <link>https://kasworld.github.io/tags/gopherjs/</link>
+      <pubDate>Tue, 16 Oct 2018 09:59:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gopherjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>다트</title>
+      <link>https://kasworld.github.io/tags/%EB%8B%A4%ED%8A%B8/</link>
+      <pubDate>Mon, 17 Sep 2018 19:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%8B%A4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>highscore</title>
+      <link>https://kasworld.github.io/tags/highscore/</link>
+      <pubDate>Sun, 01 Jul 2018 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/highscore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>업데이트</title>
+      <link>https://kasworld.github.io/tags/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8/</link>
+      <pubDate>Fri, 22 Jun 2018 14:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>인트로</title>
+      <link>https://kasworld.github.io/tags/%EC%9D%B8%ED%8A%B8%EB%A1%9C/</link>
+      <pubDate>Fri, 22 Jun 2018 14:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9D%B8%ED%8A%B8%EB%A1%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>삼성</title>
+      <link>https://kasworld.github.io/tags/%EC%82%BC%EC%84%B1/</link>
+      <pubDate>Tue, 19 Jun 2018 12:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%BC%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>오레오</title>
+      <link>https://kasworld.github.io/tags/%EC%98%A4%EB%A0%88%EC%98%A4/</link>
+      <pubDate>Tue, 19 Jun 2018 12:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%98%A4%EB%A0%88%EC%98%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>이상증상</title>
+      <link>https://kasworld.github.io/tags/%EC%9D%B4%EC%83%81%EC%A6%9D%EC%83%81/</link>
+      <pubDate>Tue, 19 Jun 2018 12:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9D%B4%EC%83%81%EC%A6%9D%EC%83%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>잠금해제</title>
+      <link>https://kasworld.github.io/tags/%EC%9E%A0%EA%B8%88%ED%95%B4%EC%A0%9C/</link>
+      <pubDate>Tue, 19 Jun 2018 12:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9E%A0%EA%B8%88%ED%95%B4%EC%A0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zombie</title>
+      <link>https://kasworld.github.io/tags/zombie/</link>
+      <pubDate>Thu, 14 Jun 2018 08:23:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/zombie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>좀비</title>
+      <link>https://kasworld.github.io/tags/%EC%A2%80%EB%B9%84/</link>
+      <pubDate>Thu, 14 Jun 2018 08:23:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A2%80%EB%B9%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>udp</title>
+      <link>https://kasworld.github.io/tags/udp/</link>
+      <pubDate>Fri, 06 Apr 2018 14:36:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/udp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>byobu</title>
+      <link>https://kasworld.github.io/tags/byobu/</link>
+      <pubDate>Fri, 29 Dec 2017 08:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/byobu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command line</title>
+      <link>https://kasworld.github.io/tags/command-line/</link>
+      <pubDate>Fri, 29 Dec 2017 08:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/command-line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fish shell</title>
+      <link>https://kasworld.github.io/tags/fish-shell/</link>
+      <pubDate>Fri, 29 Dec 2017 08:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/fish-shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://kasworld.github.io/tags/shell/</link>
+      <pubDate>Fri, 29 Dec 2017 08:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminator</title>
+      <link>https://kasworld.github.io/tags/terminator/</link>
+      <pubDate>Fri, 29 Dec 2017 08:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/terminator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>benchmark</title>
+      <link>https://kasworld.github.io/tags/benchmark/</link>
+      <pubDate>Wed, 29 Nov 2017 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>profiling</title>
+      <link>https://kasworld.github.io/tags/profiling/</link>
+      <pubDate>Wed, 29 Nov 2017 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/profiling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GDG seoul meetup</title>
+      <link>https://kasworld.github.io/tags/gdg-seoul-meetup/</link>
+      <pubDate>Mon, 18 Sep 2017 15:06:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gdg-seoul-meetup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>노트북</title>
+      <link>https://kasworld.github.io/tags/%EB%85%B8%ED%8A%B8%EB%B6%81/</link>
+      <pubDate>Sun, 09 Jul 2017 10:38:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%85%B8%ED%8A%B8%EB%B6%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>민트</title>
+      <link>https://kasworld.github.io/tags/%EB%AF%BC%ED%8A%B8/</link>
+      <pubDate>Sun, 09 Jul 2017 10:38:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AF%BC%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>한성노트북</title>
+      <link>https://kasworld.github.io/tags/%ED%95%9C%EC%84%B1%EB%85%B8%ED%8A%B8%EB%B6%81/</link>
+      <pubDate>Sun, 09 Jul 2017 10:38:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%9C%EC%84%B1%EB%85%B8%ED%8A%B8%EB%B6%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go-sdlgui</title>
+      <link>https://kasworld.github.io/tags/go-sdlgui/</link>
+      <pubDate>Sun, 28 May 2017 14:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/go-sdlgui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GUI</title>
+      <link>https://kasworld.github.io/tags/gui/</link>
+      <pubDate>Sun, 28 May 2017 14:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>개발</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%9C%EB%B0%9C/</link>
+      <pubDate>Tue, 09 May 2017 11:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%9C%EB%B0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>프로그래밍</title>
+      <link>https://kasworld.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link>
+      <pubDate>Tue, 09 May 2017 11:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://kasworld.github.io/tags/bash/</link>
+      <pubDate>Tue, 07 Mar 2017 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command line arguement</title>
+      <link>https://kasworld.github.io/tags/command-line-arguement/</link>
+      <pubDate>Tue, 07 Mar 2017 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/command-line-arguement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fish</title>
+      <link>https://kasworld.github.io/tags/fish/</link>
+      <pubDate>Tue, 07 Mar 2017 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/fish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flag</title>
+      <link>https://kasworld.github.io/tags/flag/</link>
+      <pubDate>Tue, 07 Mar 2017 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/flag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>삽질</title>
+      <link>https://kasworld.github.io/tags/%EC%82%BD%EC%A7%88/</link>
+      <pubDate>Tue, 07 Mar 2017 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%BD%EC%A7%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>지름</title>
+      <link>https://kasworld.github.io/tags/%EC%A7%80%EB%A6%84/</link>
+      <pubDate>Sat, 04 Feb 2017 12:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A7%80%EB%A6%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>키캡</title>
+      <link>https://kasworld.github.io/tags/%ED%82%A4%EC%BA%A1/</link>
+      <pubDate>Sat, 04 Feb 2017 12:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%82%A4%EC%BA%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7zip</title>
+      <link>https://kasworld.github.io/tags/7zip/</link>
+      <pubDate>Sat, 28 Jan 2017 16:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/7zip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arm</title>
+      <link>https://kasworld.github.io/tags/arm/</link>
+      <pubDate>Sat, 28 Jan 2017 16:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/arm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intel</title>
+      <link>https://kasworld.github.io/tags/intel/</link>
+      <pubDate>Sat, 28 Jan 2017 16:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipc</title>
+      <link>https://kasworld.github.io/tags/ipc/</link>
+      <pubDate>Sat, 28 Jan 2017 16:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ipc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple ][&#43;</title>
+      <link>https://kasworld.github.io/tags/apple-&#43;/</link>
+      <pubDate>Mon, 15 Aug 2016 15:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/apple-&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple ][gs</title>
+      <link>https://kasworld.github.io/tags/apple-gs/</link>
+      <pubDate>Mon, 15 Aug 2016 15:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/apple-gs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emulator</title>
+      <link>https://kasworld.github.io/tags/emulator/</link>
+      <pubDate>Mon, 15 Aug 2016 15:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/emulator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kegs</title>
+      <link>https://kasworld.github.io/tags/kegs/</link>
+      <pubDate>Mon, 15 Aug 2016 15:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/kegs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NAT</title>
+      <link>https://kasworld.github.io/tags/nat/</link>
+      <pubDate>Sat, 21 May 2016 21:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/nat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>공유기</title>
+      <link>https://kasworld.github.io/tags/%EA%B3%B5%EC%9C%A0%EA%B8%B0/</link>
+      <pubDate>Sat, 21 May 2016 21:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B3%B5%EC%9C%A0%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>기가인터넷</title>
+      <link>https://kasworld.github.io/tags/%EA%B8%B0%EA%B0%80%EC%9D%B8%ED%84%B0%EB%84%B7/</link>
+      <pubDate>Sat, 21 May 2016 21:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B8%B0%EA%B0%80%EC%9D%B8%ED%84%B0%EB%84%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberrypi</title>
+      <link>https://kasworld.github.io/tags/raspberrypi/</link>
+      <pubDate>Sat, 30 Apr 2016 15:04:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/raspberrypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>라즈베리파이</title>
+      <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/</link>
+      <pubDate>Sat, 30 Apr 2016 15:04:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>화면꺼짐방지</title>
+      <link>https://kasworld.github.io/tags/%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%B0%A9%EC%A7%80/</link>
+      <pubDate>Sat, 30 Apr 2016 15:04:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%B0%A9%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>usb 충전기</title>
+      <link>https://kasworld.github.io/tags/usb-%EC%B6%A9%EC%A0%84%EA%B8%B0/</link>
+      <pubDate>Sun, 27 Mar 2016 17:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/usb-%EC%B6%A9%EC%A0%84%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>라즈베리파이3</title>
+      <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43/</link>
+      <pubDate>Sun, 27 Mar 2016 17:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>개인정보</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4/</link>
+      <pubDate>Sun, 13 Mar 2016 15:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>암호화</title>
+      <link>https://kasworld.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94/</link>
+      <pubDate>Sun, 13 Mar 2016 15:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>displayport</title>
+      <link>https://kasworld.github.io/tags/displayport/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/displayport/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hdmi</title>
+      <link>https://kasworld.github.io/tags/hdmi/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/hdmi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ips</title>
+      <link>https://kasworld.github.io/tags/ips/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mva</title>
+      <link>https://kasworld.github.io/tags/mva/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mva/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>모니터</title>
+      <link>https://kasworld.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>사운드관리자</title>
+      <link>https://kasworld.github.io/tags/%EC%82%AC%EC%9A%B4%EB%93%9C%EA%B4%80%EB%A6%AC%EC%9E%90/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%AC%EC%9A%B4%EB%93%9C%EA%B4%80%EB%A6%AC%EC%9E%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>오픈프레임</title>
+      <link>https://kasworld.github.io/tags/%EC%98%A4%ED%94%88%ED%94%84%EB%A0%88%EC%9E%84/</link>
+      <pubDate>Tue, 01 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%98%A4%ED%94%88%ED%94%84%EB%A0%88%EC%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>802.11ac</title>
+      <link>https://kasworld.github.io/tags/802.11ac/</link>
+      <pubDate>Sun, 08 Nov 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/802.11ac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intel 7260</title>
+      <link>https://kasworld.github.io/tags/intel-7260/</link>
+      <pubDate>Sun, 08 Nov 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/intel-7260/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wf2881</title>
+      <link>https://kasworld.github.io/tags/wf2881/</link>
+      <pubDate>Sun, 08 Nov 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wf2881/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zenfone 2</title>
+      <link>https://kasworld.github.io/tags/zenfone-2/</link>
+      <pubDate>Sun, 08 Nov 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/zenfone-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>개발환경</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</link>
+      <pubDate>Sun, 08 Nov 2015 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>모니터 사망</title>
+      <link>https://kasworld.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0-%EC%82%AC%EB%A7%9D/</link>
+      <pubDate>Sun, 08 Nov 2015 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0-%EC%82%AC%EB%A7%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>모바일 시대</title>
+      <link>https://kasworld.github.io/tags/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%8B%9C%EB%8C%80/</link>
+      <pubDate>Sun, 08 Nov 2015 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%8B%9C%EB%8C%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>asus</title>
+      <link>https://kasworld.github.io/tags/asus/</link>
+      <pubDate>Sun, 13 Sep 2015 12:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/asus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LG보고있나?</title>
+      <link>https://kasworld.github.io/tags/lg%EB%B3%B4%EA%B3%A0%EC%9E%88%EB%82%98/</link>
+      <pubDate>Sun, 13 Sep 2015 12:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/lg%EB%B3%B4%EA%B3%A0%EC%9E%88%EB%82%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>보안</title>
+      <link>https://kasworld.github.io/tags/%EB%B3%B4%EC%95%88/</link>
+      <pubDate>Sun, 13 Sep 2015 12:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B3%B4%EC%95%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>channel</title>
+      <link>https://kasworld.github.io/tags/channel/</link>
+      <pubDate>Sat, 12 Sep 2015 16:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/channel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>closure</title>
+      <link>https://kasworld.github.io/tags/closure/</link>
+      <pubDate>Sat, 12 Sep 2015 16:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/closure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>factory</title>
+      <link>https://kasworld.github.io/tags/factory/</link>
+      <pubDate>Sat, 12 Sep 2015 16:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/factory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serial id</title>
+      <link>https://kasworld.github.io/tags/serial-id/</link>
+      <pubDate>Sat, 12 Sep 2015 16:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/serial-id/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpl</title>
+      <link>https://kasworld.github.io/tags/gpl/</link>
+      <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gpl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptime</title>
+      <link>https://kasworld.github.io/tags/iptime/</link>
+      <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/iptime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>n8004r</title>
+      <link>https://kasworld.github.io/tags/n8004r/</link>
+      <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/n8004r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netis</title>
+      <link>https://kasworld.github.io/tags/netis/</link>
+      <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/netis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>소니타이머</title>
+      <link>https://kasworld.github.io/tags/%EC%86%8C%EB%8B%88%ED%83%80%EC%9D%B4%EB%A8%B8/</link>
+      <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%86%8C%EB%8B%88%ED%83%80%EC%9D%B4%EB%A8%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mint</title>
+      <link>https://kasworld.github.io/tags/mint/</link>
+      <pubDate>Sat, 04 Jul 2015 09:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>밝기조절</title>
+      <link>https://kasworld.github.io/tags/%EB%B0%9D%EA%B8%B0%EC%A1%B0%EC%A0%88/</link>
+      <pubDate>Sat, 04 Jul 2015 09:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B0%9D%EA%B8%B0%EC%A1%B0%EC%A0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>인민에어</title>
+      <link>https://kasworld.github.io/tags/%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4/</link>
+      <pubDate>Sat, 04 Jul 2015 09:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>한성인민에어</title>
+      <link>https://kasworld.github.io/tags/%ED%95%9C%EC%84%B1%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4/</link>
+      <pubDate>Sat, 04 Jul 2015 09:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%9C%EC%84%B1%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beego</title>
+      <link>https://kasworld.github.io/tags/beego/</link>
+      <pubDate>Fri, 03 Jul 2015 14:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/beego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://kasworld.github.io/tags/go/</link>
+      <pubDate>Fri, 03 Jul 2015 14:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>revel</title>
+      <link>https://kasworld.github.io/tags/revel/</link>
+      <pubDate>Fri, 03 Jul 2015 14:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/revel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://kasworld.github.io/tags/web/</link>
+      <pubDate>Fri, 03 Jul 2015 14:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web framework</title>
+      <link>https://kasworld.github.io/tags/web-framework/</link>
+      <pubDate>Fri, 03 Jul 2015 14:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/web-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>a500</title>
+      <link>https://kasworld.github.io/tags/a500/</link>
+      <pubDate>Tue, 30 Jun 2015 16:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/a500/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>x61t</title>
+      <link>https://kasworld.github.io/tags/x61t/</link>
+      <pubDate>Tue, 30 Jun 2015 16:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/x61t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>노키아 5800</title>
+      <link>https://kasworld.github.io/tags/%EB%85%B8%ED%82%A4%EC%95%84-5800/</link>
+      <pubDate>Tue, 30 Jun 2015 16:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%85%B8%ED%82%A4%EC%95%84-5800/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>디바이스사망</title>
+      <link>https://kasworld.github.io/tags/%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%EC%82%AC%EB%A7%9D/</link>
+      <pubDate>Tue, 30 Jun 2015 16:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%EC%82%AC%EB%A7%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>레이</title>
+      <link>https://kasworld.github.io/tags/%EB%A0%88%EC%9D%B4/</link>
+      <pubDate>Tue, 30 Jun 2015 16:20:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A0%88%EC%9D%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>driver</title>
+      <link>https://kasworld.github.io/tags/driver/</link>
+      <pubDate>Mon, 22 Jun 2015 14:01:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/driver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nouveau</title>
+      <link>https://kasworld.github.io/tags/nouveau/</link>
+      <pubDate>Mon, 22 Jun 2015 14:01:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/nouveau/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nvidia</title>
+      <link>https://kasworld.github.io/tags/nvidia/</link>
+      <pubDate>Mon, 22 Jun 2015 14:01:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/nvidia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>https://kasworld.github.io/tags/ai/</link>
+      <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FSM</title>
+      <link>https://kasworld.github.io/tags/fsm/</link>
+      <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/fsm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stack</title>
+      <link>https://kasworld.github.io/tags/stack/</link>
+      <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>상전이 엔진</title>
+      <link>https://kasworld.github.io/tags/%EC%83%81%EC%A0%84%EC%9D%B4-%EC%97%94%EC%A7%84/</link>
+      <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%83%81%EC%A0%84%EC%9D%B4-%EC%97%94%EC%A7%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android lollipop</title>
+      <link>https://kasworld.github.io/tags/android-lollipop/</link>
+      <pubDate>Sat, 30 May 2015 16:52:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/android-lollipop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lollipop</title>
+      <link>https://kasworld.github.io/tags/lollipop/</link>
+      <pubDate>Sat, 30 May 2015 16:52:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/lollipop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>롤리팝</title>
+      <link>https://kasworld.github.io/tags/%EB%A1%A4%EB%A6%AC%ED%8C%9D/</link>
+      <pubDate>Sat, 30 May 2015 16:52:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A1%A4%EB%A6%AC%ED%8C%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>커펌</title>
+      <link>https://kasworld.github.io/tags/%EC%BB%A4%ED%8E%8C/</link>
+      <pubDate>Sat, 30 May 2015 16:52:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%BB%A4%ED%8E%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>펌업</title>
+      <link>https://kasworld.github.io/tags/%ED%8E%8C%EC%97%85/</link>
+      <pubDate>Sat, 30 May 2015 16:52:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8E%8C%EC%97%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>습관</title>
+      <link>https://kasworld.github.io/tags/%EC%8A%B5%EA%B4%80/</link>
+      <pubDate>Mon, 11 May 2015 17:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8A%B5%EA%B4%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interface</title>
+      <link>https://kasworld.github.io/tags/interface/</link>
+      <pubDate>Sun, 10 May 2015 18:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>https://kasworld.github.io/tags/package/</link>
+      <pubDate>Sun, 10 May 2015 18:18:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gimp</title>
+      <link>https://kasworld.github.io/tags/gimp/</link>
+      <pubDate>Fri, 08 May 2015 18:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gimp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imagemagick</title>
+      <link>https://kasworld.github.io/tags/imagemagick/</link>
+      <pubDate>Fri, 08 May 2015 18:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/imagemagick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>노가다</title>
+      <link>https://kasworld.github.io/tags/%EB%85%B8%EA%B0%80%EB%8B%A4/</link>
+      <pubDate>Fri, 08 May 2015 18:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%85%B8%EA%B0%80%EB%8B%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://kasworld.github.io/tags/server/</link>
+      <pubDate>Tue, 05 May 2015 12:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://kasworld.github.io/tags/ubuntu/</link>
+      <pubDate>Tue, 05 May 2015 12:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wireless</title>
+      <link>https://kasworld.github.io/tags/wireless/</link>
+      <pubDate>Tue, 05 May 2015 12:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wireless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eup</title>
+      <link>https://kasworld.github.io/tags/eup/</link>
+      <pubDate>Sat, 25 Apr 2015 12:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/eup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>전원문제</title>
+      <link>https://kasworld.github.io/tags/%EC%A0%84%EC%9B%90%EB%AC%B8%EC%A0%9C/</link>
+      <pubDate>Sat, 25 Apr 2015 12:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A0%84%EC%9B%90%EB%AC%B8%EC%A0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://kasworld.github.io/tags/monitoring/</link>
+      <pubDate>Tue, 21 Apr 2015 13:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terrain generation</title>
+      <link>https://kasworld.github.io/tags/terrain-generation/</link>
+      <pubDate>Thu, 09 Apr 2015 09:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/terrain-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backup</title>
+      <link>https://kasworld.github.io/tags/backup/</link>
+      <pubDate>Fri, 03 Apr 2015 19:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/backup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goroutine</title>
+      <link>https://kasworld.github.io/tags/goroutine/</link>
+      <pubDate>Wed, 25 Mar 2015 14:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/goroutine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>map</title>
+      <link>https://kasworld.github.io/tags/map/</link>
+      <pubDate>Mon, 23 Mar 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slice</title>
+      <link>https://kasworld.github.io/tags/slice/</link>
+      <pubDate>Mon, 23 Mar 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/slice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trade-off</title>
+      <link>https://kasworld.github.io/tags/trade-off/</link>
+      <pubDate>Mon, 23 Mar 2015 14:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/trade-off/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fortune cookie</title>
+      <link>https://kasworld.github.io/tags/fortune-cookie/</link>
+      <pubDate>Sat, 21 Mar 2015 16:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/fortune-cookie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sdl</title>
+      <link>https://kasworld.github.io/tags/sdl/</link>
+      <pubDate>Fri, 27 Feb 2015 14:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/sdl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://kasworld.github.io/tags/rust/</link>
+      <pubDate>Mon, 16 Feb 2015 18:27:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wxpython</title>
+      <link>https://kasworld.github.io/tags/wxpython/</link>
+      <pubDate>Fri, 28 Nov 2014 20:38:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/wxpython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>파이썬</title>
+      <link>https://kasworld.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</link>
+      <pubDate>Fri, 28 Nov 2014 20:38:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>한글</title>
+      <link>https://kasworld.github.io/tags/%ED%95%9C%EA%B8%80/</link>
+      <pubDate>Wed, 26 Nov 2014 09:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%9C%EA%B8%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>한글 잘못은 아닌데</title>
+      <link>https://kasworld.github.io/tags/%ED%95%9C%EA%B8%80-%EC%9E%98%EB%AA%BB%EC%9D%80-%EC%95%84%EB%8B%8C%EB%8D%B0/</link>
+      <pubDate>Wed, 26 Nov 2014 09:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%9C%EA%B8%80-%EC%9E%98%EB%AA%BB%EC%9D%80-%EC%95%84%EB%8B%8C%EB%8D%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://kasworld.github.io/tags/docker/</link>
+      <pubDate>Wed, 19 Nov 2014 23:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lxc</title>
+      <link>https://kasworld.github.io/tags/lxc/</link>
+      <pubDate>Wed, 19 Nov 2014 23:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/lxc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>사고기록</title>
+      <link>https://kasworld.github.io/tags/%EC%82%AC%EA%B3%A0%EA%B8%B0%EB%A1%9D/</link>
+      <pubDate>Wed, 19 Nov 2014 23:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%AC%EA%B3%A0%EA%B8%B0%EB%A1%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>우분투</title>
+      <link>https://kasworld.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</link>
+      <pubDate>Wed, 19 Nov 2014 23:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://kasworld.github.io/tags/javascript/</link>
+      <pubDate>Wed, 05 Nov 2014 11:43:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RPS</title>
+      <link>https://kasworld.github.io/tags/rps/</link>
+      <pubDate>Mon, 25 Aug 2014 15:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/rps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sublime text 2</title>
+      <link>https://kasworld.github.io/tags/sublime-text-2/</link>
+      <pubDate>Mon, 21 Jul 2014 11:53:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/sublime-text-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xubuntu</title>
+      <link>https://kasworld.github.io/tags/xubuntu/</link>
+      <pubDate>Mon, 21 Jul 2014 11:53:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/xubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>리눅스 민트</title>
+      <link>https://kasworld.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AF%BC%ED%8A%B8/</link>
+      <pubDate>Mon, 21 Jul 2014 11:53:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AF%BC%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go4game</title>
+      <link>https://kasworld.github.io/tags/go4game/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/go4game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>octree</title>
+      <link>https://kasworld.github.io/tags/octree/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/octree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spatial partition</title>
+      <link>https://kasworld.github.io/tags/spatial-partition/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/spatial-partition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>게임개발</title>
+      <link>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>게임만들기</title>
+      <link>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>게임프로그래밍</title>
+      <link>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>공간 분할</title>
+      <link>https://kasworld.github.io/tags/%EA%B3%B5%EA%B0%84-%EB%B6%84%ED%95%A0/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B3%B5%EA%B0%84-%EB%B6%84%ED%95%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>충돌 검사</title>
+      <link>https://kasworld.github.io/tags/%EC%B6%A9%EB%8F%8C-%EA%B2%80%EC%82%AC/</link>
+      <pubDate>Wed, 04 Jun 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%B6%A9%EB%8F%8C-%EA%B2%80%EC%82%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>three.js</title>
+      <link>https://kasworld.github.io/tags/three.js/</link>
+      <pubDate>Sun, 27 Apr 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/three.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>온라인게임</title>
+      <link>https://kasworld.github.io/tags/%EC%98%A8%EB%9D%BC%EC%9D%B8%EA%B2%8C%EC%9E%84/</link>
+      <pubDate>Sun, 27 Apr 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%98%A8%EB%9D%BC%EC%9D%B8%EA%B2%8C%EC%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>14.04</title>
+      <link>https://kasworld.github.io/tags/14.04/</link>
+      <pubDate>Mon, 21 Apr 2014 15:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/14.04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>드라이버</title>
+      <link>https://kasworld.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84/</link>
+      <pubDate>Mon, 21 Apr 2014 15:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>epoll</title>
+      <link>https://kasworld.github.io/tags/epoll/</link>
+      <pubDate>Wed, 02 Apr 2014 14:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/epoll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pypy</title>
+      <link>https://kasworld.github.io/tags/pypy/</link>
+      <pubDate>Wed, 02 Apr 2014 14:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/pypy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twisted</title>
+      <link>https://kasworld.github.io/tags/twisted/</link>
+      <pubDate>Wed, 02 Apr 2014 14:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/twisted/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>성능개선</title>
+      <link>https://kasworld.github.io/tags/%EC%84%B1%EB%8A%A5%EA%B0%9C%EC%84%A0/</link>
+      <pubDate>Wed, 02 Apr 2014 14:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%B1%EB%8A%A5%EA%B0%9C%EC%84%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>duel monitor</title>
+      <link>https://kasworld.github.io/tags/duel-monitor/</link>
+      <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/duel-monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GTX460</title>
+      <link>https://kasworld.github.io/tags/gtx460/</link>
+      <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gtx460/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GTX750ti</title>
+      <link>https://kasworld.github.io/tags/gtx750ti/</link>
+      <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gtx750ti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>triple monitor</title>
+      <link>https://kasworld.github.io/tags/triple-monitor/</link>
+      <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/triple-monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>드라이버 설치</title>
+      <link>https://kasworld.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98/</link>
+      <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>언어</title>
+      <link>https://kasworld.github.io/tags/%EC%96%B8%EC%96%B4/</link>
+      <pubDate>Sat, 22 Mar 2014 17:13:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%96%B8%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>강의</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%95%EC%9D%98/</link>
+      <pubDate>Sun, 02 Mar 2014 14:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%95%EC%9D%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>교육</title>
+      <link>https://kasworld.github.io/tags/%EA%B5%90%EC%9C%A1/</link>
+      <pubDate>Sun, 02 Mar 2014 14:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B5%90%EC%9C%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>세미나</title>
+      <link>https://kasworld.github.io/tags/%EC%84%B8%EB%AF%B8%EB%82%98/</link>
+      <pubDate>Sun, 02 Mar 2014 14:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%B8%EB%AF%B8%EB%82%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIY</title>
+      <link>https://kasworld.github.io/tags/diy/</link>
+      <pubDate>Tue, 25 Feb 2014 11:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/diy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>임베디드</title>
+      <link>https://kasworld.github.io/tags/%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C/</link>
+      <pubDate>Tue, 25 Feb 2014 11:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>젤리빈</title>
+      <link>https://kasworld.github.io/tags/%EC%A0%A4%EB%A6%AC%EB%B9%88/</link>
+      <pubDate>Fri, 21 Feb 2014 21:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A0%A4%EB%A6%AC%EB%B9%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>커널</title>
+      <link>https://kasworld.github.io/tags/%EC%BB%A4%EB%84%90/</link>
+      <pubDate>Fri, 21 Feb 2014 21:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%BB%A4%EB%84%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nas</title>
+      <link>https://kasworld.github.io/tags/nas/</link>
+      <pubDate>Mon, 17 Feb 2014 18:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/nas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unision</title>
+      <link>https://kasworld.github.io/tags/unision/</link>
+      <pubDate>Mon, 17 Feb 2014 18:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/unision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webdav</title>
+      <link>https://kasworld.github.io/tags/webdav/</link>
+      <pubDate>Mon, 17 Feb 2014 18:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/webdav/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>게임</title>
+      <link>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84/</link>
+      <pubDate>Sun, 19 Jan 2014 17:03:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B2%8C%EC%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>직능</title>
+      <link>https://kasworld.github.io/tags/%EC%A7%81%EB%8A%A5/</link>
+      <pubDate>Wed, 08 Jan 2014 10:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A7%81%EB%8A%A5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>개발의 단계</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%9C%EB%B0%9C%EC%9D%98-%EB%8B%A8%EA%B3%84/</link>
+      <pubDate>Thu, 26 Dec 2013 20:37:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%9C%EB%B0%9C%EC%9D%98-%EB%8B%A8%EA%B3%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go는언제써보나</title>
+      <link>https://kasworld.github.io/tags/go%EB%8A%94%EC%96%B8%EC%A0%9C%EC%8D%A8%EB%B3%B4%EB%82%98/</link>
+      <pubDate>Tue, 10 Dec 2013 11:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/go%EB%8A%94%EC%96%B8%EC%A0%9C%EC%8D%A8%EB%B3%B4%EB%82%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web2py</title>
+      <link>https://kasworld.github.io/tags/web2py/</link>
+      <pubDate>Tue, 10 Dec 2013 11:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/web2py/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>한성</title>
+      <link>https://kasworld.github.io/tags/%ED%95%9C%EC%84%B1/</link>
+      <pubDate>Sat, 07 Dec 2013 13:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%9C%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gboard</title>
+      <link>https://kasworld.github.io/tags/gboard/</link>
+      <pubDate>Sun, 27 Oct 2013 11:27:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>루팅</title>
+      <link>https://kasworld.github.io/tags/%EB%A3%A8%ED%8C%85/</link>
+      <pubDate>Sat, 28 Sep 2013 14:00:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A3%A8%ED%8C%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>테더링</title>
+      <link>https://kasworld.github.io/tags/%ED%85%8C%EB%8D%94%EB%A7%81/</link>
+      <pubDate>Sat, 28 Sep 2013 14:00:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%85%8C%EB%8D%94%EB%A7%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>entropy</title>
+      <link>https://kasworld.github.io/tags/entropy/</link>
+      <pubDate>Sat, 01 Jun 2013 17:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/entropy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>randomsound</title>
+      <link>https://kasworld.github.io/tags/randomsound/</link>
+      <pubDate>Sat, 01 Jun 2013 17:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/randomsound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rng-tools</title>
+      <link>https://kasworld.github.io/tags/rng-tools/</link>
+      <pubDate>Sat, 01 Jun 2013 17:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/rng-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seeder</title>
+      <link>https://kasworld.github.io/tags/seeder/</link>
+      <pubDate>Sat, 01 Jun 2013 17:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/seeder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>엔트로피</title>
+      <link>https://kasworld.github.io/tags/%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/</link>
+      <pubDate>Sat, 01 Jun 2013 17:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ibus</title>
+      <link>https://kasworld.github.io/tags/ibus/</link>
+      <pubDate>Thu, 30 May 2013 20:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ibus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uim</title>
+      <link>https://kasworld.github.io/tags/uim/</link>
+      <pubDate>Thu, 30 May 2013 20:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/uim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>벼루</title>
+      <link>https://kasworld.github.io/tags/%EB%B2%BC%EB%A3%A8/</link>
+      <pubDate>Thu, 30 May 2013 20:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B2%BC%EB%A3%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atom</title>
+      <link>https://kasworld.github.io/tags/atom/</link>
+      <pubDate>Sun, 05 May 2013 16:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedly</title>
+      <link>https://kasworld.github.io/tags/feedly/</link>
+      <pubDate>Sun, 05 May 2013 16:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/feedly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google reader</title>
+      <link>https://kasworld.github.io/tags/google-reader/</link>
+      <pubDate>Sun, 05 May 2013 16:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/google-reader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rss</title>
+      <link>https://kasworld.github.io/tags/rss/</link>
+      <pubDate>Sun, 05 May 2013 16:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/rss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlalchemy</title>
+      <link>https://kasworld.github.io/tags/sqlalchemy/</link>
+      <pubDate>Sun, 05 May 2013 16:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/sqlalchemy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>개인서버</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%84%9C%EB%B2%84/</link>
+      <pubDate>Sun, 05 May 2013 16:11:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%84%9C%EB%B2%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>서브라임 에디터</title>
+      <link>https://kasworld.github.io/tags/%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84-%EC%97%90%EB%94%94%ED%84%B0/</link>
+      <pubDate>Sat, 27 Apr 2013 21:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84-%EC%97%90%EB%94%94%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>키보드 설정</title>
+      <link>https://kasworld.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%84%A4%EC%A0%95/</link>
+      <pubDate>Fri, 26 Apr 2013 22:19:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%84%A4%EC%A0%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>스터디</title>
+      <link>https://kasworld.github.io/tags/%EC%8A%A4%ED%84%B0%EB%94%94/</link>
+      <pubDate>Sat, 13 Apr 2013 20:31:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8A%A4%ED%84%B0%EB%94%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nvidia optimus</title>
+      <link>https://kasworld.github.io/tags/nvidia-optimus/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/nvidia-optimus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>그래도 리눅스는 위대해</title>
+      <link>https://kasworld.github.io/tags/%EA%B7%B8%EB%9E%98%EB%8F%84-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8A%94-%EC%9C%84%EB%8C%80%ED%95%B4/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B7%B8%EB%9E%98%EB%8F%84-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8A%94-%EC%9C%84%EB%8C%80%ED%95%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>보스몬스터</title>
+      <link>https://kasworld.github.io/tags/%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B0/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>삽질기</title>
+      <link>https://kasworld.github.io/tags/%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>엿먹어라 엔비디아</title>
+      <link>https://kasworld.github.io/tags/%EC%97%BF%EB%A8%B9%EC%96%B4%EB%9D%BC-%EC%97%94%EB%B9%84%EB%94%94%EC%95%84/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%BF%EB%A8%B9%EC%96%B4%EB%9D%BC-%EC%97%94%EB%B9%84%EB%94%94%EC%95%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>옵티머스</title>
+      <link>https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EB%A8%B8%EC%8A%A4/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EB%A8%B8%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>box.com</title>
+      <link>https://kasworld.github.io/tags/box.com/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/box.com/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dropbox</title>
+      <link>https://kasworld.github.io/tags/dropbox/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/dropbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>naver ndrive</title>
+      <link>https://kasworld.github.io/tags/naver-ndrive/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/naver-ndrive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>구글 드라이브</title>
+      <link>https://kasworld.github.io/tags/%EA%B5%AC%EA%B8%80-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B5%AC%EA%B8%80-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>다음클라우드</title>
+      <link>https://kasworld.github.io/tags/%EB%8B%A4%EC%9D%8C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%8B%A4%EC%9D%8C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>싱크 스토리지</title>
+      <link>https://kasworld.github.io/tags/%EC%8B%B1%ED%81%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8B%B1%ED%81%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>클라우드</title>
+      <link>https://kasworld.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgresql</title>
+      <link>https://kasworld.github.io/tags/postgresql/</link>
+      <pubDate>Tue, 19 Mar 2013 09:56:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>포스트그레스큐엘</title>
+      <link>https://kasworld.github.io/tags/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EA%B7%B8%EB%A0%88%EC%8A%A4%ED%81%90%EC%97%98/</link>
+      <pubDate>Tue, 19 Mar 2013 09:56:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EA%B7%B8%EB%A0%88%EC%8A%A4%ED%81%90%EC%97%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>미친hdd</title>
+      <link>https://kasworld.github.io/tags/%EB%AF%B8%EC%B9%9Chdd/</link>
+      <pubDate>Sun, 10 Mar 2013 11:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AF%B8%EC%B9%9Chdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>미친웬디</title>
+      <link>https://kasworld.github.io/tags/%EB%AF%B8%EC%B9%9C%EC%9B%AC%EB%94%94/</link>
+      <pubDate>Sun, 10 Mar 2013 11:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AF%B8%EC%B9%9C%EC%9B%AC%EB%94%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>스마트폰</title>
+      <link>https://kasworld.github.io/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0/</link>
+      <pubDate>Wed, 20 Feb 2013 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>크기</title>
+      <link>https://kasworld.github.io/tags/%ED%81%AC%EA%B8%B0/</link>
+      <pubDate>Wed, 20 Feb 2013 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%81%AC%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>휴대성</title>
+      <link>https://kasworld.github.io/tags/%ED%9C%B4%EB%8C%80%EC%84%B1/</link>
+      <pubDate>Wed, 20 Feb 2013 10:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%9C%B4%EB%8C%80%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>베가넘버6</title>
+      <link>https://kasworld.github.io/tags/%EB%B2%A0%EA%B0%80%EB%84%98%EB%B2%846/</link>
+      <pubDate>Mon, 18 Feb 2013 10:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B2%A0%EA%B0%80%EB%84%98%EB%B2%846/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>사용성</title>
+      <link>https://kasworld.github.io/tags/%EC%82%AC%EC%9A%A9%EC%84%B1/</link>
+      <pubDate>Mon, 18 Feb 2013 10:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%AC%EC%9A%A9%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>화면크기</title>
+      <link>https://kasworld.github.io/tags/%ED%99%94%EB%A9%B4%ED%81%AC%EA%B8%B0/</link>
+      <pubDate>Mon, 18 Feb 2013 10:45:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%99%94%EB%A9%B4%ED%81%AC%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>시나몬</title>
+      <link>https://kasworld.github.io/tags/%EC%8B%9C%EB%82%98%EB%AA%AC/</link>
+      <pubDate>Fri, 15 Feb 2013 21:56:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8B%9C%EB%82%98%EB%AA%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brief</title>
+      <link>https://kasworld.github.io/tags/brief/</link>
+      <pubDate>Sun, 20 Jan 2013 23:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/brief/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codewright</title>
+      <link>https://kasworld.github.io/tags/codewright/</link>
+      <pubDate>Sun, 20 Jan 2013 23:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/codewright/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://kasworld.github.io/tags/vim/</link>
+      <pubDate>Sun, 20 Jan 2013 23:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>에디터</title>
+      <link>https://kasworld.github.io/tags/%EC%97%90%EB%94%94%ED%84%B0/</link>
+      <pubDate>Sun, 20 Jan 2013 23:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%90%EB%94%94%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>프로그래밍용 에디터</title>
+      <link>https://kasworld.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9A%A9-%EC%97%90%EB%94%94%ED%84%B0/</link>
+      <pubDate>Sun, 20 Jan 2013 23:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9A%A9-%EC%97%90%EB%94%94%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>옵티머스lte2</title>
+      <link>https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EB%A8%B8%EC%8A%A4lte2/</link>
+      <pubDate>Sun, 20 Jan 2013 12:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EB%A8%B8%EC%8A%A4lte2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>옵티이이</title>
+      <link>https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4/</link>
+      <pubDate>Sun, 20 Jan 2013 12:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>계정생성</title>
+      <link>https://kasworld.github.io/tags/%EA%B3%84%EC%A0%95%EC%83%9D%EC%84%B1/</link>
+      <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B3%84%EC%A0%95%EC%83%9D%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>모바일</title>
+      <link>https://kasworld.github.io/tags/%EB%AA%A8%EB%B0%94%EC%9D%BC/</link>
+      <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%AA%A8%EB%B0%94%EC%9D%BC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>사용자풀</title>
+      <link>https://kasworld.github.io/tags/%EC%82%AC%EC%9A%A9%EC%9E%90%ED%92%80/</link>
+      <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%AC%EC%9A%A9%EC%9E%90%ED%92%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>플랫폼</title>
+      <link>https://kasworld.github.io/tags/%ED%94%8C%EB%9E%AB%ED%8F%BC/</link>
+      <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%94%8C%EB%9E%AB%ED%8F%BC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>피쉬아일랜드</title>
+      <link>https://kasworld.github.io/tags/%ED%94%BC%EC%89%AC%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C/</link>
+      <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%94%BC%EC%89%AC%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>한게임</title>
+      <link>https://kasworld.github.io/tags/%ED%95%9C%EA%B2%8C%EC%9E%84/</link>
+      <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%95%9C%EA%B2%8C%EC%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dir-655</title>
+      <link>https://kasworld.github.io/tags/dir-655/</link>
+      <pubDate>Fri, 18 Jan 2013 19:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/dir-655/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iperf</title>
+      <link>https://kasworld.github.io/tags/iperf/</link>
+      <pubDate>Fri, 18 Jan 2013 19:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/iperf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jellybean</title>
+      <link>https://kasworld.github.io/tags/jellybean/</link>
+      <pubDate>Thu, 17 Jan 2013 10:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/jellybean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>아이코니아탭</title>
+      <link>https://kasworld.github.io/tags/%EC%95%84%EC%9D%B4%EC%BD%94%EB%8B%88%EC%95%84%ED%83%AD/</link>
+      <pubDate>Thu, 17 Jan 2013 10:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%84%EC%9D%B4%EC%BD%94%EB%8B%88%EC%95%84%ED%83%AD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>에이서</title>
+      <link>https://kasworld.github.io/tags/%EC%97%90%EC%9D%B4%EC%84%9C/</link>
+      <pubDate>Thu, 17 Jan 2013 10:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%90%EC%9D%B4%EC%84%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mmorpg</title>
+      <link>https://kasworld.github.io/tags/mmorpg/</link>
+      <pubDate>Mon, 14 Jan 2013 16:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/mmorpg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>아키에이지</title>
+      <link>https://kasworld.github.io/tags/%EC%95%84%ED%82%A4%EC%97%90%EC%9D%B4%EC%A7%80/</link>
+      <pubDate>Mon, 14 Jan 2013 16:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%84%ED%82%A4%EC%97%90%EC%9D%B4%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>네이버 자전거 지도</title>
+      <link>https://kasworld.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%A7%80%EB%8F%84/</link>
+      <pubDate>Wed, 31 Oct 2012 20:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%A7%80%EB%8F%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>서울은 생각보다 작아요</title>
+      <link>https://kasworld.github.io/tags/%EC%84%9C%EC%9A%B8%EC%9D%80-%EC%83%9D%EA%B0%81%EB%B3%B4%EB%8B%A4-%EC%9E%91%EC%95%84%EC%9A%94/</link>
+      <pubDate>Wed, 31 Oct 2012 20:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%9C%EC%9A%B8%EC%9D%80-%EC%83%9D%EA%B0%81%EB%B3%B4%EB%8B%A4-%EC%9E%91%EC%95%84%EC%9A%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>자전거</title>
+      <link>https://kasworld.github.io/tags/%EC%9E%90%EC%A0%84%EA%B1%B0/</link>
+      <pubDate>Wed, 31 Oct 2012 20:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9E%90%EC%A0%84%EA%B1%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hd200plus</title>
+      <link>https://kasworld.github.io/tags/hd200plus/</link>
+      <pubDate>Tue, 16 Oct 2012 18:03:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/hd200plus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>삼천리</title>
+      <link>https://kasworld.github.io/tags/%EC%82%BC%EC%B2%9C%EB%A6%AC/</link>
+      <pubDate>Tue, 16 Oct 2012 18:03:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%82%BC%EC%B2%9C%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IDE</title>
+      <link>https://kasworld.github.io/tags/ide/</link>
+      <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NERDtree</title>
+      <link>https://kasworld.github.io/tags/nerdtree/</link>
+      <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/nerdtree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rails</title>
+      <link>https://kasworld.github.io/tags/rails/</link>
+      <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>taglist</title>
+      <link>https://kasworld.github.io/tags/taglist/</link>
+      <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/taglist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ROR</title>
+      <link>https://kasworld.github.io/tags/ror/</link>
+      <pubDate>Mon, 13 Aug 2012 20:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ror/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://kasworld.github.io/tags/ruby/</link>
+      <pubDate>Mon, 13 Aug 2012 20:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>레일즈</title>
+      <link>https://kasworld.github.io/tags/%EB%A0%88%EC%9D%BC%EC%A6%88/</link>
+      <pubDate>Mon, 13 Aug 2012 20:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A0%88%EC%9D%BC%EC%A6%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>루비</title>
+      <link>https://kasworld.github.io/tags/%EB%A3%A8%EB%B9%84/</link>
+      <pubDate>Mon, 13 Aug 2012 20:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A3%A8%EB%B9%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gnome</title>
+      <link>https://kasworld.github.io/tags/gnome/</link>
+      <pubDate>Mon, 30 Jul 2012 14:25:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gnome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>언락</title>
+      <link>https://kasworld.github.io/tags/%EC%96%B8%EB%9D%BD/</link>
+      <pubDate>Wed, 25 Jul 2012 13:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%96%B8%EB%9D%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>카메라 셧터소리</title>
+      <link>https://kasworld.github.io/tags/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%85%A7%ED%84%B0%EC%86%8C%EB%A6%AC/</link>
+      <pubDate>Mon, 07 Nov 2011 20:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%85%A7%ED%84%B0%EC%86%8C%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>허니컴</title>
+      <link>https://kasworld.github.io/tags/%ED%97%88%EB%8B%88%EC%BB%B4/</link>
+      <pubDate>Mon, 07 Nov 2011 20:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%97%88%EB%8B%88%EC%BB%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogger bug</title>
+      <link>https://kasworld.github.io/tags/blogger-bug/</link>
+      <pubDate>Sun, 16 Oct 2011 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/blogger-bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iphone</title>
+      <link>https://kasworld.github.io/tags/iphone/</link>
+      <pubDate>Fri, 07 Oct 2011 22:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>siri</title>
+      <link>https://kasworld.github.io/tags/siri/</link>
+      <pubDate>Fri, 07 Oct 2011 22:16:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/siri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>뻘소리</title>
+      <link>https://kasworld.github.io/tags/%EB%BB%98%EC%86%8C%EB%A6%AC/</link>
+      <pubDate>Tue, 04 Oct 2011 15:25:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%BB%98%EC%86%8C%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>애플</title>
+      <link>https://kasworld.github.io/tags/%EC%95%A0%ED%94%8C/</link>
+      <pubDate>Thu, 29 Sep 2011 22:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%A0%ED%94%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>첫사랑</title>
+      <link>https://kasworld.github.io/tags/%EC%B2%AB%EC%82%AC%EB%9E%91/</link>
+      <pubDate>Thu, 29 Sep 2011 22:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%B2%AB%EC%82%AC%EB%9E%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>독점</title>
+      <link>https://kasworld.github.io/tags/%EB%8F%85%EC%A0%90/</link>
+      <pubDate>Fri, 19 Aug 2011 10:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%8F%85%EC%A0%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>잡소리</title>
+      <link>https://kasworld.github.io/tags/%EC%9E%A1%EC%86%8C%EB%A6%AC/</link>
+      <pubDate>Fri, 19 Aug 2011 10:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9E%A1%EC%86%8C%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>잉여짓</title>
+      <link>https://kasworld.github.io/tags/%EC%9E%89%EC%97%AC%EC%A7%93/</link>
+      <pubDate>Sat, 06 Aug 2011 17:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9E%89%EC%97%AC%EC%A7%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>펌질</title>
+      <link>https://kasworld.github.io/tags/%ED%8E%8C%EC%A7%88/</link>
+      <pubDate>Sat, 06 Aug 2011 12:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8E%8C%EC%A7%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sound</title>
+      <link>https://kasworld.github.io/tags/sound/</link>
+      <pubDate>Wed, 27 Jul 2011 19:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/sound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uwsgi</title>
+      <link>https://kasworld.github.io/tags/uwsgi/</link>
+      <pubDate>Fri, 08 Jul 2011 11:25:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/uwsgi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>설치</title>
+      <link>https://kasworld.github.io/tags/%EC%84%A4%EC%B9%98/</link>
+      <pubDate>Mon, 07 Mar 2011 15:44:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%84%A4%EC%B9%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipad</title>
+      <link>https://kasworld.github.io/tags/ipad/</link>
+      <pubDate>Fri, 10 Sep 2010 16:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/ipad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>갤럭시텝</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%85%9D/</link>
+      <pubDate>Fri, 10 Sep 2010 16:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%85%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IT</title>
+      <link>https://kasworld.github.io/tags/it/</link>
+      <pubDate>Fri, 03 Sep 2010 13:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>주가총액</title>
+      <link>https://kasworld.github.io/tags/%EC%A3%BC%EA%B0%80%EC%B4%9D%EC%95%A1/</link>
+      <pubDate>Fri, 03 Sep 2010 13:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A3%BC%EA%B0%80%EC%B4%9D%EC%95%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>구글</title>
+      <link>https://kasworld.github.io/tags/%EA%B5%AC%EA%B8%80/</link>
+      <pubDate>Fri, 27 Aug 2010 14:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B5%AC%EA%B8%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>시너지</title>
+      <link>https://kasworld.github.io/tags/%EC%8B%9C%EB%84%88%EC%A7%80/</link>
+      <pubDate>Mon, 09 Aug 2010 17:43:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8B%9C%EB%84%88%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>네트웍</title>
+      <link>https://kasworld.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8D/</link>
+      <pubDate>Thu, 25 Mar 2010 11:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>짝짝</title>
+      <link>https://kasworld.github.io/tags/%EC%A7%9D%EC%A7%9D/</link>
+      <pubDate>Thu, 25 Mar 2010 11:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%A7%9D%EC%A7%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>크롬</title>
+      <link>https://kasworld.github.io/tags/%ED%81%AC%EB%A1%AC/</link>
+      <pubDate>Mon, 15 Mar 2010 12:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%81%AC%EB%A1%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>파폭</title>
+      <link>https://kasworld.github.io/tags/%ED%8C%8C%ED%8F%AD/</link>
+      <pubDate>Mon, 15 Mar 2010 12:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%8C%8C%ED%8F%AD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>노키아</title>
+      <link>https://kasworld.github.io/tags/%EB%85%B8%ED%82%A4%EC%95%84/</link>
+      <pubDate>Wed, 24 Feb 2010 08:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%85%B8%ED%82%A4%EC%95%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>5800</title>
+      <link>https://kasworld.github.io/tags/5800/</link>
+      <pubDate>Tue, 23 Feb 2010 21:01:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/5800/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>플래시</title>
+      <link>https://kasworld.github.io/tags/%ED%94%8C%EB%9E%98%EC%8B%9C/</link>
+      <pubDate>Mon, 22 Feb 2010 15:08:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%94%8C%EB%9E%98%EC%8B%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>n5800</title>
+      <link>https://kasworld.github.io/tags/n5800/</link>
+      <pubDate>Thu, 11 Feb 2010 13:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/n5800/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hdaps</title>
+      <link>https://kasworld.github.io/tags/hdaps/</link>
+      <pubDate>Wed, 09 Dec 2009 18:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/hdaps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>가속센서</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C/</link>
+      <pubDate>Wed, 09 Dec 2009 18:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gps</title>
+      <link>https://kasworld.github.io/tags/gps/</link>
+      <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/gps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>아이폰</title>
+      <link>https://kasworld.github.io/tags/%EC%95%84%EC%9D%B4%ED%8F%B0/</link>
+      <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%84%EC%9D%B4%ED%8F%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>에그</title>
+      <link>https://kasworld.github.io/tags/%EC%97%90%EA%B7%B8/</link>
+      <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%97%90%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>와이브로</title>
+      <link>https://kasworld.github.io/tags/%EC%99%80%EC%9D%B4%EB%B8%8C%EB%A1%9C/</link>
+      <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%99%80%EC%9D%B4%EB%B8%8C%EB%A1%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>웹캠</title>
+      <link>https://kasworld.github.io/tags/%EC%9B%B9%EC%BA%A0/</link>
+      <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9B%B9%EC%BA%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://kasworld.github.io/tags/google/</link>
+      <pubDate>Sun, 15 Nov 2009 21:29:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xmodmap</title>
+      <link>https://kasworld.github.io/tags/xmodmap/</link>
+      <pubDate>Wed, 04 Nov 2009 13:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/xmodmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grub</title>
+      <link>https://kasworld.github.io/tags/grub/</link>
+      <pubDate>Sat, 06 Dec 2008 14:55:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/grub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>태블릿</title>
+      <link>https://kasworld.github.io/tags/%ED%83%9C%EB%B8%94%EB%A6%BF/</link>
+      <pubDate>Sat, 06 Dec 2008 14:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%ED%83%9C%EB%B8%94%EB%A6%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://kasworld.github.io/tags/php/</link>
+      <pubDate>Sun, 30 Nov 2008 19:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>벤치</title>
+      <link>https://kasworld.github.io/tags/%EB%B2%A4%EC%B9%98/</link>
+      <pubDate>Wed, 29 Oct 2008 10:48:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B2%A4%EC%B9%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>벤치마크</title>
+      <link>https://kasworld.github.io/tags/%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC/</link>
+      <pubDate>Thu, 23 Oct 2008 13:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>아톰</title>
+      <link>https://kasworld.github.io/tags/%EC%95%84%ED%86%B0/</link>
+      <pubDate>Thu, 23 Oct 2008 13:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%95%84%ED%86%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://kasworld.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 08 May 2008 08:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>자바</title>
+      <link>https://kasworld.github.io/tags/%EC%9E%90%EB%B0%94/</link>
+      <pubDate>Thu, 08 May 2008 08:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%9E%90%EB%B0%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>스크립트언어</title>
+      <link>https://kasworld.github.io/tags/%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%96%B8%EC%96%B4/</link>
+      <pubDate>Tue, 29 Apr 2008 08:59:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%96%B8%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TCO</title>
+      <link>https://kasworld.github.io/tags/tco/</link>
+      <pubDate>Thu, 20 Mar 2008 15:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/tco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>총비용</title>
+      <link>https://kasworld.github.io/tags/%EC%B4%9D%EB%B9%84%EC%9A%A9/</link>
+      <pubDate>Thu, 20 Mar 2008 15:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%B4%9D%EB%B9%84%EC%9A%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>스팸착각</title>
+      <link>https://kasworld.github.io/tags/%EC%8A%A4%ED%8C%B8%EC%B0%A9%EA%B0%81/</link>
+      <pubDate>Tue, 01 Jan 2008 09:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EC%8A%A4%ED%8C%B8%EC%B0%A9%EA%B0%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>리눅스프로그램소개</title>
+      <link>https://kasworld.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%86%8C%EA%B0%9C/</link>
+      <pubDate>Mon, 31 Dec 2007 20:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%86%8C%EA%B0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>64bit</title>
+      <link>https://kasworld.github.io/tags/64bit/</link>
+      <pubDate>Sun, 30 Dec 2007 16:46:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/64bit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcp server/client</title>
+      <link>https://kasworld.github.io/tags/tcp-server/client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/tcp-server/client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>udp server/client</title>
+      <link>https://kasworld.github.io/tags/udp-server/client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/udp-server/client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>가끔은 새로 설치하자.</title>
+      <link>https://kasworld.github.io/tags/%EA%B0%80%EB%81%94%EC%9D%80-%EC%83%88%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%98%EC%9E%90./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kasworld.github.io/tags/%EA%B0%80%EB%81%94%EC%9D%80-%EC%83%88%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%98%EC%9E%90./</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

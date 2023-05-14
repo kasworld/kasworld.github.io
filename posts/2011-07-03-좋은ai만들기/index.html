@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>좋은 AI 만들기? | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="시간 날때마다 집에서 간단한 슈팅 게임? 을 만들고 있습니다만.. ( 엄밀히 말하면 2D 게임을 위한 프레임웍 )
+전 게임을 하는 것보다 구경하는 것을 더 좋아하는 편이기 때문에 대신 플레이해줄 AI들을 몇가지 만들고 있습니다.
+몇종의 AI를 만들고(허접하지만) 각각의 AI끼리 대전을 시켜보며 구경을 하고 있는데..
+만든 입장에서 더 실력이 좋을 거라고 생각하면 만든 AI 보다 대충 머리수 채우기로만든 AI가 더 점수가 좋은 경우가 꽤 있군요.
+그러면 다시 코드를 보면서 이유를 생각하고 그 결과를 다시 반영해보고 하면서 즐기고 있습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="좋은 AI 만들기?" />
+<meta property="og:description" content="시간 날때마다 집에서 간단한 슈팅 게임? 을 만들고 있습니다만.. ( 엄밀히 말하면 2D 게임을 위한 프레임웍 )
+전 게임을 하는 것보다 구경하는 것을 더 좋아하는 편이기 때문에 대신 플레이해줄 AI들을 몇가지 만들고 있습니다.
+몇종의 AI를 만들고(허접하지만) 각각의 AI끼리 대전을 시켜보며 구경을 하고 있는데..
+만든 입장에서 더 실력이 좋을 거라고 생각하면 만든 AI 보다 대충 머리수 채우기로만든 AI가 더 점수가 좋은 경우가 꽤 있군요.
+그러면 다시 코드를 보면서 이유를 생각하고 그 결과를 다시 반영해보고 하면서 즐기고 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2011-07-03T19:30:00+09:00" />
+<meta property="article:modified_time" content="2011-07-03T19:30:00+09:00" />
+<meta itemprop="name" content="좋은 AI 만들기?">
+<meta itemprop="description" content="시간 날때마다 집에서 간단한 슈팅 게임? 을 만들고 있습니다만.. ( 엄밀히 말하면 2D 게임을 위한 프레임웍 )
+전 게임을 하는 것보다 구경하는 것을 더 좋아하는 편이기 때문에 대신 플레이해줄 AI들을 몇가지 만들고 있습니다.
+몇종의 AI를 만들고(허접하지만) 각각의 AI끼리 대전을 시켜보며 구경을 하고 있는데..
+만든 입장에서 더 실력이 좋을 거라고 생각하면 만든 AI 보다 대충 머리수 채우기로만든 AI가 더 점수가 좋은 경우가 꽤 있군요.
+그러면 다시 코드를 보면서 이유를 생각하고 그 결과를 다시 반영해보고 하면서 즐기고 있습니다."><meta itemprop="datePublished" content="2011-07-03T19:30:00+09:00" />
+<meta itemprop="dateModified" content="2011-07-03T19:30:00+09:00" />
+<meta itemprop="wordCount" content="106">
+<meta itemprop="keywords" content="AI,게임프로그래밍,개발,파이썬,python,게임개발,wxgame,게임만들기,wxpython," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="좋은 AI 만들기?"/>
+<meta name="twitter:description" content="시간 날때마다 집에서 간단한 슈팅 게임? 을 만들고 있습니다만.. ( 엄밀히 말하면 2D 게임을 위한 프레임웍 )
+전 게임을 하는 것보다 구경하는 것을 더 좋아하는 편이기 때문에 대신 플레이해줄 AI들을 몇가지 만들고 있습니다.
+몇종의 AI를 만들고(허접하지만) 각각의 AI끼리 대전을 시켜보며 구경을 하고 있는데..
+만든 입장에서 더 실력이 좋을 거라고 생각하면 만든 AI 보다 대충 머리수 채우기로만든 AI가 더 점수가 좋은 경우가 꽤 있군요.
+그러면 다시 코드를 보면서 이유를 생각하고 그 결과를 다시 반영해보고 하면서 즐기고 있습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">좋은 AI 만들기?</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2011-07-03T19:30:00+09:00">July 3, 2011</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="../images/2011-07-03-%EC%A2%8B%EC%9D%80AI%EB%A7%8C%EB%93%A4%EA%B8%B0-Screenshot-Frame+.png"><img src="../images/thumbnails/2011-07-03-%EC%A2%8B%EC%9D%80AI%EB%A7%8C%EB%93%A4%EA%B8%B0-Screenshot-Frame+.png" alt=""></a></p>
+<p>시간 날때마다 집에서 간단한 슈팅 게임? 을 만들고 있습니다만.. 
+( 엄밀히 말하면 2D 게임을 위한 프레임웍 )</p>
+<p>전 게임을 하는 것보다 구경하는 것을 더 좋아하는 편이기 때문에 대신
+플레이해줄 AI들을 몇가지 만들고 있습니다.</p>
+<p>몇종의 AI를 만들고(허접하지만) 각각의 AI끼리 대전을 시켜보며 구경을 하고
+있는데..</p>
+<p>만든 입장에서 더 실력이 좋을 거라고 생각하면 만든 AI 보다 대충 머리수
+채우기로만든 AI가 더 점수가 좋은 경우가 꽤 있군요.</p>
+<p>그러면 다시 코드를 보면서 이유를 생각하고 그 결과를 다시 반영해보고
+하면서 즐기고 있습니다.</p>
+<p>그러면서 잠깐 든 생각이 혹시 아이를 키우는 것도 이런 걸일까(오버 겠지만
+;;; )하는 생각이 들기도 하는 군요.</p>
+<p>분명히 만들긴 내가 만들었지만 내 계획대로는 되지 않는것..</p>
+<p>그러면서 이글(<a href="http://egoing.net/1545">http://egoing.net/1545</a>)이 생각 나더군요. ^^</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

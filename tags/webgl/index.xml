@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webgl on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/webgl/</link>
+    <description>Recent content in webgl on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 09 Aug 2020 18:05:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike 업데이트, 2d client 제거, 타일 투명도 적용등. </title>
+      <link>https://kasworld.github.io/posts/2020-08-09-goguelike%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B82dclient%EC%A0%9C%EA%B1%B0%ED%83%80%EC%9D%BC%ED%88%AC%EB%AA%85%EB%8F%84%EC%A0%81%EC%9A%A9%EB%93%B1/</link>
+      <pubDate>Sun, 09 Aug 2020 18:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-08-09-goguelike%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B82dclient%EC%A0%9C%EA%B1%B0%ED%83%80%EC%9D%BC%ED%88%AC%EB%AA%85%EB%8F%84%EC%A0%81%EC%9A%A9%EB%93%B1/</guid>
+      <description>아래 동영상은 분명히 4K로 캡처했는데 업로드하니 2K 가 되는 군요.
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3D client에만 적용 가능한 기능들이 있어서 ( condition float 는 실제로 공중으로 띄웁니다. ) 더이상 의미없는 2D client는 제거 해야 할것 같습니다. 그 외에는 tile에 투명도를 적용했습니다. webgl, three.js 에 unicode char 를 표시하는 것이 잘 안되어 ascii char로 바꾸었습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike glclient에 2d client 기능의 대부분을 구현 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2020-08-07-goguelikeglclient%EC%97%902dclient%EA%B8%B0%EB%8A%A5%EC%9D%98%EB%8C%80%EB%B6%80%EB%B6%84%EC%9D%84%EA%B5%AC%ED%98%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Fri, 07 Aug 2020 12:34:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-08-07-goguelikeglclient%EC%97%902dclient%EA%B8%B0%EB%8A%A5%EC%9D%98%EB%8C%80%EB%B6%80%EB%B6%84%EC%9D%84%EA%B5%AC%ED%98%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>마지막으로 구현한 것이 중앙 상단에 나오는 공지? 메시지입니다. 그 외에 지형 스크립트를 자동으로 만들어 주는 towermaker를 강화해서 100층이나 1000층 짜리 타워를 만들수 있게 되었습니다. 1000층 짜리 타워를 실행하면 CPU도 RAM도 무지막지하게 사용하게 됩니다. 대충 50Gbyte정도의 램과 16개의 cpu를 거의 풀로 사용하더군요. 그리고 작업중인 기능? 으로 대 코로나 시대를 맞이하여? 컨디션과 fieldobj(trap) 에 전염병(Contagion) 을 추가 해보고 있습니다. 이런저런 수치 ( 전염성, 사망율, 자연 회복율) 를 조정해가며 이리 저리 실험해볼 생각입니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike  개발 진행 사항 </title>
+      <link>https://kasworld.github.io/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</link>
+      <pubDate>Tue, 28 Jul 2020 16:35:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+tile들이 모두 3D 로 만들어 지고 타일 들이 높이 맞게 Fieldobj 와 activeobj 들이 배치 및 이동합니다.
+그 외에는 towermaker 가 대폭적으로 업데이트 되었습니다. 기존에 손으로 만들었던 starttower 같은 것을 더 쉽게 만들 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 쿼터 뷰 </title>
+      <link>https://kasworld.github.io/posts/2020-07-08-goguelike%EC%BF%BC%ED%84%B0%EB%B7%B0/</link>
+      <pubDate>Wed, 08 Jul 2020 15:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-07-08-goguelike%EC%BF%BC%ED%84%B0%EB%B7%B0/</guid>
+      <description>3D tile 을 적용한 김에 카메라를 살짝 기울여 보았습니다. 확실히 입체감이 늘어나고 필드가 좀더 그럴듯 하게 되었습니다.
+다만 가시 범위가 늘어나서 성능을 위해 보이는 부분만 object를 배치한 것이 티나는 군요.</description>
+    </item>
+    
+    <item>
+      <title>goguelike WebGL 클라이언트 작업 </title>
+      <link>https://kasworld.github.io/posts/2020-06-29-goguelikewebgl%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%9E%91%EC%97%85/</link>
+      <pubDate>Mon, 29 Jun 2020 15:56:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-06-29-goguelikewebgl%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%9E%91%EC%97%85/</guid>
+      <description>캐릭터 (activeobj) item(CarryObj) 상점,계단,함정들(FieldObj) , 벽,문,창(Wall, Door, Window) 을 3D 화 했습니다.
+미로 지형에서 가장 극적으로 보이기에 화면 캡처를 해봤습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike 의 webgl client 작업</title>
+      <link>https://kasworld.github.io/posts/2020-06-16-goguelike%EC%9D%98webglclient%EC%9E%91%EC%97%85/</link>
+      <pubDate>Tue, 16 Jun 2020 15:41:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-06-16-goguelike%EC%9D%98webglclient%EC%9E%91%EC%97%85/</guid>
+      <description>webgl 의 CanvasTexture 를 사용한 PlaneBufferGeometry 를 terrain표시용으로 사용하는 gl client 입니다. canvas 만 사용할때는 wrap around 되는 field의 표시를 위해 귀찮은 작업(계산) 을 해야 했는데 CanvasTexture 의 RepeatWrapping 과 repeat 기능을 사용하니 간단히 해결되는 군요. 역시 신기술이 좋은 겁니다. ㅠㅠ</description>
+    </item>
+    
+    <item>
+      <title>하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 </title>
+      <link>https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/</link>
+      <pubDate>Thu, 28 May 2020 15:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/</guid>
+      <description>gowasm2dgame vs gowasm3dgame의 이야깁니다.
+gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
+gowasm3dgame 에는 두 종류의 게임(2d stage, 3d stage)을 구현 해보았습니다.
+두 프로젝트 모두 게임 로직은 서버의 stage에서 구현하고 있고 클라이언트는 viewer로만 작동하기 때문에 가능한 구조입니다.
+현재는 사용자의 게임조작을 서버로 전달하는 부분이 빠저있지만 추가하는 것이 어렵진 않습니다.
+gowasm2dgame 은 재미삼아 구현 한 것이고,
+gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
+gowasm2dgame html canvas version client</description>
+    </item>
+    
+    <item>
+      <title>go4game 에 웹 클라이언트를 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 27 Apr 2014 14:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>사진 설명 : go4game web client
+소스코드는 언제나 처럼 https://github.com/kasworld/go4game 에 있습니다.
+go언어는 서버에서 사용하는 것을 중점으로 하고 있기 때문에 client UI 를 작성할 만한 라이브러리가 적당한 것이 없습니다.
+기본 라이브러리만이 아니고 3rd party 에서도 아직까지는 딱히 이거다 라고 할만한 것이 없더군요.
+그에 반해서 서버를 만들기 위한 라이브러리는 tcp/http 불문하고 넘칠 정도로 많고 또 잘되어 있는데 아마도 go언어로 만든 프로그램의 UI는 당연히 web으로 작성하라는 의미 같습니다.
+그런 관계로 go4game도 client UI는 웹으로 작성해야 겠다는 생각이 들어서 ( 사실은 클라이언트 UI 라이브러리를 찾다 포기하고 ^^; ) 웹 작업을 했습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

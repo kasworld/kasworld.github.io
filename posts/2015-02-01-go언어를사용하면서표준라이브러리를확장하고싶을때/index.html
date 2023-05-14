@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="너무 간단해서 적기도 뭐한 팁이지만
+가끔씩 표준 라이브러리가 제공하는 struct( class 가 아니지요 ^^) 를 확장해서 내가 필요한 함수들을 추가 하고 싶을때가 있습니다.
+goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사용하는데 표준 라이브러리는 기초적인 함수만을 제공하여 더 쓰기 편한 형태의 함수를 추가해서 사용하고 있습니다.
+기본적으로는 go 언어의 embedded field를 사용하는 것이고 이것을 통해서 embedded된 struct가 제공하는 함수들이외에도 원하는 함수를 추가해 사용할수 있습니다.
+//startpackage randimport (r &quot;math/rand&quot;&quot;time&quot;)type Rand struct {*r.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때." />
+<meta property="og:description" content="너무 간단해서 적기도 뭐한 팁이지만
+가끔씩 표준 라이브러리가 제공하는 struct( class 가 아니지요 ^^) 를 확장해서 내가 필요한 함수들을 추가 하고 싶을때가 있습니다.
+goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사용하는데 표준 라이브러리는 기초적인 함수만을 제공하여 더 쓰기 편한 형태의 함수를 추가해서 사용하고 있습니다.
+기본적으로는 go 언어의 embedded field를 사용하는 것이고 이것을 통해서 embedded된 struct가 제공하는 함수들이외에도 원하는 함수를 추가해 사용할수 있습니다.
+//startpackage randimport (r &quot;math/rand&quot;&quot;time&quot;)type Rand struct {*r." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-02-01-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%ED%91%9C%EC%A4%80%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%A5%BC%ED%99%95%EC%9E%A5%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-02-01T11:41:00+09:00" />
+<meta property="article:modified_time" content="2015-02-01T11:41:00+09:00" />
+<meta itemprop="name" content="go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때.">
+<meta itemprop="description" content="너무 간단해서 적기도 뭐한 팁이지만
+가끔씩 표준 라이브러리가 제공하는 struct( class 가 아니지요 ^^) 를 확장해서 내가 필요한 함수들을 추가 하고 싶을때가 있습니다.
+goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사용하는데 표준 라이브러리는 기초적인 함수만을 제공하여 더 쓰기 편한 형태의 함수를 추가해서 사용하고 있습니다.
+기본적으로는 go 언어의 embedded field를 사용하는 것이고 이것을 통해서 embedded된 struct가 제공하는 함수들이외에도 원하는 함수를 추가해 사용할수 있습니다.
+//startpackage randimport (r &quot;math/rand&quot;&quot;time&quot;)type Rand struct {*r."><meta itemprop="datePublished" content="2015-02-01T11:41:00+09:00" />
+<meta itemprop="dateModified" content="2015-02-01T11:41:00+09:00" />
+<meta itemprop="wordCount" content="251">
+<meta itemprop="keywords" content="golang,go programming language,goguelike," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때."/>
+<meta name="twitter:description" content="너무 간단해서 적기도 뭐한 팁이지만
+가끔씩 표준 라이브러리가 제공하는 struct( class 가 아니지요 ^^) 를 확장해서 내가 필요한 함수들을 추가 하고 싶을때가 있습니다.
+goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사용하는데 표준 라이브러리는 기초적인 함수만을 제공하여 더 쓰기 편한 형태의 함수를 추가해서 사용하고 있습니다.
+기본적으로는 go 언어의 embedded field를 사용하는 것이고 이것을 통해서 embedded된 struct가 제공하는 함수들이외에도 원하는 함수를 추가해 사용할수 있습니다.
+//startpackage randimport (r &quot;math/rand&quot;&quot;time&quot;)type Rand struct {*r."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-02-01T11:41:00+09:00">February 1, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>너무 간단해서 적기도 뭐한 팁이지만</p>
+<p>가끔씩 표준 라이브러리가 제공하는 struct( class 가 아니지요 ^^) 를
+확장해서 내가 필요한 함수들을 추가 하고 싶을때가 있습니다.</p>
+<p>goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사용하는데 표준
+라이브러리는 기초적인 함수만을 제공하여 더 쓰기 편한 형태의 함수를
+추가해서 사용하고 있습니다.</p>
+<p>기본적으로는 go 언어의 embedded field를 사용하는 것이고 이것을 통해서
+embedded된 struct가 제공하는 함수들이외에도 원하는 함수를 추가해
+사용할수 있습니다.</p>
+<pre><code>//start
+package rand
+
+import (
+ r &quot;math/rand&quot;
+ &quot;time&quot;
+)
+
+type Rand struct {
+ *r.Rand
+}
+
+func (rnd *Rand) IntRange(s, e int) int {
+ return rnd.Intn(e-s) + s
+}
+
+func (rnd *Rand) NormIntRange(desiredMean, desiredStdDev int) int {
+ return int(rnd.NormFloat64()*float64(desiredStdDev)) + desiredMean
+}
+
+func (rnd *Rand) NormFloat64Range(desiredMean, desiredStdDev float64) float64 {
+ return rnd.NormFloat64()*desiredStdDev + desiredMean
+}
+
+func GetNewRand() *Rand {
+ return &amp;Rand{
+  r.New(r.NewSource(time.Now().UnixNano())),
+ }
+}
+
+
+//end
+</code></pre>
+<p>이렇게 만들어서 
+&ldquo;math/rand&rdquo; 대신 위 패키지를 import해서 사용하면 됩니다. 
+기존 rand 패키지의 Rand struct 가 제공하는 모든 함수를 사용하면서 새로
+추가한 함수들도 사용할수 있습니다.</p>
+<p>주의할점은 표준 rand 패키지가 제공하는 모든 함수(특히 암묵적으로 전역
+선언된 Rand object를 사용하는 ) 를 사용 할수 있는것은 아닙니다.</p>
+<p>애초에 이 패키지를 만들게 된 이유도 이 전역 rand object를 사용하고
+있었는데 
+언제나 처럼 profiling을 통해서 성능 개선을 하려고 해보니 
+<strong>이 전역 Rand object를 사용하는 부분에서 엄청난 양의 lock이 걸리고
+있더군요.</strong></p>
+<p>그리서 모두 local Rand object를 쓰도록 바꾸면서 이왕 하는 김에 만든
+코드입니다.</p>
+<p>ps) 2015-02-03 추가 
+생각해보니 GetNewRand 함수는 표준 라이브러리와 같이 New 함수로 바꾸는
+것이 더 좋겠네요. 
+(함수에 get , set 을 붙이는 것이 꽤 오랜 습관이라 ) 
+goguelike에서도 도 이름을 바꿨습니다.</p>
+<p>ps) 2015-02-14 추가 
+github에 코드를 올렸습니다. 
+<a href="https://github.com/kasworld/rand">https://github.com/kasworld/rand</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-01-31-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%EC%A3%BC%EC%9D%98%ED%95%A0%EB%B6%80%EB%B6%84/">go언어를 사용하면서 주의 할 부분 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-01-30-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EC%9E%90%EC%A3%BC%EC%93%B0%EA%B2%8C%EB%90%98%EB%8A%94%EC%BD%94%EB%93%9C%ED%8C%A8%ED%84%B4%EB%93%A4serialid%EC%83%9D%EC%84%B1/">go 언어를 사용 할때  자주 쓰게 되는 코드 패턴들. serial ID 생성 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-24-goguelikebaised%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike:baised 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-17-goguelikemapeditor/">goguelike map editor </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-09-goguelike%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/">goguelike 성능 테스트 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-27-goguelike%EC%83%81%ED%83%9C%EC%A0%95%EB%B3%B4%EC%9D%98%EC%B6%94%EA%B0%80%EB%B0%8F%EA%B0%84%EB%8B%A8%EC%84%A4%EB%AA%85/">goguelike 상태 정보의 추가및 간단 설명. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-25-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike 클라이언트를 개선하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-23-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EA%B0%9C%EC%84%A0/">goguelike 클라이언트 개선 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-22-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%84%9C%EB%B2%84%EB%A1%9C%EC%99%84%EC%A0%84%EB%B6%84%EB%A6%AC%ED%95%9Cgoguelike/">클라이언트/서버로 완전 분리한 goguelike </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-15-goguelike%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-30-goguelike%EB%AF%B8%EB%A1%9C%EC%A7%80%ED%98%95%EC%96%BC%EC%9D%8C%EB%A7%88%EC%9D%84%EC%A7%80%ED%98%95/">goguelike 미로 지형 - 얼음 마을 지형 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-12-03-gotesting%ED%8C%A8%ED%82%A4%EC%A7%80%EC%82%AC%EC%9A%A9%EC%A4%91%EC%A3%BC%EC%9D%98%EC%A0%90/">go testing 패키지 사용중 주의점 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어로 만든 코드를 웹 브라우저에서 실행하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-16-pythongolang%EC%9D%98webframework%EC%A0%84%EC%9F%81/">python/golang의 web framework전쟁.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-29-goguelike%EB%AF%B8%EB%8B%88%EB%A7%B5%EC%B6%94%EA%B0%80/">goguelike 미니맵 추가 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

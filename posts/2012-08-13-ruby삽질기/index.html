@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>ruby 삽질기 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="어쩌다 팔자에 없는 Ruby on rails 작업을 하게 되었습니다. ( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing , 문서화 , 유지보수 입니다. )
+하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)
+루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고 생각한데다가 rails 역시 python 에 있는 web framework 들이 대놓고 저희는 rails를 베꼈어요! 하는 것들을 여럿 써 본 관계로 오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을 했습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="ruby 삽질기" />
+<meta property="og:description" content="어쩌다 팔자에 없는 Ruby on rails 작업을 하게 되었습니다. ( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing , 문서화 , 유지보수 입니다. )
+하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)
+루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고 생각한데다가 rails 역시 python 에 있는 web framework 들이 대놓고 저희는 rails를 베꼈어요! 하는 것들을 여럿 써 본 관계로 오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을 했습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2012-08-13-ruby%EC%82%BD%EC%A7%88%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2012-08-13T20:54:00+09:00" />
+<meta property="article:modified_time" content="2012-08-13T20:54:00+09:00" />
+<meta itemprop="name" content="ruby 삽질기">
+<meta itemprop="description" content="어쩌다 팔자에 없는 Ruby on rails 작업을 하게 되었습니다. ( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing , 문서화 , 유지보수 입니다. )
+하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)
+루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고 생각한데다가 rails 역시 python 에 있는 web framework 들이 대놓고 저희는 rails를 베꼈어요! 하는 것들을 여럿 써 본 관계로 오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을 했습니다."><meta itemprop="datePublished" content="2012-08-13T20:54:00+09:00" />
+<meta itemprop="dateModified" content="2012-08-13T20:54:00+09:00" />
+<meta itemprop="wordCount" content="292">
+<meta itemprop="keywords" content="루비,삽질,rails,ruby,ROR,레일즈," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ruby 삽질기"/>
+<meta name="twitter:description" content="어쩌다 팔자에 없는 Ruby on rails 작업을 하게 되었습니다. ( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing , 문서화 , 유지보수 입니다. )
+하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)
+루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고 생각한데다가 rails 역시 python 에 있는 web framework 들이 대놓고 저희는 rails를 베꼈어요! 하는 것들을 여럿 써 본 관계로 오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을 했습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">ruby 삽질기</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2012-08-13T20:54:00+09:00">August 13, 2012</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>어쩌다 팔자에 없는 
+Ruby on rails 작업을 하게 되었습니다. 
+( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing ,
+문서화 , 유지보수 입니다. )</p>
+<p>하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)</p>
+<p>루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고
+생각한데다가 
+rails 역시 python 에 있는 web framework 들이  대놓고 저희는 rails를
+베꼈어요! 
+하는 것들을 여럿 써 본 관계로 
+오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을
+했습니다.</p>
+<p>그런데&hellip;</p>
+<p>결론만 말하면</p>
+<p>청출어람.. ( python web framework 의 위대함을 절절히 느꼈습니다.)</p>
+<p>앞으로 누군가가 제 앞에서 새 프로젝트는 ROR (ruby on rails)로 하자고
+하면 
+가만 안둘 것 같습니다.</p>
+<p>상상초월인게 
+rails란 놈.. 
+x.y.z 란 버전 체계를 가지는데 
+x : major version 
+y : minor version 
+z : patch version 
+이라고 가정하면 
+x와 y 가 같아도 z 가 다르면 호환성이 없습니다. 
+( 정확히 말하면 없는 경우도 있습니다. )</p>
+<p>예를 들면 
+rails 2.3.5 와 잘 작동하던 프로젝트가 2.3.11에서는 에러를 냅니다.</p>
+<p>덤으로 ruby 쪽 모듈들이 원래 그런지 다른 모듈들도 그런 식의 호환성을
+보이는 것들이 있습니다.</p>
+<p>처음에는 이게 ralis 탓이라고 생각 못하고 온갖 삽질을 했는데 
+검색을 해보니 원래 그런거라고 하는 군요.</p>
+<p>세상 어느 라이브러리/프레임웍/어플리케이션이 버전 호환성을 그토록
+무시한답니까?</p>
+<p>word 7.0에서 만든 문서가 word 8.0에서 읽을수 없다거나 
+윈도우 xp 용 프로그램이 비스타에서 실행 불가능 하다는게 말이 되던가요?</p>
+<p>아니 심지어 이경우는 xp용 프로그램이 xp 서비스팩 1 에서는 작동이 되지
+않는 것과 같은 상황입니다.</p>
+<p>어느 블로그에선가는 rails 작성자가 진보적이고 새로운 것을 받아들이는데
+적극적이어서 그렇다고 하는 글을 봤는데.</p>
+<p>그 딴 건 취미로 하는 개인 프로젝트에서나 허용 되는 일입니다.</p>
+<p>rails가 이상하게 잠깐 반짝하다가 조용해졌다고 신기하게 생각하고 있었는데
+. 
+이런 상황이면 제정신 가진 회사에서 프로젝트에 쓰는 것은 불가능하다고
+봅니다.</p>
+<p>한줄 결론 ( 어그로를 엄청 끌만한 ) 
+rails는 취미로 만들고 있는 한 사람과 그의 팬(빠)들(만)이 쓰는
+프레임웍이다. 
+실용적으로 쓸생각은 집어쳐라.</p>
+<p>ps) 
+시간이 되는 대로 지금 하고 있는 프로젝트를 가능한한 web2py로 변환할
+계획입니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EB%A3%A8%EB%B9%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">루비</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/rails/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">rails</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ruby/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ruby</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ror/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ROR</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A0%88%EC%9D%BC%EC%A6%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">레일즈</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

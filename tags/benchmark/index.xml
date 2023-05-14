@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>benchmark on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/benchmark/</link>
+    <description>Recent content in benchmark on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 29 Nov 2017 16:51:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/benchmark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>벤치마크와 프로파일링의 결과가 서로 상충될때 </title>
+      <link>https://kasworld.github.io/posts/2017-11-29-%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%EC%99%80%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%EC%9D%98%EA%B2%B0%EA%B3%BC%EA%B0%80%EC%84%9C%EB%A1%9C%EC%83%81%EC%B6%A9%EB%90%A0%EB%95%8C/</link>
+      <pubDate>Wed, 29 Nov 2017 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2017-11-29-%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%EC%99%80%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%EC%9D%98%EA%B2%B0%EA%B3%BC%EA%B0%80%EC%84%9C%EB%A1%9C%EC%83%81%EC%B6%A9%EB%90%A0%EB%95%8C/</guid>
+      <description>작업하고 있는 goguelike2에서 사용하는 작은 패키지 하나를 github 공개 repository 에 올렸습니다.
+https://github.com/kasworld/wrapper
+인데
+내용을 보면 뭐 이런 간단한 걸 올린 것일까? 하고 생각할만한 패키지입니다.
+패키지의 기능은 최대 값이 있는 정수가 범위를 벗어 나지 않도록 wrap around 해주는 것입니다.
+실제 사용은 오른 쪽 끝을 넘어가면 왼쪽으로 나와서 무한해 보이는 필드 를 만들기 위한 기능을 제공하기 위해서 만든 것인데.
+원래는 func WrapInt(v, l int) int { return (v%l + l) % l }</description>
+    </item>
+    
+  </channel>
+</rss>

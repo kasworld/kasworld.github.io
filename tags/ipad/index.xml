@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ipad on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/ipad/</link>
+    <description>Recent content in ipad on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 10 Sep 2010 16:57:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/ipad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>갤럭시탭 지못미;;;</title>
+      <link>https://kasworld.github.io/posts/2010-09-10-%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%EC%A7%80%EB%AA%BB%EB%AF%B8/</link>
+      <pubDate>Fri, 10 Sep 2010 16:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2010-09-10-%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%EC%A7%80%EB%AA%BB%EB%AF%B8/</guid>
+      <description>일단 링크 부터 http://www.techradar.com/news/phone-and-communications/mobile-phones/google-android-not-optimised-for-tablets--715550?src=rss&amp;amp;attr=all
+제목이 Google: &amp;lsquo;Android not optimised for tablets&amp;rsquo; 한글로 다시 쓰면 &amp;ldquo;안드로이드는 아직 태블릿 용이 아니다. &amp;ldquo;
+전에 &amp;ldquo;안드로이드가 가야 할길&amp;rdquo; 에서 지적 했듯이 현재의 안드로이드 표준 프로파일에선 태블릿을 만들어 내기가 애매하다. 최대 해상도가 800x480인 표준 프로파일로는 해상도가 너무 낮고 비표준 해상도로 만들자니 앱간 호환성이 문제가 될것이고.. 이번 갤럭시 탭은 삼성으로서는 나름 야심적인 도전이었겠지만 브랜드 인지도도 떨어지는 후발주자인 주제에 겨우 1024x600 해상도로 ipad의 1024x768보다 스펙마저 낮으면서 대항마 타령을 하고 있으면 우스울 뿐이다.</description>
+    </item>
+    
+  </channel>
+</rss>

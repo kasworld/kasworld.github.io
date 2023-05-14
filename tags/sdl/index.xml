@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sdl on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/sdl/</link>
+    <description>Recent content in sdl on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 27 Feb 2015 14:33:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/sdl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go언어로 TCP server와 GUI client를 만들어 보기. </title>
+      <link>https://kasworld.github.io/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/</link>
+      <pubDate>Fri, 27 Feb 2015 14:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/</guid>
+      <description>3000라인 이상을 공용 package로 분리해 내고도 goguelike에 남은 코드가 아직도 9000라인이 넘기 때문에
+TCP server 와 GUI client로 사용할만한 예제를 따로 만들었습니다.
+결과적으로는 http://kasw.blogspot.kr/2015/02/go-tcp-serverclient.html http://kasw.blogspot.kr/2015/02/go-gui.html 을 합치는 프로그램을 만드는 것이됩니다.
+원래 계획으로는 framework으로 만들어 볼 생각이 있었는데 생각보다 framework과 custom logic의 분리가 까다로운 관계로 그냥 server와 client의 예제가 되었습니다. 코드는 새로 작성된 것이지만 전체 적인 구조와 작동은 goguelike와 거의 같은 형태입니다. ( 적당히 단순화 되긴 했지만 )
+예제가 하는 일은 ( logic을 가능한 단순한것으로 선택했습니다.</description>
+    </item>
+    
+    <item>
+      <title>go 언어로 GUI 프로그램을 만들기.</title>
+      <link>https://kasworld.github.io/posts/2015-02-20-go%EC%96%B8%EC%96%B4%EB%A1%9Cgui%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Fri, 20 Feb 2015 16:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2015-02-20-go%EC%96%B8%EC%96%B4%EB%A1%9Cgui%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description>goguelike는 애초 목표가 필요한것은 찾아 쓰고 없으면 만들어 사용한다. 였고 필요한 기능은 다중 client를 지원하는 TCP server GUI client with mouse and keyboard input server info by web auto generated terrain server and client side AI 그외 system의 contents에 해당하는 부분들 정도였습니다.
+대부분의 기능은 구현이 가능했는데 go 언어용 GUI 라이브러리 만은 잘 보이지 않더군요.
+실제로 검색해 보면 대부분의 GUI 라이브러리들이 만들다 만것들이거나 아니면 더이상 관리되지 않는 것들, 시험삼아 만들어 본것들 이었습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

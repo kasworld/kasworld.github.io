@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>wxgame2를 개선 하고 있습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="wxgame2를 개선 하고 있습니다. " />
+<meta property="og:description" content="새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-03-22T17:13:00+09:00" />
+<meta property="article:modified_time" content="2014-03-22T17:13:00+09:00" />
+<meta itemprop="name" content="wxgame2를 개선 하고 있습니다. ">
+<meta itemprop="description" content="새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다."><meta itemprop="datePublished" content="2014-03-22T17:13:00+09:00" />
+<meta itemprop="dateModified" content="2014-03-22T17:13:00+09:00" />
+<meta itemprop="wordCount" content="286">
+<meta itemprop="keywords" content="성능개선,언어,파이썬,프로그래밍,python,wxgame,AI,게임프로그래밍,개발,게임개발,게임만들기,wxpython," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wxgame2를 개선 하고 있습니다. "/>
+<meta name="twitter:description" content="새로 바뀐 스크린 샷
+client/server 실행법
+서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
+클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">wxgame2를 개선 하고 있습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-03-22T17:13:00+09:00">March 22, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>새로 바뀐 스크린 샷</p>
+<p><a href="../images/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-screenshot.png"><img src="../images/thumbnails/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-screenshot.png" alt=""></a></p>
+<p>client/server 실행법</p>
+<p>서버는 인자없이 그냥 실행하면 됩니다. 
+python wxgame2server.py 
+또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가
+서버에는 없기 때문에 pypy를 사용할 수도 있습니다.</p>
+<p>클라이언트 실행 
+python wxgame2client.py -s serverip -t teamname 
+-s 는 접속할 서버의 주소, port는 고정입니다. 
+-t 는 클라이언트 AI의 팀 이름 
+-t 옵션이 생략되면 서버에 observer mode로 접속합니다. 
+( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 
+각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다.</p>
+<p>수정 사항들 
+기존에 사용하던 정체 모를 ( 어디서 가져왔는지 기억나지 않는) 리소스들을
+빼는 작업 - 진행중 
+( 제 리눅스 머신에서 찾은 것이니 문제가 될 수지는 적겠지만 그래도
+정리하는게 좋겠지요.)</p>
+<p>UI 가 없는 AI client 지원 
+관찰자 모드 지원</p>
+<p>대규모 클라이언트 지원을 위한 준비작업 - 팀 이미지 리소스 제한 으로 8개
+이상지원 불가능하던 것을 24bit 개로 확장 
+단일 grey 이미지를 로딩시 scale 과 AdjustChannels 를 사용 team color에
+맞게 수정 
+이에 따라 각 오브젝트의 크기도 실제 collisionCricle 크기에 맞게
+되었습니다. 
+여러 장의 이미지로 animate 하던 것도 image rotate 를 사용 로딩시
+생성하게 수정.</p>
+<p>gimp로 간단히 작업해서 만들었습니다. ^^</p>
+<p><a href="../images/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-spiral.png"><img src="../images/thumbnails/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-spiral.png" alt=""></a> <a href="../images/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-grayball.png"><img src="../images/thumbnails/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-grayball.png" alt=""></a></p>
+<p>시각적 장식이자 방해물인 구름 재추가( 예전에 있다가 뺀 것을 정리해서
+다시 넣었습니다. )</p>
+<p>리소스 로드 코드 수정.</p>
+<p>네트웍 thread 쪽 설계 재구성으로 cpu 사용문제 해결 - 대규모 클라이언트
+지원 준비 작업.</p>
+<p>profile을 사용해서 성능 개선( 별 생각 없이 쓴 deepcopy 가 상당한 시간을
+쓰더군요.) 
+추가로 이야기하면 꽤 복잡한 dictionary 구조에 오브젝트 레퍼런스를 많이
+사용하고 있습니다. 
+그런데 이 부분에서 object 의 reference가 까딱 잘못하면 꼬입니다. 
+그래서 deepcopy를 사용하고 있었는데 프로파일링을 해보니 성능에 문제가
+되더군요. 결국 다 찾아서 수정했습니다.</p>
+<p>제가 성능 개선에 사용했는 profile 방법 메모( 소스 코드 내 주석에도
+적었지만) 
+클라이언트를 실행할때 
+python -m cProfile -o profile.txt  wxgame2client.py -t teama 
+종료후 프로파일을 볼때 
+python을 실행하고 
+import pstats 
+pstats.Stats(&lsquo;profile.txt&rsquo;).strip_dirs().sort_stats(&rsquo;tottime&rsquo;).print_stats(40)</p>
+<p>언제나 처럼 모든 코드와 리소스는 <a href="https://github.com/kasworld">github에</a>
+있습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B1%EB%8A%A5%EA%B0%9C%EC%84%A0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">성능개선</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%96%B8%EC%96%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">언어</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-05-%EA%B5%AC%EA%B8%80%EB%A6%AC%EB%8D%94%EA%B0%80%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A2%85%EB%A3%8C%ED%95%9C%EB%8B%A4%EB%8A%94%EC%86%8C%EC%8B%9D%EC%9D%84%EB%93%A3%EA%B3%A0/">구글 리더가 서비스 종료한다는 소식을 듣고</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">windows의 vim에서 python 활성화 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-26-%EC%A0%9C%ED%92%88%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B0%9C%EB%B0%9C%EC%9D%98%EB%8B%A8%EA%B3%84/">제품/서비스 개발의 단계</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

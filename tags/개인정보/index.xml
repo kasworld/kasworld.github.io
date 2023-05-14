@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>개인정보 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4/</link>
+    <description>Recent content in 개인정보 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 13 Mar 2016 15:39:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스에서 홈폴더를 암호화해서 개인 정보를 보호하기. </title>
+      <link>https://kasworld.github.io/posts/2016-03-13-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%ED%99%88%ED%8F%B4%EB%8D%94%EB%A5%BC%EC%95%94%ED%98%B8%ED%99%94%ED%95%B4%EC%84%9C%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%A5%BC%EB%B3%B4%ED%98%B8%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Sun, 13 Mar 2016 15:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-03-13-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%ED%99%88%ED%8F%B4%EB%8D%94%EB%A5%BC%EC%95%94%ED%98%B8%ED%99%94%ED%95%B4%EC%84%9C%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%A5%BC%EB%B3%B4%ED%98%B8%ED%95%98%EA%B8%B0/</guid>
+      <description>평생 써볼일 없는 기능이라고 생각하고 있었습니다만..
+요즘 세월이 하수상하니
+리눅스에서 홈폴더를 암호화 해서 개인정보를 보호하기를 한번 해보았습니다.
+일단 (요즘 놀고 있는)노트북에서 먼저 테스트해 보았는데 (당연히) 문제없이 잘되고 성능저하도 거의 느껴 지지 않더군요.
+그래서 약 일주일 뒤 집 데스크 탑에도 적용했습니다.
+http://www.howtogeek.com/116032/how-to-encrypt-your-home-folder-after-installing-ubuntu/
+홈 폴더를 암호화 하는 것은 설치시에 하는 것이 가장 편합니다만 (설치할때 물어봅니다. )
+저는 설치된 후에 암호화 작업을 했기때문에 좀 귀찮은 작업을 해야 합니다.
+간단히 설명하면 암호화할 폴더의 주인이 로그인된 상태(즉 폴더를 사용중인상태) 에서는 암호화를 할 수가 없기 때문에 ( 너무 당연한 이야기지요.</description>
+    </item>
+    
+  </channel>
+</rss>

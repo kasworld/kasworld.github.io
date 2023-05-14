@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/it/</link>
+    <description>Recent content in IT on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 03 Sep 2010 13:28:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>apple google ibm ms intel 들의 주가 총액.</title>
+      <link>https://kasworld.github.io/posts/2010-09-03-applegoogleibmmsintel%EB%93%A4%EC%9D%98%EC%A3%BC%EA%B0%80%EC%B4%9D%EC%95%A1/</link>
+      <pubDate>Fri, 03 Sep 2010 13:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2010-09-03-applegoogleibmmsintel%EB%93%A4%EC%9D%98%EC%A3%BC%EA%B0%80%EC%B4%9D%EC%95%A1/</guid>
+      <description>2010년 9월 3일 시점의 주요 관심 IT 기업들의 주가 총액 ms 207.17b intel 101.78b apple 230.37b ibm 157.71b google 147.62b
+MS가 IBM을 넘었다고 떠들썩 했던 때가 얼마 전인듯 한데 apple이 MS를 넘었군요.
+nvidia나 AMD는 단위가 다릅니다. AMD 가 4b Nvidia가 5.48b 정도 입니다. 이런이야기나오면 항상 나오는 삼성은 찾을 수가 없군요.
+http://www.google.com/finance/stockscreener#c0=MarketCap&amp;amp;c1=PE&amp;amp;c2=DividendYield&amp;amp;c3=Price52WeekPercChange&amp;amp;region=us&amp;amp;sector=REUTERS_10&amp;amp;sort=MarketCap&amp;amp;sortOrder=1 를 보니 일목요연 하군요.;;;</description>
+    </item>
+    
+  </channel>
+</rss>

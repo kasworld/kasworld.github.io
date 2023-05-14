@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>구글 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EA%B5%AC%EA%B8%80/</link>
+    <description>Recent content in 구글 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 27 Aug 2010 14:15:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B5%AC%EA%B8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>지금 안드로이드가 가야 할길</title>
+      <link>https://kasworld.github.io/posts/2010-08-27-%EC%A7%80%EA%B8%88%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EA%B0%80%EA%B0%80%EC%95%BC%ED%95%A0%EA%B8%B8/</link>
+      <pubDate>Fri, 27 Aug 2010 14:15:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2010-08-27-%EC%A7%80%EA%B8%88%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EA%B0%80%EA%B0%80%EC%95%BC%ED%95%A0%EA%B8%B8/</guid>
+      <description>비슷한 내용의 글을 몇번 썼던것 같지만 ^^ ( 안드로이드를 기다렸지만 모토로이를 사지 않은이유 ) iphone 4가 나오면서 안드로이드 진영이 더 빨리 움직이길 기대 했으나 예상보다 너무 반응이 느립니다.
+지금 시점 정도가 됐으면 4.3인치 스크린에 720x1280 화면 ( 즉 720p 동영상을 제대로 보여줄수 있는 해상도) 1G ram 에 8G flash disk 달린 모델들이 발표되고 있어야 한다고 생각합니다.
+물론 여기에는 구글이 만든 디바이스 프로파일에 854x480 이상의 화면에 대한 규정이 없고 (비어 있는겁니다. ) 안드로이드 내부 구조에 문제점이라던지 ( 대충 들리는 소리에 의하면 어플리케이션 설치용 flash disk는 2G 제한 이라거나 , 주 메모리의 뱅크 하나를 phone modem용으로 설정하고 이곳에는 OS접근이 불가 하다 던지 하는 ) 여러 문제가 있겠지만 지금 상황이라면 apple 진영에 1년 이상 뒤 떨어질것이 거의 확실합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

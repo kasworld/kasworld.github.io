@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
+지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
+현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&gt; 클라이언트간 정보를 전달하고 있습니다.
+코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. " />
+<meta property="og:description" content="이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
+지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
+현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&gt; 클라이언트간 정보를 전달하고 있습니다.
+코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-03-02T14:41:00+09:00" />
+<meta property="article:modified_time" content="2014-03-02T14:41:00+09:00" />
+<meta itemprop="name" content="wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. ">
+<meta itemprop="description" content="이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
+지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
+현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&gt; 클라이언트간 정보를 전달하고 있습니다.
+코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다."><meta itemprop="datePublished" content="2014-03-02T14:41:00+09:00" />
+<meta itemprop="dateModified" content="2014-03-02T14:41:00+09:00" />
+<meta itemprop="wordCount" content="204">
+<meta itemprop="keywords" content="golang,언어,파이썬,프로그래밍,강의,python,go programming language,wxgame,AI,go,게임프로그래밍,개발,교육,세미나,게임개발,게임만들기,wxpython," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. "/>
+<meta name="twitter:description" content="이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
+지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
+현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&gt; 클라이언트간 정보를 전달하고 있습니다.
+코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-03-02T14:41:00+09:00">March 2, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="../images/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-wxgame2net.png"><img src="../images/thumbnails/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4-wxgame2net.png" alt=""></a></p>
+<p><a href="http://kasw.blogspot.kr/2014/01/github.html">이전 글 </a> 이후에 <a href="http://kasw.blogspot.kr/2014/02/blog-post.html">강의
+준비</a>를 하면서 코드를
+보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아
+전체적인 재 정리를 해야겠다고 생각하고 있었습니다.</p>
+<p>지난 주부터 시간 되는 대로 작업을 진행해서 
+로직을 수행하는 wxgame2server.py와 
+서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 
+만드는 것을 일정부분 끝냈습니다.</p>
+<p>현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게
+file/pickle 을 상용해서 서버-&gt; 클라이언트간 정보를 전달하고
+있습니다.</p>
+<p>코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게
+되었습니다. 
+( 그래서 원래의 wxgame2.py 와는 클래스 구조가 많이 다릅니다. )</p>
+<p>아직 남아 있는 일들이 많은데 
+로직과 관계없는 화면 효과들의 시각화 추가</p>
+<p>서버와 AI player들을 분리 
+이렇게 되면 
+wxgame2server.py : game logic,  판정 , 점수 계산 
+wxgame2client.py : 게임 진행을 볼 수 있는 viewer 
+wxgame2player.py : AI 또는 사람이 조정하는 play client 
+형태로 정리되게 될 것 같습니다.</p>
+<p>개발/디버깅의 편의 성을 위해 임시고 파일을 사용하고 있는 데이터 교환을
+정식 network 버전으로 수정하고</p>
+<p>서버에 통합되어 있는 AI들을 따로 떼어 내서 네트웍 버전의 AI client로
+만드는 작업</p>
+<p>pickle을 사용하는 데이터 교환을 언어 중립적인 json으로 변경 
+로직/판정을 수행하는  서버를 go 언어로 포팅</p>
+<p>같은 일을 하면 좋을 것 같습니다.  ( 시간이 되면 ^^ )</p>
+<p>ps) 프로젝트 폴더에 있는 ex.py는 강의에 사용했던 예제들로 00 ~ 14 까지
+게임이 발전? 해 나가는 것을 시연 해주기 위한 코드 입니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%96%B8%EC%96%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">언어</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%95%EC%9D%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">강의</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B5%90%EC%9C%A1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">교육</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B8%EB%AF%B8%EB%82%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">세미나</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpython/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpython</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

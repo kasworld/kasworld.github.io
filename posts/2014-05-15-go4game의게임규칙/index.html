@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>go4game의 게임 규칙  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에 적어봅니다. ( 아주 사무적인 문서라 말이 짧습니다. ^^;; _
+설명:업데이트된 게임 상태창.
+설명:새로 추가된 AICloud의 동작모습
+한개의 gameservice 에는 실제 team간 interactaction 이 발생하는 여러개의 World 가 존재
+각각의 world에는 team들이 소속 team은 tcp client , websocket client , ai client 가 존재 world는 60 frame / sec 로 각 팀에게 frame action을 요청 각 팀의 frame action은 goroutine을 사용 concurrent 하게 진행.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="go4game의 게임 규칙 " />
+<meta property="og:description" content="AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에 적어봅니다. ( 아주 사무적인 문서라 말이 짧습니다. ^^;; _
+설명:업데이트된 게임 상태창.
+설명:새로 추가된 AICloud의 동작모습
+한개의 gameservice 에는 실제 team간 interactaction 이 발생하는 여러개의 World 가 존재
+각각의 world에는 team들이 소속 team은 tcp client , websocket client , ai client 가 존재 world는 60 frame / sec 로 각 팀에게 frame action을 요청 각 팀의 frame action은 goroutine을 사용 concurrent 하게 진행." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-05-15T14:20:00+09:00" />
+<meta property="article:modified_time" content="2014-05-15T14:20:00+09:00" />
+<meta itemprop="name" content="go4game의 게임 규칙 ">
+<meta itemprop="description" content="AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에 적어봅니다. ( 아주 사무적인 문서라 말이 짧습니다. ^^;; _
+설명:업데이트된 게임 상태창.
+설명:새로 추가된 AICloud의 동작모습
+한개의 gameservice 에는 실제 team간 interactaction 이 발생하는 여러개의 World 가 존재
+각각의 world에는 team들이 소속 team은 tcp client , websocket client , ai client 가 존재 world는 60 frame / sec 로 각 팀에게 frame action을 요청 각 팀의 frame action은 goroutine을 사용 concurrent 하게 진행."><meta itemprop="datePublished" content="2014-05-15T14:20:00+09:00" />
+<meta itemprop="dateModified" content="2014-05-15T14:20:00+09:00" />
+<meta itemprop="wordCount" content="373">
+<meta itemprop="keywords" content="AI,golang,게임프로그래밍,go4game,게임개발,go programming language,게임만들기," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go4game의 게임 규칙 "/>
+<meta name="twitter:description" content="AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에 적어봅니다. ( 아주 사무적인 문서라 말이 짧습니다. ^^;; _
+설명:업데이트된 게임 상태창.
+설명:새로 추가된 AICloud의 동작모습
+한개의 gameservice 에는 실제 team간 interactaction 이 발생하는 여러개의 World 가 존재
+각각의 world에는 team들이 소속 team은 tcp client , websocket client , ai client 가 존재 world는 60 frame / sec 로 각 팀에게 frame action을 요청 각 팀의 frame action은 goroutine을 사용 concurrent 하게 진행."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">go4game의 게임 규칙 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-05-15T14:20:00+09:00">May 15, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>AI 만이 아니고 게임을 구성하기 위해선 게임의 룰도 정리되어야 하기에
+적어봅니다. 
+( 아주 사무적인 문서라 말이 짧습니다. ^^;; _</p>
+<p><a href="../images/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99-Screenshot+-+2014%EB%85%84+05%EC%9B%94+15%EC%9D%BC+-+17%EC%8B%9C+08%EB%B6%84+18%EC%B4%88.png"><img src="../images/thumbnails/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99-Screenshot+-+2014%EB%85%84+05%EC%9B%94+15%EC%9D%BC+-+17%EC%8B%9C+08%EB%B6%84+18%EC%B4%88.png" alt=""></a></p>
+<p>설명:업데이트된 게임 상태창.</p>
+<p><a href="../images/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99-Screenshot+-+2014%EB%85%84+05%EC%9B%94+15%EC%9D%BC+-+14%EC%8B%9C+19%EB%B6%84+13%EC%B4%88.png"><img src="../images/thumbnails/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99-Screenshot+-+2014%EB%85%84+05%EC%9B%94+15%EC%9D%BC+-+14%EC%8B%9C+19%EB%B6%84+13%EC%B4%88.png" alt=""></a></p>
+<p>설명:새로 추가된 AICloud의 동작모습</p>
+<p>한개의 gameservice 에는 실제 team간 interactaction 이 발생하는  여러개의
+World 가 존재</p>
+<p>각각의 world에는 team들이 소속 
+team은 tcp client , websocket client , ai client 가 존재 
+world는 60 frame / sec 로 각 팀에게 frame action을 요청 
+각 팀의 frame action은 goroutine을 사용  concurrent 하게 진행. 
+data racing을 방지하기 위해 각 frame 시작시 world data serialize 와
+spatialpartition data를 생성 
+serialize data는 tcp/websocket client 에게 전달용 , spatial partition
+data는 AI client용 
+각 client 들은 이 복사된 data를 기반으로 action을 선택 서버에 전달 
+서버는 client action과 timely action, collision check를 진행 - 자신의 실
+data 수정</p>
+<p>game world는 3d space로 좌표 (-500,-500,-500) ~ ( 500,500,500) 의 1000^3
+공간 , 실수 좌표계</p>
+<p>팀은 client와 연결점(conninfo) 을 가지고 통신을 하며 이와 별개로
+gameobject들을 소유 
+이중 mainobj가 각 팀의 주인공(actor)이고 팀당 하나만 존재 가능 나머지는
+mainobject가 만들어낸 shield, bullet들 
+client는 mainobject만 제어 가능 
+mainobject가 할수 있는 행동은 5가지 
+accel , bullet , superbullet, hommingbullet , burstshot 
+accel을 mainobject의 accel vector를 지정(위치나 이동 vector가 아니고 ) 
+나머지는 지정된 탄환을 발사 
+모든 action에는 actionpoint(AP)가 소비되며 AP는 매 프레임마다 서버가
+팀에 추가 해줌 
+즉 모아서 큰 AP 소모 action을 하는 것이 가능 
+client가 Action을 하려고 해도 AP가 부족하면 서버가 거부</p>
+<p>AP를 팀에 제공하는 룰은 팀별 home position 으로 부터의 거리가 가까울수록
+많이 제공. 
+(원래는 (0,0,0) 이었는데 게임의 재미를 위해 팀별로 다르게 만듬) 
+매 프레임 마다 서버는 이 homepos를 무작위로 이동 
+( position jump가아니고 random vector 를 add 하는 형태 ) 
+따라서 각 팀의 home pos가 교차 되는 경우도 존재 
+자신의 팀의 homepos는 매 frame 마다 서버가 팀별로 전달</p>
+<p>모든 gameobject는 pos vector, move vector , accel vector 를 가지고 이를
+이용 매 프레임 자동 이동 
+각 object는 object type별로 move limit (속도 ) 가 걸려 있음, 그 이상의
+속도를 내려고 하면 서버가 자동으로 normalize 해버림 
+world boundary 에 도달하면 
+mainobj 반사, 
+shield, homming bullet 영향 없음 
+나머지는 disable됨 ( 다음프레임에 없어짐 )</p>
+<p>game object는 구형이며 radius를 가짐, 이를 기준으로 충돌 검사를 진행.</p>
+<p>gameobject type 은 서로 interaction 가능성 table을 사용 충돌 여부를
+검사. 
+충돌시 동작은 interaction하는 object는 disable 형태를 사용. 
+object 별 HP를 가지게 하는 것도 생각해 봤지만 다음 버전에 고려해볼
+생각.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go4game/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go4game</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-05-13-go4game%EC%97%90ai%EB%A5%BC%EB%B6%99%EC%9D%B4%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 AI를 붙이고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 웹 클라이언트를 추가 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">go4game - go 언어로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2를 개선 하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

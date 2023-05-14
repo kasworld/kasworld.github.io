@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>go4game - go 언어로 만드는 게임 서버 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을 시작했습니다.
+일단 첫 번째 작동 버전은 언제나처럼 github에 있습니다. 지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고 받을 수 있는 구조들 정도 입니다. 지금 사용하는 패킷은 int32 len &#43; json 형태의 패킷입니다.
+참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. The Go Programming Language : 2009년 글입니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="go4game - go 언어로 만드는 게임 서버" />
+<meta property="og:description" content="몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을 시작했습니다.
+일단 첫 번째 작동 버전은 언제나처럼 github에 있습니다. 지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고 받을 수 있는 구조들 정도 입니다. 지금 사용하는 패킷은 int32 len &#43; json 형태의 패킷입니다.
+참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. The Go Programming Language : 2009년 글입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-04-16T17:02:00+09:00" />
+<meta property="article:modified_time" content="2014-04-16T17:02:00+09:00" />
+<meta itemprop="name" content="go4game - go 언어로 만드는 게임 서버">
+<meta itemprop="description" content="몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을 시작했습니다.
+일단 첫 번째 작동 버전은 언제나처럼 github에 있습니다. 지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고 받을 수 있는 구조들 정도 입니다. 지금 사용하는 패킷은 int32 len &#43; json 형태의 패킷입니다.
+참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. The Go Programming Language : 2009년 글입니다."><meta itemprop="datePublished" content="2014-04-16T17:02:00+09:00" />
+<meta itemprop="dateModified" content="2014-04-16T17:02:00+09:00" />
+<meta itemprop="wordCount" content="546">
+<meta itemprop="keywords" content="golang,go,게임프로그래밍,온라인게임,프로그래밍,go4game,게임개발,go programming language,게임만들기," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go4game - go 언어로 만드는 게임 서버"/>
+<meta name="twitter:description" content="몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을 시작했습니다.
+일단 첫 번째 작동 버전은 언제나처럼 github에 있습니다. 지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고 받을 수 있는 구조들 정도 입니다. 지금 사용하는 패킷은 int32 len &#43; json 형태의 패킷입니다.
+참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. The Go Programming Language : 2009년 글입니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">go4game - go 언어로 만드는 게임 서버</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-04-16T17:02:00+09:00">April 16, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을
+시작했습니다.</p>
+<p>일단 첫 번째 작동 버전은
+언제나처럼 <a href="https://github.com/kasworld/go4game">github</a>에
+있습니다. <a href="https://www.blogger.com/"></a></p>
+<p>지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 
+GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고
+받을 수 있는 구조들 정도 입니다. 
+지금 사용하는 패킷은 int32 len + json 형태의 패킷입니다.</p>
+<p>참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. 
+<a href="http://kasw.blogspot.kr/2009/11/go-programming-language.html">The Go Programming
+Language</a> :
+2009년 글입니다.</p>
+<p>그리고 아직 완료하지 못한 The Way to Go OnlyGill 를 읽으며 메모한
+내용. 
+<a href="http://kasw.blogspot.kr/2012/09/go.html">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다.
+(1/N)</a> 
+<a href="http://kasw.blogspot.kr/2012/09/go-2n.html">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다.
+(2/N)</a> 
+<a href="http://kasw.blogspot.kr/2012/09/go-3n.html">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다.
+(3/N)</a> 
+<a href="http://kasw.blogspot.kr/2012/10/go-4n.html">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다.
+(4/N)</a> 
+<a href="http://kasw.blogspot.kr/2013/08/go-5n.html">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다.
+(5/N)</a></p>
+<p>작업하면서 go언어를 공부할때는 못느꼈던 점들을 메모해봤습니다.</p>
+<p>처음 go를 접하면 goroutine과 channel에 신경이 가게 되는데 실제
+프로그램을 해보니 
+interface{}가 완전 축복입니다. 
+go언어는 컴파일 언어에 정적 타이핑, 정적 바인딩 언어 입니다만 이
+interface를 통해서 python의 ducktyping 같은 효과를 낼 수 있습니다.</p>
+<p>그리고 go를 개발하기위한 환경 설정에서 folder구조가 의외로 중요합니다.</p>
+<pre><code>GOPATH/
+  bin
+  pkg
+  src
+    github.com/
+      kasworld
+        go4game
+          runserver
+          runclient
+</code></pre>
+<p>형태를 지켜야 합니다. (github 를 쓰는 경우 )</p>
+<p>그리고 라이브러리가 아닌 주 실행 파일을 만드는 경우는 또다른 독립 폴더를
+만들어야 합니다. 
+go4game 같은 경우는 아래로 runclient와 runserver 폴더가 따로 있습니다. 
+일단 이런 구조를 지키면 
+github에서 라이브러리를 가져오는 것은 
+go get github.com/kasworld/go4game 
+과 같이 아주 간단하게 이루어 집니다. ( 그전에 GOPATH -작업 루트 폴더- 가
+지정되어 있어야 합니다. ) 
+그리고 같은 폴더내에 있는 소스끼리는 소스간 import 의존성이 없습니다.
+그냥 한 파일 이라고 생각하고 작업해도 됩니다. 
+게다가 go는 소스내에서 선언의 위치 와 사용의 위치에 제한이 없습니다. 
+뒤에 정의 되어 있는 함수/struct를 앞에서 사용해도 에러를 내지
+않습니다. 
+이런 관계로 import 순서나 순환 참조에 대한 고민을 할 필요가
+없어집니다.</p>
+<p>go4game은 시스템 내의 대부분의 object가 goroutine을 사용해서 정말
+살아있는 object( data 과 정적 codeblock 이 아닌 )로 만들고 그 object간
+channel를 사용해 message를 주고 받는 형태로 설계를 하고 있습니다.</p>
+<p>이 경우 goroutine이 엄청나게 많아 지는 관계로 각 object간
+communication을 담당할 channel도 많아지는 문제가 있습니다. 
+아직은 프로토타입 단계라서 여러가지를 시도해 보고 있는데 일단은 각
+object가 command를 수신할 channel를 만들고 그 channel을 외부에서
+사용하는 형태를 취하고 있습니다.</p>
+<p>이렇게 많은 goroutine과 channel을 사용하게 되니 각 goroutine이 잘
+종료되는지를 확인할 필요가 생깁니다. (즉 goroutine이 leak 되는 지 확인
+) 
+runtime.NumGoroutine()을 사용해서 현재 goroutine의 총 수를 계속 확인,
+더이상 필요없는 goroutine이 background에서 실행 중인지를 확인합니다.</p>
+<p>channel을 만들 때
+일단 <!-- raw HTML omitted -->synchronous
+로 만들고 나중에 필요하면
+a<!-- raw HTML omitted --><!-- raw HTML omitted -->synchronous로
+확장합니다. <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->synchronous로
+만들어야 로직상의 버그로 block되는 부분을 빨리 발견 할 수
+있습니다. <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->이
+block되는 것을 막는 방법은 모든 channel send/recv를 반드시 select 내의
+case 안에 사용하는 것입니다. ( channel의 send/recv는 일단 blocked code
+입니다. )<!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> 이렇게 만들어진 go4game의 현재 성능은 
+1000 client가 초당 60 패킷을 보내는 것을 처리할 정도의 성능을
+보입니다. 
+i2500 , 3.3Ghz , 4C4T 에서 약 60000 패킷/sec 정도 
+단일 core만을 사용해야 했던 python/twisted 에 비하면 정말 많이 빠름니다.
+( 일단 cpu를 모두 사용하니 당연하긴 합니다. ) 
+앞 글에 썼던 python/twisted 와 동일 조건인 단순 echo로 성능 테스트를
+하면 대충 270000 패킷정도 처리합니다. ( 2.7배 정도 ) 
+실제 테스터가 같은 머신에서 작동한것이니 pypy 와 golang은 단일
+코어에서의 성능차이는 크지 않다고 봅니다. 
+다만 go는 cpu가 많아지면 성능이 올라가는 구조로 만들 수 있다는 게
+차이입니다. 
+이 문제만 아니라면 pypy/stackless 로도 go와 거의 같은 구조/성능을 얻을
+수 있습니다. 
+GIL의 문제가 해결될
+<a href="http://morepypy.blogspot.kr/2013/10/update-on-stm.html">pypy-stm</a> 이
+기대 되는 이유기도 합니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%98%A8%EB%9D%BC%EC%9D%B8%EA%B2%8C%EC%9E%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">온라인게임</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go4game/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go4game</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B2%8C%EC%9E%84%EB%A7%8C%EB%93%A4%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">게임만들기</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2를 개선 하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-15-thegoprogramminglanguage/">The Go Programming Language</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

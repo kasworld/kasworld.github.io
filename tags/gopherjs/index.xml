@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gopherjs on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/gopherjs/</link>
+    <description>Recent content in gopherjs on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Tue, 16 Oct 2018 09:59:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/gopherjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang gopherjs로 만든 시계와 달력 </title>
+      <link>https://kasworld.github.io/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/</link>
+      <pubDate>Tue, 16 Oct 2018 09:59:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/</guid>
+      <description>goguelike 의 webclient를 만들면서 부산물?로 만들어진 시계 와 달력입니다.
+코드를 살짝 정리해서 github에 올려 두었습니다. https://github.com/kasworld/gopherjsclockcal
+새로운 개발 환경(언어,IDE, OS, GUI )을 배울때 좋은 연습문제중하나가 그 환경에서 작동하는 시계와 달력을 만들어보는 것이라고 생각하기에 web용 goguelike 클라이언트를 만들때도 역시나 만들봤었습니다.
+그 결과물을 적당히 정리( 라이브러리 사용을 줄이는 등 ) 한것 입니다.
+만들어진 결과물은 마루에서 시계및 달력으로 잘 쓰이고 있기도 합니다. ^^</description>
+    </item>
+    
+    <item>
+      <title>golang 1.11 과 wasm , gopherjs </title>
+      <link>https://kasworld.github.io/posts/2018-08-26-golang111%EA%B3%BCwasmgopherjs/</link>
+      <pubDate>Sun, 26 Aug 2018 11:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-26-golang111%EA%B3%BCwasmgopherjs/</guid>
+      <description>현재는 goguelike에서 web client를 만들기 위해서 gopherjs를 사용하고 있습니다.
+다른 대안도 없고 약간 야매긴 하지만 잘 작동하고 있기에 만족스럽게 사용하고 있긴 합니다만 그래도 정식으로 golang에서 wasm을 지원하는 것이 베스트기에 wasm 을 정식으로 ( 실제로는 experimental port 라고 release note에 명시 ) 지원한다는 소식을 듣고 1.11의 릴리즈 만을 기다리고 있었습니다. 마침내 어제 1.11의 릴리스 소식을 듣고 바로 1.11의 설치를 하고 기존 gopherjs로 되어 있는 webclient를 wasm으로 포팅하는 작업을 시작했는데 .. 결론만 이야기 하면 일단 작업을 모두 정지하고 코드를 gopherjs 로 롤백 했습니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike에 역대 플레이어 랭킹 을 추가 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2018-07-01-goguelike%EC%97%90%EC%97%AD%EB%8C%80%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%9E%AD%ED%82%B9%EC%9D%84%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sun, 01 Jul 2018 16:51:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-07-01-goguelike%EC%97%90%EC%97%AD%EB%8C%80%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%9E%AD%ED%82%B9%EC%9D%84%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>애초에 그라운드 서버( 여러 타워 관리자 )를 만든 중요한 이유중 하나가 모든 타워를 아우르는 플레이어 랭킹을 표시 하고 싶었기 때문입니다.
+역시 오락이라면 high score가 기록 되어야지! 하고 생각하기 때문이기도 하지요. ^^
+이 플레이어 랭킹은 게임중에 표시되는 랭킹과는 좀 다릅니다. 게임 내에서 표시되는 랭킹은 그 타워 내의 모두 ( npc를 포함) 에서 현재 플레이어 캐릭터의 실시간 랭킹입니다. 그리고 이 high score 는 모든 타워에서 게임을 끝낸 플레이어 들간의 (npc 미포함) 랭킹이 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>Goguelike2 pre-alpha 테스트 플레이 오픈합니다. </title>
+      <link>https://kasworld.github.io/posts/2018-05-30-goguelike2prealpha%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 30 May 2018 10:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-05-30-goguelike2prealpha%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
+      <description>( 동일한 글이 제 블로그 http://kasw.blogspot.com/2018/05/goguelike2-pre-alpha.html 에도 올라가 있습니다. )
+Goguelike2 pre-alpha 테스트 플레이 설명
+그동안 혼자서 만드는 MMO 라는 목적으로 작업한 goguelike2 가 프리 알파 정도 상태긴 하지만 일단 테스트 플레이가 가능한 수준이 되어서? 공개합니다.
+MMO 지만 MMORPG 는 아닙니다. roguelike를 MMO 로 만들어보는 것이라 MMORLG 라고 할수 있습니다.
+접속 방법은 브라우저를 사용해서 아래있는 링크로 접속하시면 됩니다. 접속시 10Mbyte 좀 넘는 데이터를 다운 받게 되니 주의해주세요.
+다만 firefox 는 느려서 잘 안되는 것 같고 개발에 사용중인 chrome에서는 잘됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

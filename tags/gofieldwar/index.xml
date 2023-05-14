@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gofieldwar on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/gofieldwar/</link>
+    <description>Recent content in gofieldwar on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 02 May 2020 15:32:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/gofieldwar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gofieldwar 개발 일기 </title>
+      <link>https://kasworld.github.io/posts/2020-05-02-gofieldwar%EA%B0%9C%EB%B0%9C%EC%9D%BC%EA%B8%B0/</link>
+      <pubDate>Sat, 02 May 2020 15:32:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-05-02-gofieldwar%EA%B0%9C%EB%B0%9C%EC%9D%BC%EA%B8%B0/</guid>
+      <description>색을 조정해서 시인성을 개선한 스크린 샷입니다.
+3x3 의 외성과 1x1의 내성으로 진을 짜고 병력을 배치한 상태입니다.
+본격적으로 서버에서 받은 정보로 클라이언트가 표시하게 되었습니다.
+goguelike 와 같이 gofieldwar도 정해진 영역(field)이 무한 반복되는 형태 입니다. ( 한쪽으로 계속 가면 반대쪽끝으로 나오는 형태)
+프로토콜을 정리하고 클라이언트에 UI을 붙일 준비를 하고 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>테스트용으로 서비스 중이던 goguelike.iptime.org 서버를 내립니다. </title>
+      <link>https://kasworld.github.io/posts/2020-05-02-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9A%A9%EC%9C%BC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A4%91%EC%9D%B4%EB%8D%98goguelikeiptimeorg%EC%84%9C%EB%B2%84%EB%A5%BC%EB%82%B4%EB%A6%BD%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Sat, 02 May 2020 11:22:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-05-02-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9A%A9%EC%9C%BC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A4%91%EC%9D%B4%EB%8D%98goguelikeiptimeorg%EC%84%9C%EB%B2%84%EB%A5%BC%EB%82%B4%EB%A6%BD%EB%8B%88%EB%8B%A4/</guid>
+      <description>소스를 공개한 시점에서 서비스를 유지할 필요가 없다고 생각되어 서비스를 내렸습니다. 플레이 하고 싶으신 분은 https://github.com/kasworld/goguelike 에서 소스를 받아 빌드 해서 사용하시면 되겠습니다. goguelike의 개발이 완료되었거나 종료 되었다는 의미는 아닙니다. ^^
+아마 다음에 여는 (테스트)서비스는 gofieldwar가 되지않을까 생각하고 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>gofieldwar 프로토타이핑 방어진지</title>
+      <link>https://kasworld.github.io/posts/2020-04-29-gofieldwar%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9D%B4%ED%95%91%EB%B0%A9%EC%96%B4%EC%A7%84%EC%A7%80/</link>
+      <pubDate>Wed, 29 Apr 2020 11:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-04-29-gofieldwar%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9D%B4%ED%95%91%EB%B0%A9%EC%96%B4%EC%A7%84%EC%A7%80/</guid>
+      <description>gofieldwar 프로토타입 작업을 진행중에
+병력을 사용한 방어 진지 형태를 만들어보았습니다.
+X 자 표시가 근거리 공격 , + 자 표시가 원거리 공격의 threaten area 입니다.
+3종의 병력은 근거리 공격(바로 옆 셀) , 원거리 공격( 한칸 건너) , 공성(성벽공격) 으로 나누어 집니다.
+4종의 자원으로 타운을 번영(levelup)시켜 병력을 뽑고 , 성벽과 성문 을 만들어 공격에 대비 합니다.
+갈색네모가 성벽과 성문(성벽중에 일부가 다른색 열린문/닫힌문 ) 입니다.</description>
+    </item>
+    
+    <item>
+      <title>가칭 gofieldwar 작업을 시작했습니다.</title>
+      <link>https://kasworld.github.io/posts/2020-04-15-%EA%B0%80%EC%B9%ADgofieldwar%EC%9E%91%EC%97%85%EC%9D%84%EC%8B%9C%EC%9E%91%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 15 Apr 2020 12:40:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-04-15-%EA%B0%80%EC%B9%ADgofieldwar%EC%9E%91%EC%97%85%EC%9D%84%EC%8B%9C%EC%9E%91%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>예전에 go-sdl로 만들다 치워둔 프로젝트로 goguelike 가 어느정도 정리 되면 이어서 작업할 생각이었던 프로젝트 입니다.
+일단은 MMO RTS 로 생각하고 있습니다만 어떻게 바뀔지는 모르겠습니다.
+어쩌면 RTS 라기보다는 땅따먹기 에 가까울 것 같지만 그것도 RTS 의 일종이라고 생각합니다. ^^
+goguelike가 완료 되거나 종료 된것 은 아니고 한가지만 하면 지겨우니 기분 전환 삼아 다른 프로젝트도 병행 하는 것입니다.
+비슷한 이유로 만들어진것이 gowasm3dgame 이나 gowasm2dgame 입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>250k packet/sec 달성  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
+서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="250k packet/sec 달성 " />
+<meta property="og:description" content="이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
+서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2020-12-04-250kpacketsec%EB%8B%AC%EC%84%B1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-04T14:16:00+09:00" />
+<meta property="article:modified_time" content="2020-12-04T14:16:00+09:00" />
+<meta itemprop="name" content="250k packet/sec 달성 ">
+<meta itemprop="description" content="이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
+서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0."><meta itemprop="datePublished" content="2020-12-04T14:16:00+09:00" />
+<meta itemprop="dateModified" content="2020-12-04T14:16:00+09:00" />
+<meta itemprop="wordCount" content="295">
+<meta itemprop="keywords" content="성능테스트," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="250k packet/sec 달성 "/>
+<meta name="twitter:description" content="이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
+서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">250k packet/sec 달성 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-12-04T14:16:00+09:00">December 4, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을
+달성했습니다. </p>
+<p>클라이언트 실행 인자 </p>
+<p><!-- raw HTML omitted -->go run .\multiclient.go
+-ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp
+-PacketIntervalMS=0 
+*main.MultiClientConfig 
+  main.MultiClientConfig 
+    ConnectToServer: string localhost:8081 
+    NetType: string tcp 
+    PlayerNameBase: string MC_ 
+    Concurrent: int 100 
+    AccountPool: int 0 
+    AccountOverlap: int 0 
+    LimitStartCount: int 0 
+    LimitEndCount: int 0 
+    PacketIntervalMS: int 0 
+exit status 2<!-- raw HTML omitted --></p>
+<p>서버 실행 결과 </p>
+<p><!-- raw HTML omitted --> *main.ServerConfig 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->  main.ServerConfig 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->    TcpPort: string :8081 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->    HttpPort: string :8080 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->    HttpFolder: string
+www<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->http server dir=www
+port=:8080 , http://localhost:8080/ 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->tcp server port=:8081 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:0 Send:total[0
+0.00/s] lap[0 0.00/s] Recv:total[0 0.00/s] lap[0 0.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:0 Send:total[0
+0.00/s] lap[0 0.00/s] Recv:total[0 0.00/s] lap[0 0.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:0 Send:total[0
+0.00/s] lap[0 0.00/s] Recv:total[0 0.00/s] lap[0 0.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:0 Send:total[0
+0.00/s] lap[0 0.00/s] Recv:total[0 0.00/s] lap[0 0.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:0 Send:total[0
+0.00/s] lap[0 0.00/s] Recv:total[0 0.00/s] lap[0 0.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:0 Send:total[0
+0.00/s] lap[0 0.00/s] Recv:total[0 0.00/s] lap[0 0.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[53180 7596.82/s] lap[53180 53179.88/s] Recv:total[53204
+7600.25/s] lap[53204 53203.88/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[284482 35556.66/s] lap[231307 231188.05/s]
+Recv:total[284482 35556.66/s] lap[231295 231176.06/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[540831 60086.93/s] lap[256353 256352.92/s]
+Recv:total[540832 60087.04/s] lap[256350 256349.92/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[796384 79635.81/s] lap[255562 255685.75/s]
+Recv:total[796401 79637.51/s] lap[255570 255693.76/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[1050367 95480.61/s] lap[253988 253857.06/s]
+Recv:total[1050390 95482.70/s] lap[254005 253874.05/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[1307236 108928.70/s] lap[256872 256872.00/s]
+Recv:total[1307246 108929.54/s] lap[256878 256878.00/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[1562885 120218.64/s] lap[255649 255773.18/s]
+Recv:total[1562906 120220.25/s] lap[255670 255794.19/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[1819956 129988.76/s] lap[257071 256938.29/s]
+Recv:total[1819977 129990.26/s] lap[257092 256959.28/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[2078131 138538.47/s] lap[258183 258307.58/s]
+Recv:total[2078139 138539.00/s] lap[258181 258305.58/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[2337589 146091.06/s] lap[259458 259324.50/s]
+Recv:total[2337596 146091.49/s] lap[259465 259331.50/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[2597864 152811.74/s] lap[260279 260404.62/s]
+Recv:total[2597867 152811.91/s] lap[260278 260403.62/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[2854019 158548.36/s] lap[256156 256024.07/s]
+Recv:total[2854044 158549.75/s] lap[256180 256048.06/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[3110763 163716.03/s] lap[256750 256742.12/s]
+Recv:total[3110771 163716.45/s] lap[256750 256742.12/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[3370932 168542.53/s] lap[260171 260297.22/s]
+Recv:total[3370949 168543.38/s] lap[260187 260313.23/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[3627599 172734.59/s] lap[256672 256539.47/s]
+Recv:total[3627603 172734.78/s] lap[256670 256537.47/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[3872756 176026.37/s] lap[245159 245159.05/s]
+Recv:total[3872759 176026.50/s] lap[245160 245160.05/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[4134362 179750.84/s] lap[261612 261738.71/s]
+Recv:total[4134373 179751.32/s] lap[261617 261743.71/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->Connection:100
+Send:total[4389765 182902.94/s] lap[255405 255404.82/s]
+Recv:total[4389767 182903.03/s] lap[255403 255402.82/s] 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->exit status 2<!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">성능테스트</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2020-02-29-%EC%83%88%EA%B8%B0%EA%B3%84%EC%9D%98%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98%EA%B8%B0%EB%A1%9D/">새 기계의 성능테스트 의 기록 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-02-wxgame%EC%9D%98cs%ED%99%94%EB%8A%94twisted%EB%B2%84%EC%A0%84%EC%9D%84%EB%81%9D%EC%9C%BC%EB%A1%9C%EC%9D%BC%EB%8B%A8%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%A9%EB%8B%88%EB%8B%A4/">wxgame의 C/S화는 twisted 버전을 끝으로 일단 마무리 합니다. </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

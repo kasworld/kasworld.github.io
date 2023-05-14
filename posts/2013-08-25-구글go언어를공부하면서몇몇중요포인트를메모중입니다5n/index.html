@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N) | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="오랫만에 다시 go 이야깁니다.
+오랬만에 기억을 되살리기 위해 이런 저런 이야기를 잠깐 해보면 go 언어의 특징중 가장 두드러지는 것을 하나 들면 goroutine을 들 수 있을 텐데요.
+많은 서버와 대용량의 데이터(소위 big data)를 처리 하고 있는 구글은 이를 위해서 여러 언어를 사용하고 있다고 알려져 있습니다. 하지만 각각의 언어들은 장단점이 있는 관계로 구미에 딱 맞는 언어가 필요하여 go 언어를 만들었다는 게 사람들의 짐작 입니다.
+그래서 go 언어에는 구글이 가장 필요로 하는 goroutine 과 channel 이 기본으로 존재합니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)" />
+<meta property="og:description" content="오랫만에 다시 go 이야깁니다.
+오랬만에 기억을 되살리기 위해 이런 저런 이야기를 잠깐 해보면 go 언어의 특징중 가장 두드러지는 것을 하나 들면 goroutine을 들 수 있을 텐데요.
+많은 서버와 대용량의 데이터(소위 big data)를 처리 하고 있는 구글은 이를 위해서 여러 언어를 사용하고 있다고 알려져 있습니다. 하지만 각각의 언어들은 장단점이 있는 관계로 구미에 딱 맞는 언어가 필요하여 go 언어를 만들었다는 게 사람들의 짐작 입니다.
+그래서 go 언어에는 구글이 가장 필요로 하는 goroutine 과 channel 이 기본으로 존재합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-08-25T12:35:00+09:00" />
+<meta property="article:modified_time" content="2013-08-25T12:35:00+09:00" />
+<meta itemprop="name" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)">
+<meta itemprop="description" content="오랫만에 다시 go 이야깁니다.
+오랬만에 기억을 되살리기 위해 이런 저런 이야기를 잠깐 해보면 go 언어의 특징중 가장 두드러지는 것을 하나 들면 goroutine을 들 수 있을 텐데요.
+많은 서버와 대용량의 데이터(소위 big data)를 처리 하고 있는 구글은 이를 위해서 여러 언어를 사용하고 있다고 알려져 있습니다. 하지만 각각의 언어들은 장단점이 있는 관계로 구미에 딱 맞는 언어가 필요하여 go 언어를 만들었다는 게 사람들의 짐작 입니다.
+그래서 go 언어에는 구글이 가장 필요로 하는 goroutine 과 channel 이 기본으로 존재합니다."><meta itemprop="datePublished" content="2013-08-25T12:35:00+09:00" />
+<meta itemprop="dateModified" content="2013-08-25T12:35:00+09:00" />
+<meta itemprop="wordCount" content="373">
+<meta itemprop="keywords" content="golang,go,언어,go programming language," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)"/>
+<meta name="twitter:description" content="오랫만에 다시 go 이야깁니다.
+오랬만에 기억을 되살리기 위해 이런 저런 이야기를 잠깐 해보면 go 언어의 특징중 가장 두드러지는 것을 하나 들면 goroutine을 들 수 있을 텐데요.
+많은 서버와 대용량의 데이터(소위 big data)를 처리 하고 있는 구글은 이를 위해서 여러 언어를 사용하고 있다고 알려져 있습니다. 하지만 각각의 언어들은 장단점이 있는 관계로 구미에 딱 맞는 언어가 필요하여 go 언어를 만들었다는 게 사람들의 짐작 입니다.
+그래서 go 언어에는 구글이 가장 필요로 하는 goroutine 과 channel 이 기본으로 존재합니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-08-25T12:35:00+09:00">August 25, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>오랫만에 다시 go 이야깁니다.</p>
+<p>오랬만에 기억을 되살리기 위해 이런 저런 이야기를 잠깐 해보면 
+go 언어의 특징중 가장 두드러지는 것을 하나 들면 goroutine을 들 수 있을
+텐데요.</p>
+<p>많은 서버와 대용량의 데이터(소위 big data)를 처리 하고 있는 구글은 이를
+위해서 여러 언어를 사용하고 있다고 알려져 있습니다. 
+하지만 각각의 언어들은 장단점이 있는 관계로 구미에 딱 맞는 언어가
+필요하여 go 언어를 만들었다는 게 사람들의 짐작 입니다.</p>
+<p>그래서 go 언어에는 구글이 가장 필요로 하는  goroutine 과 channel 이
+기본으로 존재합니다. 
+(고 생각합니다. ^^; )</p>
+<p>이후 요약 입니다.</p>
+<p>goroutine 일종의 micro thread 
+어떻게 보면 stackless python이나 ugreen 같은 것 . 
+( 역시 대세 인가? )</p>
+<p>자연스러운 coroutine 지원을 위해 go 언어는 기본적으로 goroutine 과
+channel을 
+지원하는데 이는 언어 뿐만 아니라 컴파일러 그리고 runtime 의 지원을
+통해서 
+이루어 진다.</p>
+<p>현재의 go 구현은 기본적으로는 cpu를 1개만 사용하게 설정되어 있기
+때문에 
+시스템의 모든 cpu를 사용하고 싶다면 
+runtime.GOMAXPROCS(runtime.NumCPU()) 
+같은 코드를 추가해야 한다. 
+(이왕이면 init() 에 넣으면 좋다. )</p>
+<p>그리고 go 언어가 지원하는 gabage collection 역시 concurrent
+programming을 위해 꼭필요한 요소이다. 
+shared memory 로 통신 하지 말고 channel을 사용할것.</p>
+<p>goroutine 
+go goroutinename() 형태로 실행 
+concurrent 실행 
+최소 4k 의 segmented stack , very cheap , but not free</p>
+<p>return 또는 runtime.Goexit() 로 종료.</p>
+<p>channel 
+goroutine간의 communication을 위한 typed data buffer , 그리고 first
+class 
+ch &lt;- : channel에 넣음 ( 로 보냄 ) 
+&lt;-ch  : channel에서 꺼냄 ( 에서 받음 ) 
+형태로 사용 
+ch := make( chan int , 1 ) : 버퍼 크기 1짜리 생성. 
+크기가 0이면 synchronous channel , 
+1이상이면 asynchronous 로 작동.</p>
+<p>chan&lt;- : 쓰기 전용 channel type 
+select { 
+    case writeCh &lt;- data: 
+    default: 
+} 
+형태로 사용하면 non block channel write 가 가능.</p>
+<p>&lt;-chan : 읽기 전용 channel type 
+d, ok := &lt;-readCh 
+형태로 nonblock read 가능</p>
+<p>쓰기가 가능한 channel은 close(ch) 가 가능하다.</p>
+<p>channel factory pattern 
+goroutine에 channel을 인자로 주는 것이아니고 
+함수가 goroutine을 (lambda 형태로) 실행하고 동시에 그 goroutine이 사용할
+channel을 만들어 
+return 하는 형태.</p>
+<p>range를 사용해 for문에 사용가능 
+for i := range ch { 
+} 
+channel이 close 될때까지 반복한다.</p>
+<p>select 
+여러개의 channel을 상대로 준비된 channel을 실행하거나 준비된 chennel이
+없고 
+default가 있는경우 default를 실행 , 없는 경우 wait를 한다.</p>
+<p>정기적으로 action을 해야 하는 경우 
+time.NewTicker( repeatDur ) 라이브러리 함수를 사용. 
+처리 량을 throttling 하고 싶은 경우는 
+time.Tick( dur ) 사용. 
+한번만 (timeout 용 ) 인 경우는 
+time.After( ) 를 사용.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%96%B8%EC%96%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">언어</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A41n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (1/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-15-thegoprogramminglanguage/">The Go Programming Language</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

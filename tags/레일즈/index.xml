@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>레일즈 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%A0%88%EC%9D%BC%EC%A6%88/</link>
+    <description>Recent content in 레일즈 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Mon, 13 Aug 2012 20:54:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%A0%88%EC%9D%BC%EC%A6%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ruby 삽질기</title>
+      <link>https://kasworld.github.io/posts/2012-08-13-ruby%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
+      <pubDate>Mon, 13 Aug 2012 20:54:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-08-13-ruby%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
+      <description>어쩌다 팔자에 없는 Ruby on rails 작업을 하게 되었습니다. ( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing , 문서화 , 유지보수 입니다. )
+하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)
+루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고 생각한데다가 rails 역시 python 에 있는 web framework 들이 대놓고 저희는 rails를 베꼈어요! 하는 것들을 여럿 써 본 관계로 오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을 했습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

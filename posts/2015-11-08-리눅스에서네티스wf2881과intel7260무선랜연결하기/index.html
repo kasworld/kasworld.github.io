@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>리눅스에서 네티스 wf2881과 intel 7260 무선랜 연결하기.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이전글 http://kasw.blogspot.kr/2015/08/netis-wf2881.html
+8월 28일 에 네티스 wf2881 을 구매 설치하고 집에 802.11ac를 지원하는 장비를 구매하고 싶다는 욕망에 시달리다 결국 노트북 랜카드를 intel 7260으로 교체 했습니다. ( 9월 16일에 했음)
+그런데 온갖문제가 일어나서 그동한 삽질을 하다가 최근에야
+문제를 해결했지만 여백이 부족한 관계로 적지 않는다.
+라고 하면 안되겠지요?
+문제를 해결해서 여기에 기록합니다.
+일단 문제는 wf2881과 intel 7260 양쪽에 다 있었습니다. 그래서 해결하는 것이 더 복잡했습니다.
+일단 간단한 것 부터
+네티스 wf2881은 아무리 봐도 펌웨어 1.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="리눅스에서 네티스 wf2881과 intel 7260 무선랜 연결하기. " />
+<meta property="og:description" content="이전글 http://kasw.blogspot.kr/2015/08/netis-wf2881.html
+8월 28일 에 네티스 wf2881 을 구매 설치하고 집에 802.11ac를 지원하는 장비를 구매하고 싶다는 욕망에 시달리다 결국 노트북 랜카드를 intel 7260으로 교체 했습니다. ( 9월 16일에 했음)
+그런데 온갖문제가 일어나서 그동한 삽질을 하다가 최근에야
+문제를 해결했지만 여백이 부족한 관계로 적지 않는다.
+라고 하면 안되겠지요?
+문제를 해결해서 여기에 기록합니다.
+일단 문제는 wf2881과 intel 7260 양쪽에 다 있었습니다. 그래서 해결하는 것이 더 복잡했습니다.
+일단 간단한 것 부터
+네티스 wf2881은 아무리 봐도 펌웨어 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-11-08-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%EB%84%A4%ED%8B%B0%EC%8A%A4wf2881%EA%B3%BCintel7260%EB%AC%B4%EC%84%A0%EB%9E%9C%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-11-08T14:48:00+09:00" />
+<meta property="article:modified_time" content="2015-11-08T14:48:00+09:00" />
+<meta itemprop="name" content="리눅스에서 네티스 wf2881과 intel 7260 무선랜 연결하기. ">
+<meta itemprop="description" content="이전글 http://kasw.blogspot.kr/2015/08/netis-wf2881.html
+8월 28일 에 네티스 wf2881 을 구매 설치하고 집에 802.11ac를 지원하는 장비를 구매하고 싶다는 욕망에 시달리다 결국 노트북 랜카드를 intel 7260으로 교체 했습니다. ( 9월 16일에 했음)
+그런데 온갖문제가 일어나서 그동한 삽질을 하다가 최근에야
+문제를 해결했지만 여백이 부족한 관계로 적지 않는다.
+라고 하면 안되겠지요?
+문제를 해결해서 여기에 기록합니다.
+일단 문제는 wf2881과 intel 7260 양쪽에 다 있었습니다. 그래서 해결하는 것이 더 복잡했습니다.
+일단 간단한 것 부터
+네티스 wf2881은 아무리 봐도 펌웨어 1."><meta itemprop="datePublished" content="2015-11-08T14:48:00+09:00" />
+<meta itemprop="dateModified" content="2015-11-08T14:48:00+09:00" />
+<meta itemprop="wordCount" content="482">
+<meta itemprop="keywords" content="zenfone 2,wifi,802.11ac,wf2881,intel 7260," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="리눅스에서 네티스 wf2881과 intel 7260 무선랜 연결하기. "/>
+<meta name="twitter:description" content="이전글 http://kasw.blogspot.kr/2015/08/netis-wf2881.html
+8월 28일 에 네티스 wf2881 을 구매 설치하고 집에 802.11ac를 지원하는 장비를 구매하고 싶다는 욕망에 시달리다 결국 노트북 랜카드를 intel 7260으로 교체 했습니다. ( 9월 16일에 했음)
+그런데 온갖문제가 일어나서 그동한 삽질을 하다가 최근에야
+문제를 해결했지만 여백이 부족한 관계로 적지 않는다.
+라고 하면 안되겠지요?
+문제를 해결해서 여기에 기록합니다.
+일단 문제는 wf2881과 intel 7260 양쪽에 다 있었습니다. 그래서 해결하는 것이 더 복잡했습니다.
+일단 간단한 것 부터
+네티스 wf2881은 아무리 봐도 펌웨어 1."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">리눅스에서 네티스 wf2881과 intel 7260 무선랜 연결하기. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-11-08T14:48:00+09:00">November 8, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>이전글 
+<a href="http://kasw.blogspot.kr/2015/08/netis-wf2881.html">http://kasw.blogspot.kr/2015/08/netis-wf2881.html</a></p>
+<p>8월 28일 에 네티스 wf2881 을 구매 설치하고 집에 802.11ac를 지원하는
+장비를 구매하고 싶다는 욕망에 시달리다 
+결국 노트북 랜카드를 intel 7260으로 교체 했습니다. ( 9월 16일에 했음)</p>
+<p>그런데 온갖문제가 일어나서 그동한 삽질을 하다가 최근에야</p>
+<p>문제를 해결했지만 여백이 부족한 관계로 적지 않는다.</p>
+<p>라고 하면 안되겠지요?</p>
+<p>문제를 해결해서 여기에 기록합니다.</p>
+<p>일단 문제는 wf2881과 intel 7260 양쪽에 다 있었습니다. 
+그래서 해결하는 것이 더 복잡했습니다.</p>
+<p>일단 간단한 것 부터</p>
+<ol>
+<li>네티스 wf2881은 아무리 봐도 펌웨어 1.8.0에서는 AC를 지원 하지 않는 것
+같습니다.</li>
+</ol>
+<p>2x2(2tx 2rx ) 지원 하는 랜카드(intel 7260) 에서 300Mbps( 150 x 2 ) 까지
+밖에 설정되지 않는 군요. 
+AC를 정상적으로 지원하면 866(433 x 2 ) 로 접속되어야 합니다.</p>
+<p>테스트는 wf2881 관리 페이지 접속 정보에 표시된 것과 
+내부 Gigabit 유선 망에 연결된 기계에 iperf 로 접속 테스트 한
+결과입니다.</p>
+<p>또다른 근거로는 다른 AC를 지원하는 기계(asus zenfone2 )에서도 150
+이상으로 접속되지는 않습니다. 
+( 1x1 기계이므로 433 으로 접속되어야 합니다. )</p>
+<p>그나마 무선 설정에 들어가서</p>
+<p><!-- raw HTML omitted -->Preamble
+방식<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->[Short]<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->IAPP<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->[사용안함]<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->Aggregation<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+[사용함]<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->Short
+GI<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+[사용함]<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->무선
+분리<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+[사용안함]<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->LDPC<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+[사용함]<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->A-MSDU<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+[사용함]<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>으로 설정하면 접속은 802.11n으로 이루어지(는것 같)지만 속도는 조금 빨라
+집니다. </p>
+<p>( 기본 값이 좀 이상하더군요 )</p>
+<p>설정은 영문 wifi 위키들과 </p>
+<p><!-- raw HTML omitted --><a href="http://www.dd-wrt.com/wiki/index.php/Advanced_wireless_settings">http://www.dd-wrt.com/wiki/index.php/Advanced_wireless_settings</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->를 참고 했습니다. <!-- raw HTML omitted --></p>
+<p>2. intel 7260 무선랜 카드 설정 이야기 </p>
+<p>9월 16일 노트북 랜카드 교체 를 했습다만 최근에야 (비교적) 정상적으로
+작동하는 설정을 찾았습니다. </p>
+<p>참고로 저는 </p>
+<p>linux mint 17.2 에 kernel 4.2.5 를 사용하고 있습니다. </p>
+<p><!-- raw HTML omitted -->Linux ******
+4.2.5-040205-generic #201510270124 SMP Tue Oct 27 01:25:49 UTC 2015
+x86_64 x86_64 x86_64 GNU/Linux<!-- raw HTML omitted --></p>
+<p><a href="https://wireless.wiki.kernel.org/en/users/Drivers/iwlwifi">https://wireless.wiki.kernel.org/en/users/Drivers/iwlwifi</a></p>
+<p>를 보면 각 리눅스 커널 마다 랜카드 펌웨어 가 달라서 가능한 높은 버전
+펌웨어를 쓰기 위해 4.2.5 를 설치 했습니다.</p>
+<p>( 가장 높은 버전의 stable 커널 입니다. )</p>
+<p>설치법은 </p>
+<p><a href="http://mintguide.org/system/507-install-linux-kernel-4-2-5-stable-on-linux-mint.html">http://mintguide.org/system/507-install-linux-kernel-4-2-5-stable-on-linux-mint.html</a></p>
+<p>을 보시면 됩니다. </p>
+<p>설치후 펌웨어를 다운받아 압축을 풀고 </p>
+<p><!-- raw HTML omitted -->/lib/firmware 에 복사해 넣으면
+됩니다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->그러나 이렇게 해도 문제가
+해결되지는 않습니다. <!-- raw HTML omitted --></p>
+<p>결국 핵심은 
+# /etc/rc.local 에</p>
+<p><!-- raw HTML omitted -->iw
+reg set US<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->iwconfig
+wlan0 power off<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->을 추가하고
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#/etc/modprobe.d/iwlwifi.conf
+에 (없으면 생성)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->option
+iwlwifi power_save=N<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#options
+iwlwifi 11n_disable=1<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->options
+iwlwifi 11n_disable=8<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#options
+iwlwifi wd_disable=1 <!-- raw HTML omitted --></p>
+<p>을 넣은것 입니다. </p>
+<p>위 내용은  </p>
+<p>전원 관리를 끄는 것 과 </p>
+<p>무선랜 카드의 regulatory domain 을 KR 또는 US 로 바꾼것입니다. </p>
+<p>( 제가 구매한 카드는 TW가 기본이더군요. )</p>
+<p>문제 해결에 큰 도움을 준 링크는 </p>
+<p><a href="http://askubuntu.com/questions/616119/unstable-wireless-with-intel-7260-iwlwifi-after-upgrade-to-15-04">http://askubuntu.com/questions/616119/unstable-wireless-with-intel-7260-iwlwifi-after-upgrade-to-15-04</a></p>
+<p>입니다.</p>
+<ul>
+<li>Turn off bluetooth (use rfkill or turn off in Bios)</li>
+<li>Turn OFF 802.11n mode
+(in <em>/etc/modprobe.d/iwlwifi.conf</em> add <em>options iwlwifi
+11n_disable=1</em>)</li>
+<li><strong>Turn ON link aggregation
+(in <em>/etc/modprobe.d/iwlwifi.conf</em> add <em>options iwlwifi
+11n_disable=8</em>)</strong></li>
+<li>Turn OFF watchdog (in <em>/etc/modprobe.d/iwlwifi.conf</em> add <em>options
+iwlwifi wd_disable=1</em>)</li>
+<li><strong>Turn off power saving features (<em>$ sudo iw wlan0 set power_save
+off</em>)</strong></li>
+<li><strong>Set regulatory domain (<em>$ sudo iw reg set
+&lt;<!-- raw HTML omitted -->country
+code<!-- raw HTML omitted -->&gt;</em></strong></li>
+</ul>
+<p><!-- raw HTML omitted -->내용이
+큰 도움이 됬습니다. <!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->(
+굵은 글씨가 제가 사용한 것입니다. )<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>그 상태에서 wf2881의 5G 무선 설정에서 무선 채널을 미국에사 사용하는
+체널로 설정해 주어야 합니다. 
+전 153 채널로 설정해 사용하고 있습니다.</p>
+<p>그리고 이 모든 삽질에도 불구하고 무선랜은 제 노트북이 어댑터 연결
+상태에서 부팅하는 경우만 정상 접속 됩니다. 
+배터리 상태에서 부팅하면 무선을 못잡는 군요. 
+뭔가 전원 상태에 따라 무선랜 초기화 과정이 다른 것 같은데 그게 뭔지 아직
+모르겠습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/zenfone-2/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">zenfone 2</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wifi/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wifi</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/802.11ac/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">802.11ac</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wf2881/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wf2881</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/intel-7260/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">intel 7260</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-09-13-asuszenfone2%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/">Asus Zenfone 2  사용, 감상기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-08-01-netiswf2881%EC%9C%A0%EB%AC%B4%EC%84%A0%EA%B3%B5%EC%9C%A0%EA%B8%B0%EC%9D%BC%EC%A3%BC%EC%9D%BC%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/">netis WF2881 유무선공유기 일주일 사용 감상기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-17-%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%97%90%EC%84%9Cwifi%EC%B1%84%EB%84%90%ED%99%95%EC%9E%A5%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/">젤리빈에서 wifi 채널 확장/수정하기</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

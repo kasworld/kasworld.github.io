@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>집에 파일서버를 셋팅 했습니다. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="여름이라고 더워서 켜지도 않고 처박아 뒀던 데스크탑을 ( 여름내낸 노트북만 썼습니다. - 전기도 적게 먹고 조용하고 좋더군요. - 게임만 포기하면.. ) 다시 셋팅 했습니다.
+꼴보기 싫은 윈도를 깔지는 않고 콘솔로 우분투 서버를 깔아 봤는데.. ( 처음엔 TV에 연결헤서 우분투 데스크 탑을 깔아 봤는데.. TV 해상도를 못잡아 내더군요. ) 설치가 다 끊난후 혹시나 해서 VGA를 뽑고 부팅을 하니
+아무 문제 없이 부팅이 잘되는 겁니다. 만세!!!
+ssh 로 리모트로 들어 가서 설정 하면 되니 기쁜 마음에 전원과 네트웍만 연결하고 베란다로 쫒아 냈습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="집에 파일서버를 셋팅 했습니다." />
+<meta property="og:description" content="여름이라고 더워서 켜지도 않고 처박아 뒀던 데스크탑을 ( 여름내낸 노트북만 썼습니다. - 전기도 적게 먹고 조용하고 좋더군요. - 게임만 포기하면.. ) 다시 셋팅 했습니다.
+꼴보기 싫은 윈도를 깔지는 않고 콘솔로 우분투 서버를 깔아 봤는데.. ( 처음엔 TV에 연결헤서 우분투 데스크 탑을 깔아 봤는데.. TV 해상도를 못잡아 내더군요. ) 설치가 다 끊난후 혹시나 해서 VGA를 뽑고 부팅을 하니
+아무 문제 없이 부팅이 잘되는 겁니다. 만세!!!
+ssh 로 리모트로 들어 가서 설정 하면 되니 기쁜 마음에 전원과 네트웍만 연결하고 베란다로 쫒아 냈습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2008-09-06-%EC%A7%91%EC%97%90%ED%8C%8C%EC%9D%BC%EC%84%9C%EB%B2%84%EB%A5%BC%EC%85%8B%ED%8C%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2008-09-06T21:00:00+09:00" />
+<meta property="article:modified_time" content="2008-09-06T21:00:00+09:00" />
+<meta itemprop="name" content="집에 파일서버를 셋팅 했습니다.">
+<meta itemprop="description" content="여름이라고 더워서 켜지도 않고 처박아 뒀던 데스크탑을 ( 여름내낸 노트북만 썼습니다. - 전기도 적게 먹고 조용하고 좋더군요. - 게임만 포기하면.. ) 다시 셋팅 했습니다.
+꼴보기 싫은 윈도를 깔지는 않고 콘솔로 우분투 서버를 깔아 봤는데.. ( 처음엔 TV에 연결헤서 우분투 데스크 탑을 깔아 봤는데.. TV 해상도를 못잡아 내더군요. ) 설치가 다 끊난후 혹시나 해서 VGA를 뽑고 부팅을 하니
+아무 문제 없이 부팅이 잘되는 겁니다. 만세!!!
+ssh 로 리모트로 들어 가서 설정 하면 되니 기쁜 마음에 전원과 네트웍만 연결하고 베란다로 쫒아 냈습니다."><meta itemprop="datePublished" content="2008-09-06T21:00:00+09:00" />
+<meta itemprop="dateModified" content="2008-09-06T21:00:00+09:00" />
+<meta itemprop="wordCount" content="125">
+<meta itemprop="keywords" content="ubuntu,linux,리눅스,우분투," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="집에 파일서버를 셋팅 했습니다."/>
+<meta name="twitter:description" content="여름이라고 더워서 켜지도 않고 처박아 뒀던 데스크탑을 ( 여름내낸 노트북만 썼습니다. - 전기도 적게 먹고 조용하고 좋더군요. - 게임만 포기하면.. ) 다시 셋팅 했습니다.
+꼴보기 싫은 윈도를 깔지는 않고 콘솔로 우분투 서버를 깔아 봤는데.. ( 처음엔 TV에 연결헤서 우분투 데스크 탑을 깔아 봤는데.. TV 해상도를 못잡아 내더군요. ) 설치가 다 끊난후 혹시나 해서 VGA를 뽑고 부팅을 하니
+아무 문제 없이 부팅이 잘되는 겁니다. 만세!!!
+ssh 로 리모트로 들어 가서 설정 하면 되니 기쁜 마음에 전원과 네트웍만 연결하고 베란다로 쫒아 냈습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">집에 파일서버를 셋팅 했습니다.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2008-09-06T21:00:00+09:00">September 6, 2008</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>여름이라고 더워서 켜지도 않고 처박아 뒀던 데스크탑을 
+( 여름내낸 노트북만 썼습니다. - 전기도 적게 먹고 조용하고 좋더군요. -
+게임만 포기하면.. ) 
+다시 셋팅 했습니다.</p>
+<p>꼴보기 싫은 윈도를 깔지는 않고 콘솔로 우분투 서버를 깔아 봤는데.. 
+( 처음엔 TV에 연결헤서 우분투 데스크 탑을 깔아 봤는데.. TV 해상도를
+못잡아 내더군요. ) 
+설치가 다 끊난후 
+혹시나 해서 VGA를 뽑고 부팅을 하니</p>
+<p>아무 문제 없이 부팅이 잘되는 겁니다. 
+만세!!!</p>
+<p>ssh 로 리모트로 들어 가서 설정 하면 되니 기쁜 마음에 전원과 네트웍만
+연결하고 베란다로 쫒아 냈습니다. ^^</p>
+<p>삼바도 잘되고 lamp 도 잘되고 ssh 접속도 잘되니 속이 다 시원 하군요. 
+재미삼아 집에 있는 전력량계로 재보니.</p>
+<p>VGA (7900gs)연결시 71W (아이들) 먹던 기계가 VGA를 빼고 부팅해보니 40w
+정도로 전기사용 량이 주는군요.. 
+이정도면 전기요금 걱정없이 24 켜놓고 파일서버로 써도 될것 같아 기뻐 하는
+중입니다. 
+^__________________^</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2008-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%93%A4%EC%9D%84%EB%B3%B4%EB%A0%A4%EB%A9%B4/">우분투에서 설치된 문서들을 보려면</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-30-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%EC%9C%88%EB%8F%84%EC%9A%B0%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4%ED%95%84%EC%9A%94%ED%95%9C%EA%B2%BD%EC%9A%B0/">리눅스에서 윈도우 프로그램이 필요한 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%B6%80%ED%8C%85%EC%9D%B4%EC%9D%B4%EC%83%81%ED%95%98%EA%B2%8C%EB%8A%90%EB%A6%B0%EA%B2%BD%EC%9A%B0/">우분투 부팅이 이상하게 느린경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-16-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EB%A9%94%EC%9D%B8%EC%9C%BC%EB%A1%9C%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/">리눅스를 메인으로 사용해보기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-03-28-%EC%9A%B0%EB%B6%84%ED%88%AC804%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9C%BC%EB%A1%9C%EB%81%9D%EB%83%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 8.04 로 업그레이드를 성공적으로 끝냈습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-02-20-%EC%83%88%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">새노트북을 구입했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-01-01-%ED%97%88%EA%B1%B1/">허걱</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-31-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EB%8F%84%EA%B0%80%EC%83%81%EC%8B%9C%EB%94%94%EB%A1%AC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4%EC%9E%88%EB%82%98%EC%9A%94/">리눅스에도 가상 시디롬 프로그램이 있나요?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-02-27-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%82%B3%EB%8A%94%EB%8B%A4/">지름은 지름을 낳는다.^^</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

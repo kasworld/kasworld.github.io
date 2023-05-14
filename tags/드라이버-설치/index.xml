@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>드라이버 설치 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98/</link>
+    <description>Recent content in 드라이버 설치 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 02 Apr 2014 13:14:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>집에서 프로그래밍 환경을 개선 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>최근 일신상의 변화로 집에서 작업하는 시간이 늘어난 김에 작업환경을 개선 했습니다.
+벌써 3년 가까이 써서 열도 많이 나고 소음도 커진 nvidia GTX460 을 빼고 조용하고 발열이 적다는 GTX750ti로 바꿨습니다.
+바꾼김에 그동안 묵혀 두고 있던 모니터 두개를 추가해서 triple monitor를 구성했습니다. ( 사실은 이게 목적이었습니다. )
+GTX460에선 duel monitor만 구성해도 굉음을 내서 사용이 거의 불가능했었는데 GTX750ti는 세개를 달아도 조용합니다.
+저는 주 작업환경이 리눅스라 혹시 지원 안되면 어쩌나 하고 살짝 걱정했었지만 nvidia홈페이지에서 드라이버를 받아 설치하니 아무 문제 없이 잘 잡힙니다.</description>
+    </item>
+    
+  </channel>
+</rss>

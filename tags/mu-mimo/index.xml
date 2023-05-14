@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MU-MIMO on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/mu-mimo/</link>
+    <description>Recent content in MU-MIMO on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 28 Oct 2018 14:30:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/mu-mimo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>갤럭시 s7e 무선랜 문제 해결 </title>
+      <link>https://kasworld.github.io/posts/2018-10-28-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs7e%EB%AC%B4%EC%84%A0%EB%9E%9C%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0/</link>
+      <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-10-28-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs7e%EB%AC%B4%EC%84%A0%EB%9E%9C%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0/</guid>
+      <description>이전에 쓴 글 갤럭시 s7e 오래오 업데이트후 생긴 이상증상들
+중 하나의 증상의 원인? 을 찾아서 기록합니다. 오레오 업데이트후 wifi 최고 접속 속도가 866Mbps 에서 433Mbps으로 저하된 증상 ( 그와중에도 노트북은 866Mbps으로 잘 접속되는 상황) 의 해결인데 방법은 공유기의 MU-MIMO beamforming를 끄는 것이었습니다. ( 따라서 어쩌면 오레오 업데이트와 무관한 이슈였을지도 모릅니다. 제가 공유기 설정을 바꾼것과 시점이 비슷할수도 있으니 )
+MU-MIMO beamforming을 켜는 것이 속도/효율이 더 좋아지기 위한 신기술이라고 알고 있기에 켜두고 있었는데 역효과가 나는 경우도 생기는 것 같습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

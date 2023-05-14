@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>box.com on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/box.com/</link>
+    <description>Recent content in box.com on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 04 Apr 2013 09:42:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/box.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우분투/리눅스 민트에서 클라우드 스토리지 사용하기.</title>
+      <link>https://kasworld.github.io/posts/2013-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Thu, 04 Apr 2013 09:42:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2013-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <description>전에 쓴 이곳 저곳에서 개인데이터를 안전하게 접근 사용하기. 글에서 NAS가 어쩌고 하긴 했지만.. 현실은 언제나 가난한 월급쟁이인지라. ;;; 리눅스에서 사용가능한 클라우드 싱크 스토리지 들 몇개를 설치 해봤습니다. 현재까지 테스트해본것들은 구글 드라이브
+네이버 ndrive 다음 클라우드
+dropbox
+box.com
+정도인데.. 이중에서 리눅스에서 잘되는 것들은 다음, dropbox, box.com 이군요. dropbox 야 리눅스를 정식으로 아주 잘 지원하니 홈페이지에서 다운받아 설치/로그인 하면 아무 문제 없이 사용할수 있습니다. 용량만 좀 많이 주면 고민할 필요가 없을텐데 말이죠.. 특이하게도 구글 드라이브는 리눅스에서 편하게 쓸수 있는 방법이 없습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

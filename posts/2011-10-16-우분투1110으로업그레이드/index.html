@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>우분투 11.10 으로 업그레이드 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이번에 우분투 11.10이 나왔습니다. 서둘러 설치 해봤자 다운 속도 느리고 초기 버그 로 고생( 그것이 또 재미지만 ^^ )할께 뻔해서 느긋하게 있다가 주말을 맞이해서 집기계를 업그레이드 했습니다. 회사 테스트 용 기계는 금요일 퇴근 전에 업그레이드를 걸어 두었구요.
+결론만 말씀드리면 유니티는 원래부터 맘에 안들어 gnome-classic 으로 사용하고 있었는데 . 이번 업그레이ㄷ로 들어간 gnome-shell역시 맘에 안들어서 xfce로 전환 했습니다.
+데스크탑에서 꼭 넷북이나 태블릿 같은 인터페이스 &#43; 가능한 사용자 설정을 숨기는 형태로의 변화가 과연 정말로 필요한건지 정말 궁금합니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="우분투 11.10 으로 업그레이드" />
+<meta property="og:description" content="이번에 우분투 11.10이 나왔습니다. 서둘러 설치 해봤자 다운 속도 느리고 초기 버그 로 고생( 그것이 또 재미지만 ^^ )할께 뻔해서 느긋하게 있다가 주말을 맞이해서 집기계를 업그레이드 했습니다. 회사 테스트 용 기계는 금요일 퇴근 전에 업그레이드를 걸어 두었구요.
+결론만 말씀드리면 유니티는 원래부터 맘에 안들어 gnome-classic 으로 사용하고 있었는데 . 이번 업그레이ㄷ로 들어간 gnome-shell역시 맘에 안들어서 xfce로 전환 했습니다.
+데스크탑에서 꼭 넷북이나 태블릿 같은 인터페이스 &#43; 가능한 사용자 설정을 숨기는 형태로의 변화가 과연 정말로 필요한건지 정말 궁금합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2011-10-16T12:47:00+09:00" />
+<meta property="article:modified_time" content="2011-10-16T12:47:00+09:00" />
+<meta itemprop="name" content="우분투 11.10 으로 업그레이드">
+<meta itemprop="description" content="이번에 우분투 11.10이 나왔습니다. 서둘러 설치 해봤자 다운 속도 느리고 초기 버그 로 고생( 그것이 또 재미지만 ^^ )할께 뻔해서 느긋하게 있다가 주말을 맞이해서 집기계를 업그레이드 했습니다. 회사 테스트 용 기계는 금요일 퇴근 전에 업그레이드를 걸어 두었구요.
+결론만 말씀드리면 유니티는 원래부터 맘에 안들어 gnome-classic 으로 사용하고 있었는데 . 이번 업그레이ㄷ로 들어간 gnome-shell역시 맘에 안들어서 xfce로 전환 했습니다.
+데스크탑에서 꼭 넷북이나 태블릿 같은 인터페이스 &#43; 가능한 사용자 설정을 숨기는 형태로의 변화가 과연 정말로 필요한건지 정말 궁금합니다."><meta itemprop="datePublished" content="2011-10-16T12:47:00+09:00" />
+<meta itemprop="dateModified" content="2011-10-16T12:47:00+09:00" />
+<meta itemprop="wordCount" content="96">
+<meta itemprop="keywords" content="ubuntu,linux,gnome,리눅스,우분투," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="우분투 11.10 으로 업그레이드"/>
+<meta name="twitter:description" content="이번에 우분투 11.10이 나왔습니다. 서둘러 설치 해봤자 다운 속도 느리고 초기 버그 로 고생( 그것이 또 재미지만 ^^ )할께 뻔해서 느긋하게 있다가 주말을 맞이해서 집기계를 업그레이드 했습니다. 회사 테스트 용 기계는 금요일 퇴근 전에 업그레이드를 걸어 두었구요.
+결론만 말씀드리면 유니티는 원래부터 맘에 안들어 gnome-classic 으로 사용하고 있었는데 . 이번 업그레이ㄷ로 들어간 gnome-shell역시 맘에 안들어서 xfce로 전환 했습니다.
+데스크탑에서 꼭 넷북이나 태블릿 같은 인터페이스 &#43; 가능한 사용자 설정을 숨기는 형태로의 변화가 과연 정말로 필요한건지 정말 궁금합니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">우분투 11.10 으로 업그레이드</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2011-10-16T12:47:00+09:00">October 16, 2011</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>이번에 우분투 11.10이 나왔습니다. 
+서둘러 설치 해봤자 다운 속도 느리고 초기 버그 로 고생( 그것이 또
+재미지만 ^^ )할께 뻔해서 
+느긋하게 있다가 주말을 맞이해서 
+집기계를 업그레이드 했습니다. 
+회사 테스트 용 기계는 금요일 퇴근 전에 업그레이드를 걸어 두었구요.</p>
+<p>결론만 말씀드리면 
+유니티는 원래부터 맘에 안들어 gnome-classic 으로 사용하고 있었는데 . 
+이번 업그레이ㄷ로 들어간 gnome-shell역시 맘에 안들어서 
+xfce로 전환 했습니다.</p>
+<p>데스크탑에서 꼭 넷북이나 태블릿 같은 인터페이스 + 가능한 사용자 설정을
+숨기는 형태로의 변화가 과연 정말로 필요한건지 정말 궁금합니다.</p>
+<p>아무튼 토발즈가 왜 gnome에 투덜 거리면서 xfce로 전향 했는지 확실하게
+이해 할수 있었습니다.</p>
+<p>이거 캐노니컬의 유니티 고집이 좀 위험한거 아닌가 싶네요.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/gnome/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gnome</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2011-07-27-opendevdspfailed%EC%97%90%EB%9F%AC%EA%B0%80%EB%82%98%EB%8A%94%EA%B2%BD%EC%9A%B0/">open /dev/dsp failed 에러가 나는 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-03-07-%EB%91%90%EA%B0%9C%EC%9D%98%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A8%B8%EC%8B%A0%EC%82%AC%EC%9D%B4%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%ED%8C%A8%ED%82%A4%EC%A7%80%EB%A5%BC%EC%9D%BC%EC%B9%98%EC%8B%9C%ED%82%A4%EB%8A%94%EB%B2%95/">두개의 우분투 머신사이에서 설치된 패키지를 일치 시키는 법.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-05-02-%EC%9A%B0%EB%B6%84%ED%88%AC1004%EA%B0%80%EB%82%98%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 10.04가 나왔습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/">내가 원하던 진정한 리눅스폰은</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/">5800용 인코딩을 위해서 우분투 9.10에서 추가해줘야 하는 일.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EB%A5%BC%EA%B8%B0%EB%8B%A4%EB%A0%B8%EC%A7%80%EB%A7%8C%EB%AA%A8%ED%86%A0%EB%A1%9C%EC%9D%B4%EB%A5%BC%EC%82%AC%EC%A7%80%EC%95%8A%EC%9D%80%EC%9D%B4%EC%9C%A0/">안드로이드를 기다렸지만 모토로이를 사지 않은이유</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-22-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%ED%94%8C%EB%9E%98%EC%8B%9C%EA%B0%80%ED%81%B4%EB%A6%AD%EC%9D%B4%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94%EB%B2%84%EA%B7%B8%EB%A5%BC%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94%EB%B2%95/">우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/">모두가 아이폰을 외칠때..</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%98%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C%EB%A5%BC%ED%99%9C%EC%84%B1%ED%99%94%EC%8B%9C%ED%82%A4%EA%B8%B0/">노트북의 가속센서를 활성화 시키기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/">모두가 아이폰을 이야기할때</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-04-%EB%AC%B4%EC%9E%90%EA%B2%8C%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EC%98%AC%EB%A6%AC%EB%8A%94%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%AC%EC%8A%A4%ED%8C%85/">무자게 오랫만에 올리는 리눅스 포스팅 ^^</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-06-24-%EC%9D%B4%EA%B2%8C%EB%8B%A4evolution%ED%83%93%EC%9D%B4%EB%8B%A4/">이게다  evolution 탓이다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-12-06-grub%EC%9D%B4%EB%82%A0%EC%95%84%EA%B0%94%EC%9D%84%EA%B2%BD%EC%9A%B0%EB%B3%B5%EA%B5%AC/">grub 이 날아 갔을경우 복구</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-12-06-x61t%EC%97%90%EC%84%9C%ED%83%9C%EB%B8%94%EB%A6%BF%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">x61t 에서 태블릿 활성화 하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/">우분투에서 로컬에 설치된 문서를 편하게 보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

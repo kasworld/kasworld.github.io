@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>towermaker on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/towermaker/</link>
+    <description>Recent content in towermaker on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 07 Aug 2020 12:34:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/towermaker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike glclient에 2d client 기능의 대부분을 구현 했습니다. </title>
+      <link>https://kasworld.github.io/posts/2020-08-07-goguelikeglclient%EC%97%902dclient%EA%B8%B0%EB%8A%A5%EC%9D%98%EB%8C%80%EB%B6%80%EB%B6%84%EC%9D%84%EA%B5%AC%ED%98%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Fri, 07 Aug 2020 12:34:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-08-07-goguelikeglclient%EC%97%902dclient%EA%B8%B0%EB%8A%A5%EC%9D%98%EB%8C%80%EB%B6%80%EB%B6%84%EC%9D%84%EA%B5%AC%ED%98%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>마지막으로 구현한 것이 중앙 상단에 나오는 공지? 메시지입니다. 그 외에 지형 스크립트를 자동으로 만들어 주는 towermaker를 강화해서 100층이나 1000층 짜리 타워를 만들수 있게 되었습니다. 1000층 짜리 타워를 실행하면 CPU도 RAM도 무지막지하게 사용하게 됩니다. 대충 50Gbyte정도의 램과 16개의 cpu를 거의 풀로 사용하더군요. 그리고 작업중인 기능? 으로 대 코로나 시대를 맞이하여? 컨디션과 fieldobj(trap) 에 전염병(Contagion) 을 추가 해보고 있습니다. 이런저런 수치 ( 전염성, 사망율, 자연 회복율) 를 조정해가며 이리 저리 실험해볼 생각입니다.</description>
+    </item>
+    
+    <item>
+      <title>goguelike  개발 진행 사항 </title>
+      <link>https://kasworld.github.io/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</link>
+      <pubDate>Tue, 28 Jul 2020 16:35:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</guid>
+      <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+tile들이 모두 3D 로 만들어 지고 타일 들이 높이 맞게 Fieldobj 와 activeobj 들이 배치 및 이동합니다.
+그 외에는 towermaker 가 대폭적으로 업데이트 되었습니다. 기존에 손으로 만들었던 starttower 같은 것을 더 쉽게 만들 수 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

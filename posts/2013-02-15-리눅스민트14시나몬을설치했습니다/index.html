@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>리눅스 민트 14 시나몬을 설치했습니다. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="며칠 전부터 고민하다가 오늘 일어나자마자 다 갈아업고 민트14를 설치했습니다. 잠깐 써본 느낌은 우분투 유니티에 짜증나고 xfce는 약간 부족하다고 느끼는 사람들에게는 아주 좋은 대안이 될것 같습니다. 사실 우분투가 이렇게 나왔어야 하지 않나 하는 생각이 들더군요.
+처음 설치하면 nvidia 비디오 드라이버를 못잡아서 수동으로 설치해 줘야 하지만 금방 잘 잡히고 문제없이 작동합니다.
+그리고 언제나처럼 제 손에 맞추기 위해 추가로 설치 및 설정한 것들을 기록합니다.
+오라클의 뻘짓때문에 mysql대신 mariadb ppa 를 추가하고 설치 git / gvim 설치 및 설정 python 관련 모듈들 설치">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="리눅스 민트 14 시나몬을 설치했습니다." />
+<meta property="og:description" content="며칠 전부터 고민하다가 오늘 일어나자마자 다 갈아업고 민트14를 설치했습니다. 잠깐 써본 느낌은 우분투 유니티에 짜증나고 xfce는 약간 부족하다고 느끼는 사람들에게는 아주 좋은 대안이 될것 같습니다. 사실 우분투가 이렇게 나왔어야 하지 않나 하는 생각이 들더군요.
+처음 설치하면 nvidia 비디오 드라이버를 못잡아서 수동으로 설치해 줘야 하지만 금방 잘 잡히고 문제없이 작동합니다.
+그리고 언제나처럼 제 손에 맞추기 위해 추가로 설치 및 설정한 것들을 기록합니다.
+오라클의 뻘짓때문에 mysql대신 mariadb ppa 를 추가하고 설치 git / gvim 설치 및 설정 python 관련 모듈들 설치" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-02-15T21:56:00+09:00" />
+<meta property="article:modified_time" content="2013-02-15T21:56:00+09:00" />
+<meta itemprop="name" content="리눅스 민트 14 시나몬을 설치했습니다.">
+<meta itemprop="description" content="며칠 전부터 고민하다가 오늘 일어나자마자 다 갈아업고 민트14를 설치했습니다. 잠깐 써본 느낌은 우분투 유니티에 짜증나고 xfce는 약간 부족하다고 느끼는 사람들에게는 아주 좋은 대안이 될것 같습니다. 사실 우분투가 이렇게 나왔어야 하지 않나 하는 생각이 들더군요.
+처음 설치하면 nvidia 비디오 드라이버를 못잡아서 수동으로 설치해 줘야 하지만 금방 잘 잡히고 문제없이 작동합니다.
+그리고 언제나처럼 제 손에 맞추기 위해 추가로 설치 및 설정한 것들을 기록합니다.
+오라클의 뻘짓때문에 mysql대신 mariadb ppa 를 추가하고 설치 git / gvim 설치 및 설정 python 관련 모듈들 설치"><meta itemprop="datePublished" content="2013-02-15T21:56:00+09:00" />
+<meta itemprop="dateModified" content="2013-02-15T21:56:00+09:00" />
+<meta itemprop="wordCount" content="216">
+<meta itemprop="keywords" content="시나몬,ubuntu,linux,리눅스,우분투,민트," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="리눅스 민트 14 시나몬을 설치했습니다."/>
+<meta name="twitter:description" content="며칠 전부터 고민하다가 오늘 일어나자마자 다 갈아업고 민트14를 설치했습니다. 잠깐 써본 느낌은 우분투 유니티에 짜증나고 xfce는 약간 부족하다고 느끼는 사람들에게는 아주 좋은 대안이 될것 같습니다. 사실 우분투가 이렇게 나왔어야 하지 않나 하는 생각이 들더군요.
+처음 설치하면 nvidia 비디오 드라이버를 못잡아서 수동으로 설치해 줘야 하지만 금방 잘 잡히고 문제없이 작동합니다.
+그리고 언제나처럼 제 손에 맞추기 위해 추가로 설치 및 설정한 것들을 기록합니다.
+오라클의 뻘짓때문에 mysql대신 mariadb ppa 를 추가하고 설치 git / gvim 설치 및 설정 python 관련 모듈들 설치"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">리눅스 민트 14 시나몬을 설치했습니다.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-02-15T21:56:00+09:00">February 15, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>며칠 전부터 고민하다가 오늘 일어나자마자 다 갈아업고 민트14를
+설치했습니다. 
+잠깐 써본 느낌은 우분투 유니티에 짜증나고 xfce는 약간 부족하다고 느끼는
+사람들에게는 아주 좋은 대안이 될것 같습니다. 
+사실 우분투가 이렇게 나왔어야 하지 않나 하는 생각이 들더군요.</p>
+<p>처음 설치하면 nvidia 비디오 드라이버를 못잡아서 수동으로 설치해 줘야
+하지만 금방 잘 잡히고 문제없이 작동합니다.</p>
+<p>그리고 언제나처럼 제 손에 맞추기 위해 추가로 설치 및 설정한 것들을
+기록합니다.</p>
+<p>오라클의 뻘짓때문에 mysql대신 mariadb ppa 를 추가하고 설치 
+git / gvim 설치 및 설정 
+python 관련 모듈들 설치</p>
+<p>늘 쓰던 pycrust보다 ipython 이 좋아보여서 설치, 좀더 들여다보고 이것으로
+바꿀생각입니다.</p>
+<p>gimp와 gufw(방화벽) 는 기본설치되니 편합니다. 
+gufw 를 enable 하고 sshfs 를 설치하고 fail2ban 설치 - ddns와 포트 포워딩
+설정 </p>
+<p>  아니나 다를까 로그를 확인해 보니 어딘가에서 열심히 로그인 시도하다 ban
+되고 있습니다.;;;</p>
+<p>nginx 와 uwsgi 설치 , cherrypy와 twisted 설치 
+ibus 와 한글 지원설치 
+sublime text 2 다운로드 및 설치 - 한번 구매로 윈도우/리눅스에서 모두
+쓸수 있으니 참 좋습니다. 
+chrome 다운/설치 
+comix 를 설치하고 보니 mcomix라는 후계자가 있어서 바꿔 설치 
+filezilla와 dropbox 설치</p>
+<p>아무래도 리눅스에 익숙해지려면 가상머신 설치가 아닌 실 머신에 주부팅
+OS로 설치해서 써봐야 빨리 많이 익숙해집니다.</p>
+<p>일단 모든 일을 리눅스에서 해결 하려고 시도하면서 배우는 것이
+많으니까요.</p>
+<p>그외엔 놀기 위해 설치하는 
+hedgewar , mame , mednafn , pokerth , pysol , golly 정도입니다.</p>
+<p>이 것도 여러번 해보니 반나절 정도만에 끝나더군요.</p>
+<p>당분간은 민트와 함께 춤을.. 입니다. ^^</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%8B%9C%EB%82%98%EB%AA%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">시나몬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%AF%BC%ED%8A%B8/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">민트</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">sublime text 2 에디터를 구입했습니다. - 수정했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/">wine 설치시 노틸러스의 짜증나는 notepad 연결 제거하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/">우분투 11.10 으로 업그레이드</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-27-opendevdspfailed%EC%97%90%EB%9F%AC%EA%B0%80%EB%82%98%EB%8A%94%EA%B2%BD%EC%9A%B0/">open /dev/dsp failed 에러가 나는 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-03-07-%EB%91%90%EA%B0%9C%EC%9D%98%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A8%B8%EC%8B%A0%EC%82%AC%EC%9D%B4%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%ED%8C%A8%ED%82%A4%EC%A7%80%EB%A5%BC%EC%9D%BC%EC%B9%98%EC%8B%9C%ED%82%A4%EB%8A%94%EB%B2%95/">두개의 우분투 머신사이에서 설치된 패키지를 일치 시키는 법.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-05-02-%EC%9A%B0%EB%B6%84%ED%88%AC1004%EA%B0%80%EB%82%98%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 10.04가 나왔습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/">내가 원하던 진정한 리눅스폰은</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/">5800용 인코딩을 위해서 우분투 9.10에서 추가해줘야 하는 일.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EB%A5%BC%EA%B8%B0%EB%8B%A4%EB%A0%B8%EC%A7%80%EB%A7%8C%EB%AA%A8%ED%86%A0%EB%A1%9C%EC%9D%B4%EB%A5%BC%EC%82%AC%EC%A7%80%EC%95%8A%EC%9D%80%EC%9D%B4%EC%9C%A0/">안드로이드를 기다렸지만 모토로이를 사지 않은이유</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-22-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%ED%94%8C%EB%9E%98%EC%8B%9C%EA%B0%80%ED%81%B4%EB%A6%AD%EC%9D%B4%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94%EB%B2%84%EA%B7%B8%EB%A5%BC%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94%EB%B2%95/">우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/">모두가 아이폰을 외칠때..</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%98%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C%EB%A5%BC%ED%99%9C%EC%84%B1%ED%99%94%EC%8B%9C%ED%82%A4%EA%B8%B0/">노트북의 가속센서를 활성화 시키기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/">모두가 아이폰을 이야기할때</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-04-%EB%AC%B4%EC%9E%90%EA%B2%8C%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EC%98%AC%EB%A6%AC%EB%8A%94%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%AC%EC%8A%A4%ED%8C%85/">무자게 오랫만에 올리는 리눅스 포스팅 ^^</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-06-24-%EC%9D%B4%EA%B2%8C%EB%8B%A4evolution%ED%83%93%EC%9D%B4%EB%8B%A4/">이게다  evolution 탓이다.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>리눅스에서 윈도우 프로그램이 필요한 경우 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="리눅스를 사용하더라도 어쩔수 없이 윈도우가 필요한 경우가 가끔 있을수 있습니다. 저같은 경우는 이에 대처하기 위해 여러가지 방법을 사용했는데요.
+윈도우/리눅스간 멀티 부팅을 한다. 가장 일반적으로 많이 사용하는 방법이고 대부분의 경우에 처음 리눅스를 설치하면 택하는 옵션입니다. 저같은 경우는 새로 하드를 포멧하면서 파티션을 windows xp 32bit, winows xp 64bit , linux 64bit, linux swap , 데이타 저장및 교환용 파티션 이런 형태로 포멧을 했습니다. 데이터 교환용 파티션 같은 경우는 리눅스에선 윈도우 파티션을 읽고 쓸수 있기 때문에 없어도 대충 살만합니다만 정작 윈도우에선 리눅스 파티션을 읽고 쓸수 없기때문에 공용 데이타를 넣기 위한 공간으로 준비 했습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="리눅스에서 윈도우 프로그램이 필요한 경우" />
+<meta property="og:description" content="리눅스를 사용하더라도 어쩔수 없이 윈도우가 필요한 경우가 가끔 있을수 있습니다. 저같은 경우는 이에 대처하기 위해 여러가지 방법을 사용했는데요.
+윈도우/리눅스간 멀티 부팅을 한다. 가장 일반적으로 많이 사용하는 방법이고 대부분의 경우에 처음 리눅스를 설치하면 택하는 옵션입니다. 저같은 경우는 새로 하드를 포멧하면서 파티션을 windows xp 32bit, winows xp 64bit , linux 64bit, linux swap , 데이타 저장및 교환용 파티션 이런 형태로 포멧을 했습니다. 데이터 교환용 파티션 같은 경우는 리눅스에선 윈도우 파티션을 읽고 쓸수 있기 때문에 없어도 대충 살만합니다만 정작 윈도우에선 리눅스 파티션을 읽고 쓸수 없기때문에 공용 데이타를 넣기 위한 공간으로 준비 했습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2007-12-30-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%EC%9C%88%EB%8F%84%EC%9A%B0%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4%ED%95%84%EC%9A%94%ED%95%9C%EA%B2%BD%EC%9A%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2007-12-30T16:46:00+09:00" />
+<meta property="article:modified_time" content="2007-12-30T16:46:00+09:00" />
+<meta itemprop="name" content="리눅스에서 윈도우 프로그램이 필요한 경우">
+<meta itemprop="description" content="리눅스를 사용하더라도 어쩔수 없이 윈도우가 필요한 경우가 가끔 있을수 있습니다. 저같은 경우는 이에 대처하기 위해 여러가지 방법을 사용했는데요.
+윈도우/리눅스간 멀티 부팅을 한다. 가장 일반적으로 많이 사용하는 방법이고 대부분의 경우에 처음 리눅스를 설치하면 택하는 옵션입니다. 저같은 경우는 새로 하드를 포멧하면서 파티션을 windows xp 32bit, winows xp 64bit , linux 64bit, linux swap , 데이타 저장및 교환용 파티션 이런 형태로 포멧을 했습니다. 데이터 교환용 파티션 같은 경우는 리눅스에선 윈도우 파티션을 읽고 쓸수 있기 때문에 없어도 대충 살만합니다만 정작 윈도우에선 리눅스 파티션을 읽고 쓸수 없기때문에 공용 데이타를 넣기 위한 공간으로 준비 했습니다."><meta itemprop="datePublished" content="2007-12-30T16:46:00+09:00" />
+<meta itemprop="dateModified" content="2007-12-30T16:46:00+09:00" />
+<meta itemprop="wordCount" content="400">
+<meta itemprop="keywords" content="ubuntu,linux,리눅스,우분투,64bit," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="리눅스에서 윈도우 프로그램이 필요한 경우"/>
+<meta name="twitter:description" content="리눅스를 사용하더라도 어쩔수 없이 윈도우가 필요한 경우가 가끔 있을수 있습니다. 저같은 경우는 이에 대처하기 위해 여러가지 방법을 사용했는데요.
+윈도우/리눅스간 멀티 부팅을 한다. 가장 일반적으로 많이 사용하는 방법이고 대부분의 경우에 처음 리눅스를 설치하면 택하는 옵션입니다. 저같은 경우는 새로 하드를 포멧하면서 파티션을 windows xp 32bit, winows xp 64bit , linux 64bit, linux swap , 데이타 저장및 교환용 파티션 이런 형태로 포멧을 했습니다. 데이터 교환용 파티션 같은 경우는 리눅스에선 윈도우 파티션을 읽고 쓸수 있기 때문에 없어도 대충 살만합니다만 정작 윈도우에선 리눅스 파티션을 읽고 쓸수 없기때문에 공용 데이타를 넣기 위한 공간으로 준비 했습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">리눅스에서 윈도우 프로그램이 필요한 경우</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2007-12-30T16:46:00+09:00">December 30, 2007</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>리눅스를 사용하더라도 어쩔수 없이 윈도우가 필요한 경우가 가끔 있을수
+있습니다. 
+저같은 경우는 이에 대처하기 위해 여러가지 방법을 사용했는데요.</p>
+<ol>
+<li>
+<p>윈도우/리눅스간 멀티 부팅을 한다. 
+가장 일반적으로 많이 사용하는 방법이고 대부분의 경우에 처음 리눅스를
+설치하면 택하는 옵션입니다. 
+저같은 경우는 새로 하드를 포멧하면서 파티션을 
+windows xp 32bit, winows xp 64bit , linux 64bit, linux swap , 데이타
+저장및 교환용 파티션 
+이런 형태로 포멧을 했습니다. 
+데이터 교환용 파티션 같은 경우는 리눅스에선 윈도우 파티션을 읽고 쓸수
+있기 때문에 없어도 대충 살만합니다만 정작 윈도우에선 리눅스 파티션을
+읽고 쓸수 없기때문에 공용 데이타를 넣기 위한 공간으로 준비 했습니다. 
+( 지금은 윈도우로 부팅을 하지 않기 때문에 그냥 리눅스 파티션이 되어
+버렸습니다. ^^ )</p>
+</li>
+<li>
+<p>쓰다보면 재부팅 하는게 무지 귀찮기 때문에 슬슬 가상화 프로그램으로
+눈이 돌아 갑니다. 
+리눅스에서 윈도우를 설치 부팅 할수 있는 가상기계는 3종 정도가
+있는데요. 
+가장 유명한 vmware ( 상용입니다만 player 는 비상용이 되어 있습니다. ) 
+요즘 뜨고 있는 virtual box ( 리눅스쪽에선 가장 많이 추천 하고 있습니다.
+공개 프로그램) 
+그리고 미래를 책임질것으로 기대를모으고 있는 Xen ( 전 아직도 이걸 어떻게
+쓰는지 모르겠더군요.) 정도가 있습니다. 
+그런데 64bit 우분투에 디폴트로 설치 가능한 VM은 virtualbox 입니다. 
+이상하게 vmware player는 32bit 호스트 OS만 지원 하더군요. 
+( vmware 홈페이지 가서 64bit 플레이어를 받을 수있는지는 모르겠습니다만 
+비상용이긴 해도 공개 소프트가 아니라서 굳이 찾아볼 생각이 안들었습니다.
+) 
+아무튼 이런 이유로 virtualbox를 설치했는데.. 
+기대와는 달리 기존에 존재하는 윈도우 파티션을 가상 머신 내부에서 부팅
+하는 기능은 지원 하지 않더군요. 
+할수 없이 조그마한 가상 하드를 만들어 설치 했습니다. 
+설치하고 게스트 확장 드라이버를 설치하면 요즘 맥에서 유행하는 패러랠즈
+같이 
+심리스 윈도우 기능도 지원해서 꽤 편하게 쓸만 합니다. 
+( 윈도우 프로그램이 VM 창안에 뜨는것이 아니라 리눅스 데스크 탑에 다른
+일반 프로그램처럼 보이게 해주는 기능 )</p>
+</li>
+<li>
+<p>제가 약간 특수한 경우겠지만 완전한 윈도우 실행 환경을 원한다면
+저사양의 노트북을 하나 구하셔서 거기에 윈도우를 설치하고 리모트 데스크
+탑으로 들어가서 사용하는것이 가능합니다. 
+이경우 화면과 키보드만 리눅스에서 보일뿐 나머지는 모두 윈도우 환경이기
+때문에 완벽한(!) 호환성을 보입니다. ( &ndash;;; 퍽 당연하잖아. ) 
+이 당연한 이야기를 왜 하냐 하면 노트북인 경우 기계를 두대 운영하는것보다
+소음/발열/전기/공간 면에 월등해서 부담이 없기 때문입니다. 
+설치된 노트북은 네트웍만 연결해서(무선이면 더 좋겠지요.) 적당히 눈에
+안띄는곳에 박아두면 완벽 ^^ 파일도 공유폴더와 삼바로 연결하면 전혀
+불편없이 사용할수 있습니다.</p>
+</li>
+<li>
+<p>그리고 불안정하지만 가장 부담이 적은 wine을 사용하는게 가능합니다. 
+이 wine역시 우분투 기본 레포지토리에있는것은 64bit를 지원 하지 않는다고
+반항하므로 
+wine 홈페이지에가서 설치 패키지를 받아서 사용하시면 됩니다. 
+( 정확히 말하면 wine 홈페이지에 레포지토리를 내 기계의 패키지 검색
+레포지토리로 등록하면 됩니다. )</p>
+</li>
+</ol>
+<p>제가 우분투를 설치한후 위의 4단계를 순서대로 거쳐 왔습니다. ^^ 
+( 오픈 소스가 아닌 꼭써야하는 윈도우 프로그램이 필요해서 말이죠. ;; )</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/64bit/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">64bit</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2007-12-16-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EB%A9%94%EC%9D%B8%EC%9C%BC%EB%A1%9C%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/">리눅스를 메인으로 사용해보기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%B6%80%ED%8C%85%EC%9D%B4%EC%9D%B4%EC%83%81%ED%95%98%EA%B2%8C%EB%8A%90%EB%A6%B0%EA%B2%BD%EC%9A%B0/">우분투 부팅이 이상하게 느린경우</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

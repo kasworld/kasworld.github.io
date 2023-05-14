@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>라즈베리 파이와 go언어.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="라즈베리파이에서 golang이 잘 되나? 를 찾다가 발견한 http://gobot.io/ ( Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language )
+이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니 하고
+go언어 공식 홈의 다운로드 페이지를 확인해보니 https://golang.org/dl/ go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는 있었지만 ^^ )
+이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인 했습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="라즈베리 파이와 go언어. " />
+<meta property="og:description" content="라즈베리파이에서 golang이 잘 되나? 를 찾다가 발견한 http://gobot.io/ ( Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language )
+이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니 하고
+go언어 공식 홈의 다운로드 페이지를 확인해보니 https://golang.org/dl/ go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는 있었지만 ^^ )
+이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인 했습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-03-06T14:39:00+09:00" />
+<meta property="article:modified_time" content="2016-03-06T14:39:00+09:00" />
+<meta itemprop="name" content="라즈베리 파이와 go언어. ">
+<meta itemprop="description" content="라즈베리파이에서 golang이 잘 되나? 를 찾다가 발견한 http://gobot.io/ ( Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language )
+이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니 하고
+go언어 공식 홈의 다운로드 페이지를 확인해보니 https://golang.org/dl/ go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는 있었지만 ^^ )
+이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인 했습니다."><meta itemprop="datePublished" content="2016-03-06T14:39:00+09:00" />
+<meta itemprop="dateModified" content="2016-03-06T14:39:00+09:00" />
+<meta itemprop="wordCount" content="121">
+<meta itemprop="keywords" content="golang,라즈베리파이,raspberrypi," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="라즈베리 파이와 go언어. "/>
+<meta name="twitter:description" content="라즈베리파이에서 golang이 잘 되나? 를 찾다가 발견한 http://gobot.io/ ( Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language )
+이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니 하고
+go언어 공식 홈의 다운로드 페이지를 확인해보니 https://golang.org/dl/ go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는 있었지만 ^^ )
+이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인 했습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">라즈베리 파이와 go언어. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-03-06T14:39:00+09:00">March 6, 2016</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>라즈베리파이에서  golang이 잘 되나? 를 찾다가 발견한 
+<a href="http://gobot.io/">http://gobot.io/</a> 
+( Gobot is a framework for robotics, physical computing, and the
+Internet of Things, written in the Go programming language )</p>
+<p>이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니
+하고</p>
+<p>go언어 공식 홈의 다운로드 페이지를 확인해보니 
+<a href="https://golang.org/dl/">https://golang.org/dl/</a> 
+go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는
+있었지만 ^^ )</p>
+<p>이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인
+했습니다.</p>
+<p>달랑 
+go version 
+을 실행해 본 거지만 결과가 나오면 잘되는 것이려니 합니다.</p>
+<p>라즈베리의 기본 apt-get레포지토리 버전은 1.3.3이니 golang 홈페이지에서
+받아 설치해야 1.6 버전을 설치 할수 있습니다.</p>
+<p>이제 라즈베리에서 golang으로 이것 저것 해볼 꿈에 부풀었는데. 
+집에 있는 녀석은 이미 마루에서 시계 역할을 하느라고 바쁘군요.</p>
+<p>이로서 라즈베리파이3을 사야할 핑계가 완벽해 졌습니다. 
+^_________________^</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">라즈베리파이</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/raspberrypi/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">raspberrypi</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2016-03-01-%EC%A0%80%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43%EC%9D%80%EC%8B%9C%EB%8B%A4/">저 라즈베리파이 3은 시다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/">Serial ID 생성기 - 두번째 글 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-07-03-go%EC%9A%A9webframework%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%8A%B9%EC%A7%95/">go 용 web framework 벤치마크, 특징. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike2의 AI에 상전이 엔진을 적용했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/">goguelike2에 소비성아이템, 버프 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/">go 언어에서 goroutine group을 같이 종료 시키기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/">메모리와 성능간의 trade-off , map vs slice</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/">go 언어용 fortune cookie package</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/">go-sdlgui 에서 한글 표시 지원추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">go언어로 TCP server와 GUI client를 만들어 보기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-24-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Ctcpserverclient%EC%9D%98%EC%A0%84%ED%98%95%EC%A0%81%ED%98%95%ED%83%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%ED%99%94/">go언어에서 tcp server/client 의 전형적 형태. - 라이브러리화.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

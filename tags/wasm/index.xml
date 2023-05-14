@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wasm on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/wasm/</link>
+    <description>Recent content in wasm on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Mon, 06 Jan 2020 11:21:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/wasm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2020년 현재 goguelike의 상태 정리 </title>
+      <link>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</link>
+      <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</guid>
+      <description>goguelike - mmo-roguelike golang, websocket, webassembly, htmlcanvas (가능한한) 혼자서 만드는 MMO 서버 관리 서버 ( ground server )
+다중 서버 지원
+서버는 linux에서 golang으로 개발/실행
+클라이언트는 golang으로 webassembly 를 생성
+100% 서버 기반 클라이언트는 viewer , 사용자 입력을 서버로 전달 하는 역할
+websocket을 사용 연결 유지형 클라이언트
+클라이언트를 통한 핵킹/치트 가능성을 원천 봉쇄
+클라이언트는 캐릭터의 현재 위치기준으로 시야내의 지형정보만을 받는다. ( 맵핵의 원천 봉쇄)
+클라이언트 설치 불필요
+webassembly/html5 canvas를 지원하는 web browser 라면 플랫폼 불문하고 플레이 가능</description>
+    </item>
+    
+    <item>
+      <title>go 언어로 만든 배경이 있는 시계/달력 </title>
+      <link>https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/</link>
+      <pubDate>Fri, 06 Dec 2019 14:49:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/</guid>
+      <description>https://github.com/kasworld/wasmclockcal
+go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
+build.sh을 실행하면
+파일을 http로 서비스 해줄 dir2http 와 실제 index.html을 통해 로딩되어 시계/달력을 표시해줄 wasmclock.wasm 파일이 생성됩니다.
+wasm_exec.js 은 wasm을 로딩해서 실행하는 데 사용 됩니다. go를 설치하면 /usr/local/go/misc/wasm 폴더에 설치되어 있습니다. (linux 의 경우 )
+dir2http를 실행하면 접속할 클라이언트 url을 보여 줍니다.
+dir2http dir=. port=:8080 http://localhost:8080/
+open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localhost:8080/?mvid=youtubeid
+클라이언트 접속 URL 에
+bgimg=이미지이름(url) 을 주면 배경그림이 설정되고</description>
+    </item>
+    
+    <item>
+      <title>golang 과 golang wasm 사이에 websocket으로 통신하기. </title>
+      <link>https://kasworld.github.io/posts/2019-09-09-golang%EA%B3%BCgolangwasm%EC%82%AC%EC%9D%B4%EC%97%90websocket%EC%9C%BC%EB%A1%9C%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Mon, 09 Sep 2019 18:05:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2019-09-09-golang%EA%B3%BCgolangwasm%EC%82%AC%EC%9D%B4%EC%97%90websocket%EC%9C%BC%EB%A1%9C%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0/</guid>
+      <description>(가끔은 살아있음을 알려줘야 하기에. ) goguelike2의 gopherjs webclient 를 go언에에서 (아직 EXPERIMENTAL 이라고 하지만) 정식으로 지원 하기 시작한 Webassembly 로 포팅하다가 나온 부산 물 입니다.
+( 잘 안되서 web socket 관련 코드만 뜯어내서 작동 테스트를 하기 위해 만든 코드들 )
+기본적으로 golang websocket server 서버가 정상 작동 하는 지는 테스트 하기 위한 golang websocket client 그리고 주 목적인 golang wasm web client 로 구성 되어 있습니다.
+테스트 용으로 뚝딱 뚝딱 만든거라 허접한 부분들도 많지만 일단 읽어보고 카피해 쓸만큼은 정리했다고 생각합니다.</description>
+    </item>
+    
+    <item>
+      <title>golang 1.11 과 wasm , gopherjs </title>
+      <link>https://kasworld.github.io/posts/2018-08-26-golang111%EA%B3%BCwasmgopherjs/</link>
+      <pubDate>Sun, 26 Aug 2018 11:50:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2018-08-26-golang111%EA%B3%BCwasmgopherjs/</guid>
+      <description>현재는 goguelike에서 web client를 만들기 위해서 gopherjs를 사용하고 있습니다.
+다른 대안도 없고 약간 야매긴 하지만 잘 작동하고 있기에 만족스럽게 사용하고 있긴 합니다만 그래도 정식으로 golang에서 wasm을 지원하는 것이 베스트기에 wasm 을 정식으로 ( 실제로는 experimental port 라고 release note에 명시 ) 지원한다는 소식을 듣고 1.11의 릴리즈 만을 기다리고 있었습니다. 마침내 어제 1.11의 릴리스 소식을 듣고 바로 1.11의 설치를 하고 기존 gopherjs로 되어 있는 webclient를 wasm으로 포팅하는 작업을 시작했는데 .. 결론만 이야기 하면 일단 작업을 모두 정지하고 코드를 gopherjs 로 롤백 했습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

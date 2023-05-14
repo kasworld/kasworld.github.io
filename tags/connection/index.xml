@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>connection on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/connection/</link>
+    <description>Recent content in connection on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 22 Nov 2020 17:26:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/connection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go 언어로 만든 서버에서 64K connection 만들어 보기 </title>
+      <link>https://kasworld.github.io/posts/2020-11-22-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C64kconnection%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/</link>
+      <pubDate>Sun, 22 Nov 2020 17:26:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-11-22-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C64kconnection%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/</guid>
+      <description>재미삼아 만들어본 프로젝트입니다. https://github.com/kasworld/massecho
+tcp연결이나 gorilla websocket을 사용해서 테스트 가능합니다. 테스트 전에 준비해야 할것이 대규모의 connection을 테스트 하기위해선 몇가지의 제한을 넘어야 합니다. 1. OS에서 열수있는 파일수의 제한 2. OS에서 client socket 제한 윈도우즈가 주 개발 환경인 상황에서 linux 테스트를 위해 설치한 WSL2 와 virtualbox의 ubuntu에서는 openfile 수의 제한을 올릴수가 없습니다. ( 아니면 방법을 못찾은 듯)
+ubuntu를 설치한 노트북에선 같은 방법으로 잘되는 것으로 봐선 그냥 막아둔듯 합니다. linux에서 파일 수 제한을 올리는 방법은 /etc/security/limits.</description>
+    </item>
+    
+  </channel>
+</rss>

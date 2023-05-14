@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>postgresql 삽질기;; | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="세상의 모든 삽질이 그러하듯이, 무릇 삽질이란;;;누군가의 바보스러움때문에 발생하기 마련인데..그중에 가장 우울한것이 자신의 한심스러움 때문에 일어나는 삽질이다.ㅠㅠ 요즘 대세는 mariadb 라고 외치고 다니고 있던 중..( 정작 쓰지는 않는 주제에 ;; ) 아기다리 고기다리 던(언제쩍 개그냐 이거;; )postgresql이 9.x 대에와서 드디어 쓸만해졌다!! 란 소리를 듣고&hellip; 그러면 나도 잠깐 들여다 볼까? 하고 생각한 지 어어 2달 ;;; mysql/mariadb 와는 달리 이놈의 postgres는 우분투/민트 의 레포지토리에서 설치를 해도바로 사용 가능한 상태로 설치 되지를 않더군요;; 일단 설치를 해두고.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="postgresql 삽질기;;" />
+<meta property="og:description" content="세상의 모든 삽질이 그러하듯이, 무릇 삽질이란;;;누군가의 바보스러움때문에 발생하기 마련인데..그중에 가장 우울한것이 자신의 한심스러움 때문에 일어나는 삽질이다.ㅠㅠ 요즘 대세는 mariadb 라고 외치고 다니고 있던 중..( 정작 쓰지는 않는 주제에 ;; ) 아기다리 고기다리 던(언제쩍 개그냐 이거;; )postgresql이 9.x 대에와서 드디어 쓸만해졌다!! 란 소리를 듣고&hellip; 그러면 나도 잠깐 들여다 볼까? 하고 생각한 지 어어 2달 ;;; mysql/mariadb 와는 달리 이놈의 postgres는 우분투/민트 의 레포지토리에서 설치를 해도바로 사용 가능한 상태로 설치 되지를 않더군요;; 일단 설치를 해두고." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-03-19T09:56:00+09:00" />
+<meta property="article:modified_time" content="2013-03-19T09:56:00+09:00" />
+<meta itemprop="name" content="postgresql 삽질기;;">
+<meta itemprop="description" content="세상의 모든 삽질이 그러하듯이, 무릇 삽질이란;;;누군가의 바보스러움때문에 발생하기 마련인데..그중에 가장 우울한것이 자신의 한심스러움 때문에 일어나는 삽질이다.ㅠㅠ 요즘 대세는 mariadb 라고 외치고 다니고 있던 중..( 정작 쓰지는 않는 주제에 ;; ) 아기다리 고기다리 던(언제쩍 개그냐 이거;; )postgresql이 9.x 대에와서 드디어 쓸만해졌다!! 란 소리를 듣고&hellip; 그러면 나도 잠깐 들여다 볼까? 하고 생각한 지 어어 2달 ;;; mysql/mariadb 와는 달리 이놈의 postgres는 우분투/민트 의 레포지토리에서 설치를 해도바로 사용 가능한 상태로 설치 되지를 않더군요;; 일단 설치를 해두고."><meta itemprop="datePublished" content="2013-03-19T09:56:00+09:00" />
+<meta itemprop="dateModified" content="2013-03-19T09:56:00+09:00" />
+<meta itemprop="wordCount" content="415">
+<meta itemprop="keywords" content="mint,삽질기,ubuntu,삽질,포스트그레스큐엘,linux,리눅스,우분투,민트,postgresql," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="postgresql 삽질기;;"/>
+<meta name="twitter:description" content="세상의 모든 삽질이 그러하듯이, 무릇 삽질이란;;;누군가의 바보스러움때문에 발생하기 마련인데..그중에 가장 우울한것이 자신의 한심스러움 때문에 일어나는 삽질이다.ㅠㅠ 요즘 대세는 mariadb 라고 외치고 다니고 있던 중..( 정작 쓰지는 않는 주제에 ;; ) 아기다리 고기다리 던(언제쩍 개그냐 이거;; )postgresql이 9.x 대에와서 드디어 쓸만해졌다!! 란 소리를 듣고&hellip; 그러면 나도 잠깐 들여다 볼까? 하고 생각한 지 어어 2달 ;;; mysql/mariadb 와는 달리 이놈의 postgres는 우분투/민트 의 레포지토리에서 설치를 해도바로 사용 가능한 상태로 설치 되지를 않더군요;; 일단 설치를 해두고."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">postgresql 삽질기;;</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-03-19T09:56:00+09:00">March 19, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><!-- raw HTML omitted -->세상의 모든 삽질이
+그러하듯이,<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->무릇
+삽질이란;;;<!-- raw HTML omitted --><!-- raw HTML omitted -->누군가의
+바보스러움때문에 발생하기
+마련인데..<!-- raw HTML omitted --><!-- raw HTML omitted -->그중에 가장
+우울한것이 자신의 한심스러움 때문에 일어나는
+삽질이다.<!-- raw HTML omitted --><!-- raw HTML omitted -->ㅠㅠ<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->요즘 대세는 mariadb 라고
+외치고 다니고 있던 중..<!-- raw HTML omitted --><!-- raw HTML omitted -->( 정작
+쓰지는 않는 주제에 ;; )<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->아기다리 고기다리 던(언제쩍
+개그냐 이거;; )postgresql이 9.x 대에와서 드디어
+쓸만해졌다!!<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->란 소리를
+듣고&hellip;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->그러면 나도 잠깐 들여다 볼까?
+하고 생각한 지 어어 2달 ;;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->mysql/mariadb 와는 달리
+이놈의 postgres는 우분투/민트 의 레포지토리에서 설치를
+해도<!-- raw HTML omitted --><!-- raw HTML omitted -->바로 사용 가능한 상태로
+설치 되지를 않더군요;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->일단 설치를
+해두고..<!-- raw HTML omitted --><!-- raw HTML omitted -->어 9.2가 최신
+버전인데 레포지토리에
+없네? <!-- raw HTML omitted --><!-- raw HTML omitted -->하면서<!-- raw HTML omitted --><!-- raw HTML omitted -->ppa
+까지 추가해서<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->server/client/pgadmin3에 오오..
+plpython이 있네 하고 이것 까지 설치는 해
+두었지만..<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->이상하게도 pgadmin3를
+사용해서 postgres 에 접속할수가 없는 겁니다.
+;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->게다가 설치하면서 db 관리자
+암호를 물어 보지도 않고
+말이지요.;;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->뭐 어쩌란 거냐!! 하고 대충
+문서를 찾아 하란 대로 (실은 제멋대로) 해봐도
+잘안되고..<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->결론만 말하면 mysql과는 admin에 대한
+개념이 좀다르다.. 입니다.<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->postgres는 일단 관리용 system
+계정 postgres 를 만들고<!-- raw HTML omitted --><!-- raw HTML omitted -->이
+계정으로 로그인 해서 모든 관리 업무를 한다는 가정으로 만들어 져
+있습니다. 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->( 아마도 고전적인 unix용
+서비스의 관리형태가 아닐까 싶군요. )<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->그런데 정작 우분투/민트에서는 이
+postgres 로 로그인을 할수 없습니다. / 하면 안됩니다.
+;;;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->꼬박 꼬박 sudo -u postgres 를
+사용해서 작업 해야 합니다.<!-- raw HTML omitted --><!-- raw HTML omitted -->(
+뭐 보안 상의 이유 겠지요. )<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->그리고 command-line 관리툴의 이름이
+이상한데 ( 왜 이렇게 만들었는지 모르겠습니다.
+)<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->createuser / dropuser
+입니다. 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->db admin툴 내부에 들어가서
+사용하는 명령이 아니고 그냥 터미널용
+명령입니다.<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->dropuser야 그렇다고 해도 (
+맘에는 안들어도.. )<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->createuser 라니.. 누가봐도
+시스템에 계정을 추가하는 명령으로 착각하기 딱좋은 이름아닌가요.
+&ndash;+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->정리하는 차원에서 순서를
+적으면<!-- raw HTML omitted --> 
+<!-- raw HTML omitted -->ppa 추가 ( 원하면
+)<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->apt-get / synaptic 에서
+설치<!-- raw HTML omitted --><!-- raw HTML omitted -->/etc/postgresql/9.x/main/postgersql.conf
+수정 
+<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->제경우는<!-- raw HTML omitted --><!-- raw HTML omitted -->listen_addresses
+= &rsquo;localhost&rsquo;<!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->password_encryption =
+on<!-- raw HTML omitted --><!-- raw HTML omitted -->만 수정 <!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> 
+<!-- raw HTML omitted --> sudo -u postgres createuser -d -W 사용할DB계정이름 
+( -d : db 생성 가능 , -W : 암호 입력 받음 )</p>
+<p>** password_encryption 를 켠 탓인지 모르겠지만..  이 방법으로는
+정상적으로 암호 설정이 안되는 것 같습니다. 반드시 psql로 들어가서 암호를
+설정해야 하는듯..</p>
+<p>( 또는 
+sudo -u postgres psql 로 command line 관리툴 실행 
+alter user 사용할DB계정이름 password &lsquo;사용할암호&rsquo; ; 
+ctrl-d 로 종료 
+) 
+** 여기서 또 한참 헤맨것이 맨 마지막의 ; 빼먹어서 고생했습니다.;;</p>
+<p>pgadmin3 를 그냥 실행 ( sudo -u postgres 를 사용하지 않고.. ;;; ) 
+반드시 방금 만든 DB계정으로 접속 
+기본 관리 계정인 postgres 로는 이상하게 접속 이 않되더군요. 뭐 보안
+때문이겠지만.. 
+그리고 주의할점이 
+이상하게도 postgres 기본 설정파일의 tcp port는 5433 인데 
+pgadmin3에서 기본으로 입력되어 있는  port는 5432 입니다. ( 이건 뭐
+낚시도 아니고. ;; )</p>
+<p>아무튼 이 과정을 거치면 (써놓고 보니 별것도 없네요. ;; ) 
+드디어 postgres를 GUI 로 접근해서 볼수 있습니다. ;;</p>
+<p>전반적인 느낌은 대충 쓰려는 놈은 쓰지마라.. 
+기본 설정으론 작동 않됨 
+엔터 연타로 사용하려는 넘은 사용 금지.. 
+같은 까칠함이 느껴집니다. ;;;</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/mint/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">mint</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88%EA%B8%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질기</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EA%B7%B8%EB%A0%88%EC%8A%A4%ED%81%90%EC%97%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">포스트그레스큐엘</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%AF%BC%ED%8A%B8/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">민트</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/postgresql/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">postgresql</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">리눅스 민트 14 시나몬을 설치했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">sublime text 2 에디터를 구입했습니다. - 수정했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/">wine 설치시 노틸러스의 짜증나는 notepad 연결 제거하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/">우분투 11.10 으로 업그레이드</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-27-opendevdspfailed%EC%97%90%EB%9F%AC%EA%B0%80%EB%82%98%EB%8A%94%EA%B2%BD%EC%9A%B0/">open /dev/dsp failed 에러가 나는 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-03-07-%EB%91%90%EA%B0%9C%EC%9D%98%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A8%B8%EC%8B%A0%EC%82%AC%EC%9D%B4%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%ED%8C%A8%ED%82%A4%EC%A7%80%EB%A5%BC%EC%9D%BC%EC%B9%98%EC%8B%9C%ED%82%A4%EB%8A%94%EB%B2%95/">두개의 우분투 머신사이에서 설치된 패키지를 일치 시키는 법.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-05-02-%EC%9A%B0%EB%B6%84%ED%88%AC1004%EA%B0%80%EB%82%98%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 10.04가 나왔습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/">내가 원하던 진정한 리눅스폰은</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/">5800용 인코딩을 위해서 우분투 9.10에서 추가해줘야 하는 일.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EB%A5%BC%EA%B8%B0%EB%8B%A4%EB%A0%B8%EC%A7%80%EB%A7%8C%EB%AA%A8%ED%86%A0%EB%A1%9C%EC%9D%B4%EB%A5%BC%EC%82%AC%EC%A7%80%EC%95%8A%EC%9D%80%EC%9D%B4%EC%9C%A0/">안드로이드를 기다렸지만 모토로이를 사지 않은이유</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-22-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%ED%94%8C%EB%9E%98%EC%8B%9C%EA%B0%80%ED%81%B4%EB%A6%AD%EC%9D%B4%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94%EB%B2%84%EA%B7%B8%EB%A5%BC%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94%EB%B2%95/">우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/">모두가 아이폰을 외칠때..</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%98%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C%EB%A5%BC%ED%99%9C%EC%84%B1%ED%99%94%EC%8B%9C%ED%82%A4%EA%B8%B0/">노트북의 가속센서를 활성화 시키기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/">모두가 아이폰을 이야기할때</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-04-%EB%AC%B4%EC%9E%90%EA%B2%8C%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EC%98%AC%EB%A6%AC%EB%8A%94%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%AC%EC%8A%A4%ED%8C%85/">무자게 오랫만에 올리는 리눅스 포스팅 ^^</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

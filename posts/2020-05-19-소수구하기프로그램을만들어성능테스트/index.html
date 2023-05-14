@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>소수 구하기 프로그램을 만들어 성능테스트 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="dos와 turbo-c 시절 부터의 취미인 소수 구하기 프로그램을 만들어 성능테스트 하기 입니다. 16bit 시절 부터 이런 저런 방법으로 소수구하기 프로그램을 짜고 시간측정을 해가며 옵티마이징하는 취미가 있었습니다. 새 컴퓨터 , 새 OS , 새 언어 , 새 cpu, 등이 생기면 항상 그 환경용 으로 작성해서 성능의 변화를 즐기고 있었는데 최근 몇년간은 intel의 삽질로 별다른 변화가 없어서 거의 잊고 있었습니다.
+하지만 이번에 AMD 8코어 16 쓰레드 cpu와 새 램(ddr4) 이 생겼으니 테스트를 할 생각이 들어서 작업을 해봤습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="소수 구하기 프로그램을 만들어 성능테스트" />
+<meta property="og:description" content="dos와 turbo-c 시절 부터의 취미인 소수 구하기 프로그램을 만들어 성능테스트 하기 입니다. 16bit 시절 부터 이런 저런 방법으로 소수구하기 프로그램을 짜고 시간측정을 해가며 옵티마이징하는 취미가 있었습니다. 새 컴퓨터 , 새 OS , 새 언어 , 새 cpu, 등이 생기면 항상 그 환경용 으로 작성해서 성능의 변화를 즐기고 있었는데 최근 몇년간은 intel의 삽질로 별다른 변화가 없어서 거의 잊고 있었습니다.
+하지만 이번에 AMD 8코어 16 쓰레드 cpu와 새 램(ddr4) 이 생겼으니 테스트를 할 생각이 들어서 작업을 해봤습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2020-05-19-%EC%86%8C%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EC%96%B4%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-05-19T15:53:00+09:00" />
+<meta property="article:modified_time" content="2020-05-19T15:53:00+09:00" />
+<meta itemprop="name" content="소수 구하기 프로그램을 만들어 성능테스트">
+<meta itemprop="description" content="dos와 turbo-c 시절 부터의 취미인 소수 구하기 프로그램을 만들어 성능테스트 하기 입니다. 16bit 시절 부터 이런 저런 방법으로 소수구하기 프로그램을 짜고 시간측정을 해가며 옵티마이징하는 취미가 있었습니다. 새 컴퓨터 , 새 OS , 새 언어 , 새 cpu, 등이 생기면 항상 그 환경용 으로 작성해서 성능의 변화를 즐기고 있었는데 최근 몇년간은 intel의 삽질로 별다른 변화가 없어서 거의 잊고 있었습니다.
+하지만 이번에 AMD 8코어 16 쓰레드 cpu와 새 램(ddr4) 이 생겼으니 테스트를 할 생각이 들어서 작업을 해봤습니다."><meta itemprop="datePublished" content="2020-05-19T15:53:00+09:00" />
+<meta itemprop="dateModified" content="2020-05-19T15:53:00+09:00" />
+<meta itemprop="wordCount" content="301">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="소수 구하기 프로그램을 만들어 성능테스트"/>
+<meta name="twitter:description" content="dos와 turbo-c 시절 부터의 취미인 소수 구하기 프로그램을 만들어 성능테스트 하기 입니다. 16bit 시절 부터 이런 저런 방법으로 소수구하기 프로그램을 짜고 시간측정을 해가며 옵티마이징하는 취미가 있었습니다. 새 컴퓨터 , 새 OS , 새 언어 , 새 cpu, 등이 생기면 항상 그 환경용 으로 작성해서 성능의 변화를 즐기고 있었는데 최근 몇년간은 intel의 삽질로 별다른 변화가 없어서 거의 잊고 있었습니다.
+하지만 이번에 AMD 8코어 16 쓰레드 cpu와 새 램(ddr4) 이 생겼으니 테스트를 할 생각이 들어서 작업을 해봤습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">소수 구하기 프로그램을 만들어 성능테스트</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-05-19T15:53:00+09:00">May 19, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>dos와 turbo-c 시절 부터의 취미인 소수 구하기 프로그램을 만들어
+성능테스트 하기 입니다. </p>
+<p>16bit 시절 부터 이런 저런 방법으로 소수구하기 프로그램을 짜고 시간측정을
+해가며 옵티마이징하는 취미가 있었습니다. </p>
+<p>새 컴퓨터 , 새 OS , 새 언어 , 새 cpu,  등이 생기면 항상 그 환경용 으로
+작성해서 성능의 변화를 즐기고 있었는데 최근 몇년간은 intel의 삽질로
+별다른 변화가 없어서 거의 잊고 있었습니다.</p>
+<p>하지만 이번에 AMD 8코어 16 쓰레드 cpu와 새 램(ddr4) 이 생겼으니 테스트를
+할 생각이 들어서 작업을 해봤습니다. </p>
+<p>게다가 이번에는 충분한 코어/쓰레드와 편한 multi-thread 개발 환경(go
+언어) 가 있으니  드디어 생각만 하고 못하고 있던 multi-thread로 소수
+구하기를 할 수 있었습니다. </p>
+<p>아래 패키지를 받아서 example.go 를 실행해 보면 알수 있지만 </p>
+<p>간단히 요약하면 </p>
+<p>channel 을 사용하면 16 thread를 사용하게 만들어도 single thread 버전의
+2배 정도 속도만 나온다. </p>
+<p>(MultiAppendFindTo)</p>
+<p>channel을 사용하지 않도록 만들면 (MultiAppendFindTo3,MultiAppendFindTo4)
+약 8배 정도의 성능 향상(16thread에서) 이 있다. </p>
+<p>go의 channel은  아주 편한 도구지만 이렇게 아주 작은 단위의 작업을 위해
+사용하기는 느리다. </p>
+<p>slice의 buffer realloc을 최적화하는 것은 생각보다 성능의 영향이 작다. </p>
+<p>MultiAppendFindTo3 vs MultiAppendFindTo4</p>
+<p>입니다. </p>
+<p><a href="https://github.com/kasworld/primenum">https://github.com/kasworld/primenum</a></p>
+<p>패키지 설명 </p>
+<h1 id="prime-number-finder">prime number finder</h1>
+<p>소수를 여러가지 방법(6가지)으로 구하는 패키지 입니다.</p>
+<h1 id="a-hrefhttpsgithubcomkasworldprimenumeab8b0eb8aa5">&lt;a href=&ldquo;<a href="https://github.com/kasworld/primenum#%EA%B8%B0%EB%8A%A5%22">https://github.com/kasworld/primenum#%EA%B8%B0%EB%8A%A5&quot;</a></h1>
+<p>id=&ldquo;user-content-기능&rdquo; class=&ldquo;anchor&rdquo; aria-hidden=&ldquo;true&rdquo;
+style=&ldquo;background-color: initial; box-sizing: border-box; color: #0366d6; float: left; line-height: 1; margin-left: -20px; padding-right: 4px; text-decoration-line: none;&quot;&gt;<!-- raw HTML omitted --><!-- raw HTML omitted -->기능</p>
+<p>MakePrimes</p>
+<pre><code>가장 기본적인 구한 소수들을 테이블에 보관해가면서 더 큰 소수들을 찾아 냅니다. 
+아래의 PrimeIntList 를 쓰지 않습니다. 
+</code></pre>
+<p>type PrimeIntList</p>
+<pre><code>구한 소수 테이블을 유지하면서 추가로 소수들을 구해가기 위한 정보들 담고 있습니다. 
+AppendFindTo : 주어진 인자 까지 수수를 찾아 냅니다. 
+MultiAppendFindTo : go channel 과 go routine worker 를 사용해서 multithread로 소수를 구합니다. 
+MultiAppendFindTo2 : channel 사용를 줄여 속도를 올린 함수 입니다. 
+MultiAppendFindTo3 : channel사용을 없애고 worker 별 계산 결과를 merge sort로 취합합니다. 
+MultiAppendFindTo4 : 계산용 buffer를 미리 alloc해서 slice의 크기를 늘이기 위한 오버헤드를 줄였습니다. 
+</code></pre>
+<h1 id="a">&lt;a</h1>
+<p>href=&ldquo;<a href="https://github.com/kasworld/primenum#%EC%82%AC%EC%9A%A9-%EC%98%88%EC%A0%9C%22">https://github.com/kasworld/primenum#%EC%82%AC%EC%9A%A9-%EC%98%88%EC%A0%9C&quot;</a>
+id=&ldquo;user-content-사용-예제&rdquo; class=&ldquo;anchor&rdquo; aria-hidden=&ldquo;true&rdquo;
+style=&ldquo;background-color: initial; box-sizing: border-box; color: #0366d6; float: left; line-height: 1; margin-left: -20px; padding-right: 4px; text-decoration-line: none;&quot;&gt;<!-- raw HTML omitted --><!-- raw HTML omitted -->사용 예제</p>
+<p>example/example.go 참조.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

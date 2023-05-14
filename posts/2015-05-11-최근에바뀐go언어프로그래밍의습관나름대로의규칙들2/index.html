@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이전 글에 이어 지는 내용입니다. (http://kasw.blogspot.kr/2015/05/go.html)
+가능한 작은 단위 까지도 각 struct를 독립 package화 하기 이것은 정말로 습관화하려고 노력하는 것입니다. package 이름을 struct 이름과 같게 하고 패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) structnameattrib.go struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 structname.go
+struct 가 해야 하는 기능들을 정의 structname_test.go
+go test 용 로 정하기
+작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무 생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도 생기더군요.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2" />
+<meta property="og:description" content="이전 글에 이어 지는 내용입니다. (http://kasw.blogspot.kr/2015/05/go.html)
+가능한 작은 단위 까지도 각 struct를 독립 package화 하기 이것은 정말로 습관화하려고 노력하는 것입니다. package 이름을 struct 이름과 같게 하고 패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) structnameattrib.go struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 structname.go
+struct 가 해야 하는 기능들을 정의 structname_test.go
+go test 용 로 정하기
+작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무 생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도 생기더군요." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-05-11T17:08:00+09:00" />
+<meta property="article:modified_time" content="2015-05-11T17:08:00+09:00" />
+<meta itemprop="name" content="최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2">
+<meta itemprop="description" content="이전 글에 이어 지는 내용입니다. (http://kasw.blogspot.kr/2015/05/go.html)
+가능한 작은 단위 까지도 각 struct를 독립 package화 하기 이것은 정말로 습관화하려고 노력하는 것입니다. package 이름을 struct 이름과 같게 하고 패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) structnameattrib.go struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 structname.go
+struct 가 해야 하는 기능들을 정의 structname_test.go
+go test 용 로 정하기
+작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무 생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도 생기더군요."><meta itemprop="datePublished" content="2015-05-11T17:08:00+09:00" />
+<meta itemprop="dateModified" content="2015-05-11T17:08:00+09:00" />
+<meta itemprop="wordCount" content="236">
+<meta itemprop="keywords" content="golang,습관,naming," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2"/>
+<meta name="twitter:description" content="이전 글에 이어 지는 내용입니다. (http://kasw.blogspot.kr/2015/05/go.html)
+가능한 작은 단위 까지도 각 struct를 독립 package화 하기 이것은 정말로 습관화하려고 노력하는 것입니다. package 이름을 struct 이름과 같게 하고 패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) structnameattrib.go struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 structname.go
+struct 가 해야 하는 기능들을 정의 structname_test.go
+go test 용 로 정하기
+작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무 생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도 생기더군요."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-05-11T17:08:00+09:00">May 11, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>이전 글에 이어 지는 내용입니다. 
+(<a href="http://kasw.blogspot.kr/2015/05/go.html">http://kasw.blogspot.kr/2015/05/go.html</a>)</p>
+<ol start="4">
+<li>가능한 작은 단위 까지도 각 struct를 독립 package화 하기 
+이것은 정말로 습관화하려고 노력하는 것입니다. 
+package 이름을 struct 이름과 같게 하고 
+패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) 
+structnameattrib.go</li>
+</ol>
+<ul>
+<li>struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 </li>
+</ul>
+<p>structname.go</p>
+<ul>
+<li>struct 가 해야 하는 기능들을 정의 </li>
+</ul>
+<p>structname_test.go</p>
+<ul>
+<li>go test 용 </li>
+</ul>
+<p>로 정하기</p>
+<p>작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무
+생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도
+생기더군요. 
+그래서 일단 위와 같은 규칙으로 파일을 분리하곤 합니다. 
+더 나아가면 private methed 가 있는 파일과 public method (interface에도
+정의되어 있는 ) 가 있는 파일을 분리하기도 합니다.</p>
+<p>그리고 이렇게 가능한 작은 단위까지 package로 분리하면 
+structname.New() 와 같은 형식으로 새 object를 만드는 것이 규칙화
+됩니다.</p>
+<ol start="5">
+<li>struct field accessor naming 
+ struct 내의 field들을 가능한 private field 로 정의하고 
+field accessor이름을 
+GetXXX , SetXXX로 정의 하기 
+이것도 go 언어의 권장사항은 GetXXX 가 아니고 그냥  XXX() 입니다. 
+그런데 저는 method는 동사가 들어 가는 것이 편해서 ( field와 method를
+구별하기 좋으니까. ) 
+굳이 Get을 붙여서 만듭니다.</li>
+</ol>
+<p>이 규칙에서 약간 문제가 되는 것이 field들을 private로 만들면 
+gob나 json등의 serialization에서 문제가 됩니다. 
+(그래서 초반 코드들은 field들을 public으로 만들었습니다. ) 
+그런데 interface를 대량으로 사용하게 되니 어쩔수 없이 ( 불가능한 것은
+아니지만 ) Get, Set method를 정의하고 private field로 만들게 되더군요. 
+이 경우struct를 serialize를 하려면 marshaler 들을 만들어 주면 됩니다. 
+json은 (Un)MarshalJSON 이고 gob등은 (Un)MarshalBinary 
+입니다. 
+이전에 이 글 (<a href="http://kasw.blogspot.kr/2015/01/go.html">http://kasw.blogspot.kr/2015/01/go.html</a>) 에 간단히
+적었습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%8A%B5%EA%B4%80/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">습관</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/naming/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">naming</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/">go 언어에서 goroutine group을 같이 종료 시키기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/">메모리와 성능간의 trade-off , map vs slice</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/">go 언어용 fortune cookie package</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/">go-sdlgui 에서 한글 표시 지원추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">go언어로 TCP server와 GUI client를 만들어 보기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-24-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Ctcpserverclient%EC%9D%98%EC%A0%84%ED%98%95%EC%A0%81%ED%98%95%ED%83%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%ED%99%94/">go언어에서 tcp server/client 의 전형적 형태. - 라이브러리화.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-20-go%EC%96%B8%EC%96%B4%EB%A1%9Cgui%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%84%EB%A7%8C%EB%93%A4%EA%B8%B0/">go 언어로 GUI 프로그램을 만들기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-19-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C2dtilebasedspace%EC%9A%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4/">go언어에서 2d tile based space 용 라이브러리들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-17-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cinterface%EC%9D%98%EC%9D%98%EB%AF%B8/">go 언어에서 interface의 의미.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-16-%EC%9A%94%EC%A6%98rust%EB%A5%BC%EC%B6%94%EC%B2%9C%ED%95%98%EB%8A%94%EA%B8%80%EB%93%A4%EC%9D%B4%EB%A7%8E%EC%9D%B4%EC%98%AC%EB%9D%BC%EC%98%A4%EB%8B%88go%EC%97%90%EB%8C%80%ED%95%B4%EC%84%9C%EB%8F%84%EC%B6%94%EC%B2%9C%ED%95%98%EB%8A%94%EA%B8%80%EC%9D%84%EC%8D%A8%EB%B4%85%EB%8B%88%EB%8B%A4/">요즘 Rust를 추천 하는 글들이 많이 올라오니 Go에 대해서도 추천하는 글을 써봅니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-15-go%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%EC%8B%A4%EC%8B%9C%EA%B0%84%ED%86%B5%EA%B3%84%EB%A5%BC%EA%B8%B0%EB%A1%9D%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/">go 프로그램에서 실시간 통계를 기록하고 싶을때 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/">go 언어용 python-like log 모듈 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

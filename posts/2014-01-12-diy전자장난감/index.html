@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>DIY 전자 장난감  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="DIY 전자 장난감들을 가지고 놀고 싶어서 이것 저것 조사해본 기록입니다.
+주요 선정 기준은 가격이 적당히 저렴해야 하고 (10만원 이 넘지 말 것) S/W 가 공개 소프트웨어로 구성되어 있어서 수정/확장이 자유로울 것. 개발을 위한 커뮤니티 형성이 잘되어 있는 것 S/W 개발만이 아니고 GPIO 등을 사용할 수 있는 H/W 지원이 될 것 크기는 적당히 작고(손바닥 크기 이하) 간단하게 전원 공급을 할수 있을 것. 입니다.
+( gboard 8.9 등 완제품은 가지고 놀 수 있는 범위가 너무 제한 적이라 )">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="DIY 전자 장난감 " />
+<meta property="og:description" content="DIY 전자 장난감들을 가지고 놀고 싶어서 이것 저것 조사해본 기록입니다.
+주요 선정 기준은 가격이 적당히 저렴해야 하고 (10만원 이 넘지 말 것) S/W 가 공개 소프트웨어로 구성되어 있어서 수정/확장이 자유로울 것. 개발을 위한 커뮤니티 형성이 잘되어 있는 것 S/W 개발만이 아니고 GPIO 등을 사용할 수 있는 H/W 지원이 될 것 크기는 적당히 작고(손바닥 크기 이하) 간단하게 전원 공급을 할수 있을 것. 입니다.
+( gboard 8.9 등 완제품은 가지고 놀 수 있는 범위가 너무 제한 적이라 )" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-01-12-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%90/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-01-12T21:12:00+09:00" />
+<meta property="article:modified_time" content="2014-01-12T21:12:00+09:00" />
+<meta itemprop="name" content="DIY 전자 장난감 ">
+<meta itemprop="description" content="DIY 전자 장난감들을 가지고 놀고 싶어서 이것 저것 조사해본 기록입니다.
+주요 선정 기준은 가격이 적당히 저렴해야 하고 (10만원 이 넘지 말 것) S/W 가 공개 소프트웨어로 구성되어 있어서 수정/확장이 자유로울 것. 개발을 위한 커뮤니티 형성이 잘되어 있는 것 S/W 개발만이 아니고 GPIO 등을 사용할 수 있는 H/W 지원이 될 것 크기는 적당히 작고(손바닥 크기 이하) 간단하게 전원 공급을 할수 있을 것. 입니다.
+( gboard 8.9 등 완제품은 가지고 놀 수 있는 범위가 너무 제한 적이라 )"><meta itemprop="datePublished" content="2014-01-12T21:12:00+09:00" />
+<meta itemprop="dateModified" content="2014-01-12T21:12:00+09:00" />
+<meta itemprop="wordCount" content="166">
+<meta itemprop="keywords" content="리눅스,DIY,임베디드,안드로이드," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DIY 전자 장난감 "/>
+<meta name="twitter:description" content="DIY 전자 장난감들을 가지고 놀고 싶어서 이것 저것 조사해본 기록입니다.
+주요 선정 기준은 가격이 적당히 저렴해야 하고 (10만원 이 넘지 말 것) S/W 가 공개 소프트웨어로 구성되어 있어서 수정/확장이 자유로울 것. 개발을 위한 커뮤니티 형성이 잘되어 있는 것 S/W 개발만이 아니고 GPIO 등을 사용할 수 있는 H/W 지원이 될 것 크기는 적당히 작고(손바닥 크기 이하) 간단하게 전원 공급을 할수 있을 것. 입니다.
+( gboard 8.9 등 완제품은 가지고 놀 수 있는 범위가 너무 제한 적이라 )"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">DIY 전자 장난감 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-01-12T21:12:00+09:00">January 12, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>DIY 전자 장난감들을 가지고 놀고 싶어서 이것 저것 조사해본 기록입니다.</p>
+<p>주요 선정 기준은 
+가격이 적당히 저렴해야 하고 (10만원 이 넘지 말 것) 
+S/W 가 공개 소프트웨어로 구성되어 있어서 수정/확장이 자유로울 것. 
+개발을 위한 커뮤니티 형성이 잘되어 있는 것 
+S/W 개발만이 아니고 GPIO 등을 사용할 수 있는 H/W 지원이 될 것 
+크기는 적당히 작고(손바닥 크기 이하) 간단하게 전원 공급을 할수 있을
+것. 
+입니다.</p>
+<p>( gboard 8.9 등 완제품은 가지고 놀 수 있는 범위가 너무 제한 적이라 )</p>
+<p>아두이노 :<a href="http://arduino.cc/">http://arduino.cc/</a> 
+<a href="http://mirror.enha.kr/wiki/Arduino">http://mirror.enha.kr/wiki/Arduino</a></p>
+<p>라즈베리파이 : <a href="http://www.raspberrypi.org/">http://www.raspberrypi.org/</a> 
+<a href="http://mirror.enha.kr/wiki/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%20%ED%8C%8C%EC%9D%B4">http://mirror.enha.kr/wiki/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%20%ED%8C%8C%EC%9D%B4</a></p>
+<p>UDOO : <a href="http://www.udoo.org/">http://www.udoo.org/</a></p>
+<p>intel galileo : <a href="http://arduino.cc/en/ArduinoCertified/IntelGalileo">http://arduino.cc/en/ArduinoCertified/IntelGalileo</a></p>
+<p>비글본 블랙 : <a href="http://www.leocom.kr/Beaglebone/">http://www.leocom.kr/Beaglebone/</a></p>
+<p>ODROID :
+<a href="http://hardkernel.com/main/products/prdt_info.php?g_code=G138745696275">http://hardkernel.com/main/products/prdt_info.php?g_code=G138745696275</a></p>
+<p>여기를 보면 비슷한 개발 보드들이 많이 있습니다. 
+<a href="http://www.devicemart.co.kr/goods/list.php?category=002038">http://www.devicemart.co.kr/goods/list.php?category=002038</a></p>
+<p>아래로는 화면/배터리만 없다 뿐인 안드로이드 완제품들 - H/W 장치 추가하는
+재미가 없음.</p>
+<p>이 수준이면 vita tv 나 nvidia shield 와도 별 차이가 없는 수준.</p>
+<p>MK802 : <a href="https://www.miniand.com/products/MK802%20Android%20Mini%20PC">https://www.miniand.com/products/MK802%20Android%20Mini%20PC</a></p>
+<p>Chrome Cast
+: <a href="http://mirror.enha.kr/wiki/%ED%81%AC%EB%A1%AC%EC%BA%90%EC%8A%A4%ED%8A%B8">http://mirror.enha.kr/wiki/%ED%81%AC%EB%A1%AC%EC%BA%90%EC%8A%A4%ED%8A%B8</a></p>
+<p>Ouya : <a href="https://www.ouya.tv/">https://www.ouya.tv/</a></p>
+<p>H/W 는 유사하지만 목적이 다른 것들</p>
+<p>포고플러그 : <a href="http://pogoplug.com/devices">http://pogoplug.com/devices</a></p>
+<p>그리고 이와 별도로 아예 USB 로 gpio를 사용하고 싶다면</p>
+<p>USB GPIO : <a href="http://numato.com/8-channel-usb-gpio-module">http://numato.com/8-channel-usb-gpio-module</a> 
+리눅스도 잘 지원하는 것 같습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/diy/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">DIY</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">임베디드</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">안드로이드</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-10-27-%ED%95%9C%EC%84%B1gboard89%EC%9D%98%EA%B8%B0%EC%88%A0%EC%A0%81%EB%AC%B8%EC%A0%9C/">한성 gboard 8.9의 기술적 문제 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-24-%ED%95%9C%EC%84%B1gboard89%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0/">한성 gboard 8.9에 리눅스를 설치하고.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EB%A5%BC%EA%B8%B0%EB%8B%A4%EB%A0%B8%EC%A7%80%EB%A7%8C%EB%AA%A8%ED%86%A0%EB%A1%9C%EC%9D%B4%EB%A5%BC%EC%82%AC%EC%A7%80%EC%95%8A%EC%9D%80%EC%9D%B4%EC%9C%A0/">안드로이드를 기다렸지만 모토로이를 사지 않은이유</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/">모두가 아이폰을 외칠때..</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-07-%ED%95%9C%EC%84%B1%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">한성 인민 에어 를 샀습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-09-28-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%9D%98%ED%99%9C%EC%9A%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%B5%9C%EC%8B%A0%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%9C%BC%EB%A1%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">엑스페리아 레이의 활용을 위해 최신 젤리빈으로 업데이트를 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-17-gboard89%ED%95%9C%EB%8B%AC%EC%A2%80%EB%84%98%EA%B2%8C%EC%82%AC%EC%9A%A9%ED%95%9C%EC%86%8C%EA%B0%90/">gboard 8.9 한 달 좀 넘게 사용한 소감 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-06-01-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/">리눅스 엔트로피?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/">우분투 sublime text2에서 한글을 입력하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-26-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%A3%BC%EB%B6%84%ED%88%AC%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9Cgui%EC%97%86%EC%9D%B4%ED%82%A4%EB%B3%B4%EB%93%9C%EC%98%B5%EC%85%98%EC%9D%84%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94%EB%B2%95/">우분투/주분투/민트 에서 GUI 없이 키보드 옵션을 설정하는 법 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/">한성 보스몬스터 77 리눅스 삽질기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">우분투/리눅스 민트에서 클라우드 스토리지 사용하기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/">postgresql 삽질기;;</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">리눅스 민트 14 시나몬을 설치했습니다.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

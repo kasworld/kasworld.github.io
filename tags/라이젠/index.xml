@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>라이젠 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EC%A0%A0/</link>
+    <description>Recent content in 라이젠 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 29 Feb 2020 15:33:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EC%A0%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>새 기계의 성능테스트 의 기록 </title>
+      <link>https://kasworld.github.io/posts/2020-02-29-%EC%83%88%EA%B8%B0%EA%B3%84%EC%9D%98%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98%EA%B8%B0%EB%A1%9D/</link>
+      <pubDate>Sat, 29 Feb 2020 15:33:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-02-29-%EC%83%88%EA%B8%B0%EA%B3%84%EC%9D%98%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98%EA%B8%B0%EB%A1%9D/</guid>
+      <description>새 컴퓨터가 준비 되었으니 당연히 성능테스트를 진행 해봤습니다.
+사양은 전에 쓴대로 AMD 라이젠 7 3700X + X570 보드+ 128GB ram 입니다.
+goguelike tower(게임) 서버와 다중 접속 테스트용 multiclient 를 사용해서
+1000 클라이언트(connection)을 테스트 해보니 전혀 부하가 걸리지 않아서
+10000 클라이언트를 걸어 보았습니다. 바로 open file 부족 에러가 나더군요. 까먹고 있던 linux의 서버 설정들을 해주었습니다.
+/etc/security/limits.conf 파일에 * soft nofile 999999 * hard nofile 999999 * soft core unlimited * hard core unlimited</description>
+    </item>
+    
+    <item>
+      <title>데스크탑 업그레이드 AMD 라이젠 7 3700X &#43; X570 보드&#43; 128GB ram </title>
+      <link>https://kasworld.github.io/posts/2020-02-28-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9Camd%EB%9D%BC%EC%9D%B4%EC%A0%A073700xx570%EB%B3%B4%EB%93%9C128gbram/</link>
+      <pubDate>Fri, 28 Feb 2020 10:17:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-02-28-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9Camd%EB%9D%BC%EC%9D%B4%EC%A0%A073700xx570%EB%B3%B4%EB%93%9C128gbram/</guid>
+      <description>요즘엔 노트북도 데스크탑못지 않게 빠르니 앞으로는 데스크탑은 사지 않고 노트북만 쓰겠어! 라고 생각했던 적이 저에게도 있었습니다. ^^;
+2년 반 정도 잘 사용해온 한성 노트북이 goguelike 플레이를 녹화 하는데 버벅이더군요.
+인텔 i7-7700HQ (4코어 8쓰레드) cpu 에 24GB 램 1T nvme 디스크 로는 모자란가? 하고 호시탐탐 업그레이드를 위한 조사를 몇달간! 진행했습니다.
+업그레이드를 하면 적어도 2배는 빨라져야한다. 라는 기준을 세우고 검색을 해봤으나 현재 노트북에서는 극도로 많은 비용( 300만원 이상 ) 을 지불 하기 전에는 2배성능의 기계를 살수 없다는 것을 알았습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

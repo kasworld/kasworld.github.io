@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Help For Linux: I Cannot Click On Flash In Ubuntu : Solved
+파이어 폭스/구글 크롬 가리지 않고 일어나는 문제입니다.
+핵심은
+export GDK_NATIVE_WINDOWS=1
+을 해주는것인데
+gksudo gedit /usr/lib/nspluginwrapper/i386/linux/npviewer
+에 마지막줄 전에 써주는 것으로 해결되는 군요.
+재미있는것은 eclipse의 다이얼로그 버튼이 눌리지 않는 문제도 같은 방법으로
+(eclipse 를 실행하기 전에 export 를 해주면 됩니다. )
+해결된다는 거..">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법" />
+<meta property="og:description" content="Help For Linux: I Cannot Click On Flash In Ubuntu : Solved
+파이어 폭스/구글 크롬 가리지 않고 일어나는 문제입니다.
+핵심은
+export GDK_NATIVE_WINDOWS=1
+을 해주는것인데
+gksudo gedit /usr/lib/nspluginwrapper/i386/linux/npviewer
+에 마지막줄 전에 써주는 것으로 해결되는 군요.
+재미있는것은 eclipse의 다이얼로그 버튼이 눌리지 않는 문제도 같은 방법으로
+(eclipse 를 실행하기 전에 export 를 해주면 됩니다. )
+해결된다는 거.." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2010-02-22-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%ED%94%8C%EB%9E%98%EC%8B%9C%EA%B0%80%ED%81%B4%EB%A6%AD%EC%9D%B4%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94%EB%B2%84%EA%B7%B8%EB%A5%BC%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94%EB%B2%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2010-02-22T15:08:00+09:00" />
+<meta property="article:modified_time" content="2010-02-22T15:08:00+09:00" />
+<meta itemprop="name" content="우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법">
+<meta itemprop="description" content="Help For Linux: I Cannot Click On Flash In Ubuntu : Solved
+파이어 폭스/구글 크롬 가리지 않고 일어나는 문제입니다.
+핵심은
+export GDK_NATIVE_WINDOWS=1
+을 해주는것인데
+gksudo gedit /usr/lib/nspluginwrapper/i386/linux/npviewer
+에 마지막줄 전에 써주는 것으로 해결되는 군요.
+재미있는것은 eclipse의 다이얼로그 버튼이 눌리지 않는 문제도 같은 방법으로
+(eclipse 를 실행하기 전에 export 를 해주면 됩니다. )
+해결된다는 거.."><meta itemprop="datePublished" content="2010-02-22T15:08:00+09:00" />
+<meta itemprop="dateModified" content="2010-02-22T15:08:00+09:00" />
+<meta itemprop="wordCount" content="54">
+<meta itemprop="keywords" content="플래시,ubuntu,linux,리눅스,우분투," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법"/>
+<meta name="twitter:description" content="Help For Linux: I Cannot Click On Flash In Ubuntu : Solved
+파이어 폭스/구글 크롬 가리지 않고 일어나는 문제입니다.
+핵심은
+export GDK_NATIVE_WINDOWS=1
+을 해주는것인데
+gksudo gedit /usr/lib/nspluginwrapper/i386/linux/npviewer
+에 마지막줄 전에 써주는 것으로 해결되는 군요.
+재미있는것은 eclipse의 다이얼로그 버튼이 눌리지 않는 문제도 같은 방법으로
+(eclipse 를 실행하기 전에 export 를 해주면 됩니다. )
+해결된다는 거.."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">우분투에서 플래시가 클릭이 되지 않는 버그를 해결하는 법</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2010-02-22T15:08:00+09:00">February 22, 2010</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="http://helpforlinux.blogspot.com/2009/11/i-cannot-click-on-flash-in-ubuntu.html">Help For Linux: I Cannot Click On Flash In Ubuntu :
+Solved</a></p>
+<p>파이어 폭스/구글 크롬 가리지 않고 일어나는 문제입니다.</p>
+<p>핵심은</p>
+<p>export GDK_NATIVE_WINDOWS=1</p>
+<p>을 해주는것인데</p>
+<p>gksudo gedit /usr/lib/nspluginwrapper/i386/linux/npviewer</p>
+<p>에 마지막줄 전에 써주는 것으로 해결되는 군요.</p>
+<p>재미있는것은 eclipse의 다이얼로그 버튼이 눌리지 않는 문제도 같은
+방법으로</p>
+<p>(eclipse 를 실행하기 전에 export 를 해주면 됩니다. )</p>
+<p>해결된다는 거..</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%8C%EB%9E%98%EC%8B%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">플래시</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/">모두가 아이폰을 외칠때..</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%98%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C%EB%A5%BC%ED%99%9C%EC%84%B1%ED%99%94%EC%8B%9C%ED%82%A4%EA%B8%B0/">노트북의 가속센서를 활성화 시키기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/">모두가 아이폰을 이야기할때</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-11-04-%EB%AC%B4%EC%9E%90%EA%B2%8C%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EC%98%AC%EB%A6%AC%EB%8A%94%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%AC%EC%8A%A4%ED%8C%85/">무자게 오랫만에 올리는 리눅스 포스팅 ^^</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2009-06-24-%EC%9D%B4%EA%B2%8C%EB%8B%A4evolution%ED%83%93%EC%9D%B4%EB%8B%A4/">이게다  evolution 탓이다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-12-06-grub%EC%9D%B4%EB%82%A0%EC%95%84%EA%B0%94%EC%9D%84%EA%B2%BD%EC%9A%B0%EB%B3%B5%EA%B5%AC/">grub 이 날아 갔을경우 복구</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-12-06-x61t%EC%97%90%EC%84%9C%ED%83%9C%EB%B8%94%EB%A6%BF%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">x61t 에서 태블릿 활성화 하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/">우분투에서 로컬에 설치된 문서를 편하게 보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-12-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%ED%8F%AC%EB%A9%A7%ED%95%98%EA%B3%A0%EC%83%88%EB%A1%9C%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">오랫만에 노트북을 포멧하고 새로 설치 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-09-06-%EC%A7%91%EC%97%90%ED%8C%8C%EC%9D%BC%EC%84%9C%EB%B2%84%EB%A5%BC%EC%85%8B%ED%8C%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">집에 파일서버를 셋팅 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%93%A4%EC%9D%84%EB%B3%B4%EB%A0%A4%EB%A9%B4/">우분투에서 설치된 문서들을 보려면</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-30-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C%EC%9C%88%EB%8F%84%EC%9A%B0%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4%ED%95%84%EC%9A%94%ED%95%9C%EA%B2%BD%EC%9A%B0/">리눅스에서 윈도우 프로그램이 필요한 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%B6%80%ED%8C%85%EC%9D%B4%EC%9D%B4%EC%83%81%ED%95%98%EA%B2%8C%EB%8A%90%EB%A6%B0%EA%B2%BD%EC%9A%B0/">우분투 부팅이 이상하게 느린경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2007-12-16-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EB%A9%94%EC%9D%B8%EC%9C%BC%EB%A1%9C%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/">리눅스를 메인으로 사용해보기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-03-28-%EC%9A%B0%EB%B6%84%ED%88%AC804%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9C%BC%EB%A1%9C%EB%81%9D%EB%83%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 8.04 로 업그레이드를 성공적으로 끝냈습니다.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

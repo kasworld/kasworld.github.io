@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike2의 AI에 상전이 엔진을 적용했습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &ldquo;유한 상태 기계&quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
+상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike2의 AI에 상전이 엔진을 적용했습니다. " />
+<meta property="og:description" content="상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &ldquo;유한 상태 기계&quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
+상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-06-19T08:32:00+09:00" />
+<meta property="article:modified_time" content="2015-06-19T08:32:00+09:00" />
+<meta itemprop="name" content="goguelike2의 AI에 상전이 엔진을 적용했습니다. ">
+<meta itemprop="description" content="상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &ldquo;유한 상태 기계&quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
+상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다."><meta itemprop="datePublished" content="2015-06-19T08:32:00+09:00" />
+<meta itemprop="dateModified" content="2015-06-19T08:32:00+09:00" />
+<meta itemprop="wordCount" content="216">
+<meta itemprop="keywords" content="AI,golang,goguelike2,상전이 엔진,stack,FSM," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike2의 AI에 상전이 엔진을 적용했습니다. "/>
+<meta name="twitter:description" content="상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &ldquo;유한 상태 기계&quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
+상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike2의 AI에 상전이 엔진을 적용했습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-06-19T08:32:00+09:00">June 19, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 
+그래도 &ldquo;유한 상태 기계&quot;같은 심심한 이름 보다는 상전이 엔진( Phase
+Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지
+않으니 좋아보이는 군요.</p>
+<p>상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; 
+<a href="http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84">http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84</a></p>
+<h1 id="오류가-발생했습니다">오류가 발생했습니다.</h1>
+<p><!-- raw HTML omitted --><a href="https://www.youtube.com">www.youtube.com</a><!-- raw HTML omitted -->에서 동영상을 시청하거나 브라우저에서
+자바스크립트가 사용 중지된 경우 사용 설정하세요.</p>
+<p>3.3배속 AI 플레이 동영상 </p>
+<p>goguelike2의 기존 AI를 완전히 재작성해서 <!-- raw HTML omitted -->상전이엔진<!-- raw HTML omitted --> stack-based
+FSM을 사용하도록 완전히 재작성하였습니다. 
+AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야
+겨우 좀 쓸만한 형태 
+( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고
+있습니다.</p>
+<p>그리고 이제 조금 FSM을 어떻게 사용하면 좋을지에 대해서도 감이 오는
+군요. 
+( FSM을 사용한것은 이번이 2번째 )</p>
+<p>상황에 따라 미래의 state를 예약해야 하는 것이 필요해서 stack-based FSM을
+만들어 쓰고 있습니다. 
+( 또는 sub-state call 용으로도 사용할 계획이&quot;었&rdquo; 습니다. )</p>
+<p>추가로 미래또는 다른 state로 보낼 argument 저장을 위해 name-value
+stack을 만들었는데 쓰다보니 쓸일이 없군요. 그냥 stack으로도 충분할듯
+합니다.</p>
+<p>결과적으로 AI는 
+step별 실행을 위한 
+<a href="https://github.com/kasworld/runstep">https://github.com/kasworld/runstep</a> 
+goroutine 실행 상태 제어및 취소를 위한 
+<a href="https://github.com/kasworld/runstate">https://github.com/kasworld/runstate</a> 
+nv-stack ( 미공개 상태) 
+그리고 분리되었다 병합된 FSM 모듈 
+들을 복합적으로 사용해서 flow 제어를 하는 구조가 되었습니다. 
+( 덕분에 구조를 잡고 정리하는데 꽤 머리가 아팠습니다. )</p>
+<p>그리고 그 외에 보조 모듈로 
+주변 공간을 분석하는 AIEnv  모듈과 
+과거의 기억을 관장하는 AIMemory 를 사용하고 있습니다.</p>
+<p>다음으로는 AI에  &ldquo;개성(characteristic)&ldquo;을 부여하는 작업을 해보고
+싶군요. 
+그 다음에는 faction별 집단 행동역시 고민하고 있습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike2/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike2</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%83%81%EC%A0%84%EC%9D%B4-%EC%97%94%EC%A7%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">상전이 엔진</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/stack/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">stack</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/fsm/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">FSM</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/">goguelike2에 소비성아이템, 버프 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-15-go4game%EC%9D%98%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99/">go4game의 게임 규칙 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-13-go4game%EC%97%90ai%EB%A5%BC%EB%B6%99%EC%9D%B4%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 AI를 붙이고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike2 의 몇몇 스크린 샷들. 작업 진행 사항. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-04-21-mmo%EB%A5%BC%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%83%EC%97%90%EB%A1%9C%EB%A7%9D%EC%9D%B4%EC%9E%88%EB%8B%A4%EB%A9%B4/">MMO를 만드는 것에 로망이 있다면 .</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-04-09-goguelike%EC%9D%98%EC%A7%80%ED%98%95%EC%83%9D%EC%84%B1%EB%B6%80%EB%B6%84%EC%9D%84%EC%99%84%EC%A0%84%EC%9E%AC%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike의 지형 생성 부분을 완전 재작업 하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/">go 언어에서 goroutine group을 같이 종료 시키기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/">메모리와 성능간의 trade-off , map vs slice</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/">go 언어용 fortune cookie package</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/">go-sdlgui 에서 한글 표시 지원추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code generation on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/code-generation/</link>
+    <description>Recent content in code generation on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 09 Oct 2019 12:28:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/code-generation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang (네트웍) 프로토콜 생성기 </title>
+      <link>https://kasworld.github.io/posts/2019-10-09-golang%EB%84%A4%ED%8A%B8%EC%9B%8D%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%83%9D%EC%84%B1%EA%B8%B0/</link>
+      <pubDate>Wed, 09 Oct 2019 12:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2019-10-09-golang%EB%84%A4%ED%8A%B8%EC%9B%8D%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%83%9D%EC%84%B1%EA%B8%B0/</guid>
+      <description>https://github.com/kasworld/genprotocol
+genprotocol - protocol 기반 코드 생성 ( goguelike 프로젝트를 하면서 만들어진 ) 네트웍 등에서 사용하기 위한 protocol 을 작성하는데 필요한 반복적 이고 기계적인 코드들을 자동으로 생성 해주는 프로그램 입니다. https://github.com/kasworld/wasmwebsocket 을 보면 예제를 볼 수 있습니다. 작성 이유는 하나의 프로젝트에서 여러종의 protocol 을 사용할 일이 생겨서 반복된 코드를 작성하다 보니 만들게 되었습니다. goguelike 를 예로 들면 game client - tower server tower server - ground server 의 2종의 protocol이 필요하고 사실상 비슷한데 조금 다른 코드들이 서로 구별 되어 쓰입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

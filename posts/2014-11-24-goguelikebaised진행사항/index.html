@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike:baised 진행사항  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="딱히 외적으로 변화한 부분이 없는 관계로 포스팅이 뜸했습니다만..
+내부적으로는 격변이라고 할 만큼의 수정이 있었습니다. ( 거의 모든 코드가 수정된 듯. )
+기본적으로는 기존의 코드를 모두 refactoring해서 30여개의 모듈로 분리하는 작업이 완료 되었습니다.
+그리고 client AI 를 위한 a-star 모듈과 이를 사용한 client AI 작업이 진행되었고 또 이를 이용한 loadtester 역시 만들었습니다.
+클라이언트 쪽 변경사항이라면 서버와 같이 모듈화 작업이 진행되면서 다양한 형태의 클라이언트를 만들기 위한 clientbase 모듈을 만들고 이를 sdlclient 와 loadtester에 적욯하였습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike:baised 진행사항 " />
+<meta property="og:description" content="딱히 외적으로 변화한 부분이 없는 관계로 포스팅이 뜸했습니다만..
+내부적으로는 격변이라고 할 만큼의 수정이 있었습니다. ( 거의 모든 코드가 수정된 듯. )
+기본적으로는 기존의 코드를 모두 refactoring해서 30여개의 모듈로 분리하는 작업이 완료 되었습니다.
+그리고 client AI 를 위한 a-star 모듈과 이를 사용한 client AI 작업이 진행되었고 또 이를 이용한 loadtester 역시 만들었습니다.
+클라이언트 쪽 변경사항이라면 서버와 같이 모듈화 작업이 진행되면서 다양한 형태의 클라이언트를 만들기 위한 clientbase 모듈을 만들고 이를 sdlclient 와 loadtester에 적욯하였습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-11-24-goguelikebaised%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-11-24T20:45:00+09:00" />
+<meta property="article:modified_time" content="2014-11-24T20:45:00+09:00" />
+<meta itemprop="name" content="goguelike:baised 진행사항 ">
+<meta itemprop="description" content="딱히 외적으로 변화한 부분이 없는 관계로 포스팅이 뜸했습니다만..
+내부적으로는 격변이라고 할 만큼의 수정이 있었습니다. ( 거의 모든 코드가 수정된 듯. )
+기본적으로는 기존의 코드를 모두 refactoring해서 30여개의 모듈로 분리하는 작업이 완료 되었습니다.
+그리고 client AI 를 위한 a-star 모듈과 이를 사용한 client AI 작업이 진행되었고 또 이를 이용한 loadtester 역시 만들었습니다.
+클라이언트 쪽 변경사항이라면 서버와 같이 모듈화 작업이 진행되면서 다양한 형태의 클라이언트를 만들기 위한 clientbase 모듈을 만들고 이를 sdlclient 와 loadtester에 적욯하였습니다."><meta itemprop="datePublished" content="2014-11-24T20:45:00+09:00" />
+<meta itemprop="dateModified" content="2014-11-24T20:45:00+09:00" />
+<meta itemprop="wordCount" content="392">
+<meta itemprop="keywords" content="golang,go programming language,goguelike," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike:baised 진행사항 "/>
+<meta name="twitter:description" content="딱히 외적으로 변화한 부분이 없는 관계로 포스팅이 뜸했습니다만..
+내부적으로는 격변이라고 할 만큼의 수정이 있었습니다. ( 거의 모든 코드가 수정된 듯. )
+기본적으로는 기존의 코드를 모두 refactoring해서 30여개의 모듈로 분리하는 작업이 완료 되었습니다.
+그리고 client AI 를 위한 a-star 모듈과 이를 사용한 client AI 작업이 진행되었고 또 이를 이용한 loadtester 역시 만들었습니다.
+클라이언트 쪽 변경사항이라면 서버와 같이 모듈화 작업이 진행되면서 다양한 형태의 클라이언트를 만들기 위한 clientbase 모듈을 만들고 이를 sdlclient 와 loadtester에 적욯하였습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike:baised 진행사항 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-11-24T20:45:00+09:00">November 24, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>딱히 외적으로 변화한 부분이 없는 관계로 포스팅이 뜸했습니다만..</p>
+<p>내부적으로는 격변이라고 할 만큼의 수정이 있었습니다. 
+( 거의 모든 코드가 수정된 듯. )</p>
+<p>기본적으로는 기존의 코드를 모두 refactoring해서 30여개의 모듈로 분리하는
+작업이 완료 되었습니다.</p>
+<p>그리고 client AI 를 위한 a-star 모듈과 이를 사용한 client AI 작업이
+진행되었고 또 이를 이용한 loadtester 역시 만들었습니다.</p>
+<p>클라이언트 쪽 변경사항이라면 
+서버와 같이 모듈화 작업이 진행되면서 다양한 형태의 클라이언트를 만들기
+위한 clientbase 모듈을 만들고 이를 sdlclient 와 loadtester에
+적욯하였습니다.</p>
+<p>그리고 지난 주말부터 작업한 go 언어용 sdl GUI library 작업이
+진행중입니다.</p>
+<p>기존 sdlclient는 거의 sdl 기본 기능 ( 선긋고 , bitmap 복사하고 )만을
+사용해서 만든 관계로 코드도 복잡하고 또 모듈화를 하거나 mouse를 지원
+하는데 어려움이 있었습니다.</p>
+<p>본격적으로 쓸만한 client를 만드려고 하니 mouse 지원이나 각종 GUI
+control들이 아쉬워서 이리 저리 찾아 봐도 정말 없기에 결국 만들게
+되었습니다. ;;;</p>
+<p>오늘 작업 까지 해서 기존 sdlclient에 필요한 control들이 모두 만들어
+졌으며 이를 적용한 sdlclient2 작업까지 끝났습니다.</p>
+<p>사실 고민하는데 3일 기본 작업하는데 2일 버그잡고 성능 개선 하는데 1일
+정도 걸렸으니 대단한 작업은 아닙니다.</p>
+<p>( AI path finding을 위한 a-star 작업은 고민이 1주 , 검색및 구현이 3시간
+, 디버그가 1일 정도 걸리더군요. -작업에 가장 시간이 많이 소요되는 것은
+고민(==설계) 인게 맞습니다. ^^ )</p>
+<p>그래서 현재 까지의 작업양을 확인해보니 드디어 총 코드의 양이 10000
+라인이 넘었습니다.</p>
+<p><!-- raw HTML omitted -->
+134 399 2794 ./lru/lru.go 
+110 299 2322 ./room/room.go 
+707 2023 17148 ./floor/floor.go 
+742 2036 17418 ./floor/floorao.go 
+137 389 2788 ./log/log.go 
+253 711 6296 ./towermaker/theme.go 
+474 1730 14631 ./towermaker/mapeditutil.go 
+304 912 5524 ./bias/bias.go 
+130 456 3076 ./astar/astar.go 
+327 994 8284 ./clientai/clientai.go 
+175 540 3623 ./rect/rect.go 
+77 173 1633 ./passiveobj/passiveobj.go 
+285 1281 10185 ./config/config.go 
+70 199 1380 ./dice/dice.go 
+80 273 1850 ./ivector2d/ivector2d.go 
+63 144 1061 ./terrain/terraintile.go 
+520 1933 12817 ./terrain/terrain.go 
+70 207 1222 ./util/util.go 
+35 76 720 ./server/server.go 
+268 613 5564 ./server/webinfo.go 
+17 33 277 ./version/version.go 
+199 573 3963 ./quadtree/quadtree.go 
+519 1513 11820 ./clientgui/clientgui.go 
+33 81 462 ./prime/prime.go 
+412 1101 10298 ./tower/tower.go 
+299 754 8080 ./clientbase/clientbase.go 
+497 1402 11974 ./activeobj/activeobj.go 
+61 172 1090 ./maze/maze.go 
+242 611 4992 ./clientpacket/clientpacket.go 
+48 120 692 ./id/id.go 
+77 191 1517 ./fieldobjs/fieldobjs.go 
+84 209 1800 ./actionstat/actionstat.go 
+234 718 4420 ./action/action.go 
+234 710 5396 ./floorfield/floorfield.go 
+83 242 1784 ./floorfield/ftpather.go 
+24 42 408 ./play/servicetower.go 
+892 2681 27685 ./play/sdlclient2.go 
+950 3044 28668 ./play/oldsdlclient.go 
+291 670 7087 ./play/edittower.go 
+21 34 333 ./play/newtower.go 
+22 34 327 ./play/maketower.go 
+73 201 1787 ./play/loadtester.go 
+145 381 2946 ./tcpconn/tcpconn.go 
+74 177 1329 ./frametask/frametask.go 
+10492 31082 259471 total<!-- raw HTML omitted --></p>
+<p>이제 더 이상 사용하지 않을 oldsdlclient.go 를 제외하면 9600라인
+정도군요.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/goguelike/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">goguelike</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-10-17-goguelikemapeditor/">goguelike map editor </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-09-goguelike%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/">goguelike 성능 테스트 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-27-goguelike%EC%83%81%ED%83%9C%EC%A0%95%EB%B3%B4%EC%9D%98%EC%B6%94%EA%B0%80%EB%B0%8F%EA%B0%84%EB%8B%A8%EC%84%A4%EB%AA%85/">goguelike 상태 정보의 추가및 간단 설명. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-25-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike 클라이언트를 개선하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-23-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EA%B0%9C%EC%84%A0/">goguelike 클라이언트 개선 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-22-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%84%9C%EB%B2%84%EB%A1%9C%EC%99%84%EC%A0%84%EB%B6%84%EB%A6%AC%ED%95%9Cgoguelike/">클라이언트/서버로 완전 분리한 goguelike </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-15-goguelike%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-30-goguelike%EB%AF%B8%EB%A1%9C%EC%A7%80%ED%98%95%EC%96%BC%EC%9D%8C%EB%A7%88%EC%9D%84%EC%A7%80%ED%98%95/">goguelike 미로 지형 - 얼음 마을 지형 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어로 만든 코드를 웹 브라우저에서 실행하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-16-pythongolang%EC%9D%98webframework%EC%A0%84%EC%9F%81/">python/golang의 web framework전쟁.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-29-goguelike%EB%AF%B8%EB%8B%88%EB%A7%B5%EC%B6%94%EA%B0%80/">goguelike 미니맵 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-28-goguelikeadventureof/">goguelike - adventure of @ </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-25-%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%83%EC%9D%98%EC%83%81%ED%83%9C2%EC%9D%98%EB%AA%A8%ED%97%98/">만들고 있는 것의 상태2 : &#34;@&#34;의 모험 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-08-20-%EC%9A%94%EC%A6%98%EC%A0%9C%EA%B0%80%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%83/">요즘 제가 만들고 있는 것</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-06-04-go4game%EC%9D%98spatialpartition%EC%9D%84octree%EB%A1%9C%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game의 spatial partition을 octree로 바꿨습니다. </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

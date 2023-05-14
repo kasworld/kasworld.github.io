@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>xubuntu 14.04 로 업그레이드를 했습니다.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드 하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. 작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 ) 일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. ( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니 연습용으론 최적입니다. )
+배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상 까먹습니다. sudo do-release-upgrade 를 사용합니다. 한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든 업그레이드를 완료해줍니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="xubuntu 14.04 로 업그레이드를 했습니다. " />
+<meta property="og:description" content="신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드 하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. 작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 ) 일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. ( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니 연습용으론 최적입니다. )
+배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상 까먹습니다. sudo do-release-upgrade 를 사용합니다. 한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든 업그레이드를 완료해줍니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-04-21-xubuntu1404%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-04-21T15:58:00+09:00" />
+<meta property="article:modified_time" content="2014-04-21T15:58:00+09:00" />
+<meta itemprop="name" content="xubuntu 14.04 로 업그레이드를 했습니다. ">
+<meta itemprop="description" content="신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드 하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. 작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 ) 일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. ( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니 연습용으론 최적입니다. )
+배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상 까먹습니다. sudo do-release-upgrade 를 사용합니다. 한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든 업그레이드를 완료해줍니다."><meta itemprop="datePublished" content="2014-04-21T15:58:00+09:00" />
+<meta itemprop="dateModified" content="2014-04-21T15:58:00+09:00" />
+<meta itemprop="wordCount" content="329">
+<meta itemprop="keywords" content="nvidia,14.04,업그레이드,드라이버,리눅스,우분투," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="xubuntu 14.04 로 업그레이드를 했습니다. "/>
+<meta name="twitter:description" content="신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드 하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. 작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 ) 일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. ( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니 연습용으론 최적입니다. )
+배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상 까먹습니다. sudo do-release-upgrade 를 사용합니다. 한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든 업그레이드를 완료해줍니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">xubuntu 14.04 로 업그레이드를 했습니다. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-04-21T15:58:00+09:00">April 21, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드
+하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. </p>
+<p>작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 )
+일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. </p>
+<p>( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니
+연습용으론 최적입니다. )</p>
+<p>배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상
+까먹습니다. </p>
+<p>sudo do-release-upgrade </p>
+<p>를 사용합니다. </p>
+<p>한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든
+업그레이드를 완료해줍니다. </p>
+<p>시스템 설정중 본인이 변경한 설정들이 있으면 중간 중간 보존할지 말지를
+물어보니 다른 일을 하다 보면 질문의 답을 기다리는 커서가 깜빡이는 화면을
+볼 수 있습니다. </p>
+<p>( 그러면 더 오래 걸리게 되겠지요. ^^ )</p>
+<p>노트북을 아무 문제 없이 업그레이드 하고 나서 &ldquo;역시 문제 없군&rdquo;, &ldquo;그리고
+달라진 것도 거의 없어 보이네.&rdquo; 하고 생각하면서 주 작업 머신의
+업그레이드를 진행했습니다. </p>
+<p>( 내부적으론 많이 바뀌었겠지만 사용하고 있는 설정을 거의 완벽하게 유지
+해주니 바뀐점을 느끼기 힘듭니다. ^^)</p>
+<p>주 작업 머신의 업그레이드 역시 전혀 문제없이 완료되기에(심지어 전 3
+모니터를 사용하고 있습니다. ) 뭔가 바뀌었나 하고 이런 저런 곳을 찾아보고
+벤치마크 프로그램을 실행해보고 있는데 3D쪽이 좀 느려진 느낌이 듭니다. </p>
+<p>어라? 하고 그래픽 드라이버를 살펴보니 제가 수동으로
+설치해놓은 NVIDIA-Linux-x86_64-337.12가 아니고 xubuntu 기본인
+nvidia-331 드라이버가 설치되어 있습니다. </p>
+<p>아마도 337.12는 정식 릴리즈가아닌 beta드라이버니 최신 안정 버전을 설치한
+것일 겁니다. </p>
+<p>예전 기억을 되살려 드라이버를 다시 설치했습니다. </p>
+<p>그리고 아무생각없이 재부팅.. </p>
+<p>&hellip;</p>
+<p>부팅이 안되는군요. .잠시 경직&hellip;</p>
+<p>곰곰히 생각해보니 예전 드라이버를 그냥 둔 채로 새 드라이버 설치를 진행
+했나봅니다. </p>
+<p>일단 부팅은 시켜야 하니 </p>
+<p>recovery모드로 부팅해서 ( 정확히는 이전 버전 커널로 부팅했습니다. )</p>
+<p><a href="http://www.yourownlinux.com/2014/04/how-to-install-nvidia-337-12-graphics-driver-in-linux.html">http://www.yourownlinux.com/2014/04/how-to-install-nvidia-337-12-graphics-driver-in-linux.html</a></p>
+<p>에 나온대로 </p>
+<p>sudo apt-get purge nvidia*</p>
+<p>를 하고 재부팅.. </p>
+<p>무사히 화면이 나오는 것을 보고 가슴을 쓸어 내렸습니다. </p>
+<p>요즘엔 리눅스를 사용하면서 문제가 생기는 경우가 워낙 적어서 아주
+오랫만에 당한 부팅 불가 였습니다.</p>
+<p>그리고는 14.04를 설치하면 적용하려고 했던 intel_pstate</p>
+<p><a href="http://www.webupd8.org/2014/04/prevent-your-laptop-from-overheating.html">http://www.webupd8.org/2014/04/prevent-your-laptop-from-overheating.html</a></p>
+<p>을 적용했습니다. </p>
+<p>일단 제 샌디브릿지 주 작업 머신에는 잘 적용된다고 해서 문제 없이
+적용했지만 </p>
+<p>하스웰에선 될지 안될지 모른다고 해서 하스웰이 들어 있는 노트북에는 아직
+적용하지 않은 상태 입니다. </p>
+<p>그리고 전 xubuntu를 사용하기때문에 별 상관 없어서 적용하지 않았지만
+ubuntu를 사용한다면 </p>
+<p><a href="http://www.webupd8.org/2014/04/10-things-to-do-after-installing-ubuntu.html">http://www.webupd8.org/2014/04/10-things-to-do-after-installing-ubuntu.html</a></p>
+<p>내용이 꽤 좋아 보입니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/nvidia/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nvidia</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/14.04/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">14.04</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">업그레이드</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">드라이버</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">집에서 프로그래밍 환경을 개선 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/">한성 보스몬스터 77 리눅스 삽질기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/">DIY 전자 장난감 2 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">결국 nas를 샀습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-07-%ED%95%9C%EC%84%B1%EC%9D%B8%EB%AF%BC%EC%97%90%EC%96%B4%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/">한성 인민 에어 를 샀습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-24-%ED%95%9C%EC%84%B1gboard89%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0/">한성 gboard 8.9에 리눅스를 설치하고.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-06-01-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/">리눅스 엔트로피?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/">우분투 sublime text2에서 한글을 입력하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-26-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%A3%BC%EB%B6%84%ED%88%AC%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9Cgui%EC%97%86%EC%9D%B4%ED%82%A4%EB%B3%B4%EB%93%9C%EC%98%B5%EC%85%98%EC%9D%84%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94%EB%B2%95/">우분투/주분투/민트 에서 GUI 없이 키보드 옵션을 설정하는 법 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">우분투/리눅스 민트에서 클라우드 스토리지 사용하기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/">postgresql 삽질기;;</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">리눅스 민트 14 시나몬을 설치했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">sublime text 2 에디터를 구입했습니다. - 수정했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/">wine 설치시 노틸러스의 짜증나는 notepad 연결 제거하기</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

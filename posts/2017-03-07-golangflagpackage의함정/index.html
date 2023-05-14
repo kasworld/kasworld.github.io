@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>golang flag package 의 함정  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
+AccountPool int
+AccountOverlap bool
+LimitStartCount int
+LimitEndCount int
+RetryDelayTimeOut int
+Storyname string
+일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
+go run rundriver/client_story.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="golang flag package 의 함정 " />
+<meta property="og:description" content="지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
+AccountPool int
+AccountOverlap bool
+LimitStartCount int
+LimitEndCount int
+RetryDelayTimeOut int
+Storyname string
+일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
+go run rundriver/client_story." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2017-03-07-golangflagpackage%EC%9D%98%ED%95%A8%EC%A0%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-03-07T10:30:00+09:00" />
+<meta property="article:modified_time" content="2017-03-07T10:30:00+09:00" />
+<meta itemprop="name" content="golang flag package 의 함정 ">
+<meta itemprop="description" content="지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
+AccountPool int
+AccountOverlap bool
+LimitStartCount int
+LimitEndCount int
+RetryDelayTimeOut int
+Storyname string
+일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
+go run rundriver/client_story."><meta itemprop="datePublished" content="2017-03-07T10:30:00+09:00" />
+<meta itemprop="dateModified" content="2017-03-07T10:30:00+09:00" />
+<meta itemprop="wordCount" content="278">
+<meta itemprop="keywords" content="golang,삽질,command line arguement,bash,flag,fish," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="golang flag package 의 함정 "/>
+<meta name="twitter:description" content="지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
+AccountPool int
+AccountOverlap bool
+LimitStartCount int
+LimitEndCount int
+RetryDelayTimeOut int
+Storyname string
+일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
+go run rundriver/client_story."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">golang flag package 의 함정 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-03-07T10:30:00+09:00">March 7, 2017</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game )
+ 프로젝트에서 </p>
+<p>서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. </p>
+<p>프로그램 실행용 인자들의 타입이 </p>
+<p><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Concurrent        int</p>
+<p><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->AccountPool       int</p>
+<p><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->AccountOverlap    bool</p>
+<p><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->LimitStartCount   int</p>
+<p><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->LimitEndCount     int</p>
+<p><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->RetryDelayTimeOut int</p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->Storyname
+string</p>
+<p>일때 </p>
+<p>아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본
+사람이라고 인정해 줄수 있을것 같습니다. </p>
+<p>-i 는 config를 url에서 얻어오는 옵션으로 </p>
+<p>( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )</p>
+<p>go run rundriver/client_story.go -i
+&ldquo;http://localhost:10003/client.ini?prefix=Aaa&amp;ll=1023&rdquo; -Concurrent 1000
+-LimitStartCount 0 -LimitEndCount 0 -AccountPool 2000 -AccountOverlap
+false -RetryDelayTimeOut 1 -Story Idle</p>
+<p>위의 형태로 실행하면 인자들중 일부가 적용되지 않아 제대로 작동하지
+않습니다. </p>
+<p>각 인자의 의미야 상상하시는 그대로 일것이고 ( 서버 테스트용 client를
+만들어봤다면 ) </p>
+<p>그래서 false가 역시 수상해 라고 </p>
+<p>go run rundriver/client_story.go -i
+&ldquo;http://localhost:10003/client.ini?prefix=Aaa&amp;ll=1023&rdquo; -Concurrent 1000
+-LimitStartCount 0 -LimitEndCount 0 -AccountPool 2000 -AccountOverlap 0
+-RetryDelayTimeOut 1 -Story Idle</p>
+<p>바꿔봐도 해결되지 않더군요. </p>
+<p>설마 linux에서 command line 길이 제한을 넘어가나 하고 </p>
+<p>구글을 검색해보니 </p>
+<p>$getconf ARG_MAX</p>
+<p>로 확인해 보라고 해서 확인하면 </p>
+<p>2097152</p>
+<p>약 2M &ndash;;</p>
+<p>내가 사용하고 있는 fish shell문제인가 하고 </p>
+<p>bash에서 실행해도 똑같습니다. ;; </p>
+<p>그럼 golang에서 사용하는 flag package 가 문제인가 하고 </p>
+<p>flag 소스 코드를 들여다 봐도 </p>
+<p>그런 제한 같은것은 없습니다. </p>
+<p>그래서 마음을 비우고 flag package 문서를 꼼꼼히 읽어보기 시작했습니다. </p>
+<p><a href="https://golang.org/pkg/flag/">https://golang.org/pkg/flag/</a></p>
+<p>-flag</p>
+<p>-flag=x</p>
+<p>-flag x  // non-boolean flags only</p>
+<p>ㅠㅠ </p>
+<p><strong>bool type 인 경우만 취급 방법이 다르다!</strong></p>
+<p>go run rundriver/client_story.go -i
+&ldquo;http://localhost:10003/client.ini?prefix=Aaa&amp;ll=1023&rdquo; -Concurrent 1000
+-LimitStartCount 0 -LimitEndCount 0 -AccountPool 2000
+-AccountOverlap=false -RetryDelayTimeOut 1 -Story Idle</p>
+<p>로 쓰니 문제 해결되었습니다. </p>
+<p>역시 뭔가 이상하면 매뉴얼을 봐야합니다. </p>
+<p>ps) 팀원들에게 공유했더니 다들 &ldquo;헛갈리니까 인자를 int로 바꾸고 내부에서
+변환해서 쓰자&quot;고 해서 int로 바꿨습니다. </p>
+<p>ps2) 예전에 <a href="http://kasw.blogspot.kr/2015/01/go.html">go언어를 사용하면서 주의 할
+부분</a> 에 적은 </p>
+<p>encoding/json 패키지를 사용해서 unit8(==byte) array 나 slice를 encode
+하는 경우 이 결과를 decode하면 에러가 난다. ;;; </p>
+<p>가 생각났습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%BD%EC%A7%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">삽질</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/command-line-arguement/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">command line arguement</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/bash/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">bash</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/flag/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">flag</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/fish/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">fish</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2016-10-15-%ED%98%84%EC%9E%AC%EA%B7%BC%ED%99%A9%EA%B2%B8%EC%A7%80%EA%B8%88%ED%95%98%EA%B3%A0%EC%9E%88%EB%8A%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%ED%86%B5%EA%B3%84golang%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">현재 근황 겸 지금 하고있는 프로젝트의 통계 (golang으로 만들고 있는 게임 서버 )</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/">라즈베리 파이와 go언어. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/">Serial ID 생성기 - 두번째 글 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-07-03-go%EC%9A%A9webframework%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%8A%B9%EC%A7%95/">go 용 web framework 벤치마크, 특징. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/">오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike2의 AI에 상전이 엔진을 적용했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/">goguelike2에 소비성아이템, 버프 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/">최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-25-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cgoroutinegroup%EC%9D%84%EA%B0%99%EC%9D%B4%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0/">go 언어에서 goroutine group을 같이 종료 시키기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/">메모리와 성능간의 trade-off , map vs slice</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/">go 언어에서 메모리 사용 프로파일링 하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/">go 언어용 fortune cookie package</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/">go-sdlgui 에서 한글 표시 지원추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/">goguelike ver 0.40.1 동시 접속 성능 테스트 결과 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

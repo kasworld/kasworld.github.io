@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="gowasm2dgame vs gowasm3dgame의 이야깁니다.
+gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
+gowasm3dgame 에는 두 종류의 게임(2d stage, 3d stage)을 구현 해보았습니다.
+두 프로젝트 모두 게임 로직은 서버의 stage에서 구현하고 있고 클라이언트는 viewer로만 작동하기 때문에 가능한 구조입니다.
+현재는 사용자의 게임조작을 서버로 전달하는 부분이 빠저있지만 추가하는 것이 어렵진 않습니다.
+gowasm2dgame 은 재미삼아 구현 한 것이고,
+gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
+gowasm2dgame html canvas version client">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 " />
+<meta property="og:description" content="gowasm2dgame vs gowasm3dgame의 이야깁니다.
+gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
+gowasm3dgame 에는 두 종류의 게임(2d stage, 3d stage)을 구현 해보았습니다.
+두 프로젝트 모두 게임 로직은 서버의 stage에서 구현하고 있고 클라이언트는 viewer로만 작동하기 때문에 가능한 구조입니다.
+현재는 사용자의 게임조작을 서버로 전달하는 부분이 빠저있지만 추가하는 것이 어렵진 않습니다.
+gowasm2dgame 은 재미삼아 구현 한 것이고,
+gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
+gowasm2dgame html canvas version client" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-05-28T15:28:00+09:00" />
+<meta property="article:modified_time" content="2020-05-28T15:28:00+09:00" />
+<meta itemprop="name" content="하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 ">
+<meta itemprop="description" content="gowasm2dgame vs gowasm3dgame의 이야깁니다.
+gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
+gowasm3dgame 에는 두 종류의 게임(2d stage, 3d stage)을 구현 해보았습니다.
+두 프로젝트 모두 게임 로직은 서버의 stage에서 구현하고 있고 클라이언트는 viewer로만 작동하기 때문에 가능한 구조입니다.
+현재는 사용자의 게임조작을 서버로 전달하는 부분이 빠저있지만 추가하는 것이 어렵진 않습니다.
+gowasm2dgame 은 재미삼아 구현 한 것이고,
+gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
+gowasm2dgame html canvas version client"><meta itemprop="datePublished" content="2020-05-28T15:28:00+09:00" />
+<meta itemprop="dateModified" content="2020-05-28T15:28:00+09:00" />
+<meta itemprop="wordCount" content="86">
+<meta itemprop="keywords" content="golang,webgl,websocket,game framework," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 "/>
+<meta name="twitter:description" content="gowasm2dgame vs gowasm3dgame의 이야깁니다.
+gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
+gowasm3dgame 에는 두 종류의 게임(2d stage, 3d stage)을 구현 해보았습니다.
+두 프로젝트 모두 게임 로직은 서버의 stage에서 구현하고 있고 클라이언트는 viewer로만 작동하기 때문에 가능한 구조입니다.
+현재는 사용자의 게임조작을 서버로 전달하는 부분이 빠저있지만 추가하는 것이 어렵진 않습니다.
+gowasm2dgame 은 재미삼아 구현 한 것이고,
+gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
+gowasm2dgame html canvas version client"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-05-28T15:28:00+09:00">May 28, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><!-- raw HTML omitted -->gowasm2dgame<!-- raw HTML omitted -->
+vs <!-- raw HTML omitted -->gowasm3dgame<!-- raw HTML omitted -->의 이야깁니다.</p>
+<p><!-- raw HTML omitted -->gowasm2dgame<!-- raw HTML omitted --> 에는 두가지 버전(2d, 3d) 의
+클라이이언트를 구현 하고</p>
+<p><!-- raw HTML omitted -->gowasm3dgame<!-- raw HTML omitted --> 에는 두 종류의 게임(2d stage, 3d
+stage)을 구현 해보았습니다.</p>
+<p>두 프로젝트 모두 게임 로직은 서버의 stage에서 구현하고 있고 클라이언트는
+viewer로만 작동하기 때문에 가능한 구조입니다.</p>
+<p>현재는 사용자의 게임조작을 서버로 전달하는 부분이 빠저있지만 추가하는
+것이 어렵진 않습니다.</p>
+<p><!-- raw HTML omitted -->gowasm2dgame<!-- raw HTML omitted --> 은 재미삼아 구현 한 것이고,</p>
+<p><!-- raw HTML omitted -->gowasm3dgame<!-- raw HTML omitted --> 은 장기적으로 stage기반의 online게임
+프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.</p>
+<p><!-- raw HTML omitted -->gowasm2dgame<!-- raw HTML omitted --> html canvas version client</p>
+<p><a href="../images/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-2d.png"><img src="../images/thumbnails/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-2d.png" alt=""></a></p>
+<p><!-- raw HTML omitted -->gowasm2dgame<!-- raw HTML omitted --> web gl version client</p>
+<p><a href="../images/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-3d.png"><img src="../images/thumbnails/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-3d.png" alt=""></a></p>
+<p><!-- raw HTML omitted -->gowasm3dgame<!-- raw HTML omitted --> 3d stage version</p>
+<p><a href="../images/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-3d.png"><img src="../images/thumbnails/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-3d.png" alt=""></a></p>
+<p><!-- raw HTML omitted -->gowasm3dgame<!-- raw HTML omitted --> 2d stage version</p>
+<p><a href="../images/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-2d.png"><img src="../images/thumbnails/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-2d.png" alt=""></a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/webgl/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">webgl</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/websocket/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">websocket</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/game-framework/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">game framework</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 웹 클라이언트를 추가 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/">2020년 현재 goguelike의 상태 정리 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-04-08-6%EB%85%84%EA%B0%80%EA%B9%8C%EC%9D%B4%EC%9E%91%EC%97%85%ED%95%B4%EC%98%A8goguelike%EC%9D%98%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%A5%BC%EA%B3%B5%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4/">6년 가까이 작업해온 goguelike 의 소스 코드를 공개 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2020-01-18-goguelike5000commit%EA%B8%B0%EB%85%90/">goguelike 5000 commit 기념 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-12-15-%EA%B7%B8%EC%A0%803d%EA%B3%B5%EA%B0%84%EC%97%90%EA%B3%B5%EB%93%A4%EC%9D%B4%EB%8F%8C%EC%95%84%EB%8B%A4%EB%8B%90%EB%BF%90%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/">그저 3d 공간에 공들이 돌아다닐 뿐인 프로젝트</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/">go 언어로 만든 배경이 있는 시계/달력 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/">wxgame2의 go 언어 포팅 gowasm2dgame </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-10-09-golang%EB%84%A4%ED%8A%B8%EC%9B%8D%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%83%9D%EC%84%B1%EA%B8%B0/">golang (네트웍) 프로토콜 생성기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-09-09-golang%EA%B3%BCgolangwasm%EC%82%AC%EC%9D%B4%EC%97%90websocket%EC%9C%BC%EB%A1%9C%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0/">golang 과 golang wasm 사이에 websocket으로 통신하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/">goguelike 2를 개발하면서 만들어진 라이브러리들의 일부를  공개/업데이트 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/">golang gopherjs로 만든 시계와 달력 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-10-02-goguelike%ED%8E%B8%ED%96%A5bias%EC%9D%98color%ED%91%9C%EC%8B%9C%EC%A7%80%EB%82%9C1%EB%85%84%EA%B0%84%EC%9E%91%EC%97%85%EB%9F%89/">goguelike 편향Bias의 color표시 , 지난 1년간 작업량 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-09-21-goguelike%EC%9B%90%ED%98%95%EC%8B%9C%EC%95%BC%EC%9D%98%EC%A0%81%EC%9A%A9/">goguelike 원형 시야의 적용 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-09-14-goguelike%EA%B8%B0%EC%96%B5%EC%83%81%EC%8B%A4%EA%B0%81%EC%A2%85%ED%95%A8%EC%A0%95%EC%9D%98%EC%B6%94%EA%B0%80/">goguelike 기억상실, 각종 함정의 추가 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-09-04-goguelike%EB%AF%B8%EB%8B%88%EB%A7%B5%EC%9D%98%EC%82%AD%EC%A0%9C2%EB%8B%A8%EC%A4%8C%EC%9D%98%EC%B6%94%EA%B0%80/">goguelike 미니맵의 삭제, 2단 줌의 추가 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

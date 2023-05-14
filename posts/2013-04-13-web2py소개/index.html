@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>web2py 소개  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="회사에서 세미나 용으로 작성한 글인데 쓰고 보니 이것 만으로도 web2py의 소개 용으로는 충분 할 것 같아서 그리고 블로그에 올려도 좋을 듯한 내용이어서 올려 봅니다.
+원문은 http://web2py.com/books/default/chapter/29/03 이며 번역을 한 것이 아니고 업무에 필요한/필요할 것 같은 것들을 정리한 글이라 원문과 같이 놓고 보셔야 이해가 될 듯 합니다. 제가 맡은 부분인 Overview 부분 만 입니다. ^^
+web2py 개요 - overview
+** **
+시작하기 - startup web2py는 윈도우와 맥에선 실행 프로그램으로도 제공되기 때문에 따로 python 이 필요하지 않다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="web2py 소개 " />
+<meta property="og:description" content="회사에서 세미나 용으로 작성한 글인데 쓰고 보니 이것 만으로도 web2py의 소개 용으로는 충분 할 것 같아서 그리고 블로그에 올려도 좋을 듯한 내용이어서 올려 봅니다.
+원문은 http://web2py.com/books/default/chapter/29/03 이며 번역을 한 것이 아니고 업무에 필요한/필요할 것 같은 것들을 정리한 글이라 원문과 같이 놓고 보셔야 이해가 될 듯 합니다. 제가 맡은 부분인 Overview 부분 만 입니다. ^^
+web2py 개요 - overview
+** **
+시작하기 - startup web2py는 윈도우와 맥에선 실행 프로그램으로도 제공되기 때문에 따로 python 이 필요하지 않다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-04-13T20:31:00+09:00" />
+<meta property="article:modified_time" content="2013-04-13T20:31:00+09:00" />
+<meta itemprop="name" content="web2py 소개 ">
+<meta itemprop="description" content="회사에서 세미나 용으로 작성한 글인데 쓰고 보니 이것 만으로도 web2py의 소개 용으로는 충분 할 것 같아서 그리고 블로그에 올려도 좋을 듯한 내용이어서 올려 봅니다.
+원문은 http://web2py.com/books/default/chapter/29/03 이며 번역을 한 것이 아니고 업무에 필요한/필요할 것 같은 것들을 정리한 글이라 원문과 같이 놓고 보셔야 이해가 될 듯 합니다. 제가 맡은 부분인 Overview 부분 만 입니다. ^^
+web2py 개요 - overview
+** **
+시작하기 - startup web2py는 윈도우와 맥에선 실행 프로그램으로도 제공되기 때문에 따로 python 이 필요하지 않다."><meta itemprop="datePublished" content="2013-04-13T20:31:00+09:00" />
+<meta itemprop="dateModified" content="2013-04-13T20:31:00+09:00" />
+<meta itemprop="wordCount" content="1737">
+<meta itemprop="keywords" content="web2py,개발,파이썬,프로그래밍,교육,세미나,python,스터디," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="web2py 소개 "/>
+<meta name="twitter:description" content="회사에서 세미나 용으로 작성한 글인데 쓰고 보니 이것 만으로도 web2py의 소개 용으로는 충분 할 것 같아서 그리고 블로그에 올려도 좋을 듯한 내용이어서 올려 봅니다.
+원문은 http://web2py.com/books/default/chapter/29/03 이며 번역을 한 것이 아니고 업무에 필요한/필요할 것 같은 것들을 정리한 글이라 원문과 같이 놓고 보셔야 이해가 될 듯 합니다. 제가 맡은 부분인 Overview 부분 만 입니다. ^^
+web2py 개요 - overview
+** **
+시작하기 - startup web2py는 윈도우와 맥에선 실행 프로그램으로도 제공되기 때문에 따로 python 이 필요하지 않다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">web2py 소개 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-04-13T20:31:00+09:00">April 13, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>회사에서 세미나 용으로 작성한 글인데 쓰고 보니 이것 만으로도 web2py의
+소개 용으로는 충분 할 것 같아서 그리고  블로그에 올려도 좋을 듯한
+내용이어서 올려 봅니다.</p>
+<p>원문은 
+<a href="http://web2py.com/books/default/chapter/29/03">http://web2py.com/books/default/chapter/29/03</a> 
+이며 번역을 한 것이 아니고 업무에 필요한/필요할 것 같은 것들을 정리한
+글이라 원문과 같이 놓고 보셔야 이해가 될 듯 합니다. 
+제가 맡은 부분인 Overview 부분 만 입니다. ^^</p>
+<p><strong><!-- raw HTML omitted -->web2py
+개요 - overview<!-- raw HTML omitted --></strong></p>
+<p>** 
+<!-- raw HTML omitted --><!-- raw HTML omitted -->**</p>
+<p><strong><!-- raw HTML omitted -->시작하기 -
+startup <!-- raw HTML omitted --></strong></p>
+<p><!-- raw HTML omitted -->web2py는
+윈도우와 맥에선 실행 프로그램으로도 제공되기 때문에 따로 python 이
+필요하지 않다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->물론
+linux 에서와 같이 소스 형태로 제공되는 것을 사용할 수도 있다. 이 경우는
+별도로 python의 설치가 필요하다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->소스형태로
+사용하려면 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->python
+web2py.py <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->맥에선
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->open
+web2py.app <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->윈도우에선
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->web2py.exe
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->와
+같이 실행한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->실행
+시 여러 인자들을 받을 수 있는데. 그 인자들은 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->-h
+인자를 주고 실행해서 볼 수 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->기본적으로는
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->http://localhost:8000/<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->http://127.0.0.1:8000/<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->으로(만)
+접근 가능한 형태로 실행된다.  ip를 0.0.0.0 으로 설정하면 외부 에서
+접근가능한 형태가 된다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->실행시
+-a 옵션이나 GUI 창에 관리앱인 admin용 암호를 줄 수 있는데 이 암호로만
+관리앱 (admin) 에 접근이 가능하다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->실행
+시에 이 관리앱 암호가 주어 지지 않으면 admin앱은 disable 된다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->apache +
+mod_proxy 로 접근 되는 경우가 아니면 localhost에서 만 접근 가능하며
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->만일
+proxy가 인지 되면 session cookie 는 secure로 설정되어 https가 아닌 경우
+admin로그인이 불가능해진다.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->즉
+보안 상의 이슈로 admin 접근은 https이거나 로컬 머신으로부터이어야만
+한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->이
+과정을 거쳐서 실행하면 자동으로 브라우저를 위의 URL로 실행해줄텐데
+자동으로 안열리면 위의 URL을 입력하자.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->브러우저
+상의 administrative interface 버튼을 클릭해서 관리앱로그인을 하며 이때
+실행시 입력한 암호를 입력한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->이
+관리앱 계정?은 1개 뿐이며 암호는 매 실행시 마다 물어본다. 싫다면
+&lt;recycle&gt;을 사용해 이전 암호를 사용할수도 있다. 이 계정은 web2py
+앱들의 인증시스템과는 별개로 작동되며 무관하다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->관리앱
+(admin) 을 들어가면 설치된 어플리케이션들을 볼수 있는데 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->기본적으론
+admin , examples , welcome 이 존재 할것이다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->admin
+은 현재 들어가있는 web2py 관리용 앱이며 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->examples
+은 온라인 문서 == 공식 web2py 홈페이지의 복제 이고 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->welcome은
+web2py 앱의 기본 틀로 만들어진 것이며 최초 실행시 본 사이트이다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->사용
+준비가 된 web2py 응용프로그램은 web2py appliance 라고 부른다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->(
+너무 기니까 우리는 web2py  앱 이라고 부르자. )<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->admin
+앱의 site 페이지에서 여러 기능을 사용할수 있는데.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->web2py
+앱의 배포 패키지를 설치 하거나 삭제 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->새로운
+앱 생성. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->앱을
+배포 가능 형태로 패키징 해서 다운 로드. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->임시
+파일들을 정리 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->enable
+/ disable  : 외부 머신으로부터의 접근을 허용/차단 상태로 설정.
+localhost나 proxy 를 통할때 영향을 받지 않는다. 앱 폴더에 DISABLED
+파일을 생성한다. http 503 error를 리턴.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->앱을
+편집 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->같은
+기능이 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->admin을
+사용해서 새로운 앱을 만들면 welcome 앱의 복제를 사용해서 만들기 때문에
+당장 작동 가능한 형태의 여러 파일들이 있는 형태로 만들어진다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->그리고
+wizard를 통해서 앱을 만들수도 있는데 이경우는 각종 다양한 기능을
+선택해가면서 생성할수 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->간단한
+예제들 - simple examples <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->new
+simple application을 통해서 myapp을 만든다.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->접근은
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->http://localhost:8000/myapp<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->admin에서
+edit을 선택<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->models</dt>
+<dd>데이터 모델링 : M<!-- raw HTML omitted --></dd>
+<dt><!-- raw HTML omitted -->controllers</dt>
+<dd>biz logic , workflow : C <!-- raw HTML omitted --></dd>
+<dt><!-- raw HTML omitted -->views</dt>
+<dd> date presentation : V <!-- raw HTML omitted --></dd>
+<dt><!-- raw HTML omitted -->languages</dt>
+<dd>다국어 지원 <!-- raw HTML omitted --></dd>
+<dt><!-- raw HTML omitted -->modules</dt>
+<dd>앱용 공용 라이브러리 코드 <!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted -->static
+files : image, css, js 등 <!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->plugins</dt>
+<dd>앱용 플러그인 설치 공간.<!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->web2py
+applications 폴더를 보면 같은 이름의 폴더가 생성되어 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->http
+url request는 controllers 내의 함수를 호출하게 되며 자동으로 appadmin.py
+와  default.py 파일이 만들어져 있을 것이다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->appadmin은
+db data 관리용.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->default
+가 사용자의 request를 받을 파일이다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->default.py에
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+index(): 
+   return &ldquo;Hello from MyApp&rdquo;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->를
+정의하면 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->http://127.0.0.1:8000/myapp/default/index<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->에
+대응하게 된다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->여기에
+대응하는 view는 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->default/index.html
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->html
+내에 {{=controll가 리턴한 파이선 object  }} <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->형태로
+사용 가능<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->즉
+C 에서<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+index(): 
+   return dict(message=&ldquo;Hello from MyApp&rdquo;)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V
+에서 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->&lt;html&gt; 
+  &lt;head&gt;&lt;/head&gt; 
+  &lt;body&gt; 
+     &lt;h1&gt;{{=message}}&lt;/h1&gt; 
+  &lt;/body&gt; 
+&lt;/html&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->와
+같이 사용. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C가
+딕셔너리를 리턴하면 web2py는 해당 V 를 view 폴더내의 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->[controller]/[function].[extension]<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->에서
+찾으려고 한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->extension은
+요청받은 확장자이며 default는 html 이다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->찾지
+못한경우 generic.확장자 를 시도. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->기본
+지원 확장자는 json, jsonp, xml, rss, ics, pdf  이다.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->production
+site에서는 generic 에 의존해서는 안된다. - 개발 중에만 쓸것. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->view를
+강제 지정하고싶으면 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->response.view
+= &lsquo;default/something.html&rsquo;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->같이
+쓸것.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->디버깅
+용으로 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{=response.toolbar()}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->을
+사용할수 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->lets
+count - 세션의 예<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C
+내에서 session object를 사용할수 있는데.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+index(): 
+   session.counter = (session.counter or 0) + 1 
+   return dict(message=&ldquo;Hello from MyApp&rdquo;,
+counter=session.counter)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->같이
+쓸수 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V는
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->&lt;html&gt; 
+  &lt;head&gt;&lt;/head&gt; 
+  &lt;body&gt; 
+     &lt;h1&gt;{{=message}}&lt;/h1&gt; 
+     &lt;h2&gt;Number of visits: {{=counter}}&lt;/h2&gt; 
+  &lt;/body&gt; 
+&lt;/html&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->처럼
+ 쓰면 된다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->폼/인자를
+받는 법<!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->C</dt>
+<dd>default.py <!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted -->def
+first(): 
+   return dict() 
+def second(): 
+   return dict()<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->V</dt>
+<dd>default/first.html<!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;What is your name?&lt;/h1&gt; 
+&lt;form action=&ldquo;second&rdquo;&gt; 
+ &lt;input name=&ldquo;visitor_name&rdquo; /&gt; 
+ &lt;input type=&ldquo;submit&rdquo; /&gt; 
+&lt;/form&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V:default/second.html<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;Hello {{=request.vars.visitor_name}}&lt;/h1&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->postbacks
+:자주 쓰이는 방법. 자신에게 post 해서 validation을 한후 redirect <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+first(): 
+   if request.vars.visitor_name: 
+       session.visitor_name = request.vars.visitor_name 
+       redirect(URL(&lsquo;second&rsquo;)) 
+   return dict() 
+def second(): 
+   return dict()<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->
+V : default/first.html<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+What is your name? 
+&lt;form&gt; 
+ &lt;input name=&ldquo;visitor_name&rdquo; /&gt; 
+ &lt;input type=&ldquo;submit&rdquo; /&gt; 
+&lt;/form&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->V:default/second.html</dt>
+<dd>session 으로 부터 받는다.<!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;Hello {{=session.visitor_name or
+&ldquo;anonymous&rdquo;}}&lt;/h1&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->C</dt>
+<dd>first 재작성 .<!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted -->def
+first(): 
+   form = FORM(INPUT(_name=&lsquo;visitor_name&rsquo;,
+requires=IS_NOT_EMPTY()), 
+             INPUT(_type=&lsquo;submit&rsquo;)) 
+   if form.process().accepted: 
+       session.visitor_name = form.vars.visitor_name 
+       redirect(URL(&lsquo;second&rsquo;)) 
+   return dict(form=form)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->또
+다른 더 좋은 방법 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+first(): 
+   form = SQLFORM.factory(Field(&lsquo;visitor_name&rsquo;, 
+                                label=&lsquo;what is your name?&rsquo;, 
+                                requires=IS_NOT_EMPTY())) 
+   if form.process().accepted: 
+       session.visitor_name = form.vars.visitor_name 
+       redirect(URL(&lsquo;second&rsquo;)) 
+   return dict(form=form)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->V</dt>
+<dd>default/first.html<!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+{{=form}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<dl>
+<dt><!-- raw HTML omitted -->form.process()</dt>
+<dd>validation 후 form자신을 돌려줌. form.accepted 는 form이 처리,검증되면
+True<!-- raw HTML omitted --></dd>
+</dl>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->session을
+사용하지 않고 url에 넣는 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->redirect(URL(&lsquo;second&rsquo;,vars=dict(name=name)))<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->방법도
+있지만 보안상 비추천이다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->다국어
+지원 - internationalization : I18N <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C
+에서 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->T(&ldquo;What
+is your name?&rdquo;)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V
+에서<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->&lt;h1&gt;{{=T(&ldquo;What
+is your name?&rdquo;)}}&lt;/h1&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->같이
+사용한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->또
+다른 예 그림 블로그 - an image blog<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->admin에서
+image 앱을 만들고.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->models폴더(이후
+M)의 db.py  를 편집하여 모델링 을 하자.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->기존
+내용이 있다면 충돌하지 않게 수정해서 마지막에 추가<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->아래
+코드는 실행되면 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->테이블이
+없으면 자동생성<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->존재하는
+데 scheme 이 다르면 일치하도록 alter , type 이 다르면 convert <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->존재하고
+같으면 아무일도 하지 않음. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+db : database connection <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->db
+= DAL(&ldquo;sqlite://storage.sqlite&rdquo;)</p>
+<p>db.define_table(&lsquo;image&rsquo;,<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+field name , type, options 
+  Field(&rsquo;title&rsquo;, unique=True),<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+name : file , type upload 
+  Field(&lsquo;file&rsquo;, &lsquo;upload&rsquo;),<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+record 가 문자로 표시될때 표시할 방법을 지정. record를 인자로 받는
+함수도 사용 가능. 
+  format = &lsquo;%(title)s&rsquo;)</p>
+<p>db.define_table(&lsquo;post&rsquo;,<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+image 테이블의 id 를 지정 
+  Field(&lsquo;image_id&rsquo;, &lsquo;reference image&rsquo;), 
+  Field(&lsquo;author&rsquo;), 
+  Field(&rsquo;email&rsquo;), 
+  Field(&lsquo;body&rsquo;, &rsquo;text&rsquo;))<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+validators 
+db.image.title.requires = IS_NOT_IN_DB(db, db.image.title) 
+db.post.image_id.requires = IS_IN_DB(db, db.image.id, &lsquo;%(title)s&rsquo;) 
+db.post.author.requires = IS_NOT_EMPTY() 
+db.post.email.requires = IS_EMAIL() 
+db.post.body.requires = IS_NOT_EMPTY()</p>
+<p>db.post.image_id.writable = db.post.image_id.readable = False<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->위
+코드가 성공적으로 실행되었다면 web2py는 자동으로 db 관리 페이지를
+생성한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->http://127.0.0.1:8000/images/appadmin<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->을
+통해서 db 관리를 할수 있다. ( 앞으론 앱관리자 라고 하자. )<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->M
+밑의 sql.log 를 확인해서 실행된 sql 을 볼수 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->appadmin은
+각 web2py 앱별로 별도 이므로 수정사항이 다른 앱에 영향을 주지 않는다.
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->이제
+만들 것 3가지<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->index
+페이지 - 제목으로 정렬된 image 목록을 표여주며 클릭시 상세 페이지로
+이동<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->show/id
+페이지 - 방문자에게 이미지 하나를 보여주고 덧글을 달수 있는 페이지
+<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->download/name -
+업로드된 이미지를 다운 받을 수 있는 페이지. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C -
+default.py<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+index(): 
+   images = db().select(db.image.ALL, orderby=db.image.title) 
+   return dict(images=images)</p>
+<p>def show(): 
+   image = db.image(request.args(0,cast=int)) or
+redirect(URL(&lsquo;index&rsquo;)) 
+   db.post.image_id.default = image.id 
+   form = SQLFORM(db.post) 
+   if form.process().accepted: 
+       response.flash = &lsquo;your comment is posted&rsquo; 
+   comments = db(db.post.image_id==image.id).select() 
+   return dict(image=image, comments=comments, form=form)</p>
+<p>def download(): 
+   return response.download(request, db)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V -
+default/index.html<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;Current Images&lt;/h1&gt; 
+&lt;ul&gt; 
+{{for image in images:}} 
+{{=LI(A(image.title, _href=URL(&ldquo;show&rdquo;, args=image.id)))}} 
+{{pass}} 
+&lt;/ul&gt;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V -
+default/show.html<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;Image: {{=image.title}}&lt;/h1&gt; 
+&lt;center&gt; 
+&lt;img width=&ldquo;200px&rdquo; 
+    src=&quot;{{=URL(&lsquo;download&rsquo;, args=image.file)}}&quot; /&gt; 
+&lt;/center&gt; 
+{{if len(comments):}} 
+ &lt;h2&gt;Comments&lt;/h2&gt;&lt;br /&gt;&lt;p&gt; 
+ {{for post in comments:}} 
+   &lt;p&gt;{{=post.author}} says
+&lt;i&gt;{{=post.body}}&lt;/i&gt;&lt;/p&gt; 
+ {{pass}}&lt;/p&gt; 
+{{else:}} 
+ &lt;h2&gt;No comments posted yet&lt;/h2&gt; 
+{{pass}} 
+&lt;h2&gt;Post a comment&lt;/h2&gt; 
+{{=form}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->등록된
+사용자만 접근가능하게 제한 하기. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->simple
+app 아니고 wizard로 생성된 앱을 기반으로 사용하여 앱을 만든다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->Auth
+관련 기능이 기본으로 생성되고 그상태에서<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C
+의 제한 하고 싶은 함수앞에 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->@auth.requires_login()<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->를
+추가한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->SQLFORM.grid
+, SQLFORM.smartgrid , 그리고 그룹 관리 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->앱관리자를
+사용해 manager 그룹을 만들고 사용자를 추가한후 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->@auth.requires_membership(&lsquo;manager&rsquo;) 
+def manage(): 
+   grid = SQLFORM.smartgrid(db.image,linked_tables=[&lsquo;post&rsquo;]) 
+   return dict(grid=grid)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V -
+default/manage.html<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h2&gt;Management Interface&lt;/h2&gt; 
+{{=grid}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->아래
+URL은 그룹에 속한 사용자만 접근할수 있게 된다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->http://127.0.0.1:8000/images/default/manage<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->기본
+레이아웃은 view/layout.html을 사용하고 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->models/menu.py
+를 통해서 몇몇 항목을 설정할수도 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->간단한
+위키 - a simple wiki <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->모델링.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->db
+= DAL(&lsquo;sqlite://storage.sqlite&rsquo;)</p>
+<p>from gluon.tools import * 
+auth = Auth(db) 
+auth.define_tables() 
+crud = Crud(db)</p>
+<p>db.define_table(&lsquo;page&rsquo;, 
+   Field(&rsquo;title&rsquo;), 
+   Field(&lsquo;body&rsquo;, &rsquo;text&rsquo;), 
+   Field(&lsquo;created_on&rsquo;, &lsquo;datetime&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->default=request.now<!-- raw HTML omitted --><!-- raw HTML omitted -->), 
+   Field(&lsquo;created_by&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->&lsquo;reference<!-- raw HTML omitted --><!-- raw HTML omitted -->
+auth_user&rsquo;, default=auth.user_id), 
+   format=&rsquo;%(title)s&rsquo;)</p>
+<p>db.define_table(&lsquo;post&rsquo;, 
+   Field(<!-- raw HTML omitted --><!-- raw HTML omitted -->&lsquo;page_id&rsquo;<!-- raw HTML omitted --><!-- raw HTML omitted -->,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->&lsquo;reference<!-- raw HTML omitted --><!-- raw HTML omitted -->
+page&rsquo;), 
+   Field(&lsquo;body&rsquo;, &rsquo;text&rsquo;), 
+   Field(&lsquo;created_on&rsquo;, &lsquo;datetime&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->default=request.now<!-- raw HTML omitted --><!-- raw HTML omitted -->), 
+   Field(&lsquo;created_by&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->&lsquo;reference<!-- raw HTML omitted --><!-- raw HTML omitted -->
+auth_user&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->default=auth.user_id<!-- raw HTML omitted --><!-- raw HTML omitted -->))</p>
+<p>db.define_table(&lsquo;document&rsquo;, 
+   Field(&lsquo;page_id&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->&lsquo;reference<!-- raw HTML omitted --><!-- raw HTML omitted -->
+page&rsquo;), 
+   Field(&rsquo;name&rsquo;), 
+   Field(&lsquo;file&rsquo;, &lsquo;upload&rsquo;), 
+   Field(&lsquo;created_on&rsquo;, &lsquo;datetime&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->default=request.now<!-- raw HTML omitted --><!-- raw HTML omitted -->), 
+   Field(&lsquo;created_by&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->&lsquo;reference<!-- raw HTML omitted --><!-- raw HTML omitted -->
+auth_user&rsquo;,
+<!-- raw HTML omitted --><!-- raw HTML omitted -->default=auth.user_id<!-- raw HTML omitted --><!-- raw HTML omitted -->), 
+   format=&rsquo;%(name)s&rsquo;)</p>
+<p>db.page.title.requires = IS_NOT_IN_DB(db, &lsquo;page.title&rsquo;) 
+db.page.body.requires = IS_NOT_EMPTY() 
+db.page.created_by.readable = db.page.created_by.writable = False 
+db.page.created_on.readable = db.page.created_on.writable = False</p>
+<p>db.post.body.requires = IS_NOT_EMPTY() 
+db.post.page_id.readable = db.post.page_id.writable = False 
+db.post.created_by.readable = db.post.created_by.writable = False 
+db.post.created_on.readable = db.post.created_on.writable = False</p>
+<p>db.document.name.requires = IS_NOT_IN_DB(db, &lsquo;document.name&rsquo;) 
+db.document.page_id.readable = db.document.page_id.writable = False 
+db.document.created_by.readable = db.document.created_by.writable =
+False 
+db.document.created_on.readable = db.document.created_on.writable =
+False<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->다른
+부분은 원문 참조.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+search(): 
+    &ldquo;&ldquo;&ldquo;an ajax wiki search page&rdquo;&rdquo;&rdquo; 
+    return dict(form=FORM(INPUT(_id=&lsquo;keyword&rsquo;,_name=&lsquo;keyword&rsquo;, 
+             _onkeyup=&ldquo;ajax(&lsquo;callback&rsquo;, [&lsquo;keyword&rsquo;], &rsquo;target&rsquo;);&rdquo;)), 
+             target_div=DIV(_id=&lsquo;target&rsquo;)) 
+def callback(): 
+    &ldquo;&ldquo;&ldquo;an ajax callback that returns a &lt;ul&gt; of links to wiki
+pages&rdquo;&rdquo;&rdquo; 
+    query = db.page.title.contains(request.vars.keyword) 
+    pages = db(query).select(orderby=db.page.title) 
+    links = [A(p.title, _href=URL(&lsquo;show&rsquo;,args=p.id)) for p in
+pages] 
+    return UL(*links)<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->사용자가
+키를 뗄때마다 _onkeyup 의 ajax(&lsquo;callback&rsquo;, [&lsquo;keyword&rsquo;], &rsquo;target&rsquo;); 가
+수행된다.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->ajax
+는 web2py.js 에 정의되어 있으며 layout.html에서 자동으로 include 하고
+있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V -
+default/search.html<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;Search wiki pages&lt;/h1&gt; 
+[ {{=A(&rsquo;listall&rsquo;, _href=URL(&lsquo;index&rsquo;))}}]&lt;br /&gt; 
+{{=form}}&lt;br /&gt;{{=target_div}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->V -
+default/show.html <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{extend
+&rsquo;layout.html&rsquo;}} 
+&lt;h1&gt;{{=page.title}}&lt;/h1&gt; 
+[ {{=A(&rsquo;edit&rsquo;, _href=URL(&rsquo;edit&rsquo;, args=request.args))}} 
+| {{=A(&lsquo;documents&rsquo;, _href=URL(&lsquo;documents&rsquo;, args=request.args))}}
+]&lt;br /&gt; 
+{{=MARKMIN(page.body)}} 
+&lt;h2&gt;Comments&lt;/h2&gt; 
+{{for post in comments:}} 
+ &lt;p&gt;{{=db.auth_user[post.created_by].first_name}} on
+{{=post.created_on}} 
+    says &lt;i&gt;{{=post.body}}&lt;/i&gt;&lt;/p&gt; 
+{{pass}} 
+&lt;h2&gt;Post a comment&lt;/h2&gt; 
+{{=form}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->body
+를 markdown 나  xml 로 만들고 싶으면 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->from
+gluon.contrib.markdown import WIKI as MARKDOWN<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{=XML(page.body)}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->{{=XML(page.body,
+sanitize=True)}}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->형태로
+사용.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->RSS
+지원 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+news(): 
+   &ldquo;&ldquo;&ldquo;generates rss feed form the wiki pages&rdquo;&rdquo;&quot;<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+view/generic.rss 를 쓰도록 
+   response.generic_patterns = [&rsquo;.rss&rsquo;] 
+   pages = db().select(db.page.ALL, orderby=db.page.title) 
+   return dict( 
+      title = &lsquo;mywiki rss feed&rsquo;, 
+      link = &lsquo;http://127.0.0.1:8000/mywiki/default/index&rsquo;, 
+      description = &lsquo;mywiki news&rsquo;, 
+      created_on = request.now, 
+      items = [ 
+         dict(title = row.title, 
+              link = URL(&lsquo;show&rsquo;, args=row.id), 
+              description = MARKMIN(row.body).xml(), 
+              created_on = row.created_on 
+              ) for row in pages])<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->RSS
+URL 은 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->http://127.0.0.1:8000/mywiki/default/news.rss<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->XML-RPC
+지원 - 검색 api <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->service
+= Service()</p>
+<p>@service.xmlrpc 
+def find_by(keyword): 
+    &ldquo;&ldquo;&ldquo;finds pages that contain keyword for XML-RPC&rdquo;&rdquo;&rdquo; 
+    return db(db.page.title.contains(keyword)).select().as_list()</p>
+<p>def call(): 
+   &ldquo;&ldquo;&ldquo;exposes all registered services, including XML-RPC&rdquo;&rdquo;&rdquo; 
+   return service()<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->사용
+예제<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->&gt;&gt;&gt;
+import xmlrpclib 
+&gt;&gt;&gt; server = xmlrpclib.ServerProxy( 
+   &lsquo;http://127.0.0.1:8000/mywiki/default/call/xmlrpc&rsquo;) 
+&gt;&gt;&gt; for item in server.find_by(&lsquo;wiki&rsquo;): 
+       print item[&lsquo;created_on&rsquo;], item[&rsquo;title&rsquo;]<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->date,datetime,time
+처리 관련<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->DB내
+, web2py 내부 , 문자열 표시<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->문자열
+표시는 기본적으로 ISO 를 따르는데 %Y-%m-%d %H:%M:%S<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->admin -
+translation page 에서 바꿀수 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->web2py
+내장 위키 - the built-in web2py wiki <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->web2py는
+기본기능으로 미디어 파일첨부,태그,페이지 접근 권한,oembed ,
+컴포넌트(14장)을 지원하는 wiki 를 제공한다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->이
+기능은 모든 web2py 앱에서 사용가능하며<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->C
+에 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->def
+index(): return auth.wiki()<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->를
+추가하는 것만으로 가능해진다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->위키를
+사용하기위해선 페이지를 만들어야 하며 가입/로그인후  wiki-editor,
+wiki-author 그룹에 들어가야한다.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->editor는
+모든 페이지의 생성,편집,삭제 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->author
+는 생성과 자신이 만든 페이지의 편집 권한 만 있다. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->MARKMIN
+설명<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->#
+This is a title 
+## this is a section title 
+### this is a subsection title</p>
+<p>Text can be **bold**, &lsquo;&lsquo;italic&rsquo;&rsquo;, ``code`` etc. 
+Learn more at:</p>
+<p><a href="http://web2py.com">http://web2py.com</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->좀더
+자세한 설명은 본문 참고.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->(
+oembed protocol , components 등 )<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->관리에대한
+추가사항들 - more on admin <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->내장
+디버거 - python 2.6이상. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->shell
+/ crontab / error ticket / mercurial version control <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->multi
+user mode  - 선생,학생 <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->mobile
+admin <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->appadmin
+에대해 좀더 이야기하면 - more on adppadmin <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->본문
+참고. <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> 
+<!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/web2py/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">web2py</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B0%9C%EB%B0%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">개발</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B5%90%EC%9C%A1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">교육</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B8%EB%AF%B8%EB%82%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">세미나</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%8A%A4%ED%84%B0%EB%94%94/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">스터디</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-19-%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84%EC%97%90%EC%84%9C%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%80%EC%96%B4%EB%96%BB%EA%B2%8C%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C/">모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/">windows의 vim에서 python 활성화 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/">우분투에서 로컬에 설치된 문서를 편하게 보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

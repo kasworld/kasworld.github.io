@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IDE on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/ide/</link>
+    <description>Recent content in IDE on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 30 Aug 2012 12:02:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> GVIM으로 IDE 처럼 사용하기 </title>
+      <link>https://kasworld.github.io/posts/2012-08-30-gvim%EC%9C%BC%EB%A1%9Cide%EC%B2%98%EB%9F%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2012-08-30-gvim%EC%9C%BC%EB%A1%9Cide%EC%B2%98%EB%9F%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <description>요즘 하고 있는 일이 많은 파일과 폴더들을 돌아다니면서 소스를 분석하고 수정해야 하는 일이라 (rails 프로젝트가 그렇더군요. ) 기존에 사용하고 있던 vim에 NERDtree plugin을 추가하여 사용하고 있습니다 http://www.vim.org/scripts/script.php?script_id=1658 taglist plugin과 조합아면 위와같은 화면을 보며 작업할수 있게 되더군요. ^^ http://www.vim.org/scripts/script.php?script_id=273 추가로 vim-rails 를 추천 받아서 사용중인데 취향을 타는 건지 그렇게 엄청 좋은지는 잘모르겠습니다. https://github.com/tpope/vim-rails
+참고로 스크린샷은 web2py 작업 화면 예 입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

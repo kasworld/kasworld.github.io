@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>리눅스 엔트로피? | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="안드로이드에 seeder 라고하는 신기한 프로그램이 있어서 뭔가 하고 찾아 보니..
+시스템에서 사용하는 random generator 의 성능? 을 올려주는 프로그램 이라고 합니다.
+설치하면 이 난수 생성기의 병목으로 느려 졌던 부분이 해소되어 전체적인 UI 반응성이 올라간다고 해서 설치해 사용하기는 하고 있습니다만.. ( 차이는 못느끼겠더군요. ^^)
+아무튼 안드로이드에 있다면 당연히 리눅스 데스크 탑에서도 비슷한 문제와 해결방안이 있겠거니 하고 생각해서
+http://en.wikipedia.org/wiki/Entropy_%28computing%29
+이것 저것 찾아보니 ubuntu/xubuntu 에서는 rng-tools 이나 randomsound를 설치 해서 사용하면 될것 같습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="리눅스 엔트로피?" />
+<meta property="og:description" content="안드로이드에 seeder 라고하는 신기한 프로그램이 있어서 뭔가 하고 찾아 보니..
+시스템에서 사용하는 random generator 의 성능? 을 올려주는 프로그램 이라고 합니다.
+설치하면 이 난수 생성기의 병목으로 느려 졌던 부분이 해소되어 전체적인 UI 반응성이 올라간다고 해서 설치해 사용하기는 하고 있습니다만.. ( 차이는 못느끼겠더군요. ^^)
+아무튼 안드로이드에 있다면 당연히 리눅스 데스크 탑에서도 비슷한 문제와 해결방안이 있겠거니 하고 생각해서
+http://en.wikipedia.org/wiki/Entropy_%28computing%29
+이것 저것 찾아보니 ubuntu/xubuntu 에서는 rng-tools 이나 randomsound를 설치 해서 사용하면 될것 같습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-06-01-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-06-01T17:49:00+09:00" />
+<meta property="article:modified_time" content="2013-06-01T17:49:00+09:00" />
+<meta itemprop="name" content="리눅스 엔트로피?">
+<meta itemprop="description" content="안드로이드에 seeder 라고하는 신기한 프로그램이 있어서 뭔가 하고 찾아 보니..
+시스템에서 사용하는 random generator 의 성능? 을 올려주는 프로그램 이라고 합니다.
+설치하면 이 난수 생성기의 병목으로 느려 졌던 부분이 해소되어 전체적인 UI 반응성이 올라간다고 해서 설치해 사용하기는 하고 있습니다만.. ( 차이는 못느끼겠더군요. ^^)
+아무튼 안드로이드에 있다면 당연히 리눅스 데스크 탑에서도 비슷한 문제와 해결방안이 있겠거니 하고 생각해서
+http://en.wikipedia.org/wiki/Entropy_%28computing%29
+이것 저것 찾아보니 ubuntu/xubuntu 에서는 rng-tools 이나 randomsound를 설치 해서 사용하면 될것 같습니다."><meta itemprop="datePublished" content="2013-06-01T17:49:00+09:00" />
+<meta itemprop="dateModified" content="2013-06-01T17:49:00+09:00" />
+<meta itemprop="wordCount" content="202">
+<meta itemprop="keywords" content="엔트로피,seeder,ubuntu,randomsound,rng-tools,linux,리눅스,우분투,entropy," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="리눅스 엔트로피?"/>
+<meta name="twitter:description" content="안드로이드에 seeder 라고하는 신기한 프로그램이 있어서 뭔가 하고 찾아 보니..
+시스템에서 사용하는 random generator 의 성능? 을 올려주는 프로그램 이라고 합니다.
+설치하면 이 난수 생성기의 병목으로 느려 졌던 부분이 해소되어 전체적인 UI 반응성이 올라간다고 해서 설치해 사용하기는 하고 있습니다만.. ( 차이는 못느끼겠더군요. ^^)
+아무튼 안드로이드에 있다면 당연히 리눅스 데스크 탑에서도 비슷한 문제와 해결방안이 있겠거니 하고 생각해서
+http://en.wikipedia.org/wiki/Entropy_%28computing%29
+이것 저것 찾아보니 ubuntu/xubuntu 에서는 rng-tools 이나 randomsound를 설치 해서 사용하면 될것 같습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">리눅스 엔트로피?</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-06-01T17:49:00+09:00">June 1, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>안드로이드에 seeder 라고하는 신기한 프로그램이 있어서 뭔가 하고 찾아
+보니..</p>
+<p>시스템에서 사용하는 random generator 의 성능? 을 올려주는 프로그램
+이라고 합니다.</p>
+<p>설치하면 이 난수 생성기의 병목으로 느려 졌던 부분이 해소되어 전체적인 UI
+반응성이 올라간다고 해서 설치해 사용하기는 하고 있습니다만.. ( 차이는
+못느끼겠더군요. ^^)</p>
+<p>아무튼 안드로이드에 있다면 당연히 리눅스 데스크 탑에서도 비슷한 문제와
+해결방안이 있겠거니 하고 생각해서</p>
+<p><a href="http://en.wikipedia.org/wiki/Entropy_%28computing%29">http://en.wikipedia.org/wiki/Entropy_%28computing%29</a></p>
+<p>이것 저것 찾아보니 ubuntu/xubuntu 에서는 
+rng-tools 이나 randomsound를 설치 해서 사용하면 될것 같습니다.</p>
+<p>사용하는 CPU 가 TRNG 기능이 있으면 rng-tools를 사용하면 되겠고. 
+아니면 randomsound 를 사용하면 될 듯 합니다. </p>
+<p>제가 사용하는 센디브릿지 CPU는 기능이 없는 관계로 randomsound를 설치해
+보았습니다.</p>
+<p>( rng-tools 를 설치하고 service를  시작하려고 하면 지원하지 않는 다고
+에러를 내더군요. )</p>
+<p>설치후 효과가 있는지 알고 싶으면 
+python 으로</p>
+<blockquote>
+<p>while True: 
+    with open(&rsquo;/proc/sys/kernel/random/entropy_avail&rsquo;,&lsquo;r&rsquo;) as f: 
+        print f.readline() 
+        time.sleep(1)</p>
+</blockquote>
+<p>와 같이 실행해 보면 됩니다. 
+4000근처가 나오면 잘 설치 된거고.. 100~200근처가 나오면 제대로 설치 되지
+않은 것입니다. </p>
+<p>6월 6일 추가 사항입니다. 
+ randomsound 를 설치 했더니 소리가 안나오는군요. 
+아마도 충돌이 나고 있는 거거나 randomsound가 소리의 출력을 사용하는 게
+아닐까 싶습니다.</p>
+<p>haveged 로 바꾸고 나니 소리는 정상으로 돌아 왔습니다. 
+( 이것도 목적은 같은 프로그램입니다. )</p>
+<p>특이한것은 회사의 ivy-bridge 머신에는 /dev/hwrng 디바이스가 존재
+하는데도 rng-tools가 작동하지 않습니다. 뭐가 문제인지 잘모르겠더군요. 
+( 집에서 사용하는 sandy-bridge 머신에는 아예 저 디바이스가 없습니다. )</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">엔트로피</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/seeder/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">seeder</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ubuntu/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ubuntu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/randomsound/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">randomsound</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/rng-tools/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">rng-tools</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">리눅스</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">우분투</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/entropy/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">entropy</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/">우분투 sublime text2에서 한글을 입력하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-26-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%A3%BC%EB%B6%84%ED%88%AC%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9Cgui%EC%97%86%EC%9D%B4%ED%82%A4%EB%B3%B4%EB%93%9C%EC%98%B5%EC%85%98%EC%9D%84%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94%EB%B2%95/">우분투/주분투/민트 에서 GUI 없이 키보드 옵션을 설정하는 법 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-04-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B8%EC%97%90%EC%84%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">우분투/리눅스 민트에서 클라우드 스토리지 사용하기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/">postgresql 삽질기;;</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">리눅스 민트 14 시나몬을 설치했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">sublime text 2 에디터를 구입했습니다. - 수정했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/">wine 설치시 노틸러스의 짜증나는 notepad 연결 제거하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/">우분투 11.10 으로 업그레이드</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-27-opendevdspfailed%EC%97%90%EB%9F%AC%EA%B0%80%EB%82%98%EB%8A%94%EA%B2%BD%EC%9A%B0/">open /dev/dsp failed 에러가 나는 경우</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-03-07-%EB%91%90%EA%B0%9C%EC%9D%98%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A8%B8%EC%8B%A0%EC%82%AC%EC%9D%B4%EC%97%90%EC%84%9C%EC%84%A4%EC%B9%98%EB%90%9C%ED%8C%A8%ED%82%A4%EC%A7%80%EB%A5%BC%EC%9D%BC%EC%B9%98%EC%8B%9C%ED%82%A4%EB%8A%94%EB%B2%95/">두개의 우분투 머신사이에서 설치된 패키지를 일치 시키는 법.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-05-02-%EC%9A%B0%EB%B6%84%ED%88%AC1004%EA%B0%80%EB%82%98%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/">우분투 10.04가 나왔습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/">내가 원하던 진정한 리눅스폰은</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/">5800용 인코딩을 위해서 우분투 9.10에서 추가해줘야 하는 일.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2010-02-23-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EB%A5%BC%EA%B8%B0%EB%8B%A4%EB%A0%B8%EC%A7%80%EB%A7%8C%EB%AA%A8%ED%86%A0%EB%A1%9C%EC%9D%B4%EB%A5%BC%EC%82%AC%EC%A7%80%EC%95%8A%EC%9D%80%EC%9D%B4%EC%9C%A0/">안드로이드를 기다렸지만 모토로이를 사지 않은이유</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

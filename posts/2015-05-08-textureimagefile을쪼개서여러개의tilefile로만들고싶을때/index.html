@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>texture image file을 쪼개서 여러개의 tile file로 만들고 싶을 때. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ImageMagick 을 사용하면 좋다.
+&ndash; 끝 &ndash; 이라고 쓰고 말면 ( 미래의 나 로부터 ) 욕먹을테니&hellip;
+goguelike &ldquo;client&rdquo; 용 tile image가 필요해서 Dungeon Crawl Stone Soup 의 http://crawl.develz.org/wordpress/
+tile 들을 가져다 쓰고 있었습니다만. ( 라이선스도 자유 이용이라 좋더군요. )
+역시 부족한 타일들이 좀 있어서 몇개는 되도 않는 손놀림으로 gimp를 사용해 어떻게 만들어 쓰고 있었습니다만 ..
+역시 어설픈 관계로 구할수 있는 큰 크기의 texture들을 쪼개서 (32x32 png ) 만들어 보기로 하고 역시 gimp로 노가다를 하고 있자니 한숨만 나오고.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="texture image file을 쪼개서 여러개의 tile file로 만들고 싶을 때." />
+<meta property="og:description" content="ImageMagick 을 사용하면 좋다.
+&ndash; 끝 &ndash; 이라고 쓰고 말면 ( 미래의 나 로부터 ) 욕먹을테니&hellip;
+goguelike &ldquo;client&rdquo; 용 tile image가 필요해서 Dungeon Crawl Stone Soup 의 http://crawl.develz.org/wordpress/
+tile 들을 가져다 쓰고 있었습니다만. ( 라이선스도 자유 이용이라 좋더군요. )
+역시 부족한 타일들이 좀 있어서 몇개는 되도 않는 손놀림으로 gimp를 사용해 어떻게 만들어 쓰고 있었습니다만 ..
+역시 어설픈 관계로 구할수 있는 큰 크기의 texture들을 쪼개서 (32x32 png ) 만들어 보기로 하고 역시 gimp로 노가다를 하고 있자니 한숨만 나오고." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-05-08-textureimagefile%EC%9D%84%EC%AA%BC%EA%B0%9C%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98tilefile%EB%A1%9C%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-05-08T18:29:00+09:00" />
+<meta property="article:modified_time" content="2015-05-08T18:29:00+09:00" />
+<meta itemprop="name" content="texture image file을 쪼개서 여러개의 tile file로 만들고 싶을 때.">
+<meta itemprop="description" content="ImageMagick 을 사용하면 좋다.
+&ndash; 끝 &ndash; 이라고 쓰고 말면 ( 미래의 나 로부터 ) 욕먹을테니&hellip;
+goguelike &ldquo;client&rdquo; 용 tile image가 필요해서 Dungeon Crawl Stone Soup 의 http://crawl.develz.org/wordpress/
+tile 들을 가져다 쓰고 있었습니다만. ( 라이선스도 자유 이용이라 좋더군요. )
+역시 부족한 타일들이 좀 있어서 몇개는 되도 않는 손놀림으로 gimp를 사용해 어떻게 만들어 쓰고 있었습니다만 ..
+역시 어설픈 관계로 구할수 있는 큰 크기의 texture들을 쪼개서 (32x32 png ) 만들어 보기로 하고 역시 gimp로 노가다를 하고 있자니 한숨만 나오고."><meta itemprop="datePublished" content="2015-05-08T18:29:00+09:00" />
+<meta itemprop="dateModified" content="2015-05-08T18:29:00+09:00" />
+<meta itemprop="wordCount" content="152">
+<meta itemprop="keywords" content="노가다,imagemagick,gimp," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="texture image file을 쪼개서 여러개의 tile file로 만들고 싶을 때."/>
+<meta name="twitter:description" content="ImageMagick 을 사용하면 좋다.
+&ndash; 끝 &ndash; 이라고 쓰고 말면 ( 미래의 나 로부터 ) 욕먹을테니&hellip;
+goguelike &ldquo;client&rdquo; 용 tile image가 필요해서 Dungeon Crawl Stone Soup 의 http://crawl.develz.org/wordpress/
+tile 들을 가져다 쓰고 있었습니다만. ( 라이선스도 자유 이용이라 좋더군요. )
+역시 부족한 타일들이 좀 있어서 몇개는 되도 않는 손놀림으로 gimp를 사용해 어떻게 만들어 쓰고 있었습니다만 ..
+역시 어설픈 관계로 구할수 있는 큰 크기의 texture들을 쪼개서 (32x32 png ) 만들어 보기로 하고 역시 gimp로 노가다를 하고 있자니 한숨만 나오고."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">texture image file을 쪼개서 여러개의 tile file로 만들고 싶을 때.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-05-08T18:29:00+09:00">May 8, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>ImageMagick 을 사용하면 좋다.</p>
+<p>&ndash; 끝 &ndash; </p>
+<p>이라고 쓰고 말면 ( 미래의 나 로부터 )  욕먹을테니&hellip;</p>
+<p>goguelike &ldquo;client&rdquo; 용 tile image가 필요해서 </p>
+<p>Dungeon Crawl Stone Soup 의 </p>
+<p><a href="http://crawl.develz.org/wordpress/">http://crawl.develz.org/wordpress/</a></p>
+<p>tile 들을 가져다 쓰고 있었습니다만.  ( 라이선스도 자유 이용이라
+좋더군요. )</p>
+<p>역시 부족한 타일들이 좀 있어서 몇개는 되도 않는 손놀림으로 gimp를 사용해
+어떻게 만들어 쓰고 있었습니다만 ..</p>
+<p>역시 어설픈 관계로 구할수 있는 큰 크기의 texture들을 쪼개서 (32x32 png )
+만들어 보기로 하고 </p>
+<p>역시 gimp로 노가다를 하고 있자니 한숨만 나오고. </p>
+<p>(  256x256 크기의 이미지를  쪼개서 64개의 tile로 만드는 것은
+&ldquo;프로그래머&quot;에겐 참을수 없는 반복 작업 입니다.  ^^;; )</p>
+<p>뭔가 좋은 방법이 없을까 고민하면서 그냥 쪼개는 프로그램을 하나 짜버려?
+뭐 이런 생각을 했습니다.</p>
+<p>그런데 역시 찾으면 있더군요. ;;</p>
+<p>image관련해서는 만능툴인 imagemagick을 사용하면 단 한줄로 해결 됩니다. </p>
+<p>문서가 꽤나 복잡한 관계로 필요한 것만 달랑 찾아 사용했습니다. </p>
+<p>convert big.jpg -crop &lsquo;8x8&rsquo;@ tile.png</p>
+<p>이라고 쓰면 big.jpg를 8x8로 짤라서 </p>
+<p>tile-0.png 에서  tile-63.png 까지로 만들어 줍니다. </p>
+<p>덕분에 앞으로 tile 만들 걱정을 덜었습니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EB%85%B8%EA%B0%80%EB%8B%A4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">노가다</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/imagemagick/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">imagemagick</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/gimp/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gimp</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

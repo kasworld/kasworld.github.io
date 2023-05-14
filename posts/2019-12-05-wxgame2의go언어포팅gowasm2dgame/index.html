@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>wxgame2의 go 언어 포팅 gowasm2dgame  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="https://github.com/kasworld/gowasm2dgame
+python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
+golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트 입니다.
+python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할 계획은 없습니다.)
+goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의 총정리 예제이기도 합니다.
+중요한 역할을 하는 것들을 정리해보면
+genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
+argdefault : config와 command line arguments
+prettystring : struct 의 string 화 / admin web , debug용">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="wxgame2의 go 언어 포팅 gowasm2dgame " />
+<meta property="og:description" content="https://github.com/kasworld/gowasm2dgame
+python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
+golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트 입니다.
+python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할 계획은 없습니다.)
+goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의 총정리 예제이기도 합니다.
+중요한 역할을 하는 것들을 정리해보면
+genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
+argdefault : config와 command line arguments
+prettystring : struct 의 string 화 / admin web , debug용" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-12-05T10:24:00+09:00" />
+<meta property="article:modified_time" content="2019-12-05T10:24:00+09:00" />
+<meta itemprop="name" content="wxgame2의 go 언어 포팅 gowasm2dgame ">
+<meta itemprop="description" content="https://github.com/kasworld/gowasm2dgame
+python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
+golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트 입니다.
+python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할 계획은 없습니다.)
+goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의 총정리 예제이기도 합니다.
+중요한 역할을 하는 것들을 정리해보면
+genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
+argdefault : config와 command line arguments
+prettystring : struct 의 string 화 / admin web , debug용"><meta itemprop="datePublished" content="2019-12-05T10:24:00+09:00" />
+<meta itemprop="dateModified" content="2019-12-05T10:24:00+09:00" />
+<meta itemprop="wordCount" content="250">
+<meta itemprop="keywords" content="golang,python,wxgame,wxpy,meta-programming," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wxgame2의 go 언어 포팅 gowasm2dgame "/>
+<meta name="twitter:description" content="https://github.com/kasworld/gowasm2dgame
+python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
+golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트 입니다.
+python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할 계획은 없습니다.)
+goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의 총정리 예제이기도 합니다.
+중요한 역할을 하는 것들을 정리해보면
+genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
+argdefault : config와 command line arguments
+prettystring : struct 의 string 화 / admin web , debug용"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">wxgame2의 go 언어 포팅 gowasm2dgame </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-05T10:24:00+09:00">December 5, 2019</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="../images/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame-gowasm2dgame.png"><img src="../images/thumbnails/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame-gowasm2dgame.png" alt=""></a></p>
+<p><a href="https://github.com/kasworld/gowasm2dgame">https://github.com/kasworld/gowasm2dgame</a></p>
+<p>python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를</p>
+<p>golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트
+입니다.</p>
+<p>python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할
+계획은 없습니다.)</p>
+<p>goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의
+총정리 예제이기도 합니다.</p>
+<p>중요한 역할을 하는 것들을 정리해보면</p>
+<p><!-- raw HTML omitted -->genprotocol<!-- raw HTML omitted --> 서버
+클라이언트가 사용할 프로토콜 생성, 관리</p>
+<p><!-- raw HTML omitted -->argdefault<!-- raw HTML omitted --> :
+config와 command line arguments</p>
+<p><!-- raw HTML omitted -->prettystring<!-- raw HTML omitted --> :
+struct 의 string 화 / admin web , debug용</p>
+<p><!-- raw HTML omitted -->genenum<!-- raw HTML omitted --> :
+enum 의 생성, 관리</p>
+<p><!-- raw HTML omitted -->log<!-- raw HTML omitted --> :
+전용 log package의 생성, 사용</p>
+<p><!-- raw HTML omitted -->signalhandle<!-- raw HTML omitted --> :
+signal을 관리해서 프로그램의 linux 서비스화,
+start,stop,forcestart,logreopen</p>
+<p>( windows에서 동작하게 하려면 이 라이브러리 사용을 하지 않도록 수정하면
+됩니다. )</p>
+<p>정도 입니다. </p>
+<p>패킷의 marshaler로는 json을 썼었는데 너무 느리고 커져서  gob로
+바꿨습니다. </p>
+<p>서버 기반으로 작동하기에 모든 로직 처리는 서버에서 이루어 지며 </p>
+<p>웹 클라이이언트는 뷰어 로만 작동합니다. ( 서버 패킷 간 화면 표시의 위치
+보정 정도 )</p>
+<p>AI 는 현재는 서버 내부에서 작동하지만 </p>
+<p>AI와 게임 스테이지 간은 스테이지 정보를 보내주고 AI는 동작 command를
+만들어 돌려주는 형태로 분리 되어 있습니다. </p>
+<p>AI의 동작은 시간 기반으로 제한을 받으며 이를 위반하는 command 는 무시
+됩니다. </p>
+<p>예를 들어 기본 총알인 bullet은 2초에 한번 발사 할 수 있습니다. ( 또는
+10초간 모았다가 연속으로 5번 발사 할 수도 있습니다. )</p>
+<p>같은 식입니다. </p>
+<p>stage는 6개의 AI(client) 가 모여서 게임을 하는 방 의 개념이며 아직
+까지는 여러 stage를 지원 하지는 않고 있습니다. </p>
+<p>여러 stage를 지원하려면 stage manager나 로비 , 방의 생성, 참가 , 퇴장
+등의 기능을 지원 해야 하는데 </p>
+<p>wxgame2 의 go언어 포팅 이라는 원래 목적을 넘어 서는 것 같기 때문입니다. </p>
+<p>(하지만 언젠가 하게 될지도 모릅니다. )</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxgame/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxgame</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wxpy/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wxpy</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/meta-programming/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">meta-programming</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-10-09-golang%EB%84%A4%ED%8A%B8%EC%9B%8D%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%83%9D%EC%84%B1%EA%B8%B0/">golang (네트웍) 프로토콜 생성기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2017-09-18-metaprogramming%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">Meta-programming으로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-13-goguelike%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%86%8D%EB%8F%84/">goguelike의 네트웍 속도</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2를 개선 하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-09-09-golang%EA%B3%BCgolangwasm%EC%82%AC%EC%9D%B4%EC%97%90websocket%EC%9C%BC%EB%A1%9C%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0/">golang 과 golang wasm 사이에 websocket으로 통신하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/">goguelike 2를 개발하면서 만들어진 라이브러리들의 일부를  공개/업데이트 합니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/">golang gopherjs로 만든 시계와 달력 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2018-10-02-goguelike%ED%8E%B8%ED%96%A5bias%EC%9D%98color%ED%91%9C%EC%8B%9C%EC%A7%80%EB%82%9C1%EB%85%84%EA%B0%84%EC%9E%91%EC%97%85%EB%9F%89/">goguelike 편향Bias의 color표시 , 지난 1년간 작업량 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

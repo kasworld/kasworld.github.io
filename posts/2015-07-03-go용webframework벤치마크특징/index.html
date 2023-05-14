@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>go 용 web framework 벤치마크, 특징.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이전글 에 잠깐 언급했었던 http://kasw.blogspot.kr/2014/10/pythongolang-web-framework.html
+go 용 web framework를 비교 테스트 해봤습니다.
+그때 이후로 beego, revel , martini 이외에 딱히 떠오르는 것은 없는것 같아서 일단 평가가 별로인(듯한) martini는 빼고 ( 나중에 시간나면 한번 보고 싶긴 합니다. )
+beego와 revel 만을 검토해 보았습니다.
+사용한 기계의 spec
+linux mint 17.1 cinnamon x64 Linux kasw-work 3.13.0-37-generic #64-Ubuntu SMP Mon Sep 22 21:28:38 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux i7-4790 3.6x4 4c8t ram 8G single channel ab -c 100 -n 500000 http://localhost:8080/">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="go 용 web framework 벤치마크, 특징. " />
+<meta property="og:description" content="이전글 에 잠깐 언급했었던 http://kasw.blogspot.kr/2014/10/pythongolang-web-framework.html
+go 용 web framework를 비교 테스트 해봤습니다.
+그때 이후로 beego, revel , martini 이외에 딱히 떠오르는 것은 없는것 같아서 일단 평가가 별로인(듯한) martini는 빼고 ( 나중에 시간나면 한번 보고 싶긴 합니다. )
+beego와 revel 만을 검토해 보았습니다.
+사용한 기계의 spec
+linux mint 17.1 cinnamon x64 Linux kasw-work 3.13.0-37-generic #64-Ubuntu SMP Mon Sep 22 21:28:38 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux i7-4790 3.6x4 4c8t ram 8G single channel ab -c 100 -n 500000 http://localhost:8080/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-07-03-go%EC%9A%A9webframework%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%8A%B9%EC%A7%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-07-03T14:17:00+09:00" />
+<meta property="article:modified_time" content="2015-07-03T14:17:00+09:00" />
+<meta itemprop="name" content="go 용 web framework 벤치마크, 특징. ">
+<meta itemprop="description" content="이전글 에 잠깐 언급했었던 http://kasw.blogspot.kr/2014/10/pythongolang-web-framework.html
+go 용 web framework를 비교 테스트 해봤습니다.
+그때 이후로 beego, revel , martini 이외에 딱히 떠오르는 것은 없는것 같아서 일단 평가가 별로인(듯한) martini는 빼고 ( 나중에 시간나면 한번 보고 싶긴 합니다. )
+beego와 revel 만을 검토해 보았습니다.
+사용한 기계의 spec
+linux mint 17.1 cinnamon x64 Linux kasw-work 3.13.0-37-generic #64-Ubuntu SMP Mon Sep 22 21:28:38 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux i7-4790 3.6x4 4c8t ram 8G single channel ab -c 100 -n 500000 http://localhost:8080/"><meta itemprop="datePublished" content="2015-07-03T14:17:00+09:00" />
+<meta itemprop="dateModified" content="2015-07-03T14:17:00+09:00" />
+<meta itemprop="wordCount" content="341">
+<meta itemprop="keywords" content="golang,go,web framework,revel,go programming language,beego,web," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go 용 web framework 벤치마크, 특징. "/>
+<meta name="twitter:description" content="이전글 에 잠깐 언급했었던 http://kasw.blogspot.kr/2014/10/pythongolang-web-framework.html
+go 용 web framework를 비교 테스트 해봤습니다.
+그때 이후로 beego, revel , martini 이외에 딱히 떠오르는 것은 없는것 같아서 일단 평가가 별로인(듯한) martini는 빼고 ( 나중에 시간나면 한번 보고 싶긴 합니다. )
+beego와 revel 만을 검토해 보았습니다.
+사용한 기계의 spec
+linux mint 17.1 cinnamon x64 Linux kasw-work 3.13.0-37-generic #64-Ubuntu SMP Mon Sep 22 21:28:38 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux i7-4790 3.6x4 4c8t ram 8G single channel ab -c 100 -n 500000 http://localhost:8080/"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">go 용 web framework 벤치마크, 특징. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-07-03T14:17:00+09:00">July 3, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>이전글 에 잠깐 언급했었던 
+<a href="http://kasw.blogspot.kr/2014/10/pythongolang-web-framework.html">http://kasw.blogspot.kr/2014/10/pythongolang-web-framework.html</a></p>
+<p>go 용 web framework를 비교 테스트 해봤습니다.</p>
+<p>그때 이후로 beego, revel , martini 이외에 딱히 떠오르는 것은 없는것
+같아서 
+일단 평가가 별로인(듯한) martini는 빼고 ( 나중에 시간나면 한번 보고 싶긴
+합니다. )</p>
+<p>beego와 revel 만을 검토해 보았습니다.</p>
+<p>사용한 기계의 spec</p>
+<p>linux mint 17.1 cinnamon x64 
+Linux kasw-work 3.13.0-37-generic #64-Ubuntu SMP Mon Sep 22 21:28:38
+UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 
+i7-4790 3.6x4 4c8t 
+ram 8G single channel 
+ab -c 100 -n 500000 http://localhost:8080/</p>
+<p>결과 요약 </p>
+<p>(절대적이지 않은 ) 성능 비교 </p>
+<p>beego  </p>
+<p>Requests per second:    16200.32 [#/sec] (mean)</p>
+<p>revel </p>
+<p>Requests per second:    24929.10 [#/sec] (mean)</p>
+<p>둘다 전용의 command 인 bee 와 revel 를 사용해서 서비스 코드의
+scaffolding을 만들어내고 ( ROR이나 django 처럼) 그 코드를 수정 해서
+실행할수 있게 해줍니다. </p>
+<p>beego 쪽이 좀더 본격적인 framework 같고 revel은 아직 더 만들어야
+할부분이 남아 있는 느낌.</p>
+<p>( ORM이 beego만 있고 revel은 없습니다. )</p>
+<p>둘다 사용하기는 편해서 기존에 다른 프레임웍을 써본사람들은 금방 적응
+가능할 것 같음. </p>
+<p>다만 revel쪽이 좀 특이한데 </p>
+<p>기본 상태에서는 CPU를 하나만 사용합니다. ( 성능도 낮고 )</p>
+<p>뭐가 문제인가 고민하다가 혹시나? 하고 </p>
+<p>init.go에 </p>
+<p>runtime.GOMAXPROCS(runtime.NumCPU())</p>
+<p>를 적용했더니 전cpu사용 + 성능 향상 이란 황당한 상황이 발생 했습니다. </p>
+<p>처음엔 어딘가에서 lock이 생기고 있나 했는데 그냥 golang의 기본 상태에서
+실행 하고 있는 거였습니다. </p>
+<p>그리고 revel은 app의 코드를 그냥 실행하는 것이 아니고 app코드를 파싱해서
+ tmp folder에 실행용 main.go를 생성 , 컴파일, 실행 시키는 형태를
+사용합니다. </p>
+<p>( 꼭 web2py를 사용하는 느낌이 들더군요. )</p>
+<p>덕분에 마치 dynamic한 parameter name validation 을 하는것 같은 효과를
+줍니다. </p>
+<p>( 변수명 == url parameter 가 됩니다. )</p>
+<p>당연히 속도는 꽤나 잘나올것 같은 구조 입니다. </p>
+<p>둘다 공히 전용 command를 사용해서 개발 모드로 실행하면 코드가 수정될때
+자동으로 반영 하는 기능을 가지고 있습니다. </p>
+<p>template는 둘다 go언어의 기본  html/template package를 사용한다고
+(메뉴얼에 ) 써 있습니다.</p>
+<p>2015-07-04 추가. 
+revel의 single cpu사용은 좀 불안한게 
+전체 cpu를 사용하면 뭔가 문제가 있어서 일부러 막아둔것인지 아니면 그냥
+기본 상태로 둔것인지를 알수 없어서 불안하긴 합니다. 
+( 내부적인 data 공유 문제 등으로 1 cpu 만을 사용해야 한다던지 하는
+이유라면 - 간단한 벤치로는 들어나지 않는 - 큰일이지요. )</p>
+<p>그리고 구글+ 종민님께서 추천해주신 negroni과 gin은 (나중에 시간날때를
+위한 ) 기록으로 여기에 적어 둡니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/web-framework/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">web framework</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/revel/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">revel</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/beego/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">beego</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/web/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">web</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어로 만든 코드를 웹 브라우저에서 실행하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-12-03-gotesting%ED%8C%A8%ED%82%A4%EC%A7%80%EC%82%AC%EC%9A%A9%EC%A4%91%EC%A3%BC%EC%9D%98%EC%A0%90/">go testing 패키지 사용중 주의점 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-16-pythongolang%EC%9D%98webframework%EC%A0%84%EC%9F%81/">python/golang의 web framework전쟁.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-25-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">goguelike 클라이언트를 개선하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-23-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EA%B0%9C%EC%84%A0/">goguelike 클라이언트 개선 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-09-15-goguelike%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-06-04-go4game%EC%9D%98spatialpartition%EC%9D%84octree%EB%A1%9C%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game의 spatial partition을 octree로 바꿨습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-05-29-go4game%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD%EB%93%A4%EC%A0%95%EB%A6%AC/">go4game 추가 사항들 정리 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 웹 클라이언트를 추가 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">go4game - go 언어로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-25-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A45n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (5/N)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-27-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EC%84%9C%EB%B8%8C%EB%9D%BC%EC%9E%84%EC%97%90%EB%94%94%ED%84%B0%EB%A1%9Cgo%EA%B0%9C%EB%B0%9C%EC%9D%84%ED%95%98%EB%A0%A4%EB%8B%A4%EB%B3%B4%EB%8B%88/">우분투에서 서브라임 에디터로 go 개발을 하(려)다보니. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-10-18-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A44n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (4/N) </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A43n/">구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (3/N) </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

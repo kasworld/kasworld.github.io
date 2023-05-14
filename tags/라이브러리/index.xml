@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>라이브러리 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/</link>
+    <description>Recent content in 라이브러리 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 08 May 2019 11:12:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike 2를 개발하면서 만들어진 라이브러리들의 일부를  공개/업데이트 합니다. </title>
+      <link>https://kasworld.github.io/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 08 May 2019 11:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
+      <description>제 깃허브 https://github.com/kasworld?tab=repositories 에 올리고 있습니다.
+기존에 공개한 라이브러리의 업데이트도 있고 새로 공개한 것들도 있습니다.
+의존성이 적은 것들 위주로 코드를 좀 정리해서 올리고 있습니다.
+설명이 거의 없는 것들이 많은데 설명이 필요 없을 정도로 간단한 것들도 많고 아니면 테스트 코드로 사용 법을 알수 있는 코드들도 있습니다.
+그 이상의 설명이 필요하다 싶은 것들은 기분 내키는 대로 이 블로그에 간단히 포스팅 하도록 하겠습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

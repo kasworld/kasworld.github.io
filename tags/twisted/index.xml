@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>twisted on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/twisted/</link>
+    <description>Recent content in twisted on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 02 Apr 2014 14:28:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/twisted/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wxgame의 C/S화는 twisted 버전을 끝으로 일단 마무리 합니다. </title>
+      <link>https://kasworld.github.io/posts/2014-04-02-wxgame%EC%9D%98cs%ED%99%94%EB%8A%94twisted%EB%B2%84%EC%A0%84%EC%9D%84%EB%81%9D%EC%9C%BC%EB%A1%9C%EC%9D%BC%EB%8B%A8%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Wed, 02 Apr 2014 14:28:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-04-02-wxgame%EC%9D%98cs%ED%99%94%EB%8A%94twisted%EB%B2%84%EC%A0%84%EC%9D%84%EB%81%9D%EC%9C%BC%EB%A1%9C%EC%9D%BC%EB%8B%A8%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
+      <description>앞으로도 자잘한 수정들은 있겠지만 큰 변화나 추가는 없을 듯 합니다.
+이번에 twisted 버전을 작업하면서 오랫만에 다시 twisted를 만져 봤는데 예전에 테스트한 기억 보다 많이 빨라진 듯 합니다.
+twistedtest.py를 보면 테스트 할 때 사용한 코드가 있습니다만 비록 echo 서버긴 하지만 초당 10만 패킷을 넘게 처리 하는 군요. ( intel 2500, pypy 사용, Int32StringReceiver 프로토콜, epoll reactor 사용.) 이 정도면 거의 대부분의 서버에서 필요한 성능을 충족시킬 수 있을 것 같습니다.
+epoll reactor를 사용할 경우 6만 정도의 동시 커넥션 상태에서도 6만 패킷/초 이상을 꾸준히 처리 할 수 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>네트웍 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8D/</link>
+    <description>Recent content in 네트웍 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 25 Mar 2010 11:10:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>네트웍은 아무리해도 어렵군요.</title>
+      <link>https://kasworld.github.io/posts/2010-03-25-%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%9D%80%EC%95%84%EB%AC%B4%EB%A6%AC%ED%95%B4%EB%8F%84%EC%96%B4%EB%A0%B5%EA%B5%B0%EC%9A%94/</link>
+      <pubDate>Thu, 25 Mar 2010 11:10:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2010-03-25-%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%9D%80%EC%95%84%EB%AC%B4%EB%A6%AC%ED%95%B4%EB%8F%84%EC%96%B4%EB%A0%B5%EA%B5%B0%EC%9A%94/</guid>
+      <description>몇 주 전부터 집에 있는 공유기가 이상한 반응을 보여서 고민을 하고 있었습니다.
+이상하게도 제가 사용하고 있는 리눅스기계를 끄면 조금 있다가 제 처가 사용하는 윈도우 머신의 인터넷이 끊기는 겁니다.
+그래서 공유기가 맛이 갔나? 아니면 드디어 isp에서 공유기 단속을 시작했나? 아니면 설치한지 좀 된 윈도우 xp가 밀고 새로 설치할때가 됬나? 아냐 최근에 새로 설치한 samba서버 설정을 잘못했나? 아님 바이러스?
+등등 이런 저런 고민을 하고 있었습니다.
+게다가 어떨때는 공유기에서 ip address 를 못받아 오는 경우도 생겨서 이건 짤없이 공유기가 맛 간거다 ( dhcp 서버가 작동 않네.</description>
+    </item>
+    
+  </channel>
+</rss>

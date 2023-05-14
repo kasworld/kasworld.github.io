@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>실시간 턴제 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%84%B4%EC%A0%9C/</link>
+    <description>Recent content in 실시간 턴제 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 28 Mar 2020 14:47:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%84%B4%EC%A0%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>roguelike를 MMO로 만들면</title>
+      <link>https://kasworld.github.io/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/</link>
+      <pubDate>Sat, 28 Mar 2020 14:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-03-28-roguelike%EB%A5%BCmmo%EB%A1%9C%EB%A7%8C%EB%93%A4%EB%A9%B4/</guid>
+      <description>http://goguelike.iptime.org/
+에서 플레이 할 수 있는 두종류의 서버(tower) 플레이 동영상 roguelike tower
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+goguelike tower
+오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+roguelike 게임들은 턴 기반으로 행동이 이루어 집니다.
+내가 행동하기 전까지는 게임이 멈춰서서 기다려 주는 거지요.
+그런데 이걸 MMO로 만드려고 하면 모든 플레이어가 행동을 선택하기 전까지 모든 플레이어가 기다려야 한다는 문제가 발생합니다.
+그래서 어쩔 수 없이 또 당연히 실시간 턴제가 되었습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

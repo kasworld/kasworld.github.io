@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>젤리빈에서 wifi 채널 확장/수정하기 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="에이서 아이코니아 탭 a500 에 젤리빈 커펌을 올린 후 http://kasw.blogspot.kr/2013/01/a500.html
+오늘 아침에 일어나보니 a500이 무선랜이 끊어 져 있더군요. 어라 공유기는 이상없는데 하고 공유기 관리 페이지를 들어가보니 wifi 사용 채널이 13으로 되어 있는 것을 보고 갑자기 생각이 났습니다.
+http://en.wikipedia.org/wiki/List_of_WLAN_channels
+wifi 2.4 GHz (802.11b/g/n) 은 각 나라별로 사용하는 채널이 다르며 미국이 가장 좁은 범위를 사용합니다.
+그래서 해외쪽 커펌을 올리다 보면 wifi 채널이 좁게 설정된 경우가 있는데 이경우 우리나라 공유기가 그 밖의 범위 채널을 쓰도록 설정되면 wifi가 않잡히게 됩니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="젤리빈에서 wifi 채널 확장/수정하기" />
+<meta property="og:description" content="에이서 아이코니아 탭 a500 에 젤리빈 커펌을 올린 후 http://kasw.blogspot.kr/2013/01/a500.html
+오늘 아침에 일어나보니 a500이 무선랜이 끊어 져 있더군요. 어라 공유기는 이상없는데 하고 공유기 관리 페이지를 들어가보니 wifi 사용 채널이 13으로 되어 있는 것을 보고 갑자기 생각이 났습니다.
+http://en.wikipedia.org/wiki/List_of_WLAN_channels
+wifi 2.4 GHz (802.11b/g/n) 은 각 나라별로 사용하는 채널이 다르며 미국이 가장 좁은 범위를 사용합니다.
+그래서 해외쪽 커펌을 올리다 보면 wifi 채널이 좁게 설정된 경우가 있는데 이경우 우리나라 공유기가 그 밖의 범위 채널을 쓰도록 설정되면 wifi가 않잡히게 됩니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-01-17-%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%97%90%EC%84%9Cwifi%EC%B1%84%EB%84%90%ED%99%95%EC%9E%A5%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-01-17T10:42:00+09:00" />
+<meta property="article:modified_time" content="2013-01-17T10:42:00+09:00" />
+<meta itemprop="name" content="젤리빈에서 wifi 채널 확장/수정하기">
+<meta itemprop="description" content="에이서 아이코니아 탭 a500 에 젤리빈 커펌을 올린 후 http://kasw.blogspot.kr/2013/01/a500.html
+오늘 아침에 일어나보니 a500이 무선랜이 끊어 져 있더군요. 어라 공유기는 이상없는데 하고 공유기 관리 페이지를 들어가보니 wifi 사용 채널이 13으로 되어 있는 것을 보고 갑자기 생각이 났습니다.
+http://en.wikipedia.org/wiki/List_of_WLAN_channels
+wifi 2.4 GHz (802.11b/g/n) 은 각 나라별로 사용하는 채널이 다르며 미국이 가장 좁은 범위를 사용합니다.
+그래서 해외쪽 커펌을 올리다 보면 wifi 채널이 좁게 설정된 경우가 있는데 이경우 우리나라 공유기가 그 밖의 범위 채널을 쓰도록 설정되면 wifi가 않잡히게 됩니다."><meta itemprop="datePublished" content="2013-01-17T10:42:00+09:00" />
+<meta itemprop="dateModified" content="2013-01-17T10:42:00+09:00" />
+<meta itemprop="wordCount" content="213">
+<meta itemprop="keywords" content="아이코니아탭,a500,jellybean,젤리빈,에이서,wifi," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="젤리빈에서 wifi 채널 확장/수정하기"/>
+<meta name="twitter:description" content="에이서 아이코니아 탭 a500 에 젤리빈 커펌을 올린 후 http://kasw.blogspot.kr/2013/01/a500.html
+오늘 아침에 일어나보니 a500이 무선랜이 끊어 져 있더군요. 어라 공유기는 이상없는데 하고 공유기 관리 페이지를 들어가보니 wifi 사용 채널이 13으로 되어 있는 것을 보고 갑자기 생각이 났습니다.
+http://en.wikipedia.org/wiki/List_of_WLAN_channels
+wifi 2.4 GHz (802.11b/g/n) 은 각 나라별로 사용하는 채널이 다르며 미국이 가장 좁은 범위를 사용합니다.
+그래서 해외쪽 커펌을 올리다 보면 wifi 채널이 좁게 설정된 경우가 있는데 이경우 우리나라 공유기가 그 밖의 범위 채널을 쓰도록 설정되면 wifi가 않잡히게 됩니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">젤리빈에서 wifi 채널 확장/수정하기</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-01-17T10:42:00+09:00">January 17, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>에이서 아이코니아 탭 a500 에 젤리빈 커펌을 올린 후 
+<a href="http://kasw.blogspot.kr/2013/01/a500.html">http://kasw.blogspot.kr/2013/01/a500.html</a></p>
+<p>오늘 아침에 일어나보니 a500이 무선랜이 끊어 져 있더군요. 
+어라 공유기는 이상없는데 하고 공유기 관리 페이지를 들어가보니 
+wifi 사용 채널이 13으로 되어 있는 것을 보고 갑자기 생각이 났습니다.</p>
+<p><a href="http://en.wikipedia.org/wiki/List_of_WLAN_channels">http://en.wikipedia.org/wiki/List_of_WLAN_channels</a></p>
+<p>wifi <!-- raw HTML omitted -->2.4 GHz (802.11b/g/n) 은<!-- raw HTML omitted --> 각 나라별로 사용하는
+채널이 다르며 
+미국이 가장 좁은 범위를 사용합니다.</p>
+<p>그래서 해외쪽 커펌을 올리다 보면 wifi 채널이 좁게 설정된 경우가 있는데
+이경우 우리나라 공유기가 그 밖의 범위 채널을 쓰도록 설정되면 wifi가
+않잡히게 됩니다. ;;;</p>
+<p>이거 때문에 예전에 wibro egg쓸때도 고생한 기억이 나는데요 . 
+표면적으로 드러나는 증상이 wifi가 되다 안되다 하기 때문에 뭐가 문제인지
+알기 어렵습니다.</p>
+<p>아무튼 루팅된 안드로이드라면 build.prop을 고치거나 ( 2.x) , sqlite
+system db( 3.x ,4.0.x ) 를 고치거나 해서 이를 해결할수 있었습니다.</p>
+<p>그래서 한숨한번 쉬고 구글링을 해서 sqlite db 를 뒤적 뒤적 하고 있었는데
+해당 엔트리가 아예 없는 겁니다. 
+그래서 이거 없으면 만들어 넣어야 하나? 
+하고 고민하다 번뜩 드는 생각이 ..</p>
+<p>혹시 4.1.x 대는 UI 로 나와 있는 것이 아닐까? 하는 생각이 들어 설정을
+찾아보니 
+있군요!!!</p>
+<p>제가 쓰는 것이 커펌이라 모든 젤리빈에 해당되는 지는 알수 없지만 적어도
+제가 쓰는 a500의 커펌에서는 설정-wifi-메뉴버튼-고급(advanced) 를
+들어가면 wifi-region code 설정이 가능하고 
+이걸 한국이나 일본으로 설정하면 해결됩니다. ( 그냥 미국 이외면 다
+됩니다. )</p>
+<p>다른 젤리빈은 어떤가 하고 젤리빈이 올라가 있는 제 옵티이이를 보니 이넘은
+wifi 관련 항목이 sk 커스텀이군요. &ndash;;;;</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EC%95%84%EC%9D%B4%EC%BD%94%EB%8B%88%EC%95%84%ED%83%AD/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">아이코니아탭</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/a500/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">a500</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/jellybean/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">jellybean</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%A0%A4%EB%A6%AC%EB%B9%88/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">젤리빈</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%97%90%EC%9D%B4%EC%84%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">에이서</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/wifi/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">wifi</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2013-01-06-%EC%97%90%EC%9D%B4%EC%84%9Ca500%EC%97%90%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%98%AC%EB%A6%AC%EA%B8%B0/">에이서 a500에 젤리빈 올리기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-11-07-%ED%97%88%EB%8B%88%EC%BB%B4%EC%97%90%EC%A0%81%EC%9A%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%8C%81%EC%9C%A0%EC%9A%A9%ED%95%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/">허니컴에 적용할만한 팁, 유용한 프로그램</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-11-06-%EC%97%90%EC%9D%B4%EC%84%9Ca500%EC%97%90%EC%84%A4%EC%B9%98%ED%95%B4%EB%B3%B8rom%EB%93%A4%EA%B0%84%EB%8B%A8%ED%8F%89%EA%B0%80%EB%B0%8F%EA%B8%B0%EB%A1%9D/">에이서 a500에 설치해본 rom들 간단 평가 및 기록.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-22-%EC%97%90%EC%9D%B4%EC%84%9C%EC%95%84%EC%9D%B4%EC%BD%94%EB%8B%88%EC%95%84%ED%83%ADa500%EC%9D%84%EB%A3%A8%ED%8C%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">에이서 아이코니아 탭 a500을 루팅 했습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-11-%EC%97%90%EC%9D%B4%EC%84%9C%EC%95%84%EC%9D%B4%EC%BD%94%EB%8B%88%EC%95%84%ED%83%ADa500%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C/">에이서 아이코니아 탭 a500을 사용하면서</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

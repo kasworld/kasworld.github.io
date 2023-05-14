@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>그래도 리눅스는 위대해 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EA%B7%B8%EB%9E%98%EB%8F%84-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8A%94-%EC%9C%84%EB%8C%80%ED%95%B4/</link>
+    <description>Recent content in 그래도 리눅스는 위대해 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 10 Apr 2013 12:58:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B7%B8%EB%9E%98%EB%8F%84-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8A%94-%EC%9C%84%EB%8C%80%ED%95%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>한성 보스몬스터 77 리눅스 삽질기. </title>
+      <link>https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
+      <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
+      <description>왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
+1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
+이 노트북의 특징은 (적어도 제게는 중요한 ) 넖은 화면 ( 1920x1080 ) , 저렴한 가격 , 그리고 많이 달수 있는 램( 슬롯이 4개라 32Gbyte의 램을 달수 있습니다 )
+그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
+전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네.</description>
+    </item>
+    
+  </channel>
+</rss>

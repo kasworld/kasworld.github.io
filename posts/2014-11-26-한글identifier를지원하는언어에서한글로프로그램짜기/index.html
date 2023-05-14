@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기. | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원 하는 경우가 많습니다. http://rosettacode.org/wiki/Unicode_variable_names
+애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게 이상한것이겠지요.
+아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게 된것은 java 였던 것 같습니다. 뭐 그전에 &ldquo;씨앗&quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..
+그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명 클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.
+그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글 이름 파일명을 사용하는지 궁금합니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기." />
+<meta property="og:description" content="요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원 하는 경우가 많습니다. http://rosettacode.org/wiki/Unicode_variable_names
+애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게 이상한것이겠지요.
+아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게 된것은 java 였던 것 같습니다. 뭐 그전에 &ldquo;씨앗&quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..
+그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명 클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.
+그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글 이름 파일명을 사용하는지 궁금합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2014-11-26-%ED%95%9C%EA%B8%80identifier%EB%A5%BC%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EB%A1%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%A7%9C%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-11-26T09:49:00+09:00" />
+<meta property="article:modified_time" content="2014-11-26T09:49:00+09:00" />
+<meta itemprop="name" content="한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기.">
+<meta itemprop="description" content="요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원 하는 경우가 많습니다. http://rosettacode.org/wiki/Unicode_variable_names
+애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게 이상한것이겠지요.
+아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게 된것은 java 였던 것 같습니다. 뭐 그전에 &ldquo;씨앗&quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..
+그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명 클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.
+그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글 이름 파일명을 사용하는지 궁금합니다."><meta itemprop="datePublished" content="2014-11-26T09:49:00+09:00" />
+<meta itemprop="dateModified" content="2014-11-26T09:49:00+09:00" />
+<meta itemprop="wordCount" content="495">
+<meta itemprop="keywords" content="프로그래밍,한글,한글 잘못은 아닌데," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기."/>
+<meta name="twitter:description" content="요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원 하는 경우가 많습니다. http://rosettacode.org/wiki/Unicode_variable_names
+애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게 이상한것이겠지요.
+아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게 된것은 java 였던 것 같습니다. 뭐 그전에 &ldquo;씨앗&quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..
+그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명 클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.
+그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글 이름 파일명을 사용하는지 궁금합니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기.</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-11-26T09:49:00+09:00">November 26, 2014</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원
+하는 경우가 많습니다. 
+<a href="http://rosettacode.org/wiki/Unicode_variable_names">http://rosettacode.org/wiki/Unicode_variable_names</a></p>
+<p>애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게
+이상한것이겠지요.</p>
+<p>아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게
+된것은 java 였던 것 같습니다. 
+뭐 그전에 &ldquo;씨앗&quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..</p>
+<p>그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명
+클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.</p>
+<p>그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글
+이름 파일명을 사용하는지 궁금합니다. 
+ 일단 저는 한글 파일명과 폴더 명을 전혀 사용하지 않는데 이는 사용할
+경우에 문제가 생기는 경우를 당했기 때문입니다.</p>
+<p>이상하게 작동에 문제가 생겨서 원인을 찾아보면 폴더이름이 한글인게 원인인
+경우가 있는 거지요. 
+한글의 잘못이 아니고 비 영어 이름일때 문제를 일으키는 프로그램의 버그인
+경우지만 아무튼 불필요한 문제로 시간을 잡아먹게 되니 이를 예방하기 위해
+애초에 한글 파일/폴더 이름을 안쓰게 된겁니다.</p>
+<p>그래서 한글 identifier를 쓰기위한 조건을 적어 보겠습니다.</p>
+<p>당연한 이야기 지만 개발에 관여하는 모든 사람들의 
+source code 를 작성하는 환경과 compile/translate 하는 환경, 실행하는
+환경의 encoding이 일치 해야 합니다 .. 
+작성하는 환경이라고 하면 
+에디터/ide 의 encoding 뿐만이 아니고 version control system 역시 고민
+해야 하는데 이는 
+log history를 보는 것도 필요하고 diff/patch를 보는 것도 필요하기
+때문입니다.</p>
+<p>conpile/translation환경은 컴파일 하는 기계 ( 당연히 프로그래머
+기계일것이라고 생각하지 마시길 , daily build/night bulid도 존재 합니다.
+) 그리고 그 컴파일결과를 보게 되는 기계및 사람 도 포함입니다. 
+실행 결과가 아니고 컴파일러가 내보내는 결과입니다. 이곳에도 프로그램의
+identifier 가 표시 되니 encoding이 문제가 됩니다.</p>
+<p>실행 하는 환경은 만들어진 프로그램이 사용자에게 전달되어 사용되는 환경도
+있지만 
+그전에 QA/tester같은 지원 조직에서  사용하게 될 환경도 있습니다. 
+이것도 프로그램이 사용자에게 보여주기 위해 만드는 결과가 아닌
+문제상황에서 출력하는 모든 결과물들이 있습니다. 
+일반적으로는 stack trace 나 error log , test coverage  들이 있겠군요. 
+지원 조직이 이를 읽고 해석해서 개발 조직으로 전달하게 되니 이역시
+고민해야 합니다. 
+( 즉 이 시점에서 지원 조직의 해외 아웃 소싱가능 성이 없어 집니다. )</p>
+<p>이분분에서 해외 진출 가능성은 전혀 없어진다고 생각 하면 될듯 합니다.
+프로그램의 결과물은 외국어를 지원 하도록 개발 되었더라도 이런식으로 내부
+코드의 일부가 외부로 표출되는 경우는 그냥 괴문자가 표시될테니까요. 
+ ( 한글 OS는 커녕 한글폰트가 설치 되어 있을지도 모르는 상황이지요. )</p>
+<p>여기 까지가 프로그램이 내보내는 여러 출력에 한글이 들어 가는 경우의 문제
+입니다.</p>
+<p>이와 별도로 한글을 표시 할수 없는 비상상황에서( 영문 OS 나 , gui 환경이
+아닌 상황에서 ) 프로그램 코드나 그 결과물(에러메시지, 로그)을 확인 하는
+것이 불가능해진다는 문제도 있습니다.</p>
+<p>애초에 unicode의 여러 encoding에서 (+ 비 unicode 한글 encoding) 오는
+혼란은 이것과는 또 별도의 문제 입니다. 
+한글 윈도의 cmd창과 OS의 한글 메시지 리소스는  euckr(cp949) 입니다.
+리눅스의 gui terminal 은 대부분 utf8을 사용하지요 . 
+게다가 최근 windows들의 unicode 셋은 utf-16le를 사용합니다. ( 한글
+윈도의 cmd창과 다릅니다. ) 
+맥은 풀어쓰기 한글 unicode를 사용하더군요. ;;; ( 한글 한자를 3개의
+unicode로 구성 - 이것도 유니코드 표준입니다.  ) 
+그나마 이런여러 encoding의문제는 
+python같으면 
+# -*- coding: utf-8 -*- 
+를 사용해서 강제/통일 하고 
+go 언어 같은 경우는 애초에 언어 spec에 utf-8로 강제하고 있으니 문제가
+조금 덜합니다. 
+그래도 맥의 풀어쓰기 한글은 답이 없을듯 하군요. 
+( 같은 한글 한글자를 표시하는 두가지 방법이 존재 합니다. 함수 변수
+이름으로 사용할때 보기에 같은 두 identifier 가 전혀 다른 것일 가능성이
+존재 하지요. )</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">프로그래밍</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%95%9C%EA%B8%80/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">한글</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%95%9C%EA%B8%80-%EC%9E%98%EB%AA%BB%EC%9D%80-%EC%95%84%EB%8B%8C%EB%8D%B0/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">한글 잘못은 아닌데</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">go4game 에 웹 클라이언트를 추가 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/">go4game - go 언어로 만드는 게임 서버</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-22-wxgame2%EB%A5%BC%EA%B0%9C%EC%84%A0%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2를 개선 하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2 의 네트웍 버전이 거의 완료 되었습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/">게임프로그래밍이라는 주제로 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/">web2py access control(접근 제어) 정리.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/">우분투 sublime text2에서 한글을 입력하기. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/">web2py 소개 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/">우분투에서 로컬에 설치된 문서를 편하게 보기.</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

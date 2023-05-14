@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>소니 엑스페리아 레이에 안드로이드 L (5.1.x)를 설치하기.  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417
+일종의 취미 생활인 가끔 생각나면 레이가지고 장난치기 입니다.
+오랫만에 XDA를 들어가보니 레이용 안드로이드 L!! 이 나왔더군요.
+그래서 설치하고 있습니다.
+( rom flash 하는 동안 쓰는 글입니다. )
+진행순서는
+위 링크를 들어가서 cyanide-5.1-RC-11.0-urushi.zip HDPI_miniGAPPS-5.1.1-20150527-signed.zip System-Formating-Tool_signed.zip UPDATE-SuperSU-v2.46.zip
+을 받아 놓습니다.
+cyanide-5.1-RC-11.0-urushi.zip 안의 boot.img 를 풀어내고 .
+fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼륨 위쪽 버튼을 누른 채로 pc 와 usb 케이블로 연결하면 됩니다. 홈 버튼 주변 이 파란색으로 빛나면 제대로 진입한 것입니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="소니 엑스페리아 레이에 안드로이드 L (5.1.x)를 설치하기. " />
+<meta property="og:description" content="http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417
+일종의 취미 생활인 가끔 생각나면 레이가지고 장난치기 입니다.
+오랫만에 XDA를 들어가보니 레이용 안드로이드 L!! 이 나왔더군요.
+그래서 설치하고 있습니다.
+( rom flash 하는 동안 쓰는 글입니다. )
+진행순서는
+위 링크를 들어가서 cyanide-5.1-RC-11.0-urushi.zip HDPI_miniGAPPS-5.1.1-20150527-signed.zip System-Formating-Tool_signed.zip UPDATE-SuperSU-v2.46.zip
+을 받아 놓습니다.
+cyanide-5.1-RC-11.0-urushi.zip 안의 boot.img 를 풀어내고 .
+fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼륨 위쪽 버튼을 누른 채로 pc 와 usb 케이블로 연결하면 됩니다. 홈 버튼 주변 이 파란색으로 빛나면 제대로 진입한 것입니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-05-30-%EC%86%8C%EB%8B%88%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%97%90%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9Cl51x%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-05-30T16:52:00+09:00" />
+<meta property="article:modified_time" content="2015-05-30T16:52:00+09:00" />
+<meta itemprop="name" content="소니 엑스페리아 레이에 안드로이드 L (5.1.x)를 설치하기. ">
+<meta itemprop="description" content="http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417
+일종의 취미 생활인 가끔 생각나면 레이가지고 장난치기 입니다.
+오랫만에 XDA를 들어가보니 레이용 안드로이드 L!! 이 나왔더군요.
+그래서 설치하고 있습니다.
+( rom flash 하는 동안 쓰는 글입니다. )
+진행순서는
+위 링크를 들어가서 cyanide-5.1-RC-11.0-urushi.zip HDPI_miniGAPPS-5.1.1-20150527-signed.zip System-Formating-Tool_signed.zip UPDATE-SuperSU-v2.46.zip
+을 받아 놓습니다.
+cyanide-5.1-RC-11.0-urushi.zip 안의 boot.img 를 풀어내고 .
+fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼륨 위쪽 버튼을 누른 채로 pc 와 usb 케이블로 연결하면 됩니다. 홈 버튼 주변 이 파란색으로 빛나면 제대로 진입한 것입니다."><meta itemprop="datePublished" content="2015-05-30T16:52:00+09:00" />
+<meta itemprop="dateModified" content="2015-05-30T16:52:00+09:00" />
+<meta itemprop="wordCount" content="275">
+<meta itemprop="keywords" content="android lollipop,레이,펌업,롤리팝,커펌,안드로이드,lollipop," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="소니 엑스페리아 레이에 안드로이드 L (5.1.x)를 설치하기. "/>
+<meta name="twitter:description" content="http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417
+일종의 취미 생활인 가끔 생각나면 레이가지고 장난치기 입니다.
+오랫만에 XDA를 들어가보니 레이용 안드로이드 L!! 이 나왔더군요.
+그래서 설치하고 있습니다.
+( rom flash 하는 동안 쓰는 글입니다. )
+진행순서는
+위 링크를 들어가서 cyanide-5.1-RC-11.0-urushi.zip HDPI_miniGAPPS-5.1.1-20150527-signed.zip System-Formating-Tool_signed.zip UPDATE-SuperSU-v2.46.zip
+을 받아 놓습니다.
+cyanide-5.1-RC-11.0-urushi.zip 안의 boot.img 를 풀어내고 .
+fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼륨 위쪽 버튼을 누른 채로 pc 와 usb 케이블로 연결하면 됩니다. 홈 버튼 주변 이 파란색으로 빛나면 제대로 진입한 것입니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">소니 엑스페리아 레이에 안드로이드 L (5.1.x)를 설치하기. </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-05-30T16:52:00+09:00">May 30, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417">http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417</a></p>
+<p>일종의 취미 생활인 가끔 생각나면 레이가지고 장난치기 입니다.</p>
+<p>오랫만에 XDA를 들어가보니 레이용 안드로이드 L!! 이 나왔더군요.</p>
+<p>그래서 설치하고 있습니다.</p>
+<p>( rom flash 하는 동안 쓰는 글입니다. )</p>
+<p>진행순서는</p>
+<p>위 링크를 들어가서 
+cyanide-5.1-RC-11.0-urushi.zip 
+HDPI_miniGAPPS-5.1.1-20150527-signed.zip 
+System-Formating-Tool_signed.zip 
+UPDATE-SuperSU-v2.46.zip</p>
+<p>을 받아 놓습니다.</p>
+<p>cyanide-5.1-RC-11.0-urushi.zip 
+안의 
+boot.img 를 풀어내고 .</p>
+<p>fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼륨 위쪽
+버튼을 누른 채로 pc 와 usb 케이블로 연결하면 됩니다. 
+홈 버튼 주변 이 파란색으로 빛나면 제대로 진입한 것입니다. )</p>
+<p>boot.img를 flash 합니다. 
+( 기계가 보이는지 확인 
+fastboot devices 
+커널을 설치 ( 커널 파일 이름이 boot.img 입니다 ) 
+fastboot flash boot boot.img 
+기계 재부팅 
+fastboot reboot)</p>
+<p>그다음은 링크대로 
+CWM 모드로 진입한후 ( 부팅시 home 연타 ) 
+( 설치되어 있지 않으면 cwm 설치부터 해야 합니다. )</p>
+<ol>
+<li>WIPE DATA/FACTORY RESET</li>
+<li>Flash system formatting tool zip</li>
+<li>Wipe Cache</li>
+<li>Flash the ROM.</li>
+<li>Reboot wait for system settle down everything!!!!</li>
+<li>reboot again and flash the Gapps 
+7)flash Supersu zip</li>
+</ol>
+<p>인데 
+5번에서 멈춰있군요.</p>
+<p>뭐가 문제이려나요. ;;;</p>
+<p>오래 걸리는 군요.</p>
+<p>다시 링크 글을 잘 읽어보니 
+sdcard에 ext4 파티션이 있어야 하나 봅니다. 
+sdcard를 큰거 (16Gbyte) 로 바꾸고 fat32 와 ext4 파티션을 가지도록 포맷
+하고 
+( 어느것을 앞으로 해야 하는지 몰라서 fat32, ext4 순으로 만들었습니다.
+) 
+flash할 zip 파일들을 fat32에 복사해 넣고 있습니다. ;;;</p>
+<p>1번부터 다시 하고 있는데 
+5번에 나오는 메시지를 보니 잘 되는 것 같습니다. 
+detected filesystem ext4 at 어쩌구 하고 나옵니다. 
+( 아까는 이부분에서 못찻는다는 에러가 나왔습니다. ) 
+아마도 레이의 내장 용량이 작으니 sdcard를 사용하게 하는 것 이겠지요.</p>
+<p>아무튼 무사히 지나가서 6,7번도 진행했습니다. 
+부팅해보니 내장 저장공간이 (app install 공간 ) 넖어져서 좋군요.</p>
+<p>이 모든 작업은 linux mint 17.1 에서 이루어 졌습니다. 
+(windows 쓰시는 분들은 다른 방법을 찾아야 할듯 합니다. )</p>
+<p>아 그리고 설치하고 나니 라디오가 없군요;;; 
+라디오 유용한데. ;;</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/android-lollipop/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">android lollipop</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A0%88%EC%9D%B4/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">레이</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%8E%8C%EC%97%85/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">펌업</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%A1%A4%EB%A6%AC%ED%8C%9D/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">롤리팝</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%BB%A4%ED%8E%8C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">커펌</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">안드로이드</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/lollipop/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">lollipop</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-06-%ED%98%B8%EA%B8%B0%EC%8B%AC%EC%97%90%EC%84%9C%EB%A0%88%EC%9D%B4%EC%97%9044%ED%82%A4%EC%BA%A3%EC%9D%84%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">호기심에서 레이에 4.4 키캣을 올렸습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-21-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EB%A5%BC42%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%ED%95%98%EA%B8%B0/">엑스페리아 레이를 4.2로 업그레이드 하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-09-28-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%9D%98%ED%99%9C%EC%9A%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%B5%9C%EC%8B%A0%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%9C%BC%EB%A1%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">엑스페리아 레이의 활용을 위해 최신 젤리빈으로 업데이트를 했습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-25-%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%8B%A4%EC%A7%80%EC%B3%90%EC%84%9C%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%97%90%EC%BB%A4%ED%8E%8C%EC%9D%84%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/">기다리다 지쳐서 엑스페리아 레이에 커펌을 올렸습니다.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-17-gboard89%ED%95%9C%EB%8B%AC%EC%A2%80%EB%84%98%EA%B2%8C%EC%82%AC%EC%9A%A9%ED%95%9C%EC%86%8C%EA%B0%90/">gboard 8.9 한 달 좀 넘게 사용한 소감 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-16-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%9D%84%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/">휴대폰을 바꿨습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-11-06-%EC%97%90%EC%9D%B4%EC%84%9Ca500%EC%97%90%EC%84%A4%EC%B9%98%ED%95%B4%EB%B3%B8rom%EB%93%A4%EA%B0%84%EB%8B%A8%ED%8F%89%EA%B0%80%EB%B0%8F%EA%B8%B0%EB%A1%9D/">에이서 a500에 설치해본 rom들 간단 평가 및 기록.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/">DIY 전자 장난감 2 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-01-12-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%90/">DIY 전자 장난감 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-10-27-%ED%95%9C%EC%84%B1gboard89%EC%9D%98%EA%B8%B0%EC%88%A0%EC%A0%81%EB%AC%B8%EC%A0%9C/">한성 gboard 8.9의 기술적 문제 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-08-24-%ED%95%9C%EC%84%B1gboard89%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0/">한성 gboard 8.9에 리눅스를 설치하고.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-20-%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4%EA%B0%90%EC%83%81%EA%B8%B0%EC%82%AC%EC%9A%A9%EB%A3%A8%ED%8C%85%EA%B8%B0/">옵티이이 감상기(사용, 루팅기)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2013-01-06-%EC%97%90%EC%9D%B4%EC%84%9Ca500%EC%97%90%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%98%AC%EB%A6%AC%EA%B8%B0/">에이서 a500에 젤리빈 올리기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-11-07-%ED%97%88%EB%8B%88%EC%BB%B4%EC%97%90%EC%A0%81%EC%9A%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%8C%81%EC%9C%A0%EC%9A%A9%ED%95%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/">허니컴에 적용할만한 팁, 유용한 프로그램</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-10-11-%EC%97%90%EC%9D%B4%EC%84%9C%EC%95%84%EC%9D%B4%EC%BD%94%EB%8B%88%EC%95%84%ED%83%ADa500%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C/">에이서 아이코니아 탭 a500을 사용하면서</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>goguelike의 네트웍 속도 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="일단 python에서 네트웍 속도로 이것 저것 해본 글들 http://kasw.blogspot.kr/search/label/wxgame
+goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트 해보니 20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로 검사및 튜닝을 한 이야기..
+결론만 말하면 go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는 10% 이하) 에서 150000 패킷 / 초 정도를 처리 할 수 있습니다.
+파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에 비하면 깨끗한 구조를 유지하면서도 2.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="goguelike의 네트웍 속도" />
+<meta property="og:description" content="일단 python에서 네트웍 속도로 이것 저것 해본 글들 http://kasw.blogspot.kr/search/label/wxgame
+goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트 해보니 20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로 검사및 튜닝을 한 이야기..
+결론만 말하면 go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는 10% 이하) 에서 150000 패킷 / 초 정도를 처리 할 수 있습니다.
+파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에 비하면 깨끗한 구조를 유지하면서도 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2015-02-13-goguelike%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%86%8D%EB%8F%84/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-02-13T20:54:00+09:00" />
+<meta property="article:modified_time" content="2015-02-13T20:54:00+09:00" />
+<meta itemprop="name" content="goguelike의 네트웍 속도">
+<meta itemprop="description" content="일단 python에서 네트웍 속도로 이것 저것 해본 글들 http://kasw.blogspot.kr/search/label/wxgame
+goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트 해보니 20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로 검사및 튜닝을 한 이야기..
+결론만 말하면 go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는 10% 이하) 에서 150000 패킷 / 초 정도를 처리 할 수 있습니다.
+파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에 비하면 깨끗한 구조를 유지하면서도 2."><meta itemprop="datePublished" content="2015-02-13T20:54:00+09:00" />
+<meta itemprop="dateModified" content="2015-02-13T20:54:00+09:00" />
+<meta itemprop="wordCount" content="182">
+<meta itemprop="keywords" content="golang,python,go programming language,network," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="goguelike의 네트웍 속도"/>
+<meta name="twitter:description" content="일단 python에서 네트웍 속도로 이것 저것 해본 글들 http://kasw.blogspot.kr/search/label/wxgame
+goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트 해보니 20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로 검사및 튜닝을 한 이야기..
+결론만 말하면 go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는 10% 이하) 에서 150000 패킷 / 초 정도를 처리 할 수 있습니다.
+파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에 비하면 깨끗한 구조를 유지하면서도 2."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">goguelike의 네트웍 속도</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-02-13T20:54:00+09:00">February 13, 2015</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>일단 python에서 네트웍 속도로 이것 저것 해본 글들 
+<a href="http://kasw.blogspot.kr/search/label/wxgame">http://kasw.blogspot.kr/search/label/wxgame</a></p>
+<p>goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트
+해보니 
+20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로
+검사및 튜닝을 한 이야기..</p>
+<p>결론만 말하면 
+go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는
+10% 이하) 에서 150000 패킷 / 초  정도를 처리 할 수 있습니다.</p>
+<p>파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에
+비하면 
+깨끗한 구조를 유지하면서도 2.5배 이상의 성능을 낼수 있는 것이지요. 
+( go 언어는 cpu를 모두 사용하고 python은 cpu를 한개만 사용가능했으니
+실제 성능 차이는 없다고 볼수도 있겠습니다. ;; )</p>
+<p>좀더 정확히 말하면 한개 기계에서 테스트할때 150000정도가 나왔으며 (
+테스트 클라이언트가 cpu를 사용하니 1.5배 이상 향상될 여지가 있습니다.
+) 
+두개의 기계를 사용해서 테스트하면 80000을 넘지 못하더군요. 
+( 기가빗 네트웍으로 연결되어 있음에도. )</p>
+<p>양쪽 기계의 상태를 보면 여유가 있었고, 생각해보면 제가 쓰는 공유기의
+패킷 처리량을 넘었기 때문이라고 생각하고 있습니다.</p>
+<p>아무튼 아직도 여지가 남아있지만 네트웍 처리 goroutine을 분리,
+logic입장에서 nonblocking, async로 처리하도록 하는 상태에서도 충분한
+성능이 나온다고 볼수 있겠습니다.</p>
+<p>참고로 이 테스트는 모두 connected tcp client 를 가정하고 한 테스트고
+따라서 http 테스트와는 비교가 불가능합니다.</p>
+<p>일단 github에 올려 두었습니다. 
+<a href="https://github.com/kasworld/netspeed">https://github.com/kasworld/netspeed</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/go-programming-language/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">go programming language</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/network/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">network</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/">wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-05-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98goroutine%EC%9D%84%EB%8F%99%EC%8B%9C%EC%97%90%ED%95%9C%EB%8B%A8%EA%B3%84%EC%94%A9%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어에서 여러개의 goroutine을 동시에 한단계씩 실행하기 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-04-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cprofiling%ED%95%98%EA%B8%B0/">go 언어에서 profiling 하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-03-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%8F%99%EC%8B%9C%EC%97%90%EC%8B%A4%ED%96%89%EB%90%98%EB%8A%94goroutine%EC%9D%98%EC%88%98%EB%A5%BC%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0/">go 언어에서 동시에 실행되는 goroutine의 수를 제어 하기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-02-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cfunctionobject%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0%EB%B0%98%EB%B3%B5%EB%A3%A8%ED%94%84%EC%9C%84%EC%9E%84%ED%8C%A8%ED%84%B4delegateloop/">go 언어에서 function object 사용하기. 반복루프 위임 패턴? (delegate loop)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-02-01-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%ED%91%9C%EC%A4%80%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%A5%BC%ED%99%95%EC%9E%A5%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/">go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-01-31-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%EC%A3%BC%EC%9D%98%ED%95%A0%EB%B6%80%EB%B6%84/">go언어를 사용하면서 주의 할 부분 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2015-01-30-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EC%9E%90%EC%A3%BC%EC%93%B0%EA%B2%8C%EB%90%98%EB%8A%94%EC%BD%94%EB%93%9C%ED%8C%A8%ED%84%B4%EB%93%A4serialid%EC%83%9D%EC%84%B1/">go 언어를 사용 할때  자주 쓰게 되는 코드 패턴들. serial ID 생성 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-12-03-gotesting%ED%8C%A8%ED%82%A4%EC%A7%80%EC%82%AC%EC%9A%A9%EC%A4%91%EC%A3%BC%EC%9D%98%EC%A0%90/">go testing 패키지 사용중 주의점 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-24-goguelikebaised%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/">goguelike:baised 진행사항 </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/">go 언어로 만든 코드를 웹 브라우저에서 실행하기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-17-goguelikemapeditor/">goguelike map editor </a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-16-pythongolang%EC%9D%98webframework%EC%A0%84%EC%9F%81/">python/golang의 web framework전쟁.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2014-10-09-goguelike%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/">goguelike 성능 테스트 </a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

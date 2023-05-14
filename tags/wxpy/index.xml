@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wxpy on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/wxpy/</link>
+    <description>Recent content in wxpy on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 05 Dec 2019 10:24:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/wxpy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wxgame2의 go 언어 포팅 gowasm2dgame </title>
+      <link>https://kasworld.github.io/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/</link>
+      <pubDate>Thu, 05 Dec 2019 10:24:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/</guid>
+      <description>https://github.com/kasworld/gowasm2dgame
+python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
+golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트 입니다.
+python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할 계획은 없습니다.)
+goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의 총정리 예제이기도 합니다.
+중요한 역할을 하는 것들을 정리해보면
+genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
+argdefault : config와 command line arguments
+prettystring : struct 의 string 화 / admin web , debug용</description>
+    </item>
+    
+  </channel>
+</rss>

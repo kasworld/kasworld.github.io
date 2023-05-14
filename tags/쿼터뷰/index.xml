@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>쿼터뷰 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EC%BF%BC%ED%84%B0%EB%B7%B0/</link>
+    <description>Recent content in 쿼터뷰 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 08 Jul 2020 15:39:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%BF%BC%ED%84%B0%EB%B7%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goguelike 쿼터 뷰 </title>
+      <link>https://kasworld.github.io/posts/2020-07-08-goguelike%EC%BF%BC%ED%84%B0%EB%B7%B0/</link>
+      <pubDate>Wed, 08 Jul 2020 15:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2020-07-08-goguelike%EC%BF%BC%ED%84%B0%EB%B7%B0/</guid>
+      <description>3D tile 을 적용한 김에 카메라를 살짝 기울여 보았습니다. 확실히 입체감이 늘어나고 필드가 좀더 그럴듯 하게 되었습니다.
+다만 가시 범위가 늘어나서 성능을 위해 보이는 부분만 object를 배치한 것이 티나는 군요.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>에그 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EC%97%90%EA%B7%B8/</link>
+    <description>Recent content in 에그 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 09 Dec 2009 13:09:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%97%90%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>모두가 아이폰을 이야기할때</title>
+      <link>https://kasworld.github.io/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/</link>
+      <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/</guid>
+      <description>전 와이브로 에그를 신청했습니다. ;;;
+주 모바일? 디바이스로 thinkpad x61t에 우분투 리눅스를 사용하는관계로 모바일 인터넷 환경에 선택지가 별로 없습니다. ;;;
+그나마 에그는 wifi로 wibro를 연결해주니 리눅스에서 아무 문제가 없지요.
+덤으로 지르는 김에 bluetooth gps 와 웹캠도 질렀습니다. gps역시 usb 타입을 사면 드라이버가 있을리가 없으니 bluetooth gps를 선택한것이구요.
+어제 물건이 도착해서 테스트 해보니 에그와 웹캠은 한방에 잡히고 (당연한가? ) gps는 약간의 삽질끝에 오늘 오전에 성공했습니다.
+http://ubuntuforums.org/showthread.php?t=200142 를 참고하면 됩니다.
+gps야 원래 좀 고생할 각오를 했지만 웹캠쪽도 리눅스에서 어느정도 지원 될지 걱정을 좀 했는데 디바이스는 기본적으로 그냥 인식되고 synaptic 관리자에서 Cheese를 설치하면 프로그램도 쓸만한 수준입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

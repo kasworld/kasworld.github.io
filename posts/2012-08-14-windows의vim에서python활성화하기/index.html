@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>windows의 vim에서 python 활성화 하기  | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="간단한 팁입니다만 기록을 위해서 적습니다.
+전 윈도우건 리눅스건 환경을 거의 통일 시켜놓고 작업을 하는 편입니다.
+이 환경의 통일에서 상당히 중요한 역할을 하는 것이 gvim 인데 http://www.vim.org/download.php 주 에디터/뷰어로 항상 gvim을 사용하도록 세팅해 놓으면 chrome/firefox와 더불어 종종 &ldquo;내가 지금 윈도로 부팅한 상태인가?&rdquo; 를 헷갈릴 정도로 일관된 환경을 유지 할수 있습니다. ( 과장이 좀 많이 있지만요. ^^)
+아무튼 vim을 쓰고 있는 시간이 많아지니 이런저런 플러그인 들도 설치하게 되고 http://kldp.org/node/125263 설정들도 이렇게 저렇게 하곤 합니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="windows의 vim에서 python 활성화 하기 " />
+<meta property="og:description" content="간단한 팁입니다만 기록을 위해서 적습니다.
+전 윈도우건 리눅스건 환경을 거의 통일 시켜놓고 작업을 하는 편입니다.
+이 환경의 통일에서 상당히 중요한 역할을 하는 것이 gvim 인데 http://www.vim.org/download.php 주 에디터/뷰어로 항상 gvim을 사용하도록 세팅해 놓으면 chrome/firefox와 더불어 종종 &ldquo;내가 지금 윈도로 부팅한 상태인가?&rdquo; 를 헷갈릴 정도로 일관된 환경을 유지 할수 있습니다. ( 과장이 좀 많이 있지만요. ^^)
+아무튼 vim을 쓰고 있는 시간이 많아지니 이런저런 플러그인 들도 설치하게 되고 http://kldp.org/node/125263 설정들도 이렇게 저렇게 하곤 합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2012-08-14T16:52:00+09:00" />
+<meta property="article:modified_time" content="2012-08-14T16:52:00+09:00" />
+<meta itemprop="name" content="windows의 vim에서 python 활성화 하기 ">
+<meta itemprop="description" content="간단한 팁입니다만 기록을 위해서 적습니다.
+전 윈도우건 리눅스건 환경을 거의 통일 시켜놓고 작업을 하는 편입니다.
+이 환경의 통일에서 상당히 중요한 역할을 하는 것이 gvim 인데 http://www.vim.org/download.php 주 에디터/뷰어로 항상 gvim을 사용하도록 세팅해 놓으면 chrome/firefox와 더불어 종종 &ldquo;내가 지금 윈도로 부팅한 상태인가?&rdquo; 를 헷갈릴 정도로 일관된 환경을 유지 할수 있습니다. ( 과장이 좀 많이 있지만요. ^^)
+아무튼 vim을 쓰고 있는 시간이 많아지니 이런저런 플러그인 들도 설치하게 되고 http://kldp.org/node/125263 설정들도 이렇게 저렇게 하곤 합니다."><meta itemprop="datePublished" content="2012-08-14T16:52:00+09:00" />
+<meta itemprop="dateModified" content="2012-08-14T16:52:00+09:00" />
+<meta itemprop="wordCount" content="341">
+<meta itemprop="keywords" content="파이썬,python,vim," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="windows의 vim에서 python 활성화 하기 "/>
+<meta name="twitter:description" content="간단한 팁입니다만 기록을 위해서 적습니다.
+전 윈도우건 리눅스건 환경을 거의 통일 시켜놓고 작업을 하는 편입니다.
+이 환경의 통일에서 상당히 중요한 역할을 하는 것이 gvim 인데 http://www.vim.org/download.php 주 에디터/뷰어로 항상 gvim을 사용하도록 세팅해 놓으면 chrome/firefox와 더불어 종종 &ldquo;내가 지금 윈도로 부팅한 상태인가?&rdquo; 를 헷갈릴 정도로 일관된 환경을 유지 할수 있습니다. ( 과장이 좀 많이 있지만요. ^^)
+아무튼 vim을 쓰고 있는 시간이 많아지니 이런저런 플러그인 들도 설치하게 되고 http://kldp.org/node/125263 설정들도 이렇게 저렇게 하곤 합니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">windows의 vim에서 python 활성화 하기 </h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2012-08-14T16:52:00+09:00">August 14, 2012</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>간단한 팁입니다만 기록을 위해서 적습니다.</p>
+<p>전 윈도우건 리눅스건 환경을 거의 통일 시켜놓고 작업을 하는 편입니다.</p>
+<p>이 환경의 통일에서 상당히 중요한 역할을 하는 것이 gvim 인데 
+<a href="http://www.vim.org/download.php">http://www.vim.org/download.php</a> 
+주 에디터/뷰어로 항상 gvim을 사용하도록 세팅해 놓으면 
+chrome/firefox와 더불어 종종 &ldquo;내가 지금 윈도로 부팅한 상태인가?&rdquo; 를
+헷갈릴 정도로 일관된 환경을 유지 할수 있습니다. ( 과장이 좀 많이
+있지만요. ^^)</p>
+<p>아무튼 vim을 쓰고 있는 시간이 많아지니 이런저런 플러그인 들도 설치하게
+되고 
+<a href="http://kldp.org/node/125263">http://kldp.org/node/125263</a> 
+설정들도 이렇게 저렇게 하곤 합니다.</p>
+<p>그래서 이번엔 windows vim에서 python script를 실행하는 설정을 했기에
+기록으로 남김니다. 
+( 별거 없지만 ;;; ) 
+windows 인 이유는 우분투에선 그냥 되는 것이기 때문이며 
+궅이 설정이라고 하는 이유는 
+windows 용 vim은 32bit 실행파일이라서 python도 32bit를 준비해야 하기
+때문입니다.</p>
+<p>즉 이글은 ( 아 서론 길다. ;;; ) 
+64bit windows에는 이미 개발용 64bit python 이 설치 되어 있어서 
+32bit vim에서 이 64bit python이 아닌 vim 전용의 32bit python을 설정하는
+방법입니다.</p>
+<p>일단 
+본인이 설치한 vim에서 
+:version 
+을 실행합니다.</p>
+<p><a href="../images/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0-gvimversion.png"><img src="../images/thumbnails/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0-gvimversion.png" alt=""></a></p>
+<p>32bit 용인지 확인하고 아래를 보면 
+dynamic_python_dll=python27.dll 
+이란 부분을 확인합니다.</p>
+<p>즉 제 vim은 32bit , python 2.7 을 필요로 한다는 겁니다. 
+<a href="http://www.python.org/getit/">http://www.python.org/getit/</a> 
+위 링크에서 해당 python을 다운 받아서 설치합니다. 
+주의 할점은 현재 사용중인 python 디렉토리와는 다른 위치에 설치해서 현
+python을 덮어 쓰지 않도록 해야 합니다. 
+설치가 끝나면 설치된 폴더에서 python27.dll 을 복사해서 gvim.exe가 있는
+폴더에 복사하면 됩니다.</p>
+<p>그리고 gvim을 실행해서 
+:py print sys.version 
+등을 실행해서 잘 나오면 성공.</p>
+<p>추가로 이 설치된 python을 지워 버릴수 있는 방법이 있습니다. 
+:py print sys.path 
+를 입력하면 vim python이 라이브러리들을 찾는 path가 나오는데 
+중간에 python27.zip 이란 것이 보일것입니다.</p>
+<p>즉 필요 라이브러리들을 python27.zip으로 묶어서 vim 폴더에 넣어주면 
+vim을 위해 설치한 python이 더이상 불필요하게 되는 것이지요. 
+제가 테스트한 바로는 
+이 zip 파일의 루트에  python 설치폴더에있는 
+DLLs 폴더의 모든 파일 , lib 폴더의 모든 폴더+ 파일 ( 폴더는 유지) , lib
+폴더의 모든 파일 , 그리고 tcl 폴더를 넣으면 잘 작동했습니다. 
+아마 tcl 폴더는 없어도 될듯 합니다.</p>
+<p>일단 이렇게 만들어진 python27.dll과 python27.zip 은 다른 기계에 설치된
+(같은 버전의)vim 폴더에 복사해 넣으면 간단하게 vim-python을 사용 할수
+있게 됩니다. 
+전 여러 기계에서 동일 세팅의 vim을 쓰는 관계로 이렇게 사용합니다.</p>
+<p>다 아시겠지만 
+ruby,perl 등에도 적용 가능합니다. 
+vim python 도움말 보는 법은 당연히 vim내에서 
+:help py 
+입니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">파이썬</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/vim/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">vim</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/2012-07-11-%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%96%B8%EC%96%B4%EB%B3%84%ED%88%AC%EC%9E%90%EC%8B%9C%EA%B0%84/">현재 까지 언어별 투자시간</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/">uwsgi 사용시 주의점</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-07-python%EC%9C%BC%EB%A1%9C%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/">python으로 웹 서비스 만들어보기.</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2011-07-03-%EC%A2%8B%EC%9D%80ai%EB%A7%8C%EB%93%A4%EA%B8%B0/">좋은 AI 만들기?</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/2008-04-29-%EB%8B%A8%EC%A0%95%ED%95%9Cpython%EC%9E%90%EC%9C%A0%EB%B6%84%EB%B0%A9%ED%95%9Cperl/">단정한 python , 자유분방한 perl</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

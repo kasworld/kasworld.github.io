@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>라즈베리파이 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/</link>
+    <description>Recent content in 라즈베리파이 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 30 Apr 2016 15:04:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>라즈베리 파이 화면 꺼짐 막기 메모</title>
+      <link>https://kasworld.github.io/posts/2016-04-30-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%A7%89%EA%B8%B0%EB%A9%94%EB%AA%A8/</link>
+      <pubDate>Sat, 30 Apr 2016 15:04:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-04-30-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%A7%89%EA%B8%B0%EB%A9%94%EB%AA%A8/</guid>
+      <description>rpi 2에서는
+/etc/xdg/lxsession/LXDE-pi/autostart 파일에
+@xset s off @xset -dpms @xset s noblank
+추가 하는 것으로 가능했는데 이상하게도 rpi 3에서는 통하지 않는다.
+rpi 3에서는
+/etc/lightdm/lightdm.conf 파일의 SeatDefaults section 에
+[SeatDefaults] xserver-command=X -s 0 -dpms
+을 추가하는 것으로 화면 꺼짐을 막을수 있다. 확인은 xset -q 를 실행해서 가능
+xset이 설치되어 있지 않은경우 sudo apt-get install x11-xserver-utils 로 설치 가능.
+http://raspberrypi.stackexchange.com/questions/2059/disable-screen-blanking-in-x-windows-on-raspbian
+링크에 있는 방법중 성공한 방법 임.</description>
+    </item>
+    
+    <item>
+      <title>라즈베리파이2 감상기 </title>
+      <link>https://kasworld.github.io/posts/2016-03-13-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B42%EA%B0%90%EC%83%81%EA%B8%B0/</link>
+      <pubDate>Sun, 13 Mar 2016 16:14:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-03-13-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B42%EA%B0%90%EC%83%81%EA%B8%B0/</guid>
+      <description>라즈베리파이 2를 구입한지 약 한달이 되었으니 써보는 감상기입니다. ( 리뷰, 사용, 분석 기 가 아닙니다. ^^ )
+실제로 한달이라곤 하지만 실제로 라즈베리파이로 뭔가 한것은 아무것도 없고 단지 설치 이미지를 다운로드 집에 굴러다니던 sd에 복사 (인터넷에 있는 설명대로 dd &amp;hellip; 로 )
+부팅후 잘되나 확인
+이거 완전히 걍 linux네?
+하는 감상후 지극히 debian 스러운 업데이트 실행 apt-get &amp;hellip;
+예전에 wxpython으로 만들어둔 시계/달력 프로그램을 github에서 clone
+실행확인후 좀 느리군 하고
+이것 저것 빼서 가볍게 만들기.</description>
+    </item>
+    
+    <item>
+      <title>라즈베리 파이와 go언어. </title>
+      <link>https://kasworld.github.io/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/</link>
+      <pubDate>Sun, 06 Mar 2016 14:39:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/</guid>
+      <description>라즈베리파이에서 golang이 잘 되나? 를 찾다가 발견한 http://gobot.io/ ( Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language )
+이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니 하고
+go언어 공식 홈의 다운로드 페이지를 확인해보니 https://golang.org/dl/ go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는 있었지만 ^^ )
+이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인 했습니다.</description>
+    </item>
+    
+    <item>
+      <title>저 라즈베리파이 3은 시다. </title>
+      <link>https://kasworld.github.io/posts/2016-03-01-%EC%A0%80%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43%EC%9D%80%EC%8B%9C%EB%8B%A4/</link>
+      <pubDate>Tue, 01 Mar 2016 15:57:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2016-03-01-%EC%A0%80%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43%EC%9D%80%EC%8B%9C%EB%8B%A4/</guid>
+      <description>2년 전부터 embedded linux 장비를 호시 탐탐 노리고 있었는데.
+http://kasw.blogspot.kr/2014/01/diy.html
+http://kasw.blogspot.kr/2014/02/diy-2.html
+어제 부로 라즈베리 파이 3이 발매 되었답니다.
+https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/
+무선랜과 블루투스도 내장하고 64bit 4코어를 내장해 성능도 좋아 졌다고 하는군요.
+문제는 제가 2주전에 라즈베리 파이2 를 구입 했다는 거지요.
+게다가 무선랜카드도 필요해서 또 따로 주문했구요. http://prod.danawa.com/info/?pcode=3708216&amp;amp;cate=1131685
+위 랜카드는 라즈베리 파이에서 기본으로 지원하지는 않지만 http://blog.ngelmaum.org/entry/research-note-install-iptime-n500u-raspberry 를 보니 사용가능한듯 하여 주문했지요.
+더 큰 문제는 기존에 사두고 까먹고 있던 무선랜 카드가 있었고 라즈베리파이에서 아무문제없이 인식 및 사용이 가능했다는 사실입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

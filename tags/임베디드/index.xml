@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>임베디드 on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C/</link>
+    <description>Recent content in 임베디드 on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Tue, 25 Feb 2014 11:47:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DIY 전자 장난감 2 </title>
+      <link>https://kasworld.github.io/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/</link>
+      <pubDate>Tue, 25 Feb 2014 11:47:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/</guid>
+      <description>이전에 썼던 DIY 전자 장난감 글 이후로 발견한 재미있어 보이는 보드 입니다.
+NUCLEO 라고 하는 보드이며 http://vodanan.co.kr/product/detail.html?product_no=139&amp;amp;cate_no=89&amp;amp;display_group=1
+에서 판매 하고 있습니다. ARM Cortex-M4 계열 CPU 를 사용한 보드로 일단 가격이 저렴합니다. ^^
+아두이노 핀호환 이라고 하고 , http://www.st.com/web/catalog/tools/FM116/SC959/SS1532/LN1847/PF260000
+CPU는 STM32F401RE
+http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1577/LN1810/PF258797
+이며 32bit arm 84Mhz CPU 내장 512k flash rom , 96k sram , fpu 지원 정도 스펙이군요. 아두이노랑 비교하면 정말 화려한 스펙입니다. ^^
+전원 구성이 유연해서 좋아 보이고 ( 3.</description>
+    </item>
+    
+    <item>
+      <title>DIY 전자 장난감 </title>
+      <link>https://kasworld.github.io/posts/2014-01-12-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%90/</link>
+      <pubDate>Sun, 12 Jan 2014 21:12:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2014-01-12-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%90/</guid>
+      <description>DIY 전자 장난감들을 가지고 놀고 싶어서 이것 저것 조사해본 기록입니다.
+주요 선정 기준은 가격이 적당히 저렴해야 하고 (10만원 이 넘지 말 것) S/W 가 공개 소프트웨어로 구성되어 있어서 수정/확장이 자유로울 것. 개발을 위한 커뮤니티 형성이 잘되어 있는 것 S/W 개발만이 아니고 GPIO 등을 사용할 수 있는 H/W 지원이 될 것 크기는 적당히 작고(손바닥 크기 이하) 간단하게 전원 공급을 할수 있을 것. 입니다.
+( gboard 8.9 등 완제품은 가지고 놀 수 있는 범위가 너무 제한 적이라 )</description>
+    </item>
+    
+  </channel>
+</rss>

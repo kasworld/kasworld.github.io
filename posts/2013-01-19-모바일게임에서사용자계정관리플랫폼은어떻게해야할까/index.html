@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까? | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="어쩌다 보니 모바일 게입 업계 분들과 만날일이 있어서 공부도 할겸 이런 저런 모바일 게임을 받아서 테스트를 해봤습니다.
+저야 기본적으로 백 엔드에 관심이 많은 쪽이라 그 쪽을 보게 되는데요.
+카카오톡은 구글 에서 게임을 받더라도 반드시 카카오톡 아이디로 로그인을 해야만 게임을 실행할수 있습니다.
+그에 반해 한게임(nhn)은 아이디를 만들기 싫다고 하면 자동으로 그 게임용 아이디를 자동으로 만들어 주더군요. ( 제가 테스트 한것은 피쉬 아일랜드 입니다. - 아주 잘 만들어진 게임이더군요. )
+이거 느낌이 아주 좋았습니다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?" />
+<meta property="og:description" content="어쩌다 보니 모바일 게입 업계 분들과 만날일이 있어서 공부도 할겸 이런 저런 모바일 게임을 받아서 테스트를 해봤습니다.
+저야 기본적으로 백 엔드에 관심이 많은 쪽이라 그 쪽을 보게 되는데요.
+카카오톡은 구글 에서 게임을 받더라도 반드시 카카오톡 아이디로 로그인을 해야만 게임을 실행할수 있습니다.
+그에 반해 한게임(nhn)은 아이디를 만들기 싫다고 하면 자동으로 그 게임용 아이디를 자동으로 만들어 주더군요. ( 제가 테스트 한것은 피쉬 아일랜드 입니다. - 아주 잘 만들어진 게임이더군요. )
+이거 느낌이 아주 좋았습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/2013-01-19-%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84%EC%97%90%EC%84%9C%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%80%EC%96%B4%EB%96%BB%EA%B2%8C%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-01-19T12:49:00+09:00" />
+<meta property="article:modified_time" content="2013-01-19T12:49:00+09:00" />
+<meta itemprop="name" content="모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?">
+<meta itemprop="description" content="어쩌다 보니 모바일 게입 업계 분들과 만날일이 있어서 공부도 할겸 이런 저런 모바일 게임을 받아서 테스트를 해봤습니다.
+저야 기본적으로 백 엔드에 관심이 많은 쪽이라 그 쪽을 보게 되는데요.
+카카오톡은 구글 에서 게임을 받더라도 반드시 카카오톡 아이디로 로그인을 해야만 게임을 실행할수 있습니다.
+그에 반해 한게임(nhn)은 아이디를 만들기 싫다고 하면 자동으로 그 게임용 아이디를 자동으로 만들어 주더군요. ( 제가 테스트 한것은 피쉬 아일랜드 입니다. - 아주 잘 만들어진 게임이더군요. )
+이거 느낌이 아주 좋았습니다."><meta itemprop="datePublished" content="2013-01-19T12:49:00+09:00" />
+<meta itemprop="dateModified" content="2013-01-19T12:49:00+09:00" />
+<meta itemprop="wordCount" content="352">
+<meta itemprop="keywords" content="피쉬아일랜드,모바일,계정생성,플랫폼,사용자풀,교육,세미나,한게임," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?"/>
+<meta name="twitter:description" content="어쩌다 보니 모바일 게입 업계 분들과 만날일이 있어서 공부도 할겸 이런 저런 모바일 게임을 받아서 테스트를 해봤습니다.
+저야 기본적으로 백 엔드에 관심이 많은 쪽이라 그 쪽을 보게 되는데요.
+카카오톡은 구글 에서 게임을 받더라도 반드시 카카오톡 아이디로 로그인을 해야만 게임을 실행할수 있습니다.
+그에 반해 한게임(nhn)은 아이디를 만들기 싫다고 하면 자동으로 그 게임용 아이디를 자동으로 만들어 주더군요. ( 제가 테스트 한것은 피쉬 아일랜드 입니다. - 아주 잘 만들어진 게임이더군요. )
+이거 느낌이 아주 좋았습니다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?</h1>
+      
+      <p class="tracked">
+        By <strong>SeukWon Kang</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-01-19T12:49:00+09:00">January 19, 2013</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>어쩌다 보니 모바일 게입 업계 분들과 만날일이 있어서 공부도 할겸 이런
+저런 모바일 게임을 받아서 테스트를 해봤습니다.</p>
+<p>저야 기본적으로 백 엔드에 관심이 많은 쪽이라 그 쪽을 보게 되는데요.</p>
+<p>카카오톡은 구글 에서 게임을 받더라도 반드시 카카오톡 아이디로 로그인을
+해야만 게임을 실행할수 있습니다.</p>
+<p>그에 반해 한게임(nhn)은 아이디를 만들기 싫다고 하면 자동으로 그 게임용
+아이디를 자동으로 만들어 주더군요. 
+( 제가 테스트 한것은 피쉬 아일랜드 입니다. - 아주 잘 만들어진
+게임이더군요. )</p>
+<p>이거 느낌이 아주 좋았습니다. 
+( 뭔가 사용자관리에 대해 UX개념이 있다는 느낌.. )</p>
+<p>그런데 재미있는 것은 이 자동 발급 아이디는 패스워드가 없습니다. 
+그래서 어떻게 관리 하나 봤더니..</p>
+<p>게임을 지웠다가 다시 설치/실행해도 그 자동 발급아이디가 그대로 다시
+쓰입니다. 
+공장 초기화를 하고 다시 설치/실행해도 다시 쓰입니다. 
+심지어 커펌을 올리고 다시 설치/실행해도 그대로 더군요.</p>
+<p>뭐 내부적으로는 각 디바이스용 고유 hash key를 만들고 그 key를 기준으로
+서비스 서버에 계정 정보를 보관 하는 형태를 사용하고 있는 거겠지요.</p>
+<p>결과적으로는 자동발급된 ID는 자동으로 ID를 기기에 종속시킨다는 겁니다.</p>
+<p>그래서 다른 디바이스(이경우는 옵티이이)에는 제 nhn ID로 로그인 해서
+게임을 진행하다가 자동발급 ID를 쓰는 디바이스(a500)도 제 계정으로
+바꾸려고 계정 바꾸기 메뉴를 (어렵게-꽤 숨어 있습니다 - 그래도 있는게
+어딘가요.) 찾아 계정 변경을 선택하니 그 계정은 이미 다른 디바이스에서
+사용중이란 에러 메시지가 나오고 변경이 안됩니다.</p>
+<p>즉 같은 게임을 두개의 디바이스에서 같은 아이디로 진행사항을 공유하면서
+진행하는 것이 불가능하다는 이야기지요. 
+( 뭐 구현이 까다롭다는건 알겠습니다만. ;;; )</p>
+<p>그 외에도 여러 모바일 회사에서 자체 계정으로 게임을 서비스 하려고 하는
+것들이 시도되는 것을 알수 있었는데.</p>
+<p>가장 이상적인 것은 
+계정을 만들기 싫은 사람을 위해선 
+1.자동으로 그 디바이스-게임 용 계정을 발급하고 플레이 할수 있게
+해주고. 
+2. 게임을 하다가 정식 계정을 만들고자 하는 사람을 위해선 그
+자동발급계정을 정식 계정으로 마이그레이션 하는 서비스를 제공 
+하는 것이 좋다고 봅니다.</p>
+<p>카카오톡 게임이나 다음모바게(기억이 확실하진 않지만) 같이 계정이 없으면
+게임을 실행해볼 기회마져 주어지지 않는 다면 별로 좋은 UX 같아보이진
+않더군요.</p>
+<p>nhn 같은 경우는 2번을 할 방법을 찾을 수가 없어 보였습니다. 즉 최초
+실행시 계정을 정식으로 만들지 않으면 계속 자동생성-디바이스 종속
+계정으로 플레이 해야하는듯..</p>
+<p>게임빌 같은 경우는 일단 게임을 실행 플레이 할 수 있고 게임중에
+자연스럽게 계정생성을 유도 하는 것처럼 보였습니다. ( 로그인 해야 받을수
+있는 혜택 같은 걸로 ^^)</p>
+<p>모바일에서도 결국 사용자 풀의 규모가 승부가 될테니 기존 사용자 풀을
+가지지 못한 회사는 이부분을 어떻게 부드럽게 해낼지가 중요할듯 합니다.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%BC%EC%89%AC%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">피쉬아일랜드</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EB%AA%A8%EB%B0%94%EC%9D%BC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">모바일</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B3%84%EC%A0%95%EC%83%9D%EC%84%B1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">계정생성</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%94%8C%EB%9E%AB%ED%8F%BC/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">플랫폼</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%82%AC%EC%9A%A9%EC%9E%90%ED%92%80/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">사용자풀</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EA%B5%90%EC%9C%A1/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">교육</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%EC%84%B8%EB%AF%B8%EB%82%98/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">세미나</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%ED%95%9C%EA%B2%8C%EC%9E%84/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">한게임</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

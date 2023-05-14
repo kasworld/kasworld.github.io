@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grub on 취미로 프로그래밍을 하는 사람입니다.</title>
+    <link>https://kasworld.github.io/tags/grub/</link>
+    <description>Recent content in grub on 취미로 프로그래밍을 하는 사람입니다.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 06 Dec 2008 14:55:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>grub 이 날아 갔을경우 복구</title>
+      <link>https://kasworld.github.io/posts/2008-12-06-grub%EC%9D%B4%EB%82%A0%EC%95%84%EA%B0%94%EC%9D%84%EA%B2%BD%EC%9A%B0%EB%B3%B5%EA%B5%AC/</link>
+      <pubDate>Sat, 06 Dec 2008 14:55:00 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/2008-12-06-grub%EC%9D%B4%EB%82%A0%EC%95%84%EA%B0%94%EC%9D%84%EA%B2%BD%EC%9A%B0%EB%B3%B5%EA%B5%AC/</guid>
+      <description>삽질의 기록입니다.
+라이브 CD로 부팅후 터미널을 실행후
+sudo grub find /boot/grub/stage1의 결과를 root (hd0,0) 형태로 입력 setup (hd0)quit 재시작</description>
+    </item>
+    
+  </channel>
+</rss>
