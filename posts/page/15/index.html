@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-02-04-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cprofiling%ED%95%98%EA%B8%B0/" class="link black dim">
+        go 언어에서 profiling 하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      python도 그렇지만 go언어도 기본적으로 profiler를 제공합니다만, 정작 쓰려면 약간 귀찮은 관계로 제가 만들어 두고 거의 cut/paste 해서 사용하는 방법입니다.
+아래 코드는 간단한 프로그램을 짤때 복사해 쓰는 파일의 내용입니다. 뭔가 파일 하나 짜리 프로그램을 짜서 테스트 할때 사용하곤 합니다.
+이 자체로도 실행가능한 형태이며 그냥 실행하면 프로파일링이 실행되진 않고 더 아래에 있는 쉘 스크립트를 사용하거나 인자로 -pfilename을 주면 됩니다.
+실행이 끝나면 자동으로 프로파일러가 실행되어 command를 기다리는 형태가 됩니다.
+간단하게 프로파일 결과를 보고 싶으면 top30 같은 형태로 top + 수자 ( 빈칸 없이) 를 실행하면 됩니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-02-03-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%8F%99%EC%8B%9C%EC%97%90%EC%8B%A4%ED%96%89%EB%90%98%EB%8A%94goroutine%EC%9D%98%EC%88%98%EB%A5%BC%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0/" class="link black dim">
         go 언어에서 동시에 실행되는 goroutine의 수를 제어 하기.
       </a>
@@ -264,27 +285,6 @@ blender https://launchpad.net/~irie/+archive/ubuntu/blender sudo add-apt-reposit
 과 같이 와이드 화면에 어울리게 된 것을 볼 수 있습니다. /usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/wx/py 에 존재하는 crust.py 내의
 self.SplitHorizontally(self.shell, self.notebook, -self.sashoffset) 를 self.SplitVertically(self.shell, self.notebook, -self.sashoffset) 로 바꾸면 됩니다.
 ( 두번 나옵니다. , _CheckShouldSplit 와 ToggleTools 함수 )
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-11-26-%ED%95%9C%EA%B8%80identifier%EB%A5%BC%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EB%A1%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%A7%9C%EA%B8%B0/" class="link black dim">
-        한글 identifier 를 지원 하는 언어에서 한글로 프로그램 짜기.
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      요즘 나오는 언어들은 프로그램 내의 identifier이름으로 unicode 를 지원 하는 경우가 많습니다. http://rosettacode.org/wiki/Unicode_variable_names
-애초에 새로 언어를 디자인 하면서 이를 지원하지 않게 디자인 하는게 이상한것이겠지요.
-아마 제가 처음으로 한글 변수 명 한글 함수명이 사용 가능한것을 보게 된것은 java 였던 것 같습니다. 뭐 그전에 &ldquo;씨앗&quot;이라고 하는 한글 프로그래밍 언어도 있었습니다만..
-그래서 이제는 unicode를 지원하니 이제는 맘껏 한글 이름 변수명과 함수명 클래스 이름을 사용해도 좋을까 하는것이 주제 입니다.
-그 전에 잠시 집고 넘어갈것이 있는데, 회사에서 프로그램을 작성할때 한글 이름 파일명을 사용하는지 궁금합니다.
     </div>
   </div>
 </div>

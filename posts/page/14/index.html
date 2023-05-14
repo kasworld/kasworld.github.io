@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/" class="link black dim">
+        go언어로 TCP server와 GUI client를 만들어 보기. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      3000라인 이상을 공용 package로 분리해 내고도 goguelike에 남은 코드가 아직도 9000라인이 넘기 때문에
+TCP server 와 GUI client로 사용할만한 예제를 따로 만들었습니다.
+결과적으로는 http://kasw.blogspot.kr/2015/02/go-tcp-serverclient.html http://kasw.blogspot.kr/2015/02/go-gui.html 을 합치는 프로그램을 만드는 것이됩니다.
+원래 계획으로는 framework으로 만들어 볼 생각이 있었는데 생각보다 framework과 custom logic의 분리가 까다로운 관계로 그냥 server와 client의 예제가 되었습니다. 코드는 새로 작성된 것이지만 전체 적인 구조와 작동은 goguelike와 거의 같은 형태입니다. ( 적당히 단순화 되긴 했지만 )
+예제가 하는 일은 ( logic을 가능한 단순한것으로 선택했습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-02-24-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Ctcpserverclient%EC%9D%98%EC%A0%84%ED%98%95%EC%A0%81%ED%98%95%ED%83%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%ED%99%94/" class="link black dim">
         go언어에서 tcp server/client 의 전형적 형태. - 라이브러리화.
       </a>
@@ -265,27 +286,6 @@ goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 
 Jae-min Park, Jongmin Kim 께 감사드립니다.
 RunStep 과 sync.groupwait의 차이는 실행/완료시 인자를 전달 할수 있느냐 + 각각 step을 제어 할것이냐 아니면 group으로 제어 할것이냐 의 차이가 있어 용도에 맞게 쓰면 될것 같기도 합니다.
 이하 원문입니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-02-04-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cprofiling%ED%95%98%EA%B8%B0/" class="link black dim">
-        go 언어에서 profiling 하기
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      python도 그렇지만 go언어도 기본적으로 profiler를 제공합니다만, 정작 쓰려면 약간 귀찮은 관계로 제가 만들어 두고 거의 cut/paste 해서 사용하는 방법입니다.
-아래 코드는 간단한 프로그램을 짤때 복사해 쓰는 파일의 내용입니다. 뭔가 파일 하나 짜리 프로그램을 짜서 테스트 할때 사용하곤 합니다.
-이 자체로도 실행가능한 형태이며 그냥 실행하면 프로파일링이 실행되진 않고 더 아래에 있는 쉘 스크립트를 사용하거나 인자로 -pfilename을 주면 됩니다.
-실행이 끝나면 자동으로 프로파일러가 실행되어 command를 기다리는 형태가 됩니다.
-간단하게 프로파일 결과를 보고 싶으면 top30 같은 형태로 top + 수자 ( 빈칸 없이) 를 실행하면 됩니다.
     </div>
   </div>
 </div>

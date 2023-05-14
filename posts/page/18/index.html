@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2014-05-29-go4game%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD%EB%93%A4%EC%A0%95%EB%A6%AC/" class="link black dim">
+        go4game 추가 사항들 정리 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      github commit log로 부터 역으로 만들어낸 내용입니다.
+설명: 실제 여러 월드가 동작하는 화면
+설명: 월드내 팀의 자세한 상태 - 배경색이 team color
+설명: 추가된 장식물, home object
+최근 부터 역순으로 team 의 world 간 이동 기능 homepos to home object json config load / save log format 정리 장식물(decoration object)들 추가 collision 관련 성능, 구조 개선 object, team, world struct 간 상호 pointer 줄이기. 같은 기능이 추가 되었습니다. 코드상으로는 많은 변화가 있었지만 실제 외견(어차피 서버라 외견이랄게 없지만)상으로 변화한 것은 별로 없습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2014-05-19-%EA%B2%8C%EC%9E%84%EA%B7%9C%EC%B9%99%EC%9D%98%ED%97%9B%EC%A0%90%EC%9D%84%EC%B5%9C%EB%8C%80%ED%95%9C%EC%95%85%EC%9A%A9%ED%99%9C%EC%9A%A9%ED%95%98%EB%8A%94ai/" class="link black dim">
         게임 규칙의 헛점을 최대한 악용(활용)하는 AI 
       </a>
@@ -264,26 +285,6 @@ GTX460에선 duel monitor만 구성해도 굉음을 내서 사용이 거의 불�
 client/server 실행법
 서버는 인자없이 그냥 실행하면 됩니다. python wxgame2server.py 또는 이번 C/S 분리의 목적중 하나인 wxpython 코드 제거로 wxpython코드가 서버에는 없기 때문에 pypy를 사용할 수도 있습니다.
 클라이언트 실행 python wxgame2client.py -s serverip -t teamname -s 는 접속할 서버의 주소, port는 고정입니다. -t 는 클라이언트 AI의 팀 이름 -t 옵션이 생략되면 서버에 observer mode로 접속합니다. ( 서버가 보내주는 정보를 화면에 표시만 하는 모드 ) 각 팀은 랜덤한 teamcolor를 가지며 그 color대로 표시됩니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-03-15-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%B4%EA%B1%B0%EC%9D%98%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
-        wxgame2 의 네트웍 버전이 거의 완료 되었습니다. 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      사진 설명 - 서버에 네개의 네트웍 클라이언트를 접속하여 실행 중인 화면.
-이전 글들 이후로 개인적 여유 시간을 대부분 투자하여 ( 아직 버그가 좀 남아있긴 하지만;) wxgame2 의 네트웍 버전을 거의다 만들었습니다.
-github의 코드 를 보시면 알게 되겠지만 기존 wxgame2 코드의 상당부분이 재 작성 되었으며 네트웍 쪽 코드도 수차례 재 작성하였습니다.
-정식 MMORPG처럼 모든 판단은 서버에서 이루어지며 각 클라이언트는 시각화와 클라이언트 AI 만 작동하는 형태 입니다. 서버 사이드 AI도 존재 하는데 이것은 서버의 NPC를 시뮬레이션 하는 것입니다.
     </div>
   </div>
 </div>

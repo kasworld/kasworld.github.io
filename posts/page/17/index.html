@@ -93,6 +93,23 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2014-09-23-goguelike%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EA%B0%9C%EC%84%A0/" class="link black dim">
+        goguelike 클라이언트 개선 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이런 저런 시도후에 제일 보기 좋은 형태를 찾았습니다. 화면 표시와는 별개로 아직 조작감은 좀 떨어지는 문제가 있지만 일단 이런 형태로 개선해 나갈 생각입니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2014-09-22-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%84%9C%EB%B2%84%EB%A1%9C%EC%99%84%EC%A0%84%EB%B6%84%EB%A6%AC%ED%95%9Cgoguelike/" class="link black dim">
         클라이언트/서버로 완전 분리한 goguelike 
       </a>
@@ -264,27 +281,6 @@ AP에 따른 행동 제약 - @ 끼리의 진로 방해 가능 + faction-skill �
 기존 wxgame2에서 부터 충돌 검사와 AI 를 의해 사용해 오던 준 동적 공간분할 대신 나름 정통 공간 분할인 octree로 바꿨습니다.
 기존에는 공간을 매 프레임 마다 총 object의 수에 비례하는 (축당 math.pow(ocount, 1/3)) 배열로 분할 해서 충돌 검사 및 AI에게 주변 환경정보를 제공하는데 사용해 왔습니다.
 하지만 아무래도 약식이라 부족한 점이 많아서 공간 분할을 하는 몇가지 알고리즘 중에 일단 octree를 선택, 구현 해봤습니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-05-29-go4game%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD%EB%93%A4%EC%A0%95%EB%A6%AC/" class="link black dim">
-        go4game 추가 사항들 정리 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      github commit log로 부터 역으로 만들어낸 내용입니다.
-설명: 실제 여러 월드가 동작하는 화면
-설명: 월드내 팀의 자세한 상태 - 배경색이 team color
-설명: 추가된 장식물, home object
-최근 부터 역순으로 team 의 world 간 이동 기능 homepos to home object json config load / save log format 정리 장식물(decoration object)들 추가 collision 관련 성능, 구조 개선 object, team, world struct 간 상호 pointer 줄이기. 같은 기능이 추가 되었습니다. 코드상으로는 많은 변화가 있었지만 실제 외견(어차피 서버라 외견이랄게 없지만)상으로 변화한 것은 별로 없습니다.
     </div>
   </div>
 </div>
