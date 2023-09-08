@@ -93,6 +93,31 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2017-03-07-golangflagpackage%EC%9D%98%ED%95%A8%EC%A0%95/" class="link black dim">
+        golang flag package 의 함정 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
+AccountPool int
+AccountOverlap bool
+LimitStartCount int
+LimitEndCount int
+RetryDelayTimeOut int
+Storyname string
+일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
+go run rundriver/client_story.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2017-02-04-%EC%83%88%ED%95%B4%EB%A7%9E%EC%9D%B4%EC%A7%80%EB%A6%84%EB%93%A4%ED%82%A4%EB%B3%B4%EB%93%9C/" class="link black dim">
         새해 맞이 지름들 - 키보드 
       </a>
@@ -287,26 +312,6 @@ http://www.howtogeek.com/116032/how-to-encrypt-your-home-folder-after-installing
 홈 폴더를 암호화 하는 것은 설치시에 하는 것이 가장 편합니다만 (설치할때 물어봅니다. )
 저는 설치된 후에 암호화 작업을 했기때문에 좀 귀찮은 작업을 해야 합니다.
 간단히 설명하면 암호화할 폴더의 주인이 로그인된 상태(즉 폴더를 사용중인상태) 에서는 암호화를 할 수가 없기 때문에 ( 너무 당연한 이야기지요.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2016-03-06-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%EC%99%80go%EC%96%B8%EC%96%B4/" class="link black dim">
-        라즈베리 파이와 go언어. 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      라즈베리파이에서 golang이 잘 되나? 를 찾다가 발견한 http://gobot.io/ ( Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language )
-이런 것 까지 있다는 건 당연히 라즈베리에서 golang이 잘돈다는 뜻이려니 하고
-go언어 공식 홈의 다운로드 페이지를 확인해보니 https://golang.org/dl/ go 1.6 에는 arm 용 빌드가 기본적으로 제공되고 있었습니다. ( 알고는 있었지만 ^^ )
-이것을 방금 라즈베리파이2에 다운/설치해보고 잘 되는 것 을 확인 했습니다.
     </div>
   </div>
 </div>

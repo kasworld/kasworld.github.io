@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-03-11-goguelikever0401%EB%8F%99%EC%8B%9C%EC%A0%91%EC%86%8D%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B2%B0%EA%B3%BC/" class="link black dim">
+        goguelike ver 0.40.1 동시 접속 성능 테스트 결과 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      기록을 위해 적습니다. 4000 클라이언트 동시 접속 ( 1000 x 4 ) 테스트
+서버 와 클라이언트 가 바뀐것 같은 느낌이 들면 기분탓^^ 입니다. ( 테스트 클라이언트가 클라이언트 AI 지원을위해 메모리 사용량이 많은 탓.)
+총 active object는 6000여개로 이중 2000여개는 서버사이드 AI 4000 개는 클라이언트 AI 즉 테스트중에 서버에서는 6000여개의 AO가 활발하게 활동중이었음.
+클라이언트 i5-2500 3.3Ghz 4c4t 16Gbyte ram cpu 50% 정도 사용 메모리는 1000클라이언트 당 6G : 결국 넘쳤음.
+서버 ( 한성 인민에어 ;; ) 하스웰 i5 4250U ( 1.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-02-27-go%EC%96%B8%EC%96%B4%EB%A1%9Ctcpserver%EC%99%80guiclient%EB%A5%BC%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/" class="link black dim">
         go언어로 TCP server와 GUI client를 만들어 보기. 
       </a>
@@ -266,26 +287,6 @@ Stat total:4660/ 3.0/s lap:1/ 39.4/s
 goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트 해보니 20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로 검사및 튜닝을 한 이야기..
 결론만 말하면 go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는 10% 이하) 에서 150000 패킷 / 초 정도를 처리 할 수 있습니다.
 파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에 비하면 깨끗한 구조를 유지하면서도 2.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-02-05-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98goroutine%EC%9D%84%EB%8F%99%EC%8B%9C%EC%97%90%ED%95%9C%EB%8B%A8%EA%B3%84%EC%94%A9%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/" class="link black dim">
-        go 언어에서 여러개의 goroutine을 동시에 한단계씩 실행하기 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      2015-02-24 추가 구글+ Jae-min Park 님께서 제가 잘못알고 있던부분을 알려주셨습니다. sync 의 waitgroup은 goroutine의 종료를 wait하는 것이 아니고 Done을 wait하는 것이므로 충분히 아래의 코드를 대치하는 것이 가능한 듯합니다. ( 결국 아래 코드는 뻘짓인 셈입니다. ^^;; )
-Jae-min Park, Jongmin Kim 께 감사드립니다.
-RunStep 과 sync.groupwait의 차이는 실행/완료시 인자를 전달 할수 있느냐 + 각각 step을 제어 할것이냐 아니면 group으로 제어 할것이냐 의 차이가 있어 용도에 맞게 쓰면 될것 같기도 합니다.
-이하 원문입니다.
     </div>
   </div>
 </div>

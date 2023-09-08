@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Rust를써봤습니다 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="이번에 Rust를 잠깐(20여시간 문서읽고, 200-300라인 코딩) 써보고 느낀점들 Rust는 참 잘 만든 언어다.
+( 표준 레포지토리인 crates.io 의 namespace 가 flat 한 것만 빼고 )
+대신 꽤 무거운 언어라서 쓰기에 즐거운 언어는 아닌것 같다.
+( 아니면 C&#43;&#43; 쓸래? 라고 물어보면 Rust가 선녀입니다. 라고 대답 하겠지만 )
+prime 계산 프로그램을 만들어 성능 테스트를 go로 만들었던 것과 비교하니
+go version : https://github.com/kasworld/primenum
+rust version : https://github.com/kasworld/primecalc
+(둘다 multi-thread버전이고 내가 할 수 있는 수준에서 최적화를 한 것들)">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Rust를써봤습니다" />
+<meta property="og:description" content="이번에 Rust를 잠깐(20여시간 문서읽고, 200-300라인 코딩) 써보고 느낀점들 Rust는 참 잘 만든 언어다.
+( 표준 레포지토리인 crates.io 의 namespace 가 flat 한 것만 빼고 )
+대신 꽤 무거운 언어라서 쓰기에 즐거운 언어는 아닌것 같다.
+( 아니면 C&#43;&#43; 쓸래? 라고 물어보면 Rust가 선녀입니다. 라고 대답 하겠지만 )
+prime 계산 프로그램을 만들어 성능 테스트를 go로 만들었던 것과 비교하니
+go version : https://github.com/kasworld/primenum
+rust version : https://github.com/kasworld/primecalc
+(둘다 multi-thread버전이고 내가 할 수 있는 수준에서 최적화를 한 것들)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/rust%EB%A5%BC%EC%8D%A8%EB%B4%A4%EC%8A%B5%EB%8B%88%EB%8B%A4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-08T15:59:06+09:00" />
+<meta property="article:modified_time" content="2023-09-08T15:59:06+09:00" />
+<meta itemprop="name" content="Rust를써봤습니다">
+<meta itemprop="description" content="이번에 Rust를 잠깐(20여시간 문서읽고, 200-300라인 코딩) 써보고 느낀점들 Rust는 참 잘 만든 언어다.
+( 표준 레포지토리인 crates.io 의 namespace 가 flat 한 것만 빼고 )
+대신 꽤 무거운 언어라서 쓰기에 즐거운 언어는 아닌것 같다.
+( 아니면 C&#43;&#43; 쓸래? 라고 물어보면 Rust가 선녀입니다. 라고 대답 하겠지만 )
+prime 계산 프로그램을 만들어 성능 테스트를 go로 만들었던 것과 비교하니
+go version : https://github.com/kasworld/primenum
+rust version : https://github.com/kasworld/primecalc
+(둘다 multi-thread버전이고 내가 할 수 있는 수준에서 최적화를 한 것들)"><meta itemprop="datePublished" content="2023-09-08T15:59:06+09:00" />
+<meta itemprop="dateModified" content="2023-09-08T15:59:06+09:00" />
+<meta itemprop="wordCount" content="217">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rust를써봤습니다"/>
+<meta name="twitter:description" content="이번에 Rust를 잠깐(20여시간 문서읽고, 200-300라인 코딩) 써보고 느낀점들 Rust는 참 잘 만든 언어다.
+( 표준 레포지토리인 crates.io 의 namespace 가 flat 한 것만 빼고 )
+대신 꽤 무거운 언어라서 쓰기에 즐거운 언어는 아닌것 같다.
+( 아니면 C&#43;&#43; 쓸래? 라고 물어보면 Rust가 선녀입니다. 라고 대답 하겠지만 )
+prime 계산 프로그램을 만들어 성능 테스트를 go로 만들었던 것과 비교하니
+go version : https://github.com/kasworld/primenum
+rust version : https://github.com/kasworld/primecalc
+(둘다 multi-thread버전이고 내가 할 수 있는 수준에서 최적화를 한 것들)"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Rust를써봤습니다</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-09-08T15:59:06+09:00">September 8, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="이번에-rust를-잠깐20여시간-문서읽고-200-300라인-코딩-써보고-느낀점들">이번에 Rust를 잠깐(20여시간 문서읽고, 200-300라인 코딩) 써보고 느낀점들</h1>
+<p>Rust는 참 잘 만든 언어다.</p>
+<p>( 표준 레포지토리인 crates.io 의 namespace 가 flat 한 것만 빼고 )</p>
+<p>대신 꽤 무거운 언어라서 쓰기에 즐거운 언어는 아닌것 같다.</p>
+<p>( 아니면 C++ 쓸래? 라고 물어보면 Rust가 선녀입니다. 라고 대답 하겠지만 )</p>
+<p>prime 계산 프로그램을 만들어 성능 테스트를 go로 만들었던 것과 비교하니</p>
+<p>go version : <a href="https://github.com/kasworld/primenum">https://github.com/kasworld/primenum</a></p>
+<p>rust version : <a href="https://github.com/kasworld/primecalc">https://github.com/kasworld/primecalc</a></p>
+<p>(둘다 multi-thread버전이고 내가 할 수 있는 수준에서 최적화를 한 것들)</p>
+<p>1,000,000,000까지의 모든 소수를 구하는 데 걸리는 시간이
+Rust가 28초 go 가 37초 정도로 차이 가 났다.</p>
+<p>생각보다 차이가 꽤 나네 하고 go로(3년전에) 만든 코드를 들어다 보니 딱히 더 최적화할 여지는 없어 보였다.</p>
+<p>그래서 Rust를 좀더 써 보려고 이리 저리 생각해보니,</p>
+<p>Rust로 만들고 싶은 것이 별로 없더라.</p>
+<p>작성하기에 즐거운 언어가 아니라는 점도 있지만 굳이 Rust로 만들어야 할 만한 것들이 별로 없다는 것이 컷다.
+( 그래도 python이나 go 처럼 즐거운 언어라면 쓰겠지만 )</p>
+<p>생각 나는 것은 OS를 만들거나, embedded에 쓸까 싶지만
+OS는 몰라도 embedded 쪽은 tinygo 나 micro-python으로 이미 많이들 쓰고 있으니 애매하고,</p>
+<p>역시 C++을 쓰고 있던 장르들 에서 새로 만들어 지는 부분들이 Rust로 점진적으로 교체 되는 정도가 아닐까 싶다.</p>
+<p>즉 광범위하게 대중적으로 쓰일 곳이 잘 안보인다는 것이다.
+( 모두가 OS를 만들지는 않을테니 )</p>
+<p>아니면 꺼꾸로 python이나 go로 만들만한 것들은 모두 AI가 만들어 주는 것으로 대치되고
+역으로 Rust로만 만들수 있는 것들만 남게되는 미래가 올지도 모르지만.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

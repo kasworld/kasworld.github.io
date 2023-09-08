@@ -93,6 +93,24 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2018-08-26-golang111%EA%B3%BCwasmgopherjs/" class="link black dim">
+        golang 1.11 과 wasm , gopherjs 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      현재는 goguelike에서 web client를 만들기 위해서 gopherjs를 사용하고 있습니다.
+다른 대안도 없고 약간 야매긴 하지만 잘 작동하고 있기에 만족스럽게 사용하고 있긴 합니다만 그래도 정식으로 golang에서 wasm을 지원하는 것이 베스트기에 wasm 을 정식으로 ( 실제로는 experimental port 라고 release note에 명시 ) 지원한다는 소식을 듣고 1.11의 릴리즈 만을 기다리고 있었습니다. 마침내 어제 1.11의 릴리스 소식을 듣고 바로 1.11의 설치를 하고 기존 gopherjs로 되어 있는 webclient를 wasm으로 포팅하는 작업을 시작했는데 .. 결론만 이야기 하면 일단 작업을 모두 정지하고 코드를 gopherjs 로 롤백 했습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2018-08-23-goguelike%EC%9D%98%EC%9C%A0%EB%A0%B9floor/" class="link black dim">
         goguelike의 유령 floor 
       </a>
@@ -266,24 +284,6 @@ Gauntlet : Defence ; Boots : Defence o Ring : Attack Amulet : Attack 입니다.
 가장 어렵고 또 중요한 &ldquo;서버 이름&rdquo; 은 ground 서버로 정했습니다.
 게임 인트로에 나온 여러개의 탑이 있는 장소 이며 또 탑을 세우거나 없애거나 하는 일도 담당해야 하는 서버라 그 역할에 어울리게 ground 입니다.
 외부로 노출될 일은 없을 서버라 ( 노출되면 보안 사고!
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2018-06-22-goguelike%EC%9D%B8%ED%8A%B8%EB%A1%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%83%91%EB%AA%A9%EB%A1%9D%EC%88%98%EC%A0%95%ED%8F%B0%ED%8A%B8%EB%B3%80%EA%B2%BD%ED%83%80%EC%9D%BC%EB%B3%80%EA%B2%BD/" class="link black dim">
-        goguelike 인트로 업데이트 , 탑 목록수정, 폰트 변경, 타일 변경 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      일단 눈에 보이는 변경사항들은 인트로가 조금더 스토리 스럽게 업데이트 되었습니다. 그리고 그에 맞춰서 탑의 목록 표시가 자연스럽게 변경 되었습니다. 탑 목록을 가져 오는 내부 구조는 완전히 새로 만들어졌습니다. 웹 폰트와 오브젝트 타일을 생성할때 사용하는 폰트를 좀더 레트로 스럽게 수정하였습니다.
-내부 적으로는 서버 목록 변경, 서버 릴리스 방법 변경 , 지형 생성 스크립트 변경 , 웹 어드민 의 업데이트, 어드민 웹 용 지형 이미지 생성 업데이트, zombie 의 homefloor 변경, 랭킹 시스템 업데이트, 얼음위에서 미끄러짐 변경 등이 있었습니다.
     </div>
   </div>
 </div>

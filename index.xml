@@ -6,7 +6,23 @@
     <description>Recent content on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 14 May 2023 16:35:16 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 15:59:06 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust를써봤습니다</title>
+      <link>https://kasworld.github.io/posts/rust%EB%A5%BC%EC%8D%A8%EB%B4%A4%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
+      <pubDate>Fri, 08 Sep 2023 15:59:06 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/rust%EB%A5%BC%EC%8D%A8%EB%B4%A4%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
+      <description>이번에 Rust를 잠깐(20여시간 문서읽고, 200-300라인 코딩) 써보고 느낀점들 Rust는 참 잘 만든 언어다.
+( 표준 레포지토리인 crates.io 의 namespace 가 flat 한 것만 빼고 )
+대신 꽤 무거운 언어라서 쓰기에 즐거운 언어는 아닌것 같다.
+( 아니면 C++ 쓸래? 라고 물어보면 Rust가 선녀입니다. 라고 대답 하겠지만 )
+prime 계산 프로그램을 만들어 성능 테스트를 go로 만들었던 것과 비교하니
+go version : https://github.com/kasworld/primenum
+rust version : https://github.com/kasworld/primecalc
+(둘다 multi-thread버전이고 내가 할 수 있는 수준에서 최적화를 한 것들)</description>
+    </item>
+    
     <item>
       <title>블로그를이전해왔습니다</title>
       <link>https://kasworld.github.io/posts/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC%EC%9D%B4%EC%A0%84%ED%95%B4%EC%99%94%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
