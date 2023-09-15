@@ -93,6 +93,29 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2014-11-30-%EA%B0%9C%EB%B0%9C%ED%95%A0%EB%95%8C%ED%95%84%EC%9A%94%ED%95%9C%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EA%B0%9C%EB%B0%9C%ED%88%B4%EB%93%A4%EC%9D%84%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0%EA%B3%84%EC%86%8D%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EC%98%88%EC%A0%95/" class="link black dim">
+        개발할때 필요한 최신 버전 개발 툴들을 추가하기. - 계속 업데이트 예정 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      아무래도 표준 ubuntu/mint repository는 약간 보수적으로 안전한 패키지만이 추가 되어 있는 관계로 최신 개발 툴을 사용하려면 따로 설치를 해야 해서 메모겸 정리 하고 있는 포스트.
+node.js https://github.com/nodesource/distributions curl -sL https://deb.nodesource.com/setup | sudo bash -
+pypy https://launchpad.net/~pypy/+archive/ubuntu/ppa sudo add-apt-repository ppa:pypy/ppa
+blender https://launchpad.net/~irie/+archive/ubuntu/blender sudo add-apt-repository ppa:irie/blender
+추가로 CUDA toolkit 설치 sudo apt-get install nvidia-cuda-toolkit
+아직 좀 갈길이 멀어 보이지만 앞으로가 기대 되는 atom editor http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html sudo add-apt-repository ppa:webupd8team/atom
+주 editor로는 sublime 2를 사용하지만 보조용으로 gvim과 함께 활약하는 geany https://launchpad.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2014-11-28-pycrust%EC%9D%98split%EC%9D%B4%EA%B0%80%EB%A1%9C%EB%A1%9C%EB%90%98%EB%8A%94%EA%B2%83%EC%9D%84%EC%84%B8%EB%A1%9C%EB%A1%9C%EB%B0%94%EA%BE%B8%EA%B8%B0/" class="link black dim">
         pycrust의 split 이 가로로 되는 것을 세로로 바꾸기. 
       </a>
@@ -269,23 +292,6 @@ python에서는 django 가 대규모 작업 시장에서 절대 강자의 위치
       지난주 이번주 동안 기본적인 서버/클라이언트의 안정화가 이루어져서 성능테스트를 해가면서 튜닝을 하고 있는 중입니다.
 방금 끝낸 테스트를 기록차원에서 적어보면 사용 기계 cpu i2500 ( 4c4t ) , ram 16Gbyte에서 서버는 각 클라이언트당 5패킷 / 초 모드로 작동중이고 5000 클라이언트 시뮬레이터를 다른 기계에서 실행한 결과 입니다.
 goguelike 13:41:44 server.go:169: tower test1 frame total:3801/ 4.0/s lap:5/ 4.8/s, gotoutine 5025 goguelike 13:41:44 server.go:173: floor0 AO(72/2232) PO(42/561) Packet(0/1157) goguelike 13:41:44 server.go:173: floor1 AO(69/2401) PO(42/630) Packet(5/2024) goguelike 13:41:44 server.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-09-27-goguelike%EC%83%81%ED%83%9C%EC%A0%95%EB%B3%B4%EC%9D%98%EC%B6%94%EA%B0%80%EB%B0%8F%EA%B0%84%EB%8B%A8%EC%84%A4%EB%AA%85/" class="link black dim">
-        goguelike 상태 정보의 추가및 간단 설명. 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      동영상으로 보면 색감도 이상하고 해서 스샷을 올려봅니다. 상태 정보를 간단하게 설명하면 맨 위로부터 현재 타워의 이름 , 층(floor) 번호, 층 종류 사용자의 faction(자동으로 지정된 bias 그룹) , karma ( 자신의 bias와 faction간의 차이 ) action point( 행동력 ), hp ( 생명력 ) , 위치 , 현위치의 타일 종류 수동/자동 모드 , 사용자가 선택한 행동 + 방향 현재 층을 얼마나 발견 했는가 % , 죽은 수 , 킬 수 공격력( bias ) , 방어력 ( bias ) 8개 위치의 장비 및 공/방 영향 ( Attack/Defence ) 위칭으로 가는 계단 위치 ( 발견시 표시 ) , 아랫층으로 가는 계단위치 (발견시 표시 ) hp bar , 미니맵 , ap bar ( hp/ap는 중요한 값이라 잘보이게 bar로 표시 )
     </div>
   </div>
 </div>

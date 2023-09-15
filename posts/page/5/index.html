@@ -93,6 +93,28 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-02-29-%EC%83%88%EA%B8%B0%EA%B3%84%EC%9D%98%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98%EA%B8%B0%EB%A1%9D/" class="link black dim">
+        새 기계의 성능테스트 의 기록 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      새 컴퓨터가 준비 되었으니 당연히 성능테스트를 진행 해봤습니다.
+사양은 전에 쓴대로 AMD 라이젠 7 3700X + X570 보드+ 128GB ram 입니다.
+goguelike tower(게임) 서버와 다중 접속 테스트용 multiclient 를 사용해서
+1000 클라이언트(connection)을 테스트 해보니 전혀 부하가 걸리지 않아서
+10000 클라이언트를 걸어 보았습니다. 바로 open file 부족 에러가 나더군요. 까먹고 있던 linux의 서버 설정들을 해주었습니다.
+/etc/security/limits.conf 파일에 * soft nofile 999999 * hard nofile 999999 * soft core unlimited * hard core unlimited
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-02-28-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9Camd%EB%9D%BC%EC%9D%B4%EC%A0%A073700xx570%EB%B3%B4%EB%93%9C128gbram/" class="link black dim">
         데스크탑 업그레이드 AMD 라이젠 7 3700X &#43; X570 보드&#43; 128GB ram 
       </a>
@@ -281,25 +303,6 @@ genprotocol - protocol 기반 코드 생성 ( goguelike 프로젝트를 하면�
 ( 잘 안되서 web socket 관련 코드만 뜯어내서 작동 테스트를 하기 위해 만든 코드들 )
 기본적으로 golang websocket server 서버가 정상 작동 하는 지는 테스트 하기 위한 golang websocket client 그리고 주 목적인 golang wasm web client 로 구성 되어 있습니다.
 테스트 용으로 뚝딱 뚝딱 만든거라 허접한 부분들도 많지만 일단 읽어보고 카피해 쓸만큼은 정리했다고 생각합니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2019-05-10-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs10%EC%9A%A9dex%EB%AF%B8%EB%9F%AC%EB%A7%81%EC%96%B4%EB%8C%91%ED%84%B0%ED%97%88%EB%B8%8C%EA%B5%AC%EC%9E%85/" class="link black dim">
-        갤럭시 S 10&#43; 용 Dex/미러링 어댑터? 허브 ? 구입 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      올해 초에 약 3년간 쓰던 갤럭시 s7 edge를 (업데이트가 종료 되었다는 핑계로 ) 사용종료 하고, S 10+을 (사전예약으로!!!) 구입했습니다.
-s7 은 낀 세대라 모니터 연결이 불가능한데 s8 부터는 dex 라는 것을 지원해서 유선으로 모니터를 연결할수 있다는 것을 알고 있었기에 S10+을 사면서 dex란 것을 사용해 봐야겠다고 생각하고 있었습니다.
-간단히 조사해 보니 S10+ 에서는 그냥 USB type C to HDMI 케이블만 연결하면 dex를 사용할수 있다고 ( 이전 모델들도 파이 업데이트 하면 가능한듯 ) 해서 고민이 시작 되었습니다.
     </div>
   </div>
 </div>

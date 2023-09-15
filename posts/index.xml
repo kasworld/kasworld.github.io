@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 08 Sep 2023 15:59:06 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Sep 2023 14:06:37 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>내가godot엔진을사용하는이유</title>
+      <link>https://kasworld.github.io/posts/%EB%82%B4%EA%B0%80godot%EC%97%94%EC%A7%84%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0/</link>
+      <pubDate>Fri, 15 Sep 2023 14:06:37 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/%EB%82%B4%EA%B0%80godot%EC%97%94%EC%A7%84%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0/</guid>
+      <description>내가 godot 엔진을 사용하는 법(이유?) 물들어온 김에 godot 홍보하기 많은 8bit 키드 들은 공감할 것 같은데 apple 2로 처음 컴퓨터를 배운 나같은 사람은
+&amp;ldquo;컴퓨터를 켜고,(basic으로) 프로그램을 작성하고, 실행해본다.&amp;rdquo; 라는 과정이 아주 당연한 느낌으로 남아 있다.
+요즘 (windows) pc에서처럼 화면에 동그라미 하나 그리는 프로그램을 짜기 위해 해야 할 일이 (어쩌면 너무나도) 복잡해진 것이 귀찮고 때때로 어렵다고 느낀다.
+사용할 언어를 고르고 에디터를 고르고 컴파일러를 고른 다음에 사용할 그래픽 라이이브러를 결정한다. 그리고 나서야 화면에 점하나를 찍는 프로그램작성을 시작해 볼 수 있다.</description>
+    </item>
+    
     <item>
       <title>Rust를써봤습니다</title>
       <link>https://kasworld.github.io/posts/rust%EB%A5%BC%EC%8D%A8%EB%B4%A4%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>

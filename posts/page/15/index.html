@@ -93,6 +93,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-02-13-goguelike%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%86%8D%EB%8F%84/" class="link black dim">
+        goguelike의 네트웍 속도
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      일단 python에서 네트웍 속도로 이것 저것 해본 글들 http://kasw.blogspot.kr/search/label/wxgame
+goguelike를 튜닝하던 중에 네트웍 패킷 처리량이 얼마나 되나 하고 테스트 해보니 20000 packet/sec 정도 밖에 안나와서 충격을 먹고 네트웍 부분을 집중적으로 검사및 튜닝을 한 이야기..
+결론만 말하면 go 언어의 능력이면 1000 클라이언트 ( 10000클라이언트 에서도 속도 저하는 10% 이하) 에서 150000 패킷 / 초 정도를 처리 할 수 있습니다.
+파이썬에선 정말로 최후까지 쥐어 짜야 60000넘기는 것도 힘들었던것에 비하면 깨끗한 구조를 유지하면서도 2.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-02-05-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98goroutine%EC%9D%84%EB%8F%99%EC%8B%9C%EC%97%90%ED%95%9C%EB%8B%A8%EA%B3%84%EC%94%A9%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/" class="link black dim">
         go 언어에서 여러개의 goroutine을 동시에 한단계씩 실행하기 
       </a>
@@ -260,29 +280,6 @@ golang도 잘 지원 되는 것 같이 보입니다. ( 일단은 )
 다만 이를 사용할때는 source code의 naming rule을 따라야 하는데 테스트할소스코드이름_test.go 형태를 지켜야 합니다.
 이를 지키지 않으면 flag 패키지를 사용해서 command line argument를 받는 프로그램 작성시 -? 등으로 command line help를 보게 되면
 -test.bench=&quot;&quot;: regular expression to select benchmarks to run -test.benchmem=false: print memory allocations for benchmarks -test.benchtime=1s: approximate run time for each benchmark -test.blockprofile=&quot;&quot;: write a goroutine blocking profile to the named file after execution -test.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-11-30-%EA%B0%9C%EB%B0%9C%ED%95%A0%EB%95%8C%ED%95%84%EC%9A%94%ED%95%9C%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EA%B0%9C%EB%B0%9C%ED%88%B4%EB%93%A4%EC%9D%84%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0%EA%B3%84%EC%86%8D%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EC%98%88%EC%A0%95/" class="link black dim">
-        개발할때 필요한 최신 버전 개발 툴들을 추가하기. - 계속 업데이트 예정 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      아무래도 표준 ubuntu/mint repository는 약간 보수적으로 안전한 패키지만이 추가 되어 있는 관계로 최신 개발 툴을 사용하려면 따로 설치를 해야 해서 메모겸 정리 하고 있는 포스트.
-node.js https://github.com/nodesource/distributions curl -sL https://deb.nodesource.com/setup | sudo bash -
-pypy https://launchpad.net/~pypy/+archive/ubuntu/ppa sudo add-apt-repository ppa:pypy/ppa
-blender https://launchpad.net/~irie/+archive/ubuntu/blender sudo add-apt-repository ppa:irie/blender
-추가로 CUDA toolkit 설치 sudo apt-get install nvidia-cuda-toolkit
-아직 좀 갈길이 멀어 보이지만 앞으로가 기대 되는 atom editor http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html sudo add-apt-repository ppa:webupd8team/atom
-주 editor로는 sublime 2를 사용하지만 보조용으로 gvim과 함께 활약하는 geany https://launchpad.
     </div>
   </div>
 </div>

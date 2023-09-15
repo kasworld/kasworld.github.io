@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>내가godot엔진을사용하는이유 | 취미로 프로그래밍을 하는 사람입니다.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="내가 godot 엔진을 사용하는 법(이유?) 물들어온 김에 godot 홍보하기 많은 8bit 키드 들은 공감할 것 같은데 apple 2로 처음 컴퓨터를 배운 나같은 사람은
+&ldquo;컴퓨터를 켜고,(basic으로) 프로그램을 작성하고, 실행해본다.&rdquo; 라는 과정이 아주 당연한 느낌으로 남아 있다.
+요즘 (windows) pc에서처럼 화면에 동그라미 하나 그리는 프로그램을 짜기 위해 해야 할 일이 (어쩌면 너무나도) 복잡해진 것이 귀찮고 때때로 어렵다고 느낀다.
+사용할 언어를 고르고 에디터를 고르고 컴파일러를 고른 다음에 사용할 그래픽 라이이브러를 결정한다. 그리고 나서야 화면에 점하나를 찍는 프로그램작성을 시작해 볼 수 있다.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="내가godot엔진을사용하는이유" />
+<meta property="og:description" content="내가 godot 엔진을 사용하는 법(이유?) 물들어온 김에 godot 홍보하기 많은 8bit 키드 들은 공감할 것 같은데 apple 2로 처음 컴퓨터를 배운 나같은 사람은
+&ldquo;컴퓨터를 켜고,(basic으로) 프로그램을 작성하고, 실행해본다.&rdquo; 라는 과정이 아주 당연한 느낌으로 남아 있다.
+요즘 (windows) pc에서처럼 화면에 동그라미 하나 그리는 프로그램을 짜기 위해 해야 할 일이 (어쩌면 너무나도) 복잡해진 것이 귀찮고 때때로 어렵다고 느낀다.
+사용할 언어를 고르고 에디터를 고르고 컴파일러를 고른 다음에 사용할 그래픽 라이이브러를 결정한다. 그리고 나서야 화면에 점하나를 찍는 프로그램작성을 시작해 볼 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kasworld.github.io/posts/%EB%82%B4%EA%B0%80godot%EC%97%94%EC%A7%84%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-15T14:06:37+09:00" />
+<meta property="article:modified_time" content="2023-09-15T14:06:37+09:00" />
+<meta itemprop="name" content="내가godot엔진을사용하는이유">
+<meta itemprop="description" content="내가 godot 엔진을 사용하는 법(이유?) 물들어온 김에 godot 홍보하기 많은 8bit 키드 들은 공감할 것 같은데 apple 2로 처음 컴퓨터를 배운 나같은 사람은
+&ldquo;컴퓨터를 켜고,(basic으로) 프로그램을 작성하고, 실행해본다.&rdquo; 라는 과정이 아주 당연한 느낌으로 남아 있다.
+요즘 (windows) pc에서처럼 화면에 동그라미 하나 그리는 프로그램을 짜기 위해 해야 할 일이 (어쩌면 너무나도) 복잡해진 것이 귀찮고 때때로 어렵다고 느낀다.
+사용할 언어를 고르고 에디터를 고르고 컴파일러를 고른 다음에 사용할 그래픽 라이이브러를 결정한다. 그리고 나서야 화면에 점하나를 찍는 프로그램작성을 시작해 볼 수 있다."><meta itemprop="datePublished" content="2023-09-15T14:06:37+09:00" />
+<meta itemprop="dateModified" content="2023-09-15T14:06:37+09:00" />
+<meta itemprop="wordCount" content="173">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="내가godot엔진을사용하는이유"/>
+<meta name="twitter:description" content="내가 godot 엔진을 사용하는 법(이유?) 물들어온 김에 godot 홍보하기 많은 8bit 키드 들은 공감할 것 같은데 apple 2로 처음 컴퓨터를 배운 나같은 사람은
+&ldquo;컴퓨터를 켜고,(basic으로) 프로그램을 작성하고, 실행해본다.&rdquo; 라는 과정이 아주 당연한 느낌으로 남아 있다.
+요즘 (windows) pc에서처럼 화면에 동그라미 하나 그리는 프로그램을 짜기 위해 해야 할 일이 (어쩌면 너무나도) 복잡해진 것이 귀찮고 때때로 어렵다고 느낀다.
+사용할 언어를 고르고 에디터를 고르고 컴파일러를 고른 다음에 사용할 그래픽 라이이브러를 결정한다. 그리고 나서야 화면에 점하나를 찍는 프로그램작성을 시작해 볼 수 있다."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        취미로 프로그래밍을 하는 사람입니다.
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">내가godot엔진을사용하는이유</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-09-15T14:06:37+09:00">September 15, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="내가-godot-엔진을-사용하는-법이유">내가 godot 엔진을 사용하는 법(이유?)</h1>
+<h2 id="물들어온-김에-godot-홍보하기">물들어온 김에 godot 홍보하기</h2>
+<p>많은 8bit 키드 들은 공감할 것 같은데
+apple 2로 처음 컴퓨터를 배운 나같은 사람은</p>
+<p>&ldquo;컴퓨터를 켜고,(basic으로) 프로그램을 작성하고, 실행해본다.&rdquo;
+라는 과정이 아주 당연한 느낌으로 남아 있다.</p>
+<p>요즘 (windows) pc에서처럼 화면에 동그라미 하나 그리는 프로그램을
+짜기 위해 해야 할 일이 (어쩌면 너무나도) 복잡해진 것이
+귀찮고 때때로 어렵다고 느낀다.</p>
+<pre><code>사용할 언어를 고르고 
+에디터를 고르고 
+컴파일러를 고른 다음에 
+사용할 그래픽 라이이브러를 결정한다.
+그리고 나서야 화면에 점하나를 찍는 프로그램작성을 시작해 볼 수 있다. 
+</code></pre>
+<p>이 모든 과정이 갑자기 생각난 아이디어를 프로그램으로
+만드는데 방해가 된다고 느껴저서
+이런저런 고민을 했었는데.</p>
+<p>Colour Maximite 2나 commanderx16 같은
+전용 하드웨어를 사용해볼까도 생각했지만<br>
+역시 전용 하드웨어를 사용하는 것은 여러가지로 불편할것 같다는 생각이 들었다.
+( 데이터 전송, 인터넷 , 만든 프로그램의 배포 등)</p>
+<p>다른 방안을 찾아보니
+godot engine이 적합하다는 결론에 도달했다.</p>
+<pre><code>단하나의 파일로 구성되어 있으며 
+2D 그래픽을 쉽게 만들수 있고 
+내장 (2d,3d)그래픽 + 텍스트 에디터가 있고  
+gdscript라고 하는 꽤 훌륭한 언어를 사용해서 
+바로 작성하고 바로 실행해볼 수 있다. 
+만든 프로그램을 windows,linux, android 용으로 빌드도 가능하다. 
+</code></pre>
+<p>그래서 지금은 뭔가를 간단히 만들어 보고 싶다면
+일단 godot 을 실행한다.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kasworld.github.io/" >
+    &copy;  취미로 프로그래밍을 하는 사람입니다. 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
