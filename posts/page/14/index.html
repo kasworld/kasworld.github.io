@@ -93,6 +93,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/" class="link black dim">
+        go 언어용 fortune cookie package
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      만들고 보니 너무 간단한것이라 별로 적을 내용이 없지만..
+linux/unix 계열에 들어 있는 fortune cookie 파일을 읽어 주는 패키지 입니다. 단 binary file(strfile) 인 .dat 파일이 아니고 확장자가 없는 text 파일을 읽어줍니다.
+사용예는 fortune_test.go를 보시면 됩니다.
+소스 코드는 https://github.com/kasworld/fortune 에 있습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-03-16-gosdlgui%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%ED%91%9C%EC%8B%9C%EC%A7%80%EC%9B%90%EC%B6%94%EA%B0%80/" class="link black dim">
         go-sdlgui 에서 한글 표시 지원추가 
       </a>
@@ -268,27 +288,6 @@ Stat total:4660/ 3.0/s lap:1/ 39.4/s
 그래서 제가 만들어 쓰는 것는 actionstat 패키지입니다.
 사용 예는 https://github.com/kasworld/netspeed 의 서버 코드를 보면 됩니다만.. 간단히 적어보면
 // init obj stat := actionstat.NewActionStat()// see statlog.Info(&quot;%v&quot;, stat)stat.UpdateLap()// update info stat.Inc()같은 형태가 됩니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/" class="link black dim">
-        go 언어용 python-like log 모듈 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      goguelike 작업을 하면서 만들어진 모듈들 중 범용성이 높은 모듈들을 정리해서 공개하는 작업을 시작합니다.
-이미 기존의 글들을 통해 소개된 모듈들은 id 생성 :http://kasw.blogspot.kr/2015/01/go-serial-id.html rand : http://kasw.blogspot.kr/2015/02/go.html runstep : http://kasw.blogspot.kr/2015/02/goroutine.html
-이 있습니다. - 각각의 글을 수정해서 github 링크를 추가해 두었습니다.
-이번에 소개할 모듈은 pyhon log처럼 사용하는 log package입니다. log 용으로 만든 것으로 rand 때와 같이 기존 go 언어의 표준 라이브러리를 확장하는 개념으로 만든것 입니다.
-만든 이유는 아무래도 python을 쓴 기간이 길다보니 python 스타일의 로그 함수가 익숙한 관계로 최대한 비슷한 느낌으로 사용할수 있게 만들어 사용 중입니다.
     </div>
   </div>
 </div>

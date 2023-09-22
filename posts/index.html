@@ -93,6 +93,30 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/ppusim/" class="link black dim">
+        Ppusim
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      세상 잉여로운 작업을 하고 있습니다.
+https://github.com/kasworld/ppusim
+rust로 할 만한 것이 별로 없다고 한 주제에 우습게도 딱 rust로 해볼 만한 것이 생각났습니다.
+실용성은 전혀 없지만 재미로 만들어보긴 좋을 것 같아서 작업을 시작했습니니다.
+예전 8bit 게임기나 오락실 게임에서 많이 쓰이던
+타일 + 팔렛트 + 스프라이트 + 다중 배경 스크롤 기능의 PPU 를 현대의 CPU로 시뮬레이션 해보기 입니다.
+자세한 내용은 위 github 링크에 써두었으니 관심있으신 분은 읽어보시면 됩니다.
+아직 미구현 인 부분이 있긴 하지만 만들어진 것의 성능을 이야기하자면
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/%EB%82%B4%EA%B0%80godot%EC%97%94%EC%A7%84%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0/" class="link black dim">
         내가godot엔진을사용하는이유
       </a>
@@ -276,25 +300,6 @@ type RspEcho_data struct {
 Msg string
 }
 98000 (98k) packet/sec정도가 한계입니다. 이를 messagepack (https://github.com/tinylib/msgp) 으로 바꾸면 처리량이 150000 (150k) packet/sec 정도로 증가합니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-11-22-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C64kconnection%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/" class="link black dim">
-        go 언어로 만든 서버에서 64K connection 만들어 보기 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      재미삼아 만들어본 프로젝트입니다. https://github.com/kasworld/massecho
-tcp연결이나 gorilla websocket을 사용해서 테스트 가능합니다. 테스트 전에 준비해야 할것이 대규모의 connection을 테스트 하기위해선 몇가지의 제한을 넘어야 합니다. 1. OS에서 열수있는 파일수의 제한 2. OS에서 client socket 제한 윈도우즈가 주 개발 환경인 상황에서 linux 테스트를 위해 설치한 WSL2 와 virtualbox의 ubuntu에서는 openfile 수의 제한을 올릴수가 없습니다. ( 아니면 방법을 못찾은 듯)
-ubuntu를 설치한 노트북에선 같은 방법으로 잘되는 것으로 봐선 그냥 막아둔듯 합니다. linux에서 파일 수 제한을 올리는 방법은 /etc/security/limits.
     </div>
   </div>
 </div>

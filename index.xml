@@ -6,7 +6,23 @@
     <description>Recent content on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 15 Sep 2023 14:06:37 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2023 15:37:15 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ppusim</title>
+      <link>https://kasworld.github.io/posts/ppusim/</link>
+      <pubDate>Fri, 22 Sep 2023 15:37:15 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/ppusim/</guid>
+      <description>세상 잉여로운 작업을 하고 있습니다.
+https://github.com/kasworld/ppusim
+rust로 할 만한 것이 별로 없다고 한 주제에 우습게도 딱 rust로 해볼 만한 것이 생각났습니다.
+실용성은 전혀 없지만 재미로 만들어보긴 좋을 것 같아서 작업을 시작했습니니다.
+예전 8bit 게임기나 오락실 게임에서 많이 쓰이던
+타일 + 팔렛트 + 스프라이트 + 다중 배경 스크롤 기능의 PPU 를 현대의 CPU로 시뮬레이션 해보기 입니다.
+자세한 내용은 위 github 링크에 써두었으니 관심있으신 분은 읽어보시면 됩니다.
+아직 미구현 인 부분이 있긴 하지만 만들어진 것의 성능을 이야기하자면</description>
+    </item>
+    
     <item>
       <title>내가godot엔진을사용하는이유</title>
       <link>https://kasworld.github.io/posts/%EB%82%B4%EA%B0%80godot%EC%97%94%EC%A7%84%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0/</link>

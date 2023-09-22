@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/" class="link black dim">
+        go 언어용 python-like log 모듈 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      goguelike 작업을 하면서 만들어진 모듈들 중 범용성이 높은 모듈들을 정리해서 공개하는 작업을 시작합니다.
+이미 기존의 글들을 통해 소개된 모듈들은 id 생성 :http://kasw.blogspot.kr/2015/01/go-serial-id.html rand : http://kasw.blogspot.kr/2015/02/go.html runstep : http://kasw.blogspot.kr/2015/02/goroutine.html
+이 있습니다. - 각각의 글을 수정해서 github 링크를 추가해 두었습니다.
+이번에 소개할 모듈은 pyhon log처럼 사용하는 log package입니다. log 용으로 만든 것으로 rand 때와 같이 기존 go 언어의 표준 라이브러리를 확장하는 개념으로 만든것 입니다.
+만든 이유는 아무래도 python을 쓴 기간이 길다보니 python 스타일의 로그 함수가 익숙한 관계로 최대한 비슷한 느낌으로 사용할수 있게 만들어 사용 중입니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-02-13-goguelike%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%86%8D%EB%8F%84/" class="link black dim">
         goguelike의 네트웍 속도
       </a>
@@ -260,26 +281,6 @@ genCh 변수를 글로벌 변수 GenCh로 선언하지 않고 로컬 변수로 �
       type DoFn func(int, int) bool
 func Call8WayTile(ox, oy int, fn DoFn) []uint8 {TileDirs := []uint8{}for i := uint8(1); i &lt;= 8; i++ {x, y := ox+Dir2Info[i].Vt[0], oy+Dir2Info[i].Vt[1]if fn(x, y) {TileDirs = append(TileDirs, i)}}return TileDirs}잘되는 군요. ^^ https://code.google.com/p/google-code-prettify/wiki/GettingStarted
 golang도 잘 지원 되는 것 같이 보입니다. ( 일단은 )
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-12-03-gotesting%ED%8C%A8%ED%82%A4%EC%A7%80%EC%82%AC%EC%9A%A9%EC%A4%91%EC%A3%BC%EC%9D%98%EC%A0%90/" class="link black dim">
-        go testing 패키지 사용중 주의점 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      go 언어는 테스팅을 위한 전용 패키지 testing을 가지고 있어 아주 유용하게 사용할수 있습니다.
-다만 이를 사용할때는 source code의 naming rule을 따라야 하는데 테스트할소스코드이름_test.go 형태를 지켜야 합니다.
-이를 지키지 않으면 flag 패키지를 사용해서 command line argument를 받는 프로그램 작성시 -? 등으로 command line help를 보게 되면
--test.bench=&quot;&quot;: regular expression to select benchmarks to run -test.benchmem=false: print memory allocations for benchmarks -test.benchtime=1s: approximate run time for each benchmark -test.blockprofile=&quot;&quot;: write a goroutine blocking profile to the named file after execution -test.
     </div>
   </div>
 </div>

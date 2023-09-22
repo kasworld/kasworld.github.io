@@ -93,6 +93,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2014-12-03-gotesting%ED%8C%A8%ED%82%A4%EC%A7%80%EC%82%AC%EC%9A%A9%EC%A4%91%EC%A3%BC%EC%9D%98%EC%A0%90/" class="link black dim">
+        go testing 패키지 사용중 주의점 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      go 언어는 테스팅을 위한 전용 패키지 testing을 가지고 있어 아주 유용하게 사용할수 있습니다.
+다만 이를 사용할때는 source code의 naming rule을 따라야 하는데 테스트할소스코드이름_test.go 형태를 지켜야 합니다.
+이를 지키지 않으면 flag 패키지를 사용해서 command line argument를 받는 프로그램 작성시 -? 등으로 command line help를 보게 되면
+-test.bench=&quot;&quot;: regular expression to select benchmarks to run -test.benchmem=false: print memory allocations for benchmarks -test.benchtime=1s: approximate run time for each benchmark -test.blockprofile=&quot;&quot;: write a goroutine blocking profile to the named file after execution -test.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2014-11-30-%EA%B0%9C%EB%B0%9C%ED%95%A0%EB%95%8C%ED%95%84%EC%9A%94%ED%95%9C%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EA%B0%9C%EB%B0%9C%ED%88%B4%EB%93%A4%EC%9D%84%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0%EA%B3%84%EC%86%8D%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EC%98%88%EC%A0%95/" class="link black dim">
         개발할때 필요한 최신 버전 개발 툴들을 추가하기. - 계속 업데이트 예정 
       </a>
@@ -273,25 +293,6 @@ map editor인 edittower는 공개할만한 수준이 못되어 이번 릴리즈�
 블로그에 쓰기는 좀 정리가 덜된 글이라 페북에 끄적끄적 하려다 길어 질것 같아 블로그로 작업. ^^ ( 그래서 반말 투입니다. )
 golang의 매력에 푸~~욱 빠져서 조강지처 python을 버리고(?) golang으로만 작업을 하고 있는 중에 web작업을 할일이 생겨 golang용 web framework을 찾아보다 생각난 것들..
 python에서는 django 가 대규모 작업 시장에서 절대 강자의 위치를 차지하고 있는중에 ( 대항마이었던 turbogear를 귀도가 죽여 버려서) flask가 호시탐탐 기회를 노리고 있고 web2py라고 하는 걸출한 all-in-one이 신규 개발자를 노리고 있는 상황이었다면 .
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-10-09-goguelike%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="link black dim">
-        goguelike 성능 테스트 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      지난주 이번주 동안 기본적인 서버/클라이언트의 안정화가 이루어져서 성능테스트를 해가면서 튜닝을 하고 있는 중입니다.
-방금 끝낸 테스트를 기록차원에서 적어보면 사용 기계 cpu i2500 ( 4c4t ) , ram 16Gbyte에서 서버는 각 클라이언트당 5패킷 / 초 모드로 작동중이고 5000 클라이언트 시뮬레이터를 다른 기계에서 실행한 결과 입니다.
-goguelike 13:41:44 server.go:169: tower test1 frame total:3801/ 4.0/s lap:5/ 4.8/s, gotoutine 5025 goguelike 13:41:44 server.go:173: floor0 AO(72/2232) PO(42/561) Packet(0/1157) goguelike 13:41:44 server.go:173: floor1 AO(69/2401) PO(42/630) Packet(5/2024) goguelike 13:41:44 server.
     </div>
   </div>
 </div>
