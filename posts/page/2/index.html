@@ -93,6 +93,32 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/" class="link black dim">
+        150000 (150k) packet/sec 를 처리하는 서버 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      https://github.com/kasworld/massecho
+를 조금 더 이리 저리 수정해 봤습니다. 각 connection이 보내는 초당 패킷수를 100으로 고정한 상태에서 connection 수를 1000 과 1500으로 바꿔가며 테스트 할때 marshaler로 표준 라이브러리의 json 이나 gob를 사용하면 AMD Ryzen 3700X (8c16t) 에서 간단한 echo protocol 을 사용해도 // Echo simple echo
+type ReqEcho_data struct {
+Msg string
+}
+// Echo simple echo
+type RspEcho_data struct {
+Msg string
+}
+98000 (98k) packet/sec정도가 한계입니다. 이를 messagepack (https://github.com/tinylib/msgp) 으로 바꾸면 처리량이 150000 (150k) packet/sec 정도로 증가합니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-11-22-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C64kconnection%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0/" class="link black dim">
         go 언어로 만든 서버에서 64K connection 만들어 보기 
       </a>
@@ -257,25 +283,6 @@ towerserver, multiclient, textclient, wasmclient(이건 포팅이 필요없는 �
 위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
 보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
 tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-08-17-goguelike%EC%9D%98%EC%8B%9C%EC%95%BC%EB%B2%94%EC%9C%84linesofsight%EB%A5%BCrework%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/" class="link black dim">
-        goguelike의 시야범위 linesofsight 를 rework 했습니다. 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      기존의 코드가 상당히 지저분한 관계로 언젠가는 고쳐야지하고 생각하다가 좋은 알고리즘?이 떠올라 주말에 작업했습니다. 간단히 끝날것으로 생각했었는데 1차 함수의 수식을 대충 생각하고 작업한 부분에 버그가 있어서 주말 내내 머리 싸매고 고민하게 만들었습니다.
-고생은 했고 또 실행 결과는 똑같지만 코드가 아주 깨끗해저서 꽤 만족스럽습니다.
-내용은 캐릭터의 보는 능력을 시선이 통과하는 타일들이 방해 하는 것 을 계산 해서 어디 까지 볼 수 있는가 하는 것으로 타일과 시선이 겹치는 길이 * 타일의 시선 방해도 를 시선이 지나가는 전체 타일에 적용합니다.
     </div>
   </div>
 </div>

@@ -93,6 +93,28 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-02-15-go%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%EC%8B%A4%EC%8B%9C%EA%B0%84%ED%86%B5%EA%B3%84%EB%A5%BC%EA%B8%B0%EB%A1%9D%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/" class="link black dim">
+        go 프로그램에서 실시간 통계를 기록하고 싶을때 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      goguelike의 webinfo 페이지를 보면
+Stat total:4660/ 3.0/s lap:1/ 39.4/s
+같은식의 실시간 통계를 볼수 있습니다. 이런식으로 어떤 행동의 총 횟수, 초당 일어난 시간(즉 평균) , 최근 횟수, 마지막 초당 횟수 등을 조사 기록하려면 꽤나 귀찮은 프로그래밍이 필요합니다.
+그래서 제가 만들어 쓰는 것는 actionstat 패키지입니다.
+사용 예는 https://github.com/kasworld/netspeed 의 서버 코드를 보면 됩니다만.. 간단히 적어보면
+// init obj stat := actionstat.NewActionStat()// see statlog.Info(&quot;%v&quot;, stat)stat.UpdateLap()// update info stat.Inc()같은 형태가 됩니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-02-14-go%EC%96%B8%EC%96%B4%EC%9A%A9pythonlikelog%EB%AA%A8%EB%93%88/" class="link black dim">
         go 언어용 python-like log 모듈 
       </a>
@@ -262,25 +284,6 @@ var genCh chan int64func init() {genCh = make(chan int64)go func() {var i in
 사용할때는
 objid := &lt;-id.GenCh()과 같은 형태를 사용하면 됩니다.
 genCh 변수를 글로벌 변수 GenCh로 선언하지 않고 로컬 변수로 선언 한것은 다른 모듈에서 수정할 가능성을 막기 위해서 이며,
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-01-08-blogger%EC%97%90%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%BD%94%EB%93%9C%EB%A5%BC%EB%84%A3%EA%B8%B0%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="link black dim">
-        blogger에 프로그램 코드를 넣기 테스트.
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      type DoFn func(int, int) bool
-func Call8WayTile(ox, oy int, fn DoFn) []uint8 {TileDirs := []uint8{}for i := uint8(1); i &lt;= 8; i++ {x, y := ox+Dir2Info[i].Vt[0], oy+Dir2Info[i].Vt[1]if fn(x, y) {TileDirs = append(TileDirs, i)}}return TileDirs}잘되는 군요. ^^ https://code.google.com/p/google-code-prettify/wiki/GettingStarted
-golang도 잘 지원 되는 것 같이 보입니다. ( 일단은 )
     </div>
   </div>
 </div>

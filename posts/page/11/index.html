@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2016-03-27-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B43%EC%A0%84%EC%9B%90%EC%82%BD%EC%A7%88%EA%B8%B0/" class="link black dim">
+        라즈베리파이 3 전원 삽질기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      신 라즈베리파이3를 결국 구매 했습니다. http://kasw.blogspot.kr/2016/03/3.html
+그전에 약간의 자기 합리화가 필요하긴 했지만요. http://kasw.blogspot.kr/2016/03/go.html
+제가 구매할때 가는 사이트에 케이스가 품절이라 케이스를 구하는데 시간이 좀 걸렸지만 2와 같은 케이스를 구매해서 넣었습니다. 중앙에 보이는 파란 방열판이 예전이 쓰고 남아있던 VGA ram방열판입니다. 딱 맞더군요.
+그리고 또 다른 곳에서 마침 싸게 파는 usb 테스터기 도 구매 했습니다
+이 테스터 기를 구매한 이유는 단지 라즈베리파이3이 일반적인 USB 2.1A 전원이 아닌 2.5A 전원을 요구 하기 때문인데 집에 있는 여러개의 전원들중 하나는 사용할수 있지 않을까 하는 희망을 가지고 일부러 전원을 빼고 구매 했기 때문입니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2016-03-13-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B42%EA%B0%90%EC%83%81%EA%B8%B0/" class="link black dim">
         라즈베리파이2 감상기 
       </a>
@@ -280,28 +301,6 @@ https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/
 저만 해도 지금 회사에서 새로 시작하는 프로젝트를 plan A는 python으로 준비하고 plan B는 go로 준비를 하고 있었는데 결국 여러 이유로 go를 사용할수 있는 (사용해야하는) 상황이 되어 go로 프로젝트를 진행하고 있습니다.
 오랫동안 python을 좋아했고 또 주변에 많이 추천해주었던 사람으로 현재의 python은 시대에 뒤떨어 졌다는 느낌을 많이 받습니다.
 python은 (동일 레벨의 다른 스크립트언어 들보다는 좋지만 ) 지금 시기 정도면 stackless ( micro thread ) , jit(pypy) , 언어 버전 이전의 완료 (python 3) , 어떤 형태로건 GIL 문제의 해결 ( STM 이건 뭐건 ) 등이 이루어 졌어야 했다고 생각합니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/" class="link black dim">
-        Serial ID 생성기 - 두번째 글 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      이전에 go 언어용 serial id generator 에 대한 글을 올린적이 있었는데. http://kasw.blogspot.kr/2015/01/go-serial-id.html
-그 내용의 개량판에 대한 이야기입니다.
-업데이트된 코드는 https://github.com/kasworld/idgen 에 있습니다.
-작업하다 보니 ID를 꼭 0부터 시작하는 것이 아니고 이전에 기록해둔 부분 부터 시작해야 하는 경우가 생기더군요. ( 서버가 종료 되었다 다시 시작할때 ID를 사용하는 object들의 persistent 가 보장 되어야 하는경우. )
-그래서 기존의 idgen 을 수정/업데이트 했습니다.
-주 변경점은 여러 생성기를 만들수있도록 factory 함수를 만들고 인자로 시작 값을 받도록 했습니다.
     </div>
   </div>
 </div>

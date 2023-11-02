@@ -6,7 +6,21 @@
     <description>Recent content on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 22 Sep 2023 15:37:15 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Nov 2023 11:37:54 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>갤럭시워치6사용기</title>
+      <link>https://kasworld.github.io/posts/%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%9B%8C%EC%B9%986%EC%82%AC%EC%9A%A9%EA%B8%B0/</link>
+      <pubDate>Thu, 02 Nov 2023 11:37:54 +0900</pubDate>
+      
+      <guid>https://kasworld.github.io/posts/%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%9B%8C%EC%B9%986%EC%82%AC%EC%9A%A9%EA%B8%B0/</guid>
+      <description>운동할때 심박계용도로 사용하기 위해 갤럭시 워치 6 40mm 를 사서 몇달간 사용후
+오늘 초기화 하고 창고로 넣으면서 기록으로 남기기위한 글 입니다. 삼성문제인지 구글(wear os)문제인지는 모르지만 둘다 워치에는 전혀 관심 없다는 생각이 듭니다.
+몇가지 재밌는?(쓰면서 혈압올리는) 기능 들이 있습니다.
+기본(시계) 화면 에서는 버튼들이 아무런 기능/반응을 하지 않습니다.
+슬립(aod) 상태에서는 버튼과 터치가 씹힙니다. 슬립을 종료 하는 역할을 하고 입력이 소비됩니다.
+손목 돌려 켜기는 체감상 50%정도 실패 합니다. 일단 실패하면 다시 시도해도 또 실패 합니다.</description>
+    </item>
+    
     <item>
       <title>Ppusim</title>
       <link>https://kasworld.github.io/posts/ppusim/</link>

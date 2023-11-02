@@ -93,6 +93,25 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-01-08-blogger%EC%97%90%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%BD%94%EB%93%9C%EB%A5%BC%EB%84%A3%EA%B8%B0%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="link black dim">
+        blogger에 프로그램 코드를 넣기 테스트.
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      type DoFn func(int, int) bool
+func Call8WayTile(ox, oy int, fn DoFn) []uint8 {TileDirs := []uint8{}for i := uint8(1); i &lt;= 8; i++ {x, y := ox+Dir2Info[i].Vt[0], oy+Dir2Info[i].Vt[1]if fn(x, y) {TileDirs = append(TileDirs, i)}}return TileDirs}잘되는 군요. ^^ https://code.google.com/p/google-code-prettify/wiki/GettingStarted
+golang도 잘 지원 되는 것 같이 보입니다. ( 일단은 )
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2014-12-03-gotesting%ED%8C%A8%ED%82%A4%EC%A7%80%EC%82%AC%EC%9A%A9%EC%A4%91%EC%A3%BC%EC%9D%98%EC%A0%90/" class="link black dim">
         go testing 패키지 사용중 주의점 
       </a>
@@ -273,26 +292,6 @@ map editor인 edittower는 공개할만한 수준이 못되어 이번 릴리즈�
       지난 주 부터 작업해오고 있던 맵 에디터가 일단 작동하는 수준 까지 만들어 졌습니다. 에디터에는 여러가지 gui component 가 필요해서 무엇을 사용할까 계속 고민 하고 있었습니다만, 아무리 찾아보고 고민해봐도 클라이언트 라이브러리가 적당한 것이 없어서 결국 웹으로 만들어 보기로 결정하는 데 까지도 꽤 오래 걸렸습니다.
 에디터가 아닌 클라이언트는 sdl 기반 라이브러리를 사용하였는데 이 것은 그야말로 간단한 그래픽 기능만 있는 것으로 각종 gui control을 지원 하지 않습니다.
 게다가 이 sdl 라이브러리는 go의 goroutine 사용에도 여러 제약이 있는 관계로 서버 기능을 사용해야 하는 에디터용으로는 부적합하더군요.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-10-16-pythongolang%EC%9D%98webframework%EC%A0%84%EC%9F%81/" class="link black dim">
-        python/golang의 web framework전쟁.
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      (제목은 반이상 낚시성 )
-블로그에 쓰기는 좀 정리가 덜된 글이라 페북에 끄적끄적 하려다 길어 질것 같아 블로그로 작업. ^^ ( 그래서 반말 투입니다. )
-golang의 매력에 푸~~욱 빠져서 조강지처 python을 버리고(?) golang으로만 작업을 하고 있는 중에 web작업을 할일이 생겨 golang용 web framework을 찾아보다 생각난 것들..
-python에서는 django 가 대규모 작업 시장에서 절대 강자의 위치를 차지하고 있는중에 ( 대항마이었던 turbogear를 귀도가 죽여 버려서) flask가 호시탐탐 기회를 노리고 있고 web2py라고 하는 걸출한 all-in-one이 신규 개발자를 노리고 있는 상황이었다면 .
     </div>
   </div>
 </div>

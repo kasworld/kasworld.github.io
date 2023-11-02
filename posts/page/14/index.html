@@ -93,6 +93,29 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/" class="link black dim">
+        go 언어에서 메모리 사용 프로파일링 하기. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이전에 cpu profile 하는 글을 썼지만 http://kasw.blogspot.kr/2015/02/go-profiling_4.html
+이번에는 memory profile을 하기 위한 수정을 했습니다.
+시작과 끝을 지정해야하는 cpu profile과는 달리 memory profile은 현상태의 snapshot을 떠내는 형태로 사용하게 됩니다.
+프로파일을 위한 shell script는
+//start#!/usr/bin/env shPRGNAME=&quot;$1&quot;shiftgo build ${PRGNAME}.go./${PRGNAME} -memprofilename ${PRGNAME}.mprof $*go tool pprof ${PRGNAME} ${PRGNAME}.mprofrm ${PRGNAME}.mprof//end과 같고,
+실제 프로그램에서 사용할때는
+//startpackage mainimport (&quot;flag&quot;&quot;fmt&quot;&quot;log&quot;&quot;math/rand&quot;&quot;os&quot;&quot;runtime&quot;&quot;runtime/pprof&quot;&quot;time&quot;)func init() {rand.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-03-21-go%EC%96%B8%EC%96%B4%EC%9A%A9fortunecookiepackage/" class="link black dim">
         go 언어용 fortune cookie package
       </a>
@@ -266,28 +289,6 @@ C++ 에 pure abstract class 나 java의 interface를 접한 분들은 의외로 
       TLDR python 에서 행복했던 분들은 Go를 C++/Java 에서 행복했던 분들은 Rust를 고민해 보는 것도 좋을 것으로 생각합니다.
 go에 대한 해외의 평가는 C++을 잡으려고 go를 만들었더니 python을 잡고 있다. 라고 하더군요. ^^ C++ 프로그래머는 go로 전향하는 경우가 적은데 python 프로그래머는 go로 전향하는 비율이 꽤 높답니다.
 구글+ 에 올린 http://kasw.blogspot.kr/2015/02/goguelike.html &ldquo;python에서 죽어라 고생해도 달성할수 없던 것을 너무 간단히 달성해서 허탈할뿐.. &quot; 이란 멘트에 달린 Go가 좋은 가요? 란 (의미의) 질문에 아무생각없이 &ldquo;추천할만 합니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-02-15-go%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C%EC%8B%A4%EC%8B%9C%EA%B0%84%ED%86%B5%EA%B3%84%EB%A5%BC%EA%B8%B0%EB%A1%9D%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/" class="link black dim">
-        go 프로그램에서 실시간 통계를 기록하고 싶을때 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      goguelike의 webinfo 페이지를 보면
-Stat total:4660/ 3.0/s lap:1/ 39.4/s
-같은식의 실시간 통계를 볼수 있습니다. 이런식으로 어떤 행동의 총 횟수, 초당 일어난 시간(즉 평균) , 최근 횟수, 마지막 초당 횟수 등을 조사 기록하려면 꽤나 귀찮은 프로그래밍이 필요합니다.
-그래서 제가 만들어 쓰는 것는 actionstat 패키지입니다.
-사용 예는 https://github.com/kasworld/netspeed 의 서버 코드를 보면 됩니다만.. 간단히 적어보면
-// init obj stat := actionstat.NewActionStat()// see statlog.Info(&quot;%v&quot;, stat)stat.UpdateLap()// update info stat.Inc()같은 형태가 됩니다.
     </div>
   </div>
 </div>

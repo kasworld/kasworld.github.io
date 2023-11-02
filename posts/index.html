@@ -93,6 +93,28 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%9B%8C%EC%B9%986%EC%82%AC%EC%9A%A9%EA%B8%B0/" class="link black dim">
+        갤럭시워치6사용기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      운동할때 심박계용도로 사용하기 위해 갤럭시 워치 6 40mm 를 사서 몇달간 사용후
+오늘 초기화 하고 창고로 넣으면서 기록으로 남기기위한 글 입니다. 삼성문제인지 구글(wear os)문제인지는 모르지만 둘다 워치에는 전혀 관심 없다는 생각이 듭니다.
+몇가지 재밌는?(쓰면서 혈압올리는) 기능 들이 있습니다.
+기본(시계) 화면 에서는 버튼들이 아무런 기능/반응을 하지 않습니다.
+슬립(aod) 상태에서는 버튼과 터치가 씹힙니다. 슬립을 종료 하는 역할을 하고 입력이 소비됩니다.
+손목 돌려 켜기는 체감상 50%정도 실패 합니다. 일단 실패하면 다시 시도해도 또 실패 합니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/ppusim/" class="link black dim">
         Ppusim
       </a>
@@ -274,32 +296,6 @@ const DataVersion = `&quot;${Data_VERSION}`&rdquo;
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
 서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/" class="link black dim">
-        150000 (150k) packet/sec 를 처리하는 서버 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      https://github.com/kasworld/massecho
-를 조금 더 이리 저리 수정해 봤습니다. 각 connection이 보내는 초당 패킷수를 100으로 고정한 상태에서 connection 수를 1000 과 1500으로 바꿔가며 테스트 할때 marshaler로 표준 라이브러리의 json 이나 gob를 사용하면 AMD Ryzen 3700X (8c16t) 에서 간단한 echo protocol 을 사용해도 // Echo simple echo
-type ReqEcho_data struct {
-Msg string
-}
-// Echo simple echo
-type RspEcho_data struct {
-Msg string
-}
-98000 (98k) packet/sec정도가 한계입니다. 이를 messagepack (https://github.com/tinylib/msgp) 으로 바꾸면 처리량이 150000 (150k) packet/sec 정도로 증가합니다.
     </div>
   </div>
 </div>

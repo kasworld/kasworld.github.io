@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2020-03-10-emoji%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EC%A4%84%EA%B0%84%EA%B2%A9%EC%9D%B4%EC%9D%B4%EC%83%81%ED%95%B4%EC%A7%80%EB%8A%94%EB%AC%B8%EC%A0%9C/" class="link black dim">
+        emoji 를 사용할때 줄간격이 이상해 지는 문제. 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      유니코드 이모지를 아이템 표시용으로 사용하게 되면서 보기 편해져서 그럼 문자 정보 표시에도 적용해 봤습니다.
+확실히 그림(글자) 가 표시되니 보기 편해지긴 합니다만 이상하게 줄간격이 들쑥 날쑥 해집니다.
+자세히 살펴보면 이모지가 표시된 줄들이 줄간격이 넓어 지는군요.
+그리고 또 자세히 살펴보면 한글이 표시된 줄들도 살짝 줄간격이 이상해 지는 것을 알수 있습니다.
+일단은 이모지표시가 있는게 보기 좋아서( 줄간은 들쑥날쑥하지만 ) 그대로 두긴 했습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2020-03-05-%EC%83%88%ED%83%80%EC%9D%BC%ED%85%8D%EC%8A%A4%EC%B2%98%EC%A0%81%EC%9A%A9%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C%ED%83%80%EC%9D%BC%EC%B6%94%EA%B0%80%EB%90%9C%ED%95%A8%EC%A0%95%EB%93%A4/" class="link black dim">
         새 타일 텍스처 적용, 유니코드 타일 , 추가된 함정들 
       </a>
@@ -287,24 +308,6 @@ goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(�
 genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
 argdefault : config와 command line arguments
 prettystring : struct 의 string 화 / admin web , debug용
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2019-10-09-golang%EB%84%A4%ED%8A%B8%EC%9B%8D%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%83%9D%EC%84%B1%EA%B8%B0/" class="link black dim">
-        golang (네트웍) 프로토콜 생성기 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      https://github.com/kasworld/genprotocol
-genprotocol - protocol 기반 코드 생성 ( goguelike 프로젝트를 하면서 만들어진 ) 네트웍 등에서 사용하기 위한 protocol 을 작성하는데 필요한 반복적 이고 기계적인 코드들을 자동으로 생성 해주는 프로그램 입니다. https://github.com/kasworld/wasmwebsocket 을 보면 예제를 볼 수 있습니다. 작성 이유는 하나의 프로젝트에서 여러종의 protocol 을 사용할 일이 생겨서 반복된 코드를 작성하다 보니 만들게 되었습니다. goguelike 를 예로 들면 game client - tower server tower server - ground server 의 2종의 protocol이 필요하고 사실상 비슷한데 조금 다른 코드들이 서로 구별 되어 쓰입니다.
     </div>
   </div>
 </div>

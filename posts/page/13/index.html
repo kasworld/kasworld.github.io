@@ -93,6 +93,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/" class="link black dim">
+        최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      나름대로는 go 언어를 꽤 많이 쓴 편이라고 생각하고 있었습니다만
+( go4game, goguelike 둘다 코드의 양도 있는 편이고 사용하는 기능도 tcp/ip, http, client, websocket 등 꽤 다양하게 사용합니다. )
+최근에 google/gxui 코드를 보면서 이런저런 것들을 많이 생각하게 되었습니다. https://github.com/google/gxui
+그 여파로 goguelike2에 이런 저런 refactoring을 시도 하게 되었는데. 그 중 적어 볼만한 것들을 적어 봅니다. (이 것이 정답이라고 말할수는 없겠지만 )
+1. private interface , public interface 전에 interface에 대해 적은 적이 있는데 (http://kasw.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/" class="link black dim">
         goguelike2 의 몇몇 스크린 샷들. 작업 진행 사항. 
       </a>
@@ -275,29 +296,6 @@ idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데
 기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
 그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
 내부적으론 [2]int를 int로 변환하는 (xlen*y +x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2015-03-22-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%82%AC%EC%9A%A9%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81%ED%95%98%EA%B8%B0/" class="link black dim">
-        go 언어에서 메모리 사용 프로파일링 하기. 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      이전에 cpu profile 하는 글을 썼지만 http://kasw.blogspot.kr/2015/02/go-profiling_4.html
-이번에는 memory profile을 하기 위한 수정을 했습니다.
-시작과 끝을 지정해야하는 cpu profile과는 달리 memory profile은 현상태의 snapshot을 떠내는 형태로 사용하게 됩니다.
-프로파일을 위한 shell script는
-//start#!/usr/bin/env shPRGNAME=&quot;$1&quot;shiftgo build ${PRGNAME}.go./${PRGNAME} -memprofilename ${PRGNAME}.mprof $*go tool pprof ${PRGNAME} ${PRGNAME}.mprofrm ${PRGNAME}.mprof//end과 같고,
-실제 프로그램에서 사용할때는
-//startpackage mainimport (&quot;flag&quot;&quot;fmt&quot;&quot;log&quot;&quot;math/rand&quot;&quot;os&quot;&quot;runtime&quot;&quot;runtime/pprof&quot;&quot;time&quot;)func init() {rand.
     </div>
   </div>
 </div>
