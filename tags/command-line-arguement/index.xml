@@ -6,12 +6,12 @@
     <description>Recent content in command line arguement on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 07 Mar 2017 10:30:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/command-line-arguement/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Mar 2017 10:30:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/command-line-arguement/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>golang flag package 의 함정 </title>
       <link>https://kasworld.github.io/posts/2017-03-07-golangflagpackage%EC%9D%98%ED%95%A8%EC%A0%95/</link>
       <pubDate>Tue, 07 Mar 2017 10:30:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2017-03-07-golangflagpackage%EC%9D%98%ED%95%A8%EC%A0%95/</guid>
       <description>지금 하고 있는 ( 회사에서 만드는 server 기반 mobile game ) 프로젝트에서 서버 테스트용 ai client 작업을 하다생긴 삽질기록입니다. 프로그램 실행용 인자들의 타입이 Concurrent int
 AccountPool int
@@ -23,6 +23,5 @@ Storyname string
 일때 아래의 go 실행 문장에서 이상한 점을 찾으면 진정으로 golang을 많이 써본 사람이라고 인정해 줄수 있을것 같습니다. -i 는 config를 url에서 얻어오는 옵션으로 ( 신경쓸필요없습니다. 그냥 인자가 길고 많다는 의미 )
 go run rundriver/client_story.</description>
     </item>
-    
   </channel>
 </rss>

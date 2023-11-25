@@ -6,17 +6,16 @@
     <description>Recent content in carbon on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 22 Jul 2022 07:26:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/carbon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 07:26:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/carbon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.</title>
       <link>https://kasworld.github.io/posts/2022-07-22-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C%EB%98%90%EC%9E%AC%EB%B0%8C%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4%EB%A5%BC%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8B%A4%EA%B3%A0%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Fri, 22 Jul 2022 07:26:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2022-07-22-%EA%B5%AC%EA%B8%80%EC%97%90%EC%84%9C%EB%98%90%EC%9E%AC%EB%B0%8C%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4%EB%A5%BC%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8B%A4%EA%B3%A0%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
       <description>구글에서 또 재밌는 프로그래밍 언어를 만들고 있다고 합니다.
 https://github.com/carbon-language/carbon-lang/tree/trunk/docs/design
 C/C++ 과 상호 연결이 쉽게 되게 하는 것이 주 목적중 하나라고 하는데 Rust는 좋은 언어지만 C/C++ 상호 연동이 그리 편하지 않아서 새로 만든듯 합니다. 그래서인지 Rust의 syntax를 많이 가져온 듯한 부분이 보입니다. 덕분에 C/C++의 가독성을 떨어 트리는 주범중하나인 변수/인자의 type 선언 형태가 타입이름 변수이름 형태에서 var 변수이름: 타입이름 형태로 바뀌었습니다. (이거 아주 맘에 드는 군요. ) javascript -&amp;gt; dart python -&amp;gt; golang 에 이어서 C/C++ -&amp;gt; carbon 이 될지 기대 됩니다.</description>
     </item>
-    
   </channel>
 </rss>

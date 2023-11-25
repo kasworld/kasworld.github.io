@@ -9,7 +9,7 @@
     <meta name="description" content="그 두번째 입니다. ( 총 몇회가 될지 모르니 2/N 입니다. ^^ )
 첫 글은 http://kasw.blogspot.com/2012/09/go.html 를 보시면 됩니다.
 Maps key 로 사용 가능한 것은 == , != 이 정의 된 type string,int,float 는 가능 array,slice,struct 는 불가능 pointer, interface 는 가능 struct 를 key로 쓰고 싶으면 Key() 나 Hash() method 를 만들고 그 결과를 키로 사용할것. value 는 아무거나 사용 가능 var map1 map[keytype]valuetype = make( map[keytype]valuetype , capacity ) map1 := map[keytype]valuetype{} map is reference type len(map1) map1[notInMapKey] is zero-value of value type not error val1,isPresent = map1[key1] 형태로 존재하는지 확인 가능 delete(map1, key1) 로 항목을 삭제 가능하면 없는 항목이어도 에러는 없다.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -39,6 +39,7 @@ Maps key 로 사용 가능한 것은 == , != 이 정의 된 type string,int,flo
 <meta property="og:url" content="https://kasworld.github.io/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2012-09-26T11:40:00+09:00" />
 <meta property="article:modified_time" content="2012-09-26T11:40:00+09:00" />
+
 <meta itemprop="name" content="구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) ">
 <meta itemprop="description" content="그 두번째 입니다. ( 총 몇회가 될지 모르니 2/N 입니다. ^^ )
 첫 글은 http://kasw.blogspot.com/2012/09/go.html 를 보시면 됩니다.

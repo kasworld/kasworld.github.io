@@ -6,12 +6,12 @@
     <description>Recent content in 플랫폼 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 19 Jan 2013 12:49:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%ED%94%8C%EB%9E%AB%ED%8F%BC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jan 2013 12:49:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%ED%94%8C%EB%9E%AB%ED%8F%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>모바일 게임에서 사용자 계정 관리 - 플랫폼은 어떻게해야 할까?</title>
       <link>https://kasworld.github.io/posts/2013-01-19-%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84%EC%97%90%EC%84%9C%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%80%EC%96%B4%EB%96%BB%EA%B2%8C%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C/</link>
       <pubDate>Sat, 19 Jan 2013 12:49:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-19-%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B2%8C%EC%9E%84%EC%97%90%EC%84%9C%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%80%EC%96%B4%EB%96%BB%EA%B2%8C%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C/</guid>
       <description>어쩌다 보니 모바일 게입 업계 분들과 만날일이 있어서 공부도 할겸 이런 저런 모바일 게임을 받아서 테스트를 해봤습니다.
 저야 기본적으로 백 엔드에 관심이 많은 쪽이라 그 쪽을 보게 되는데요.
@@ -19,6 +19,5 @@
 그에 반해 한게임(nhn)은 아이디를 만들기 싫다고 하면 자동으로 그 게임용 아이디를 자동으로 만들어 주더군요. ( 제가 테스트 한것은 피쉬 아일랜드 입니다. - 아주 잘 만들어진 게임이더군요. )
 이거 느낌이 아주 좋았습니다.</description>
     </item>
-    
   </channel>
 </rss>

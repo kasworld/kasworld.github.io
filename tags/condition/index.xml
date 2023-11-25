@@ -6,18 +6,17 @@
     <description>Recent content in condition on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 18 Feb 2020 14:43:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/condition/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2020 14:43:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/condition/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>프로그래밍에서 가장? 어렵다는 이름 짓기 </title>
       <link>https://kasworld.github.io/posts/2020-02-18-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%97%90%EC%84%9C%EA%B0%80%EC%9E%A5%EC%96%B4%EB%A0%B5%EB%8B%A4%EB%8A%94%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0/</link>
       <pubDate>Tue, 18 Feb 2020 14:43:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-02-18-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%97%90%EC%84%9C%EA%B0%80%EC%9E%A5%EC%96%B4%EB%A0%B5%EB%8B%A4%EB%8A%94%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0/</guid>
       <description>요즘 goguelike에 상태이상을 새로 추가하기 위한 작업을 하고 있습니다.
 예를 들면 이런 것들이지요. Blind ,Poisoned ,Invisible ,Weaken ,Slow ,Float , Hallucinate ,Greasy ,Sleep ,Confused 눈멀고 독걸리고 약화되고 느려지고 공중에 떠오르고 , 환각을 보고, 미끄러 떨어 트리고 , 졸리고 , 혼란되고, 등입니다.
 이들을 아우르는 용어 ( 타입 이름 ) 을 정하느라 고민을 하고 있었습니다.
 보통 상태 라고 하면 state 나 status 등을 자주 사용하곤 합니다만, 뭔가 딱 맞는 느낌이 안드는 거지요.</description>
     </item>
-    
   </channel>
 </rss>

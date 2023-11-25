@@ -6,12 +6,12 @@
     <description>Recent content in vim on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 20 Jan 2013 23:08:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jan 2013 23:08:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sublime text 2 에디터를 구입했습니다. - 수정했습니다.</title>
       <link>https://kasworld.github.io/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 20 Jan 2013 23:08:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-20-sublimetext2%EC%97%90%EB%94%94%ED%84%B0%EB%A5%BC%EA%B5%AC%EC%9E%85%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4%EC%88%98%EC%A0%95%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>요즘 프로그래밍용 텍스트 에디터의 대세^^인 sublime text 2 를 설치해서 써보고 있습니다.
 여러 플랫폼(windows, linux, max os )을 지원 하고 라이센스도 머신 단위가 아니고 구매자 단위로 주어지는 등 꽤 맘에 드는 부분이 많은 에디터 입니다.
@@ -21,28 +21,23 @@ win16 시절의 강자였던 codewright ( http://en.wikipedia.org/wiki/CodeWrig
 들의 정통 후계자란 느낌이 들어서 구매하는 것을 심각하게 고민하기 시작했습니다.
 심지어 가격도 전성기 시절의 위 에디터 가격 보다 싸군요. ( biref : $199, codewright $250 , subslime text $59!</description>
     </item>
-    
     <item>
       <title> GVIM으로 IDE 처럼 사용하기 </title>
       <link>https://kasworld.github.io/posts/2012-08-30-gvim%EC%9C%BC%EB%A1%9Cide%EC%B2%98%EB%9F%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
       <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2012-08-30-gvim%EC%9C%BC%EB%A1%9Cide%EC%B2%98%EB%9F%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       <description>요즘 하고 있는 일이 많은 파일과 폴더들을 돌아다니면서 소스를 분석하고 수정해야 하는 일이라 (rails 프로젝트가 그렇더군요. ) 기존에 사용하고 있던 vim에 NERDtree plugin을 추가하여 사용하고 있습니다 http://www.vim.org/scripts/script.php?script_id=1658 taglist plugin과 조합아면 위와같은 화면을 보며 작업할수 있게 되더군요. ^^ http://www.vim.org/scripts/script.php?script_id=273 추가로 vim-rails 를 추천 받아서 사용중인데 취향을 타는 건지 그렇게 엄청 좋은지는 잘모르겠습니다. https://github.com/tpope/vim-rails
 참고로 스크린샷은 web2py 작업 화면 예 입니다.</description>
     </item>
-    
     <item>
       <title>windows의 vim에서 python 활성화 하기 </title>
       <link>https://kasworld.github.io/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 14 Aug 2012 16:52:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2012-08-14-windows%EC%9D%98vim%EC%97%90%EC%84%9Cpython%ED%99%9C%EC%84%B1%ED%99%94%ED%95%98%EA%B8%B0/</guid>
       <description>간단한 팁입니다만 기록을 위해서 적습니다.
 전 윈도우건 리눅스건 환경을 거의 통일 시켜놓고 작업을 하는 편입니다.
 이 환경의 통일에서 상당히 중요한 역할을 하는 것이 gvim 인데 http://www.vim.org/download.php 주 에디터/뷰어로 항상 gvim을 사용하도록 세팅해 놓으면 chrome/firefox와 더불어 종종 &amp;ldquo;내가 지금 윈도로 부팅한 상태인가?&amp;rdquo; 를 헷갈릴 정도로 일관된 환경을 유지 할수 있습니다. ( 과장이 좀 많이 있지만요. ^^)
 아무튼 vim을 쓰고 있는 시간이 많아지니 이런저런 플러그인 들도 설치하게 되고 http://kldp.org/node/125263 설정들도 이렇게 저렇게 하곤 합니다.</description>
     </item>
-    
   </channel>
 </rss>

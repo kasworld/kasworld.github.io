@@ -6,12 +6,12 @@
     <description>Recent content in RPS on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 25 Aug 2014 15:50:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/rps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Aug 2014 15:50:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/rps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>만들고 있는 것의 상태2 : &#34;@&#34;의 모험 </title>
       <link>https://kasworld.github.io/posts/2014-08-25-%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%83%EC%9D%98%EC%83%81%ED%83%9C2%EC%9D%98%EB%AA%A8%ED%97%98/</link>
       <pubDate>Mon, 25 Aug 2014 15:50:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-08-25-%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B2%83%EC%9D%98%EC%83%81%ED%83%9C2%EC%9D%98%EB%AA%A8%ED%97%98/</guid>
       <description>^^;;
 일단은 nethack 과 classic ultima 사이의 어딘가 가 될것 같습니다.
@@ -19,6 +19,5 @@
 만들어질 서비스의 종류는 Role Playing Simulator. 줄여서 RPS ^^ 또는 (+system을 해서 ) RPSS
 제작자의 특성상 Game이라기 보단 로그인 해서 사용하는( use , not play) simulator 가 될것 같습니다.</description>
     </item>
-    
   </channel>
 </rss>

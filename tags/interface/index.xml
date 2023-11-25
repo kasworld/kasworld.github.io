@@ -6,12 +6,12 @@
     <description>Recent content in interface on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 10 May 2015 18:18:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/interface/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 May 2015 18:18:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/interface/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</title>
       <link>https://kasworld.github.io/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/</link>
       <pubDate>Sun, 10 May 2015 18:18:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/</guid>
       <description>나름대로는 go 언어를 꽤 많이 쓴 편이라고 생각하고 있었습니다만
 ( go4game, goguelike 둘다 코드의 양도 있는 편이고 사용하는 기능도 tcp/ip, http, client, websocket 등 꽤 다양하게 사용합니다. )
@@ -19,18 +19,15 @@
 그 여파로 goguelike2에 이런 저런 refactoring을 시도 하게 되었는데. 그 중 적어 볼만한 것들을 적어 봅니다. (이 것이 정답이라고 말할수는 없겠지만 )
 1. private interface , public interface 전에 interface에 대해 적은 적이 있는데 (http://kasw.</description>
     </item>
-    
     <item>
       <title>go 언어에서 interface의 의미.</title>
       <link>https://kasworld.github.io/posts/2015-02-17-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cinterface%EC%9D%98%EC%9D%98%EB%AF%B8/</link>
       <pubDate>Tue, 17 Feb 2015 17:45:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-02-17-go%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9Cinterface%EC%9D%98%EC%9D%98%EB%AF%B8/</guid>
       <description>go를 사용하다보면 처음에는 channel과 goroutine에 감동^^ 하고 나중에는 interface에 감탄하게 됩니다.
 C++ 에 pure abstract class 나 java의 interface를 접한 분들은 의외로 헛갈리기 좋은것이 이 go언어의 interface입니다.
 실제로 go 프로그래밍을 하다보면 처음에는 C++ 에서 header로 분리 하듯이 interface를 정의한 패키지를 분리하게 되는 데 작업을 하다보면 약간 이상한 느낌이 들기 시작합니다.
 여러 패키지에서 공유하기 위해 interface 파일을 만들었는데 나중에 확인해보면 처음에 쓰려고 만든 그 패키지 말고는 아무곳에서도 사용하지 않는다는 것을 알게 되지요.</description>
     </item>
-    
   </channel>
 </rss>

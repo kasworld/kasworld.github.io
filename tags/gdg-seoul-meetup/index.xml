@@ -6,12 +6,12 @@
     <description>Recent content in GDG seoul meetup on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 18 Sep 2017 15:06:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/gdg-seoul-meetup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2017 15:06:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/gdg-seoul-meetup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Meta-programming으로 만드는 게임 서버</title>
       <link>https://kasworld.github.io/posts/2017-09-18-metaprogramming%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/</link>
       <pubDate>Mon, 18 Sep 2017 15:06:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2017-09-18-metaprogramming%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/</guid>
       <description>지난 2년간 회사에서 개발한 게임서버 개발을 한번 정도 정리 해보고 싶다고 생각 하고 있었습니다만.
 몇주전에 golang korea 에 올라온 GDG seoul meetup 발표자 모집 글을 보고 (꽤나 즉흥적으로 ) 신청을 했더니 덜컥 발표자로 등록 되어 버렸습니다.
@@ -20,6 +20,5 @@ https://www.facebook.com/groups/golangko/
 https://docs.google.com/presentation/d/1P6wykg33jnbTM0GVB3AwXUJZlkp20yC0i6XcbOfPlG4/edit?usp=sharing
 발표 준비를 하면서 &amp;ldquo;너무 실무적 내용들이고 또 자세한 설명은 생략한다. 식이라 이래도 좋은가?&amp;rdquo; 라는 걱정을 좀 했는데 다들 열심히 들어 주시고 해서 어떻게 무사히 끝냈습니다.</description>
     </item>
-    
   </channel>
 </rss>

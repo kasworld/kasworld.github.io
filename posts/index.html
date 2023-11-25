@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,30 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/%EC%8B%9C%EB%86%80%EB%A1%9C%EC%A7%80nas%ED%95%98%EB%93%9C%EA%B5%90%EC%B2%B4/" class="link black dim">
+        시놀로지NAS하드교체
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      시놀로지 NAS에서 사용하고 있는 도시바 3T HDD가 상태는 정상이지만 좀 오래 사용한듯 하여
+(83420시간 == 3475일 == 9.75년)
+더 늦기 전에 바꿔 주긴 해야 겠다고 호시탐탐 기회를 보다가 적당한 가격 (30원/1Gbyte 이하)의 물건을 발견하여 구매하고 교체 하였습니다.
+교체 과정에 약간(?)의 삽질이 있었는데
+NAS에서 HDD를 교체 하는 것이 처음이라
+새 볼륨을 만들고 기존 데이터를 이동하고
+기종 볼륨을 삭제 하면 되겠지 하고
+(오랜 시간을 들여) 각종 폴더, 데이터 등을 옮겼으나 결과적으로 이동할 수 없는 것들이 있다는 것을 깨닫고(ㅠㅠ)
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -278,24 +303,6 @@ const DataVersion = `&quot;${Data_VERSION}`&rdquo;
 식으로 파일을 생성하면 만들어진 파일이 build가 안됩니다.
 이유를 찾아보니 powershell 5.x에서는 당연하게도 utf-8 이아닌 utf16le 파일을 생성하기 때문이고 golang은 당연히 입력으로 utf-8을 요구하니 컴파일 에러를 내는 거지요.
 디렉토리 구분자로 \ 를 쓰는 것도 그렇고 표준 encoding으로 utf-16le 를 쓰는 것도 그렇고 이리저리 참 불편하게 하는 군요.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-12-04-250kpacketsec%EB%8B%AC%EC%84%B1/" class="link black dim">
-        250k packet/sec 달성 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
-서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0.
     </div>
   </div>
 </div>

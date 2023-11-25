@@ -6,12 +6,12 @@
     <description>Recent content in calendar on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 06 Dec 2019 14:49:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Dec 2019 14:49:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go 언어로 만든 배경이 있는 시계/달력 </title>
       <link>https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/</link>
       <pubDate>Fri, 06 Dec 2019 14:49:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/</guid>
       <description>https://github.com/kasworld/wasmclockcal
 go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
@@ -24,12 +24,10 @@ open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localh
 클라이언트 접속 URL 에
 bgimg=이미지이름(url) 을 주면 배경그림이 설정되고</description>
     </item>
-    
     <item>
       <title>golang gopherjs로 만든 시계와 달력 </title>
       <link>https://kasworld.github.io/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/</link>
       <pubDate>Tue, 16 Oct 2018 09:59:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2018-10-16-golanggopherjs%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%8B%9C%EA%B3%84%EC%99%80%EB%8B%AC%EB%A0%A5/</guid>
       <description>goguelike 의 webclient를 만들면서 부산물?로 만들어진 시계 와 달력입니다.
 코드를 살짝 정리해서 github에 올려 두었습니다. https://github.com/kasworld/gopherjsclockcal
@@ -37,6 +35,5 @@ bgimg=이미지이름(url) 을 주면 배경그림이 설정되고</description>
 그 결과물을 적당히 정리( 라이브러리 사용을 줄이는 등 ) 한것 입니다.
 만들어진 결과물은 마루에서 시계및 달력으로 잘 쓰이고 있기도 합니다. ^^</description>
     </item>
-    
   </channel>
 </rss>

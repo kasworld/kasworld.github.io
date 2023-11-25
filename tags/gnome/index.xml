@@ -6,12 +6,12 @@
     <description>Recent content in gnome on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 30 Jul 2012 14:25:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jul 2012 14:25:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>wine 설치시 노틸러스의 짜증나는 notepad 연결 제거하기</title>
       <link>https://kasworld.github.io/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/</link>
       <pubDate>Mon, 30 Jul 2012 14:25:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2012-07-30-wine%EC%84%A4%EC%B9%98%EC%8B%9C%EB%85%B8%ED%8B%B8%EB%9F%AC%EC%8A%A4%EC%9D%98%EC%A7%9C%EC%A6%9D%EB%82%98%EB%8A%94notepad%EC%97%B0%EA%B2%B0%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/</guid>
       <description>http://ubuntuforums.org/showthread.php?t=1654415
 항상짜증나던것인데 검색하다 발견해서 적어 놓습니다. 우분투에서 와인을 설치하면 와인과 같이 notepad.exe 가 설치되고 노틸러스 등의 파일 관리자에서 이 notepad로 열기가 활성화 됩니다.
@@ -19,17 +19,14 @@
 rm ~/.local/share/applications/wine-extension-txt.desktop sudo update-desktop-database #this updates mimeinfo.cache
 같은 방법으로 다른 연결들도 삭제/수정할 수 있을 것 같습니다.</description>
     </item>
-    
     <item>
       <title>우분투 11.10 으로 업그레이드</title>
       <link>https://kasworld.github.io/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/</link>
       <pubDate>Sun, 16 Oct 2011 12:47:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2011-10-16-%EC%9A%B0%EB%B6%84%ED%88%AC1110%EC%9C%BC%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C/</guid>
       <description>이번에 우분투 11.10이 나왔습니다. 서둘러 설치 해봤자 다운 속도 느리고 초기 버그 로 고생( 그것이 또 재미지만 ^^ )할께 뻔해서 느긋하게 있다가 주말을 맞이해서 집기계를 업그레이드 했습니다. 회사 테스트 용 기계는 금요일 퇴근 전에 업그레이드를 걸어 두었구요.
 결론만 말씀드리면 유니티는 원래부터 맘에 안들어 gnome-classic 으로 사용하고 있었는데 . 이번 업그레이ㄷ로 들어간 gnome-shell역시 맘에 안들어서 xfce로 전환 했습니다.
 데스크탑에서 꼭 넷북이나 태블릿 같은 인터페이스 + 가능한 사용자 설정을 숨기는 형태로의 변화가 과연 정말로 필요한건지 정말 궁금합니다.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,12 +6,12 @@
     <description>Recent content in 와이브로 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 09 Dec 2009 13:09:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%99%80%EC%9D%B4%EB%B8%8C%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Dec 2009 13:09:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%99%80%EC%9D%B4%EB%B8%8C%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>모두가 아이폰을 이야기할때</title>
       <link>https://kasworld.github.io/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/</link>
       <pubDate>Wed, 09 Dec 2009 13:09:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2009-12-09-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%A0%EB%95%8C/</guid>
       <description>전 와이브로 에그를 신청했습니다. ;;;
 주 모바일? 디바이스로 thinkpad x61t에 우분투 리눅스를 사용하는관계로 모바일 인터넷 환경에 선택지가 별로 없습니다. ;;;
@@ -21,6 +21,5 @@
 http://ubuntuforums.org/showthread.php?t=200142 를 참고하면 됩니다.
 gps야 원래 좀 고생할 각오를 했지만 웹캠쪽도 리눅스에서 어느정도 지원 될지 걱정을 좀 했는데 디바이스는 기본적으로 그냥 인식되고 synaptic 관리자에서 Cheese를 설치하면 프로그램도 쓸만한 수준입니다.</description>
     </item>
-    
   </channel>
 </rss>

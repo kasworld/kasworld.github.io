@@ -6,12 +6,12 @@
     <description>Recent content in iperf on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 18 Jan 2013 19:21:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/iperf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Jan 2013 19:21:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/iperf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>지름은 지름을 부릅니다. 역시;;;</title>
       <link>https://kasworld.github.io/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/</link>
       <pubDate>Fri, 18 Jan 2013 19:21:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/</guid>
       <description>옵티머스 lte2(옵티이이) 로 바꾼후에 언제나 처럼 이런 저런 테스트를 했습니다.
 집에 사용하는 공유기가 몇년 전에 꽤 비싸게 주고산 802.11n에 Chanel bonding이 되는 (된다고 주장하는 - 지원하는 디바이스가 없어서 한번도 테스트를 못해봤으니.. ) dlink dir-655 였기때문에 신나요. 하고 네트웍 벤치마크 프로그램을 설치하고 실행해 봤습니다.
@@ -22,6 +22,5 @@ mmorpg를 하는 와이프는 서버에서 팅겨서 &amp;ldquo;뭐지?&amp;rdqu
 공유기를 재부팅하니 다시 인터넷이 됩니다. ;;
 한번더 해보고 똑같은 증상이 일어 나는 것을 확인한후.. 조용히 다음날 새벽 까지 기다렸습니다.</description>
     </item>
-    
   </channel>
 </rss>

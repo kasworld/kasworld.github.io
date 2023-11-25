@@ -6,23 +6,21 @@
     <description>Recent content in nas on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 17 Feb 2014 18:09:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Feb 2014 18:09:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/nas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>결국 nas를 샀습니다.</title>
       <link>https://kasworld.github.io/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Mon, 17 Feb 2014 18:09:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>우분투/리눅스 민트에서 클라우드 스토리지 사용하기.
 같은 글이나 이곳 저곳에서 개인데이터를 안전하게 접근 사용하기.
 같은 글도 쓰긴 했지만.. mini-itx 보드에 리눅스를 설치해서 만들어볼까 하는 생각도 있었으나 비용 문제도 있고 게으름은 모든 것을 이긴다고 결국 완제품 NAS를 샀습니다. NAS 중에서도 유명한 여러 브랜드도 있지만 역시 귀찮음이란.. 그냥 iptime nas2 로 결정했습니다. &amp;ldquo;값도 싸고 하니 외장 하드 사는 셈 치고 쓰지&amp;rdquo; 란 자기 합리화도 있습니다. 와이프의 설득에는 슬슬 (와이프) 하드 용량도 다 차가고, 또 오래 되서 하드 수명도 불안 불안 하니 백업도 할 겸 용량도 늘일 겸 이란 핑계로 성공 했구요.</description>
     </item>
-    
     <item>
       <title>이곳 저곳에서 개인데이터를 안전하게 접근 사용하기. </title>
       <link>https://kasworld.github.io/posts/2013-03-10-%EC%9D%B4%EA%B3%B3%EC%A0%80%EA%B3%B3%EC%97%90%EC%84%9C%EA%B0%9C%EC%9D%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C%EC%A0%91%EA%B7%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
       <pubDate>Sun, 10 Mar 2013 11:24:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-03-10-%EC%9D%B4%EA%B3%B3%EC%A0%80%EA%B3%B3%EC%97%90%EC%84%9C%EA%B0%9C%EC%9D%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C%EC%A0%91%EA%B7%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       <description>사용하는 기계가 늘어나니 자연스럽게 클라우드 스토리지를 이것 저것 써보고 있습니다.
 가장 유명한 dropbox 나 다음 클라우드, 네이버 ndrive , 구글 드라이브 등을 사용해봤습니다만..
@@ -30,6 +28,5 @@
 windows 만 사용하는 분들은 체감하기 힘들겠지만 리눅스,안드로이드,아이폰,맥 등을 다 고려하다보면 국내 서비스는 사실상 사용이 불가능하고.
 구글 드라이브는 구글의 이름이 아깝게도 파일을 저장하기에는 영 아닙니다. 리눅스를 지원 하지 못할 뿐만 아니라 제가 지운 파일이 실제로 지워 지지 않고 계속 구글 드라이브 웹에 남아있을 뿐만 아니고 접근까지 가능한게 아주 맘에 들지 않았습니다.</description>
     </item>
-    
   </channel>
 </rss>

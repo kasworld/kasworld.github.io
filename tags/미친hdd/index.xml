@@ -6,12 +6,12 @@
     <description>Recent content in 미친hdd on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 10 Mar 2013 11:24:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%AF%B8%EC%B9%9Chdd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Mar 2013 11:24:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%AF%B8%EC%B9%9Chdd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>이곳 저곳에서 개인데이터를 안전하게 접근 사용하기. </title>
       <link>https://kasworld.github.io/posts/2013-03-10-%EC%9D%B4%EA%B3%B3%EC%A0%80%EA%B3%B3%EC%97%90%EC%84%9C%EA%B0%9C%EC%9D%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C%EC%A0%91%EA%B7%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
       <pubDate>Sun, 10 Mar 2013 11:24:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-03-10-%EC%9D%B4%EA%B3%B3%EC%A0%80%EA%B3%B3%EC%97%90%EC%84%9C%EA%B0%9C%EC%9D%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C%EC%A0%91%EA%B7%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       <description>사용하는 기계가 늘어나니 자연스럽게 클라우드 스토리지를 이것 저것 써보고 있습니다.
 가장 유명한 dropbox 나 다음 클라우드, 네이버 ndrive , 구글 드라이브 등을 사용해봤습니다만..
@@ -19,6 +19,5 @@
 windows 만 사용하는 분들은 체감하기 힘들겠지만 리눅스,안드로이드,아이폰,맥 등을 다 고려하다보면 국내 서비스는 사실상 사용이 불가능하고.
 구글 드라이브는 구글의 이름이 아깝게도 파일을 저장하기에는 영 아닙니다. 리눅스를 지원 하지 못할 뿐만 아니라 제가 지운 파일이 실제로 지워 지지 않고 계속 구글 드라이브 웹에 남아있을 뿐만 아니고 접근까지 가능한게 아주 맘에 들지 않았습니다.</description>
     </item>
-    
   </channel>
 </rss>

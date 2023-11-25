@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,26 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-03-17-help%ED%88%B4%ED%8C%81%EC%9D%B8%ED%92%8B%EB%A0%89%EA%B2%8C%EC%9E%84%EB%85%B8%ED%8B%B0%EC%9D%98%EA%B0%9C%EC%84%A0/" class="link black dim">
+        help, 툴팁, 인풋렉, 게임 노티의 개선 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
+goguelike는 서버기반으로 만들어진 게임이고, 클라이언트는 사용자의 입력을 서버로 전달하는 일과 서버가 보내준 시야를 표시하는 일만 합니다.
+그로인해서 어쩔 수 없이 사용자 입력과 화면 표시사이에는 시간 차가 발생하게되는데, 그동안에는 한턴당 한번의 사용자 입력만 서버로 보내도록 하고 있었습니다. (서버와 네트웍의 부담을 줄이기 위해서 입니다. )
+이를 사용자의 입력이 발생( 정확히는 바뀔때)할때 마다 서버로 보내도록 바꾸었습니다. 서버는 새 턴이 시작하는 시점까지 들어온 사용자 입력중 마지막 입력만을 사용해 다음 턴 사용자의 행동을 결정합니다.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -283,31 +304,6 @@ dir2http dir=. port=:8080 http://localhost:8080/
 open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localhost:8080/?mvid=youtubeid
 클라이언트 접속 URL 에
 bgimg=이미지이름(url) 을 주면 배경그림이 설정되고
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/" class="link black dim">
-        wxgame2의 go 언어 포팅 gowasm2dgame 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      https://github.com/kasworld/gowasm2dgame
-python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
-golang, websocket, wasm 으로 포팅(이라기보단 리메이크)하는 프로젝트 입니다.
-python2가 지원이 종료된다니 겸사 겸사 이기도 합니다. (python3로 포팅할 계획은 없습니다.)
-goguelike를 만들면서 정리한 go언어 서버 제작 용 라이브러리(프레임웍) 의 총정리 예제이기도 합니다.
-중요한 역할을 하는 것들을 정리해보면
-genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
-argdefault : config와 command line arguments
-prettystring : struct 의 string 화 / admin web , debug용
     </div>
   </div>
 </div>

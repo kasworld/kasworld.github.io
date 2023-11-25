@@ -11,7 +11,7 @@
 goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사용하는데 표준 라이브러리는 기초적인 함수만을 제공하여 더 쓰기 편한 형태의 함수를 추가해서 사용하고 있습니다.
 기본적으로는 go 언어의 embedded field를 사용하는 것이고 이것을 통해서 embedded된 struct가 제공하는 함수들이외에도 원하는 함수를 추가해 사용할수 있습니다.
 //startpackage randimport (r &quot;math/rand&quot;&quot;time&quot;)type Rand struct {*r.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -43,6 +43,7 @@ goguelike 에선 표준 분포에 따른 랜덤 함수를 상당히 많이 사�
 <meta property="og:url" content="https://kasworld.github.io/posts/2015-02-01-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%ED%91%9C%EC%A4%80%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%A5%BC%ED%99%95%EC%9E%A5%ED%95%98%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-02-01T11:41:00+09:00" />
 <meta property="article:modified_time" content="2015-02-01T11:41:00+09:00" />
+
 <meta itemprop="name" content="go 언어를 사용하면서 표준 라이브러리를 확장하고 싶을때.">
 <meta itemprop="description" content="너무 간단해서 적기도 뭐한 팁이지만
 가끔씩 표준 라이브러리가 제공하는 struct( class 가 아니지요 ^^) 를 확장해서 내가 필요한 함수들을 추가 하고 싶을때가 있습니다.

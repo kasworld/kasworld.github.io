@@ -6,12 +6,12 @@
     <description>Recent content in game framework on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 28 May 2020 15:28:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/game-framework/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 May 2020 15:28:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/game-framework/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 </title>
       <link>https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/</link>
       <pubDate>Thu, 28 May 2020 15:28:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/</guid>
       <description>gowasm2dgame vs gowasm3dgame의 이야깁니다.
 gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
@@ -22,6 +22,5 @@ gowasm2dgame 은 재미삼아 구현 한 것이고,
 gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
 gowasm2dgame html canvas version client</description>
     </item>
-    
   </channel>
 </rss>

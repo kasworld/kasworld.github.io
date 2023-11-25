@@ -6,24 +6,22 @@
     <description>Recent content in 강의 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 02 Mar 2014 14:41:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B0%95%EC%9D%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Mar 2014 14:41:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EA%B0%95%EC%9D%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>wxgame2의 네트웍버전을 위한 기반 작업을 진행하고 있습니다. </title>
       <link>https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 02 Mar 2014 14:41:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-03-02-wxgame2%EC%9D%98%EB%84%A4%ED%8A%B8%EC%9B%8D%EB%B2%84%EC%A0%84%EC%9D%84%EC%9C%84%ED%95%9C%EA%B8%B0%EB%B0%98%EC%9E%91%EC%97%85%EC%9D%84%EC%A7%84%ED%96%89%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>이전 글 이후에 강의 준비를 하면서 코드를 보니 코드가 오래 되기도 했고 또 설계상의 결정들이 맘에 들지 않아 전체적인 재 정리를 해야겠다고 생각하고 있었습니다.
 지난 주부터 시간 되는 대로 작업을 진행해서 로직을 수행하는 wxgame2server.py와 서버로 부터 받은 정보를 시각화하는 뷰어인 wxgame2client.py 로 만드는 것을 일정부분 끝냈습니다.
 현재까지는 네트웍으로 데이터를 주고 받는 것은 안되어 있으며 간단하게 file/pickle 을 상용해서 서버-&amp;gt; 클라이언트간 정보를 전달하고 있습니다.
 코드를 작성하다 보니 구조가 맘에 들지 않아 거의 뜯어 고치게 되었습니다.</description>
     </item>
-    
     <item>
       <title>게임 프로그래밍 이란 주제로 결국 강의를 했습니다.</title>
       <link>https://kasworld.github.io/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Wed, 19 Feb 2014 21:31:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-02-19-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%EC%A3%BC%EC%A0%9C%EB%A1%9C%EA%B2%B0%EA%B5%AD%EA%B0%95%EC%9D%98%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>고려 대학교 고공 겨울학기의 한 꼭지로 게임 프로그래밍 이란 주제로 2시간 짜리 강의를 진행했습니다.
 원래는 4일간 2시간씩 총 8시간 짜리 강의지만 첫날 2시간만 제가 하고 이후는 능력 좋고 경험 많은 후배가 강의를 진행하고 있습니다.
@@ -32,12 +30,10 @@
 강의에 사용했던 프리젠테이션은 https://docs.google.com/presentation/d/1fNa2hY5qGE_bGnsT0NhmnVQQC6kjLuUb4i3HtQATJCI/edit#slide=id.p 에서 볼 수 있습니다.
 전산 실습실에서 진행해서 실습과 병행하여 진행할 생각으로 실습 준비를 해갔으나 생각만큼 잘 되지는 않은 것 같습니다.</description>
     </item>
-    
     <item>
       <title>예전에 파이썬으로 만들었던 게임프레임웍을 github에 올렸습니다. </title>
       <link>https://kasworld.github.io/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 19 Jan 2014 17:03:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-01-19-%EC%98%88%EC%A0%84%EC%97%90%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C%EB%A7%8C%EB%93%A4%EC%97%88%EB%8D%98%EA%B2%8C%EC%9E%84%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D%EC%9D%84github%EC%97%90%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>파이썬과 wxpython을 사용해서 간단한! 2d 슈팅게임을 만들 수 있는 프레임웍과 예제 삼아 만들어본 AI만 있는 게임?을 github에 올렸습니다.
 코드 내부의 주석을 보니 2011년에 만들어둔 것이군요.
@@ -46,16 +42,13 @@
 관심 있으신 분은 https://github.com/kasworld/wxgame2 에서 받으면 됩니다.
 원래 코드는 제가 개인적으로 만들어 사용하고 있는 kaswlib이란 것을 사용하도록 되어 있는데 github에 올리려니 서로다른 두개의 프로젝트가 되고 또 참조를 하려면 import path를 설정하는 것도 해야 해서 쓰기 불편할 듯 하여 아예 프로젝트 내부에 wxgamelib 파일에 사용하는 코드만 복사해 넣었습니다.</description>
     </item>
-    
     <item>
       <title>게임프로그래밍이라는 주제로 </title>
       <link>https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/</link>
       <pubDate>Wed, 08 Jan 2014 10:42:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/</guid>
       <description>지인으로 부터 뜬금 없이 &amp;ldquo;게임프로그래밍&amp;quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
 &amp;ldquo;게임을 만든다는 것은 무엇일까?&amp;rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다.</description>
     </item>
-    
   </channel>
 </rss>

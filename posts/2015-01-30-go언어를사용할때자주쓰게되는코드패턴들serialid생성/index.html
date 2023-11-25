@@ -12,7 +12,7 @@ var genCh chan int64func init() {genCh = make(chan int64)go func() {var i in
 사용할때는
 objid := &lt;-id.GenCh()과 같은 형태를 사용하면 됩니다.
 genCh 변수를 글로벌 변수 GenCh로 선언하지 않고 로컬 변수로 선언 한것은 다른 모듈에서 수정할 가능성을 막기 위해서 이며,">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -45,6 +45,7 @@ genCh 변수를 글로벌 변수 GenCh로 선언하지 않고 로컬 변수로 �
 <meta property="og:url" content="https://kasworld.github.io/posts/2015-01-30-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EC%9E%90%EC%A3%BC%EC%93%B0%EA%B2%8C%EB%90%98%EB%8A%94%EC%BD%94%EB%93%9C%ED%8C%A8%ED%84%B4%EB%93%A4serialid%EC%83%9D%EC%84%B1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-01-30T23:06:00+09:00" />
 <meta property="article:modified_time" content="2015-01-30T23:06:00+09:00" />
+
 <meta itemprop="name" content="go 언어를 사용 할때  자주 쓰게 되는 코드 패턴들. serial ID 생성 ">
 <meta itemprop="description" content="package id
 var genCh chan int64func init() {genCh = make(chan int64)go func() {var i int64for {i&#43;&#43;genCh &lt;- i}}()}func GenCh() &lt;-chan int64 {return genCh}과 같이 쓰면 goroutine safe 한 id 생성기를 사용할수 있습니다.

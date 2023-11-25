@@ -6,12 +6,12 @@
     <description>Recent content in nvidia on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 22 Jun 2015 14:01:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/nvidia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Jun 2015 14:01:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/nvidia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 </title>
       <link>https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/</link>
       <pubDate>Mon, 22 Jun 2015 14:01:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/</guid>
       <description>linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
 http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
@@ -19,22 +19,18 @@ http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
 그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
 기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요.</description>
     </item>
-    
     <item>
       <title>xubuntu 14.04 로 업그레이드를 했습니다. </title>
       <link>https://kasworld.github.io/posts/2014-04-21-xubuntu1404%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Mon, 21 Apr 2014 15:58:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-04-21-xubuntu1404%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>신경 쓰지 못하고 있었는데 작업중 컴퓨터에서 며칠 전 14.04로 업그레이드 하라는 메시지가 나오길래 아. 어느새 릴리즈 되었군 하고 깨달았습니다. 작업 머신의 업그레이드는 일단 뒤로 미루고 ( 하던 작업을 계속 해야 하니 ) 일단 옆에 있는 노트북부터 업그레이드를 실행했습니다. ( 데이터는 모두 백업 되어 있어 문제가 생기면 포맷하고 새로 설치하면 되니 연습용으론 최적입니다. )
 배포판 업그레이드는 많아야 6개월에 한번 진행하는 것이니 명령어를 항상 까먹습니다. sudo do-release-upgrade 를 사용합니다. 한참 목록을 다운 받고 나오는 메시지 대로 진행하면 1~2시간 내에 모든 업그레이드를 완료해줍니다.</description>
     </item>
-    
     <item>
       <title>집에서 프로그래밍 환경을 개선 했습니다. </title>
       <link>https://kasworld.github.io/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Wed, 02 Apr 2014 13:14:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-04-02-%EC%A7%91%EC%97%90%EC%84%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%ED%99%98%EA%B2%BD%EC%9D%84%EA%B0%9C%EC%84%A0%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>최근 일신상의 변화로 집에서 작업하는 시간이 늘어난 김에 작업환경을 개선 했습니다.
 벌써 3년 가까이 써서 열도 많이 나고 소음도 커진 nvidia GTX460 을 빼고 조용하고 발열이 적다는 GTX750ti로 바꿨습니다.
@@ -42,12 +38,10 @@ http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
 GTX460에선 duel monitor만 구성해도 굉음을 내서 사용이 거의 불가능했었는데 GTX750ti는 세개를 달아도 조용합니다.
 저는 주 작업환경이 리눅스라 혹시 지원 안되면 어쩌나 하고 살짝 걱정했었지만 nvidia홈페이지에서 드라이버를 받아 설치하니 아무 문제 없이 잘 잡힙니다.</description>
     </item>
-    
     <item>
       <title>한성 보스몬스터 77 리눅스 삽질기. </title>
       <link>https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
       <pubDate>Wed, 10 Apr 2013 12:58:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-04-10-%ED%95%9C%EC%84%B1%EB%B3%B4%EC%8A%A4%EB%AA%AC%EC%8A%A4%ED%84%B077%EB%A6%AC%EB%88%85%EC%8A%A4%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
       <description>왠지 요즘은 삽질기만 쓰는 것 같은 느낌이 들지만.. ;;;
 1개월 정도 전에 회사 업무에 필요해서 리눅스를 설치하기 위해 한성컴퓨터 X53-BossMonster Lv.77 를 구매요청해서 받았습니다.
@@ -55,6 +49,5 @@ GTX460에선 duel monitor만 구성해도 굉음을 내서 사용이 거의 불�
 그리고 전혀 필요없지만 다른 대안이 없어서 덤으로 달려있는 지포스 GTX670MX 가 있습니다.
 전 당연히 리눅스를 설치하기위해 구매했고 애초에 OS 도 안 따라오는 노트북이라 수령후 ( MS 에 돈 보테줄일 없으니 좋네.</description>
     </item>
-    
   </channel>
 </rss>

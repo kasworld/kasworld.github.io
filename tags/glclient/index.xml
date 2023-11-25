@@ -6,17 +6,16 @@
     <description>Recent content in glclient on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 28 Jul 2020 16:35:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/glclient/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jul 2020 16:35:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/glclient/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>goguelike  개발 진행 사항 </title>
       <link>https://kasworld.github.io/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</link>
       <pubDate>Tue, 28 Jul 2020 16:35:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-07-28-goguelike%EA%B0%9C%EB%B0%9C%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</guid>
       <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
 tile들이 모두 3D 로 만들어 지고 타일 들이 높이 맞게 Fieldobj 와 activeobj 들이 배치 및 이동합니다.
 그 외에는 towermaker 가 대폭적으로 업데이트 되었습니다. 기존에 손으로 만들었던 starttower 같은 것을 더 쉽게 만들 수 있습니다.</description>
     </item>
-    
   </channel>
 </rss>

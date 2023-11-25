@@ -6,17 +6,16 @@
     <description>Recent content in flight simulator on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 20 Aug 2020 22:04:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/flight-simulator/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2020 22:04:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/flight-simulator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>네번째 windows 의 구매 </title>
       <link>https://kasworld.github.io/posts/2020-08-20-%EB%84%A4%EB%B2%88%EC%A7%B8windows%EC%9D%98%EA%B5%AC%EB%A7%A4/</link>
       <pubDate>Thu, 20 Aug 2020 22:04:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-08-20-%EB%84%A4%EB%B2%88%EC%A7%B8windows%EC%9D%98%EA%B5%AC%EB%A7%A4/</guid>
       <description>리눅스만 사용한다는 녀석이 왜 이리 윈도우가 많아? 라고 하시면 가족들이 쓰는 것이고
 새로 구매한 windows 10은 &amp;ldquo;WSL2 를 써보고 싶어서&amp;rdquo; 라고 대답하겠습니다.
 그리고 핑계김에 (게다가 새 그래픽 카드도 샀으니 ) flight simulator 도 돌려 보고 싶어서 입니다. ^^</description>
     </item>
-    
   </channel>
 </rss>

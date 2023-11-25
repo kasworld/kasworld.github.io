@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="회사 세미나용으로 http://web2py.com/books/default/chapter/29/09/access-control 을 요약한 내용 입니다.
 접근제어 access control web2py 는 Role Based Access Control 제공 (RBAC)역할을 기반으로하는 접근제어로 context-based access control (CBAC) 과는 다르다. ( message의 context에 따라 달라지지 않는다, 상태, 혹은 데이터 ) user - role - job function 형태web2py 에서는 Auth class를 통해서 구현된다. 아래와 같은 테이블이 필요한데 프로젝트를 만들때 자동으로 코드가 생성된다. auth_user : 유저이름 , email , 암호 , 상태 (등록 대기, 완료, 블럭됨 )auth_group : 유저의 그룹(롤) 정보 , 이게 role ( 사용자 역할 ) auth_membership : group - user link table , user - group의 다대 다 연결.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -37,6 +37,7 @@
 <meta property="og:url" content="https://kasworld.github.io/posts/2013-12-10-web2pyaccesscontrol%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%A0%95%EB%A6%AC/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2013-12-10T11:57:00+09:00" />
 <meta property="article:modified_time" content="2013-12-10T11:57:00+09:00" />
+
 <meta itemprop="name" content="web2py access control(접근 제어) 정리.">
 <meta itemprop="description" content="회사 세미나용으로 http://web2py.com/books/default/chapter/29/09/access-control 을 요약한 내용 입니다.
 접근제어 access control web2py 는 Role Based Access Control 제공 (RBAC)역할을 기반으로하는 접근제어로 context-based access control (CBAC) 과는 다르다. ( message의 context에 따라 달라지지 않는다, 상태, 혹은 데이터 ) user - role - job function 형태web2py 에서는 Auth class를 통해서 구현된다. 아래와 같은 테이블이 필요한데 프로젝트를 만들때 자동으로 코드가 생성된다. auth_user : 유저이름 , email , 암호 , 상태 (등록 대기, 완료, 블럭됨 )auth_group : 유저의 그룹(롤) 정보 , 이게 role ( 사용자 역할 ) auth_membership : group - user link table , user - group의 다대 다 연결."><meta itemprop="datePublished" content="2013-12-10T11:57:00+09:00" />

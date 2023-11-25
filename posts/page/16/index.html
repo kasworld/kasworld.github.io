@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,28 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2015-01-30-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EC%9E%90%EC%A3%BC%EC%93%B0%EA%B2%8C%EB%90%98%EB%8A%94%EC%BD%94%EB%93%9C%ED%8C%A8%ED%84%B4%EB%93%A4serialid%EC%83%9D%EC%84%B1/" class="link black dim">
+        go 언어를 사용 할때  자주 쓰게 되는 코드 패턴들. serial ID 생성 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      package id
+var genCh chan int64func init() {genCh = make(chan int64)go func() {var i int64for {i++genCh &lt;- i}}()}func GenCh() &lt;-chan int64 {return genCh}과 같이 쓰면 goroutine safe 한 id 생성기를 사용할수 있습니다.
+실제 위 코드는 goguelike 의 id module의 일부 코드이기도 합니다.
+사용할때는
+objid := &lt;-id.GenCh()과 같은 형태를 사용하면 됩니다.
+genCh 변수를 글로벌 변수 GenCh로 선언하지 않고 로컬 변수로 선언 한것은 다른 모듈에서 수정할 가능성을 막기 위해서 이며,
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -273,25 +296,6 @@ emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 go 를 llvm�
 에 올릴 예정입니다.
 일단 실행 가능한 바이너리만 릴리즈 했으며 소스의 공개는 현재로서는 예정이 없습니다. 클라이언트인 sdlclient 와 서버 접속 라이브러리인 goguelib은 좀 정리가 되면 해볼까 고민 중입니다.
 map editor인 edittower는 공개할만한 수준이 못되어 이번 릴리즈에서는 빠졌습니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-10-17-goguelikemapeditor/" class="link black dim">
-        goguelike map editor 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      지난 주 부터 작업해오고 있던 맵 에디터가 일단 작동하는 수준 까지 만들어 졌습니다. 에디터에는 여러가지 gui component 가 필요해서 무엇을 사용할까 계속 고민 하고 있었습니다만, 아무리 찾아보고 고민해봐도 클라이언트 라이브러리가 적당한 것이 없어서 결국 웹으로 만들어 보기로 결정하는 데 까지도 꽤 오래 걸렸습니다.
-에디터가 아닌 클라이언트는 sdl 기반 라이브러리를 사용하였는데 이 것은 그야말로 간단한 그래픽 기능만 있는 것으로 각종 gui control을 지원 하지 않습니다.
-게다가 이 sdl 라이브러리는 go의 goroutine 사용에도 여러 제약이 있는 관계로 서버 기능을 사용해야 하는 에디터용으로는 부적합하더군요.
     </div>
   </div>
 </div>

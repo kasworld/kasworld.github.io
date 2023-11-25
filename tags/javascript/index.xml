@@ -6,12 +6,12 @@
     <description>Recent content in javascript on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 05 Nov 2014 11:43:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Nov 2014 11:43:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go 언어로 만든 코드를 웹 브라우저에서 실행하기</title>
       <link>https://kasworld.github.io/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/</link>
       <pubDate>Wed, 05 Nov 2014 11:43:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-11-05-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EC%BD%94%EB%93%9C%EB%A5%BC%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0/</guid>
       <description>asm.js를 보다가 갑자기 궁금해져서 기록삼아 적는 포스트
 google 의 chrome/V8 에 이어서 mozilla 가 야심차게 밀고 있는 http://asmjs.org/ : http://ejohn.org/blog/asmjs-javascript-compile-target/ 와 이를 활용하는 http://kripken.github.io/emscripten-site/
@@ -20,12 +20,10 @@ google 의 chrome/V8 에 이어서 mozilla 가 야심차게 밀고 있는 http:/
 더이상 개발이 진행되고 있지 않은 https://github.com/kless/go2js
 emscripten 은 llvm 을 asm.js로 변환 하는 프로젝트이니 go 를 llvm으로 변환 하는 ( Go -&amp;gt; LLVM -&amp;gt; Emscripten -&amp;gt; asm.js ) https://github.com/axw/llgo</description>
     </item>
-    
     <item>
       <title>go4game 에 웹 클라이언트를 추가 했습니다. </title>
       <link>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 27 Apr 2014 14:58:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>사진 설명 : go4game web client
 소스코드는 언제나 처럼 https://github.com/kasworld/go4game 에 있습니다.
@@ -34,6 +32,5 @@ go언어는 서버에서 사용하는 것을 중점으로 하고 있기 때문�
 그에 반해서 서버를 만들기 위한 라이브러리는 tcp/http 불문하고 넘칠 정도로 많고 또 잘되어 있는데 아마도 go언어로 만든 프로그램의 UI는 당연히 web으로 작성하라는 의미 같습니다.
 그런 관계로 go4game도 client UI는 웹으로 작성해야 겠다는 생각이 들어서 ( 사실은 클라이언트 UI 라이브러리를 찾다 포기하고 ^^; ) 웹 작업을 했습니다.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,12 +6,12 @@
     <description>Recent content in n5800 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 11 Feb 2010 13:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/n5800/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Feb 2010 13:48:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/n5800/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>노키아 n5800 의 카메라 화질(압축율) 올리기.</title>
       <link>https://kasworld.github.io/posts/2010-02-11-%EB%85%B8%ED%82%A4%EC%95%84n5800%EC%9D%98%EC%B9%B4%EB%A9%94%EB%9D%BC%ED%99%94%EC%A7%88%EC%95%95%EC%B6%95%EC%9C%A8%EC%98%AC%EB%A6%AC%EA%B8%B0/</link>
       <pubDate>Thu, 11 Feb 2010 13:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2010-02-11-%EB%85%B8%ED%82%A4%EC%95%84n5800%EC%9D%98%EC%B9%B4%EB%A9%94%EB%9D%BC%ED%99%94%EC%A7%88%EC%95%95%EC%B6%95%EC%9C%A8%EC%98%AC%EB%A6%AC%EA%B8%B0/</guid>
       <description>Nokia 5800 Tips and Tricks Thread:
 1- Copy z:\private\10202BE9\10282EDC.txt to c:\private\10202BE9
@@ -20,6 +20,5 @@ to: 0x3001A string &amp;lsquo;QualitySetLevel=306,ImageFileMimeType=image/jpeg,I
 3- Save and restart.
 The photos (at the 5MP settings) now are an average of 900KB instead of 600KB, which means less JPEG compression, which means theoretically better quality.&amp;quot;</description>
     </item>
-    
   </channel>
 </rss>

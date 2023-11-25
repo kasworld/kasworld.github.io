@@ -6,16 +6,15 @@
     <description>Recent content in php on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 30 Nov 2008 19:33:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Nov 2008 19:33:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>우분투에서 로컬에 설치된 문서를 편하게 보기.</title>
       <link>https://kasworld.github.io/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/</link>
       <pubDate>Sun, 30 Nov 2008 19:33:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2008-11-30-%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90%EC%84%9C%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%A4%EC%B9%98%EB%90%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%ED%8E%B8%ED%95%98%EA%B2%8C%EB%B3%B4%EA%B8%B0/</guid>
       <description>우분투를 설치하고 아파치를 설치하면 http://localhost/doc/ 으로 들어가서 로컬 기계에 설치되어 있는 패키지의 문서를 볼수 있습니다. 만.. 이게 들어가보면 엄청나게 많은 디렉토리가 있어서 원하는 문서 디렉토리로 찾아 가는게 귀찮더군요. ( 제기계에는 1400여개의 디렉토리가 있습니다. ) 너무 많은 정보는 없는것과 같기에 *-doc 디렉토리만 목록에 나오도록 조그만 프로그램을 만들어 봤습니다.
 1 &amp;lt;?php 2 **$dir = &amp;ldquo;/usr/share/doc/&amp;rdquo;; 3 $urlbase = &amp;ldquo;http://localhost/doc/&amp;rdquo;; 4 5 // Open a known directory, and proceed to read its contents 6 if (is_dir($dir)) { 7 if ($dh = opendir($**dir)) { 8 echo &amp;lsquo;&amp;lt;table&amp;gt;&amp;rsquo;; 9 **$**i = 0; 10 **$dirlist = array(); 11 while (($f = readdir($**dh)) !</description>
     </item>
-    
   </channel>
 </rss>

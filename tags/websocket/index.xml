@@ -6,12 +6,12 @@
     <description>Recent content in websocket on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 28 May 2020 15:28:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/websocket/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 May 2020 15:28:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/websocket/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>하나의 게임을 두종류의 클라이이언트로 vs 두종류의 게임을 하나의 클라이언트로 </title>
       <link>https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/</link>
       <pubDate>Thu, 28 May 2020 15:28:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-05-28-%ED%95%98%EB%82%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9Cvs%EB%91%90%EC%A2%85%EB%A5%98%EC%9D%98%EA%B2%8C%EC%9E%84%EC%9D%84%ED%95%98%EB%82%98%EC%9D%98%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C/</guid>
       <description>gowasm2dgame vs gowasm3dgame의 이야깁니다.
 gowasm2dgame 에는 두가지 버전(2d, 3d) 의 클라이이언트를 구현 하고
@@ -22,12 +22,10 @@ gowasm2dgame 은 재미삼아 구현 한 것이고,
 gowasm3dgame 은 장기적으로 stage기반의 online게임 프레임워크를 만들수 있지 않을까 하는 생각으로 작업중인 것입니다.
 gowasm2dgame html canvas version client</description>
     </item>
-    
     <item>
       <title>2020년 현재 goguelike의 상태 정리 </title>
       <link>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</guid>
       <description>goguelike - mmo-roguelike golang, websocket, webassembly, htmlcanvas (가능한한) 혼자서 만드는 MMO 서버 관리 서버 ( ground server )
 다중 서버 지원
@@ -40,12 +38,10 @@ websocket을 사용 연결 유지형 클라이언트
 클라이언트 설치 불필요
 webassembly/html5 canvas를 지원하는 web browser 라면 플랫폼 불문하고 플레이 가능</description>
     </item>
-    
     <item>
       <title>go4game 에 웹 클라이언트를 추가 했습니다. </title>
       <link>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 27 Apr 2014 14:58:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>사진 설명 : go4game web client
 소스코드는 언제나 처럼 https://github.com/kasworld/go4game 에 있습니다.
@@ -54,6 +50,5 @@ go언어는 서버에서 사용하는 것을 중점으로 하고 있기 때문�
 그에 반해서 서버를 만들기 위한 라이브러리는 tcp/http 불문하고 넘칠 정도로 많고 또 잘되어 있는데 아마도 go언어로 만든 프로그램의 UI는 당연히 web으로 작성하라는 의미 같습니다.
 그런 관계로 go4game도 client UI는 웹으로 작성해야 겠다는 생각이 들어서 ( 사실은 클라이언트 UI 라이브러리를 찾다 포기하고 ^^; ) 웹 작업을 했습니다.</description>
     </item>
-    
   </channel>
 </rss>

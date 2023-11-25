@@ -6,16 +6,15 @@
     <description>Recent content in google on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 15 Nov 2009 21:29:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2009 21:29:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/google/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Go Programming Language</title>
       <link>https://kasworld.github.io/posts/2009-11-15-thegoprogramminglanguage/</link>
       <pubDate>Sun, 15 Nov 2009 21:29:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2009-11-15-thegoprogramminglanguage/</guid>
       <description>구글에서 만든 언어랩니다. ^^ http://golang.org/ 구글정도되면 이미 충분한 파워와 실력이 있으니 궁금해서 조금(^^) 공부해 봤습니다. 블럭으로 {}를 써서 마치 C/C++/java/C# 유사품 처럼 보이지만 ^^ 내용은 pascal/modula 2의 후계자에 더 가까운듯 합니다.
 coroutine의 강화(?)판인 goroutine이 있는것도 재미있고, 컴파일이 빠르다고 주장(표준 라이브러리를 풀빌드하는데 10초가 안걸립니다.)하는것도 turbo pascal 생각이 나구 말이죠. 덤으로 대입 연산이 := 입니다. ㅋㅋㅋ native binary를 만들면서 garbage collection이 되는 점은 D language가 생각 나기도 하고 말이죠. ^^ 무어보다 맘에 드는건 생성된 바이너리의 속도가 C의 80~90%속도가 난다는 점입니다.</description>
     </item>
-    
   </channel>
 </rss>

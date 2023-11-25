@@ -6,17 +6,16 @@
     <description>Recent content in server on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 05 May 2015 12:24:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 May 2015 12:24:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>무선 랜으로 연결된 노트북을 서버로 사용할때 </title>
       <link>https://kasworld.github.io/posts/2015-05-05-%EB%AC%B4%EC%84%A0%EB%9E%9C%EC%9C%BC%EB%A1%9C%EC%97%B0%EA%B2%B0%EB%90%9C%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%EC%84%9C%EB%B2%84%EB%A1%9C%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C/</link>
       <pubDate>Tue, 05 May 2015 12:24:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-05-%EB%AC%B4%EC%84%A0%EB%9E%9C%EC%9C%BC%EB%A1%9C%EC%97%B0%EA%B2%B0%EB%90%9C%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%84%EC%84%9C%EB%B2%84%EB%A1%9C%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C/</guid>
       <description>개발환경을 통일 하기위해서 노트북을 서버로 사용하고 있습니다. 이렇게 하면 데스크탑에서 작업하다가 나갈일이 생겨도 서버로 sync를 하고 ( unison으로 작업 폴더를 싱크하고, 노트북에 gitlab 서버를 설치해 쓰고 있습니다. ) 노트북을 들고나가면 문제가 없게 되지요.
 게다가 노트북은 ssd 라 조용하고 또 전기도 적게 먹으니 media 서버만 nas로 돌리면 작업데이터용 서버로는 최적인것 같습니다.
 아무튼 이렇게 노트북을 서버로 쓰면서 유선lan으로 연결하면 ( giga bit lan이라 빠르긴 하지만 ) 선이 귀찮아 지기때문에 ( 전송할 데이터가 많은 경우만 연결하고 ) 보통때는 무선으로 연결하고 있습니다.</description>
     </item>
-    
   </channel>
 </rss>

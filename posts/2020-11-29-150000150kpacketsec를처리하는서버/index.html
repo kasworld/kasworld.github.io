@@ -16,7 +16,7 @@ type RspEcho_data struct {
 Msg string
 }
 98000 (98k) packet/sec정도가 한계입니다. 이를 messagepack (https://github.com/tinylib/msgp) 으로 바꾸면 처리량이 150000 (150k) packet/sec 정도로 증가합니다.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -53,6 +53,7 @@ Msg string
 <meta property="og:url" content="https://kasworld.github.io/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-29T12:10:00+09:00" />
 <meta property="article:modified_time" content="2020-11-29T12:10:00+09:00" />
+
 <meta itemprop="name" content="150000 (150k) packet/sec 를 처리하는 서버 ">
 <meta itemprop="description" content="https://github.com/kasworld/massecho
 를 조금 더 이리 저리 수정해 봤습니다. 각 connection이 보내는 초당 패킷수를 100으로 고정한 상태에서 connection 수를 1000 과 1500으로 바꿔가며 테스트 할때 marshaler로 표준 라이브러리의 json 이나 gob를 사용하면 AMD Ryzen 3700X (8c16t) 에서 간단한 echo protocol 을 사용해도 // Echo simple echo

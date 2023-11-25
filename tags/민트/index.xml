@@ -6,12 +6,12 @@
     <description>Recent content in 민트 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 09 Jul 2017 10:38:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%AF%BC%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jul 2017 10:38:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%AF%BC%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>한성 X57K BossMonster Lv.74 구입,사용기 </title>
       <link>https://kasworld.github.io/posts/2017-07-09-%ED%95%9C%EC%84%B1x57kbossmonsterlv74%EA%B5%AC%EC%9E%85%EC%82%AC%EC%9A%A9%EA%B8%B0/</link>
       <pubDate>Sun, 09 Jul 2017 10:38:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2017-07-09-%ED%95%9C%EC%84%B1x57kbossmonsterlv74%EA%B5%AC%EC%9E%85%EC%82%AC%EC%9A%A9%EA%B8%B0/</guid>
       <description>급히 쓸 일이 생겨서 새 노트북 구입했습니다.
 지난주 화요일에 도착했습니다.
@@ -21,12 +21,10 @@
 i7 에 8G ram 1050 4G , 120 ssd 를 달고 80만원 대 입니다.
 집에서 쓰는 데스크탑보다 사양이 좋네요. ( ram , ssd 가 작지만 업그레이드 가능하니 )</description>
     </item>
-    
     <item>
       <title>mint 17.2 로 업그레이드를 했습니다.</title>
       <link>https://kasworld.github.io/posts/2015-07-04-mint172%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sat, 04 Jul 2015 09:11:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-07-04-mint172%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>2015-07-06 추가 수정 지금 발견했습니다만.. 밝기 설정을 power applet에서 할수 있습니다. 설정 잘되고 문제 없습니다. ;;;
 이하 원문입니다.
@@ -37,12 +35,10 @@ i7 에 8G ram 1050 4G , 120 ssd 를 달고 80만원 대 입니다.
 3.16.0-38 이 됩니다만 전 이미 3.16.0-39를 설치해서 쓰고 있었으니 큰 차이는 없더군요.
 업그레이드 자체는 아주 간단하고 빠르게 이루어 지고 10분도 안걸린듯 합니다.</description>
     </item>
-    
     <item>
       <title>오랫만에 linux/mint에서 nvidia driver 업데이트하다 삽질한 기록 </title>
       <link>https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/</link>
       <pubDate>Mon, 22 Jun 2015 14:01:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-06-22-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90linuxmint%EC%97%90%EC%84%9Cnvidiadriver%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EB%8B%A4%EC%82%BD%EC%A7%88%ED%95%9C%EA%B8%B0%EB%A1%9D/</guid>
       <description>linux 용 nvidia driver 새버전(352.21)이 나왔길래 받아만 놓고 있다가
 http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
@@ -50,12 +46,10 @@ http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
 그냥 설치하면 설치되지 않는 것을 기억하고 있었기에 제 블로그를 좀 찾 아봤더니 별 이야기가 없더군요.
 기억에 의하면 root 로 설치 해야 하고 display manager(xdm 들 )를 정지시키고 설치를 해야 한다. 따라서 콘솔 화면 ( 콘솔 부팅을 하건 , virtual console - ctrl-alt-f1 ~ 6 으로 들어가는 -을 사용하건 ) 에서 설치를 진행해야 한다는 것 정도가 기억나더군요.</description>
     </item>
-    
     <item>
       <title>오랫만에 리눅스가 말썽을 일으킨 이야기. - 기록용 </title>
       <link>https://kasworld.github.io/posts/2014-11-19-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EA%B0%80%EB%A7%90%EC%8D%BD%EC%9D%84%EC%9D%BC%EC%9C%BC%ED%82%A8%EC%9D%B4%EC%95%BC%EA%B8%B0%EA%B8%B0%EB%A1%9D%EC%9A%A9/</link>
       <pubDate>Wed, 19 Nov 2014 23:46:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-11-19-%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EA%B0%80%EB%A7%90%EC%8D%BD%EC%9D%84%EC%9D%BC%EC%9C%BC%ED%82%A8%EC%9D%B4%EC%95%BC%EA%B8%B0%EA%B8%B0%EB%A1%9D%EC%9A%A9/</guid>
       <description>요즘 linux container 가 유행이라서 테스트나해볼까하고 (docker와 쌍벽을 이루고 있는? ) lxc를 설치해봤습니다.
 최신 버전을 찾아서 ppa를 추가 하는 식으로 설치할수도 있겠지만 요즘은 패키지 설치를 좀 보수적으로 하고 있는 편이라 기본 repository 에서 검색을 해보고 있기에 그것을 설치했습니다.
@@ -63,12 +57,10 @@ http://www.nvidia.com/Download/driverResults.aspx/86390/en-us
 grub화면이 지나고 mint부팅 화면에서 멈춰 있기에 esc를 눌러서 부팅 콘솔을 봤더니
 scanning for btrfs file systems</description>
     </item>
-    
     <item>
       <title>민트로 전환한 후 이런 저런 기록들입니다. </title>
       <link>https://kasworld.github.io/posts/2014-07-21-%EB%AF%BC%ED%8A%B8%EB%A1%9C%EC%A0%84%ED%99%98%ED%95%9C%ED%9B%84%EC%9D%B4%EB%9F%B0%EC%A0%80%EB%9F%B0%EA%B8%B0%EB%A1%9D%EB%93%A4%EC%9E%85%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Mon, 21 Jul 2014 11:53:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-07-21-%EB%AF%BC%ED%8A%B8%EB%A1%9C%EC%A0%84%ED%99%98%ED%95%9C%ED%9B%84%EC%9D%B4%EB%9F%B0%EC%A0%80%EB%9F%B0%EA%B8%B0%EB%A1%9D%EB%93%A4%EC%9E%85%EB%8B%88%EB%8B%A4/</guid>
       <description>잊기 전에 기록합니다.
 지난 주에 xubuntu의 최신 업데이트가 (이유는 모르겠지만 ) X windows로의 로그인을 실패하게 하는 문제가 발생했습니다.
@@ -76,27 +68,22 @@ scanning for btrfs file systems</description>
 그래서 오랫만에 ubuntu(unity)가 얼마나 좋아 졌을까 하고 설치를 했습니다만 1시간 만에 도저히 사용할수 없다는 결론을 내렸습니다.
 애초에 unity는 참으로 오만하게 디자인된 UI 인데 아직까지도 무엇이 잘못되었는지 파악하지 못하고 있는 듯 합니다.</description>
     </item>
-    
     <item>
       <title>postgresql 삽질기;;</title>
       <link>https://kasworld.github.io/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
       <pubDate>Tue, 19 Mar 2013 09:56:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-03-19-postgresql%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
       <description>세상의 모든 삽질이 그러하듯이, 무릇 삽질이란;;;누군가의 바보스러움때문에 발생하기 마련인데..그중에 가장 우울한것이 자신의 한심스러움 때문에 일어나는 삽질이다.ㅠㅠ 요즘 대세는 mariadb 라고 외치고 다니고 있던 중..( 정작 쓰지는 않는 주제에 ;; ) 아기다리 고기다리 던(언제쩍 개그냐 이거;; )postgresql이 9.x 대에와서 드디어 쓸만해졌다!! 란 소리를 듣고&amp;hellip; 그러면 나도 잠깐 들여다 볼까? 하고 생각한 지 어어 2달 ;;; mysql/mariadb 와는 달리 이놈의 postgres는 우분투/민트 의 레포지토리에서 설치를 해도바로 사용 가능한 상태로 설치 되지를 않더군요;; 일단 설치를 해두고.</description>
     </item>
-    
     <item>
       <title>리눅스 민트 14 시나몬을 설치했습니다.</title>
       <link>https://kasworld.github.io/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Fri, 15 Feb 2013 21:56:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-02-15-%EB%A6%AC%EB%88%85%EC%8A%A4%EB%AF%BC%ED%8A%B814%EC%8B%9C%EB%82%98%EB%AA%AC%EC%9D%84%EC%84%A4%EC%B9%98%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>며칠 전부터 고민하다가 오늘 일어나자마자 다 갈아업고 민트14를 설치했습니다. 잠깐 써본 느낌은 우분투 유니티에 짜증나고 xfce는 약간 부족하다고 느끼는 사람들에게는 아주 좋은 대안이 될것 같습니다. 사실 우분투가 이렇게 나왔어야 하지 않나 하는 생각이 들더군요.
 처음 설치하면 nvidia 비디오 드라이버를 못잡아서 수동으로 설치해 줘야 하지만 금방 잘 잡히고 문제없이 작동합니다.
 그리고 언제나처럼 제 손에 맞추기 위해 추가로 설치 및 설정한 것들을 기록합니다.
 오라클의 뻘짓때문에 mysql대신 mariadb ppa 를 추가하고 설치 git / gvim 설치 및 설정 python 관련 모듈들 설치</description>
     </item>
-    
   </channel>
 </rss>

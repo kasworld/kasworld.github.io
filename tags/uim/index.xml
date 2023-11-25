@@ -6,12 +6,12 @@
     <description>Recent content in uim on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 30 May 2013 20:47:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/uim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 May 2013 20:47:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/uim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>우분투 sublime text2에서 한글을 입력하기. </title>
       <link>https://kasworld.github.io/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/</link>
       <pubDate>Thu, 30 May 2013 20:47:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-05-30-%EC%9A%B0%EB%B6%84%ED%88%ACsublimetext2%EC%97%90%EC%84%9C%ED%95%9C%EA%B8%80%EC%9D%84%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0/</guid>
       <description>안되는 거라고 생각하고 포기 하고 있었는데 같이 일하는 동료의 제보로 약간 불편하지만 일단 입력이 가능하게 되어 기록하기 위한 포스트. ;;;
 일단 한글 입력이 안되는 원인은 ibus의 버그 때문 이라고 합니다.
@@ -22,6 +22,5 @@ http://www.interoasis.net/post.php?No=15
 에 나와있듯이
 sudo apt-get install uim uim-hangul im-switch -c /* 한글입력기 변경 */ 그리고 X 재시작 ( 로그아웃 또는 재부팅 )</description>
     </item>
-    
   </channel>
 </rss>

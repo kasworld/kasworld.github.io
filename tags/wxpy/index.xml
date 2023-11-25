@@ -6,12 +6,12 @@
     <description>Recent content in wxpy on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 05 Dec 2019 10:24:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/wxpy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Dec 2019 10:24:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/wxpy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>wxgame2의 go 언어 포팅 gowasm2dgame </title>
       <link>https://kasworld.github.io/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/</link>
       <pubDate>Thu, 05 Dec 2019 10:24:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2019-12-05-wxgame2%EC%9D%98go%EC%96%B8%EC%96%B4%ED%8F%AC%ED%8C%85gowasm2dgame/</guid>
       <description>https://github.com/kasworld/gowasm2dgame
 python 2.x 와 wxpython tcp connection 으로 만들었던 wxgame2 를
@@ -23,6 +23,5 @@ genprotocol 서버 클라이언트가 사용할 프로토콜 생성, 관리
 argdefault : config와 command line arguments
 prettystring : struct 의 string 화 / admin web , debug용</description>
     </item>
-    
   </channel>
 </rss>

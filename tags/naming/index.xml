@@ -6,24 +6,22 @@
     <description>Recent content in naming on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 18 Feb 2020 14:43:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/naming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2020 14:43:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/naming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>프로그래밍에서 가장? 어렵다는 이름 짓기 </title>
       <link>https://kasworld.github.io/posts/2020-02-18-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%97%90%EC%84%9C%EA%B0%80%EC%9E%A5%EC%96%B4%EB%A0%B5%EB%8B%A4%EB%8A%94%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0/</link>
       <pubDate>Tue, 18 Feb 2020 14:43:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-02-18-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%97%90%EC%84%9C%EA%B0%80%EC%9E%A5%EC%96%B4%EB%A0%B5%EB%8B%A4%EB%8A%94%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0/</guid>
       <description>요즘 goguelike에 상태이상을 새로 추가하기 위한 작업을 하고 있습니다.
 예를 들면 이런 것들이지요. Blind ,Poisoned ,Invisible ,Weaken ,Slow ,Float , Hallucinate ,Greasy ,Sleep ,Confused 눈멀고 독걸리고 약화되고 느려지고 공중에 떠오르고 , 환각을 보고, 미끄러 떨어 트리고 , 졸리고 , 혼란되고, 등입니다.
 이들을 아우르는 용어 ( 타입 이름 ) 을 정하느라 고민을 하고 있었습니다.
 보통 상태 라고 하면 state 나 status 등을 자주 사용하곤 합니다만, 뭔가 딱 맞는 느낌이 안드는 거지요.</description>
     </item>
-    
     <item>
       <title>최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2</title>
       <link>https://kasworld.github.io/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/</link>
       <pubDate>Mon, 11 May 2015 17:08:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/</guid>
       <description>이전 글에 이어 지는 내용입니다. (http://kasw.blogspot.kr/2015/05/go.html)
 가능한 작은 단위 까지도 각 struct를 독립 package화 하기 이것은 정말로 습관화하려고 노력하는 것입니다. package 이름을 struct 이름과 같게 하고 패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) structnameattrib.go struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 structname.go
@@ -31,12 +29,10 @@ struct 가 해야 하는 기능들을 정의 structname_test.go
 go test 용 로 정하기
 작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무 생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도 생기더군요.</description>
     </item>
-    
     <item>
       <title>최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들.</title>
       <link>https://kasworld.github.io/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/</link>
       <pubDate>Sun, 10 May 2015 18:18:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-10-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A4/</guid>
       <description>나름대로는 go 언어를 꽤 많이 쓴 편이라고 생각하고 있었습니다만
 ( go4game, goguelike 둘다 코드의 양도 있는 편이고 사용하는 기능도 tcp/ip, http, client, websocket 등 꽤 다양하게 사용합니다. )
@@ -44,6 +40,5 @@ go test 용 로 정하기
 그 여파로 goguelike2에 이런 저런 refactoring을 시도 하게 되었는데. 그 중 적어 볼만한 것들을 적어 봅니다. (이 것이 정답이라고 말할수는 없겠지만 )
 1. private interface , public interface 전에 interface에 대해 적은 적이 있는데 (http://kasw.</description>
     </item>
-    
   </channel>
 </rss>

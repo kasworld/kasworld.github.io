@@ -6,12 +6,12 @@
     <description>Recent content in 공유기 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 21 May 2016 21:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B3%B5%EC%9C%A0%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2016 21:48:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EA%B3%B5%EC%9C%A0%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sk 기가 라이트 설치, 포기, 재시도, 설정, 사용기. </title>
       <link>https://kasworld.github.io/posts/2016-05-21-sk%EA%B8%B0%EA%B0%80%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%84%A4%EC%B9%98%ED%8F%AC%EA%B8%B0%EC%9E%AC%EC%8B%9C%EB%8F%84%EC%84%A4%EC%A0%95%EC%82%AC%EC%9A%A9%EA%B8%B0/</link>
       <pubDate>Sat, 21 May 2016 21:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2016-05-21-sk%EA%B8%B0%EA%B0%80%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%84%A4%EC%B9%98%ED%8F%AC%EA%B8%B0%EC%9E%AC%EC%8B%9C%EB%8F%84%EC%84%A4%EC%A0%95%EC%82%AC%EC%9A%A9%EA%B8%B0/</guid>
       <description>기존에 sk 의 100M 인터넷 회선을 사용하고 있었습니다. 별 불만이 없었기에 가끔 기가 인터넷으로 바꿔준다는 전화를 무시하다가. 되면 좋지뭐. 란 생각으로 해보기로 했습니다.
 제가 집에 있어야 했기에 토요일인 오늘 기사님이 오셨고.
@@ -20,24 +20,20 @@
 설치후 구글에서 적당히 internet benchmark 로 검색해서 나온 사이트에서 테스트한 결과입니다.
 다만 문제인게 기사님이 난감해 하면서 이야기 해주셨는데 .</description>
     </item>
-    
     <item>
       <title>netis WF2881 유무선공유기 일주일 사용 감상기. </title>
       <link>https://kasworld.github.io/posts/2015-08-01-netiswf2881%EC%9C%A0%EB%AC%B4%EC%84%A0%EA%B3%B5%EC%9C%A0%EA%B8%B0%EC%9D%BC%EC%A3%BC%EC%9D%BC%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/</link>
       <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-08-01-netiswf2881%EC%9C%A0%EB%AC%B4%EC%84%A0%EA%B3%B5%EC%9C%A0%EA%B8%B0%EC%9D%BC%EC%A3%BC%EC%9D%BC%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/</guid>
       <description>2015-11-08추가 이후 설정/삽질에 대한 글이 있습니다. http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html
 지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트 하던중 공유기가 사망했습니다.
 같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한 주말을 보낼수 밖에 없었는데. ( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간 3Gbyte를 썼더군요. )
 하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든 상황이었습니다. 그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전 물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요.</description>
     </item>
-    
     <item>
       <title>지름은 지름을 부릅니다. 역시;;;</title>
       <link>https://kasworld.github.io/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/</link>
       <pubDate>Fri, 18 Jan 2013 19:21:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/</guid>
       <description>옵티머스 lte2(옵티이이) 로 바꾼후에 언제나 처럼 이런 저런 테스트를 했습니다.
 집에 사용하는 공유기가 몇년 전에 꽤 비싸게 주고산 802.11n에 Chanel bonding이 되는 (된다고 주장하는 - 지원하는 디바이스가 없어서 한번도 테스트를 못해봤으니.. ) dlink dir-655 였기때문에 신나요. 하고 네트웍 벤치마크 프로그램을 설치하고 실행해 봤습니다.
@@ -48,12 +44,10 @@ mmorpg를 하는 와이프는 서버에서 팅겨서 &amp;ldquo;뭐지?&amp;rdqu
 공유기를 재부팅하니 다시 인터넷이 됩니다. ;;
 한번더 해보고 똑같은 증상이 일어 나는 것을 확인한후.. 조용히 다음날 새벽 까지 기다렸습니다.</description>
     </item>
-    
     <item>
       <title>네트웍은 아무리해도 어렵군요.</title>
       <link>https://kasworld.github.io/posts/2010-03-25-%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%9D%80%EC%95%84%EB%AC%B4%EB%A6%AC%ED%95%B4%EB%8F%84%EC%96%B4%EB%A0%B5%EA%B5%B0%EC%9A%94/</link>
       <pubDate>Thu, 25 Mar 2010 11:10:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2010-03-25-%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%9D%80%EC%95%84%EB%AC%B4%EB%A6%AC%ED%95%B4%EB%8F%84%EC%96%B4%EB%A0%B5%EA%B5%B0%EC%9A%94/</guid>
       <description>몇 주 전부터 집에 있는 공유기가 이상한 반응을 보여서 고민을 하고 있었습니다.
 이상하게도 제가 사용하고 있는 리눅스기계를 끄면 조금 있다가 제 처가 사용하는 윈도우 머신의 인터넷이 끊기는 겁니다.
@@ -61,6 +55,5 @@ mmorpg를 하는 와이프는 서버에서 팅겨서 &amp;ldquo;뭐지?&amp;rdqu
 등등 이런 저런 고민을 하고 있었습니다.
 게다가 어떨때는 공유기에서 ip address 를 못받아 오는 경우도 생겨서 이건 짤없이 공유기가 맛 간거다 ( dhcp 서버가 작동 않네.</description>
     </item>
-    
   </channel>
 </rss>

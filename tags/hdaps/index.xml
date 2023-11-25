@@ -6,18 +6,17 @@
     <description>Recent content in hdaps on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 09 Dec 2009 18:28:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/hdaps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Dec 2009 18:28:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/hdaps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>노트북의 가속센서를 활성화 시키기.</title>
       <link>https://kasworld.github.io/posts/2009-12-09-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%98%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C%EB%A5%BC%ED%99%9C%EC%84%B1%ED%99%94%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
       <pubDate>Wed, 09 Dec 2009 18:28:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2009-12-09-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%98%EA%B0%80%EC%86%8D%EC%84%BC%EC%84%9C%EB%A5%BC%ED%99%9C%EC%84%B1%ED%99%94%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
       <description>오랫만에 노트북 설정을 손보는 김에 전부터 미뤄 두었던 가속센서 설정을 했습니다.
 언제나 그렇듯 원본글 링크입니다. http://www.krizka.net/2009/11/01/thinkpad-x61-tablet-tilt-detection-and-ubuntu-karmic-koala/
 저도 전에는 thinkpad의 가속센서(하드보호용)을 활성화 하려면 커널 컴파일을 해야한다고 알고 있어서 귀찮아 안하고 있었습니다만.. 우분투 9.10 에서는 sudo aptitude install tp-smapi-source sudo module-assistant build tp-smapi-source sudo module-assistant install tp-smapi-source sudo modprobe hdaps 단 4줄로 해결 되는 군요. ( 세상 참 좋아 졌네요. ㅎㅎ )
 마지막 줄에서 에러가 나면 재시작하시고 다시 하시면 잘됩니다. 아마도 이전 hdaps 모듈이 메모리에 올라와 있어서 에러가 나는 것 같더군요.</description>
     </item>
-    
   </channel>
 </rss>

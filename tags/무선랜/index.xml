@@ -6,27 +6,24 @@
     <description>Recent content in 무선랜 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 28 Oct 2018 14:30:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%AC%B4%EC%84%A0%EB%9E%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Oct 2018 14:30:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%AC%B4%EC%84%A0%EB%9E%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>갤럭시 s7e 무선랜 문제 해결 </title>
       <link>https://kasworld.github.io/posts/2018-10-28-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs7e%EB%AC%B4%EC%84%A0%EB%9E%9C%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0/</link>
       <pubDate>Sun, 28 Oct 2018 14:30:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2018-10-28-%EA%B0%A4%EB%9F%AD%EC%8B%9Cs7e%EB%AC%B4%EC%84%A0%EB%9E%9C%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0/</guid>
       <description>이전에 쓴 글 갤럭시 s7e 오래오 업데이트후 생긴 이상증상들
 중 하나의 증상의 원인? 을 찾아서 기록합니다. 오레오 업데이트후 wifi 최고 접속 속도가 866Mbps 에서 433Mbps으로 저하된 증상 ( 그와중에도 노트북은 866Mbps으로 잘 접속되는 상황) 의 해결인데 방법은 공유기의 MU-MIMO beamforming를 끄는 것이었습니다. ( 따라서 어쩌면 오레오 업데이트와 무관한 이슈였을지도 모릅니다. 제가 공유기 설정을 바꾼것과 시점이 비슷할수도 있으니 )
 MU-MIMO beamforming을 켜는 것이 속도/효율이 더 좋아지기 위한 신기술이라고 알고 있기에 켜두고 있었는데 역효과가 나는 경우도 생기는 것 같습니다.</description>
     </item>
-    
     <item>
       <title>지름은 지름을 낳는다.^^</title>
       <link>https://kasworld.github.io/posts/2008-02-27-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%82%B3%EB%8A%94%EB%8B%A4/</link>
       <pubDate>Wed, 27 Feb 2008 10:46:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2008-02-27-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%82%B3%EB%8A%94%EB%8B%A4/</guid>
       <description>집에 무선랜 장비가 2대 , 기가 비트 랜 지원 머신이 3대가 되서 ( 합이 4대 ^^ ) 마침 새로산 노트북도 802.11n 을 지원한다고 하니 5년된 &amp;ldquo;유선&amp;quot;공유기를 업그레이드 하기로 했습니다. 시중에서 위 조건 ( 기가비트 이더넷 지원 , 802.11n 지원 ) 을 만족하는 유무선 공유기는 1종밖에 없으니 고민 할꺼리는 없었읍니다만 약간 비싼듯 하여 (12만원) 잠시 고민하다..
 질렀습니다. D-Link DIR-655 를 ^^ 큰거 한번 지르고 나니 그담부턴 지르는 데 고민도 적게 하게 되는군요.</description>
     </item>
-    
   </channel>
 </rss>

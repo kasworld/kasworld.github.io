@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="1 import os,sys,string 2 import codecs 3 4 5 fncodec = codecs.getdecoder(&ldquo;utf_16&rdquo;) 6 7 fd = codecs.open( &ldquo;unicode file.txt&rdquo; , &ldquo;r&rdquo; , &ldquo;utf_16&rdquo; ) 8 utext = fd.readlines() 9 fd.close() 10 11 utext2 = [] 12 13 for i in utext : 14 if &ldquo;Search String&rdquo; in i: 15 utext2.append(i) 16 17 print len(utext),len(utext2) 18 19 fd = codecs.open( &ldquo;unicode out.txt&rdquo; , &ldquo;w&rdquo;,&ldquo;utf_16&rdquo; ) 20 fd.writelines(utext2) 21 fd.close()
 별거 아니지만 자주 쓸 일이 있을것 같아서.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -37,6 +37,7 @@
 <meta property="og:url" content="https://kasworld.github.io/posts/2006-01-22-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%97%90%EC%84%9C%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C%EB%AC%B8%EC%84%9C%EB%A5%BC%EC%9D%BD%EA%B3%A0%EC%93%B0%EB%8A%94%EB%B2%95/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2006-01-22T13:51:00+09:00" />
 <meta property="article:modified_time" content="2006-01-22T13:51:00+09:00" />
+
 <meta itemprop="name" content="파이썬에서 유니코드 문서를 읽고 쓰는법">
 <meta itemprop="description" content="1 import os,sys,string 2 import codecs 3 4 5 fncodec = codecs.getdecoder(&ldquo;utf_16&rdquo;) 6 7 fd = codecs.open( &ldquo;unicode file.txt&rdquo; , &ldquo;r&rdquo; , &ldquo;utf_16&rdquo; ) 8 utext = fd.readlines() 9 fd.close() 10 11 utext2 = [] 12 13 for i in utext : 14 if &ldquo;Search String&rdquo; in i: 15 utext2.append(i) 16 17 print len(utext),len(utext2) 18 19 fd = codecs.open( &ldquo;unicode out.txt&rdquo; , &ldquo;w&rdquo;,&ldquo;utf_16&rdquo; ) 20 fd.writelines(utext2) 21 fd.close()
 별거 아니지만 자주 쓸 일이 있을것 같아서."><meta itemprop="datePublished" content="2006-01-22T13:51:00+09:00" />

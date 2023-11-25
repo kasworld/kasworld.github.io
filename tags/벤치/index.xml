@@ -6,16 +6,15 @@
     <description>Recent content in 벤치 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 29 Oct 2008 10:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%B2%A4%EC%B9%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Oct 2008 10:48:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%B2%A4%EC%B9%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>아래 벤치에 추가로</title>
       <link>https://kasworld.github.io/posts/2008-10-29-%EC%95%84%EB%9E%98%EB%B2%A4%EC%B9%98%EC%97%90%EC%B6%94%EA%B0%80%EB%A1%9C/</link>
       <pubDate>Wed, 29 Oct 2008 10:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2008-10-29-%EC%95%84%EB%9E%98%EB%B2%A4%EC%B9%98%EC%97%90%EC%B6%94%EA%B0%80%EB%A1%9C/</guid>
       <description>이 7zip 벤치는 재미 있는게 32bit/64bit windows/linux 가리지 않고 다 네이티브 실행파일이 존재한다는 점입니다.
 추가로 회사에서 사용하고 있는 p4 3.0G + ht 에서는 2000점이 core2duo 2.4g 에선 4200 정도가 나옵니다.</description>
     </item>
-    
   </channel>
 </rss>

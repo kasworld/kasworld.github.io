@@ -6,23 +6,21 @@
     <description>Recent content in arm on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 28 Jan 2017 16:47:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/arm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2017 16:47:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/arm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>설날 맞이 잉여로운 벤치마크 한가지 </title>
       <link>https://kasworld.github.io/posts/2017-01-28-%EC%84%A4%EB%82%A0%EB%A7%9E%EC%9D%B4%EC%9E%89%EC%97%AC%EB%A1%9C%EC%9A%B4%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%95%9C%EA%B0%80%EC%A7%80/</link>
       <pubDate>Sat, 28 Jan 2017 16:47:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2017-01-28-%EC%84%A4%EB%82%A0%EB%A7%9E%EC%9D%B4%EC%9E%89%EC%97%AC%EB%A1%9C%EC%9A%B4%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC%ED%95%9C%EA%B0%80%EC%A7%80/</guid>
       <description>i5-2500 (non k ) 3.4Ghz x4 ( 3.4 ~ 3.7 가변 클럭 )
 raspberry pi 3 1.3Ghz x4 ( overclocked) 7z b 테스트 결론만 말하면 raspberry pi3 에 들어있는 저전력 arm 조차도 이제는 ( 꽤 과거 cpu 긴 하지만 ) intel cpu와 ipc가 2배차이도 나지 않는다. 인텔이 긴장할만 하다. intel : arm = 1.66 : 1.0
 동일 클럭으로 가정할때 66% 정도의 성능차이 .</description>
     </item>
-    
     <item>
       <title>DIY 전자 장난감 2 </title>
       <link>https://kasworld.github.io/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/</link>
       <pubDate>Tue, 25 Feb 2014 11:47:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-02-25-diy%EC%A0%84%EC%9E%90%EC%9E%A5%EB%82%9C%EA%B0%902/</guid>
       <description>이전에 썼던 DIY 전자 장난감 글 이후로 발견한 재미있어 보이는 보드 입니다.
 NUCLEO 라고 하는 보드이며 http://vodanan.co.kr/product/detail.html?product_no=139&amp;amp;cate_no=89&amp;amp;display_group=1
@@ -33,12 +31,10 @@ http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1577/LN1810/PF258797
 이며 32bit arm 84Mhz CPU 내장 512k flash rom , 96k sram , fpu 지원 정도 스펙이군요. 아두이노랑 비교하면 정말 화려한 스펙입니다. ^^
 전원 구성이 유연해서 좋아 보이고 ( 3.</description>
     </item>
-    
     <item>
       <title>한성 gboard 8.9에 리눅스를 설치하고.</title>
       <link>https://kasworld.github.io/posts/2013-08-24-%ED%95%9C%EC%84%B1gboard89%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0/</link>
       <pubDate>Sat, 24 Aug 2013 11:55:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-08-24-%ED%95%9C%EC%84%B1gboard89%EC%97%90%EB%A6%AC%EB%88%85%EC%8A%A4%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0/</guid>
       <description>애초에 제가 필요한건 가볍고 배터리 오래가는 리눅스 머신이었으니 .
 한성 gboard 8.9 에 리눅스를 설치해봤습니다.
@@ -47,6 +43,5 @@ http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1577/LN1810/PF258797
 애초에 안드로이드가 리눅스커널을 사용하고 있으니 chroot 와 user mode linux 같은것을 적당히 조합한것이 아닐까 하고 생각합니다. ( 자세히 확인 해보지는 않았습니다. ) 설치 과정도 loop back device file을 만들어 거기에 설치하는 형태더군요.
 설치하고 이런저런 프로그램을 설치하고 ( python, git , 7zip , byobu, mc, 등등등.</description>
     </item>
-    
   </channel>
 </rss>

@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,30 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/" class="link black dim">
+        지름은 지름을 부릅니다. 역시;;;
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      옵티머스 lte2(옵티이이) 로 바꾼후에 언제나 처럼 이런 저런 테스트를 했습니다.
+집에 사용하는 공유기가 몇년 전에 꽤 비싸게 주고산 802.11n에 Chanel bonding이 되는 (된다고 주장하는 - 지원하는 디바이스가 없어서 한번도 테스트를 못해봤으니.. ) dlink dir-655 였기때문에 신나요. 하고 네트웍 벤치마크 프로그램을 설치하고 실행해 봤습니다.
+인터넷이 끊기더군요;;;
+&hellip;
+&hellip;
+mmorpg를 하는 와이프는 서버에서 팅겨서 &ldquo;뭐지?&rdquo; 하는 표정을 짓고..
+공유기를 재부팅하니 다시 인터넷이 됩니다. ;;
+한번더 해보고 똑같은 증상이 일어 나는 것을 확인한후.. 조용히 다음날 새벽 까지 기다렸습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -261,25 +286,6 @@ os.Stdin : 표준 입력입니다. os.Open 을 사용해서 파일을 열수 있
       그 세번째 입니다.
 이전글은 http://kasw.blogspot.com/2012/09/go-2n.html
 Interface Interface는 object의 behavior 를 규정한다. ( 수행 가능한 method 들의 signature 를 정의한다. ) type InterfaceNamer interface { Method1( params ) returns Method2( params ) returns } 관용적으로 er로 끝나는 이름을 사용한다. ( Printer, Reader, Logger 등등 ) 가능한 짦게 만든다 ( primitive 하게 만든다 ) var interfaceReference InterFaceNamer = someObject struct를 정의할때 어떤 interface를 구현하는지 지정할 필요가 없다. interface에 정의된 method가 구현되어 있다면 자동으로 사용가능하다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2012-09-26-%EA%B5%AC%EA%B8%80go%EC%96%B8%EC%96%B4%EB%A5%BC%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C%EB%AA%87%EB%AA%87%EC%A4%91%EC%9A%94%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%A5%BC%EB%A9%94%EB%AA%A8%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A42n/" class="link black dim">
-        구글 go 언어를 공부하면서 몇몇 중요 포인트를 메모중입니다. (2/N) 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      그 두번째 입니다. ( 총 몇회가 될지 모르니 2/N 입니다. ^^ )
-첫 글은 http://kasw.blogspot.com/2012/09/go.html 를 보시면 됩니다.
-Maps key 로 사용 가능한 것은 == , != 이 정의 된 type string,int,float 는 가능 array,slice,struct 는 불가능 pointer, interface 는 가능 struct 를 key로 쓰고 싶으면 Key() 나 Hash() method 를 만들고 그 결과를 키로 사용할것. value 는 아무거나 사용 가능 var map1 map[keytype]valuetype = make( map[keytype]valuetype , capacity ) map1 := map[keytype]valuetype{} map is reference type len(map1) map1[notInMapKey] is zero-value of value type not error val1,isPresent = map1[key1] 형태로 존재하는지 확인 가능 delete(map1, key1) 로 항목을 삭제 가능하면 없는 항목이어도 에러는 없다.
     </div>
   </div>
 </div>

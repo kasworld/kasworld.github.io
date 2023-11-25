@@ -6,12 +6,12 @@
     <description>Recent content in 카메라 셧터소리 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 07 Nov 2011 20:46:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%85%A7%ED%84%B0%EC%86%8C%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Nov 2011 20:46:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%85%A7%ED%84%B0%EC%86%8C%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>허니컴에 적용할만한 팁, 유용한 프로그램</title>
       <link>https://kasworld.github.io/posts/2011-11-07-%ED%97%88%EB%8B%88%EC%BB%B4%EC%97%90%EC%A0%81%EC%9A%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%8C%81%EC%9C%A0%EC%9A%A9%ED%95%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</link>
       <pubDate>Mon, 07 Nov 2011 20:46:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2011-11-07-%ED%97%88%EB%8B%88%EC%BB%B4%EC%97%90%EC%A0%81%EC%9A%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%8C%81%EC%9C%A0%EC%9A%A9%ED%95%9C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</guid>
       <description>허니컴이 되면서 H/W 버튼이 없어진대신 화면 아래의 일정공간을 항상 S/W 버튼 및 상태 표시영역으로 확보하고 있어서 화면이 조금 좁아 지고 있는데요.
 이게 맘에 안드시는 분을 위한 프로그램 입니다.
@@ -21,6 +21,5 @@
 http://ppareit.github.com/HideBar/
 그리고 모든 스마트 폰이면 당연히 가능해야 하는 카메라 셔터소리 를 없애는 법입니다.</description>
     </item>
-    
   </channel>
 </rss>

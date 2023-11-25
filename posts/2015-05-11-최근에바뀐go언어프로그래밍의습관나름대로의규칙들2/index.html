@@ -11,7 +11,7 @@
 struct 가 해야 하는 기능들을 정의 structname_test.go
 go test 용 로 정하기
 작은 규모의 struct인 경우는 상관 없지만 좀 큰 규모의 struct는 아무 생각없이 한 파일에 코드를 짜넣다 보면 1000라인이 넘어 가는 경우도 생기더군요.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -43,6 +43,7 @@ go test 용 로 정하기
 <meta property="og:url" content="https://kasworld.github.io/posts/2015-05-11-%EC%B5%9C%EA%B7%BC%EC%97%90%EB%B0%94%EB%80%90go%EC%96%B8%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98%EC%8A%B5%EA%B4%80%EB%82%98%EB%A6%84%EB%8C%80%EB%A1%9C%EC%9D%98%EA%B7%9C%EC%B9%99%EB%93%A42/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-05-11T17:08:00+09:00" />
 <meta property="article:modified_time" content="2015-05-11T17:08:00+09:00" />
+
 <meta itemprop="name" content="최근에 바뀐 go 언어 프로그래밍의 습관, 나름대로의 규칙들. #2">
 <meta itemprop="description" content="이전 글에 이어 지는 내용입니다. (http://kasw.blogspot.kr/2015/05/go.html)
 가능한 작은 단위 까지도 각 struct를 독립 package화 하기 이것은 정말로 습관화하려고 노력하는 것입니다. package 이름을 struct 이름과 같게 하고 패키지내 파일 이름들을 ( 좀 규모가 되는 struct 인경우만 ) structnameattrib.go struct 의 정의와 New() 함수 , field 의 accessor 들을 정의 structname.go

@@ -6,12 +6,12 @@
     <description>Recent content in 온라인게임 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 27 Apr 2014 14:58:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%98%A8%EB%9D%BC%EC%9D%B8%EA%B2%8C%EC%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Apr 2014 14:58:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%98%A8%EB%9D%BC%EC%9D%B8%EA%B2%8C%EC%9E%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go4game 에 웹 클라이언트를 추가 했습니다. </title>
       <link>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 27 Apr 2014 14:58:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-04-27-go4game%EC%97%90%EC%9B%B9%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>사진 설명 : go4game web client
 소스코드는 언제나 처럼 https://github.com/kasworld/go4game 에 있습니다.
@@ -20,26 +20,21 @@ go언어는 서버에서 사용하는 것을 중점으로 하고 있기 때문�
 그에 반해서 서버를 만들기 위한 라이브러리는 tcp/http 불문하고 넘칠 정도로 많고 또 잘되어 있는데 아마도 go언어로 만든 프로그램의 UI는 당연히 web으로 작성하라는 의미 같습니다.
 그런 관계로 go4game도 client UI는 웹으로 작성해야 겠다는 생각이 들어서 ( 사실은 클라이언트 UI 라이브러리를 찾다 포기하고 ^^; ) 웹 작업을 했습니다.</description>
     </item>
-    
     <item>
       <title>go4game - go 언어로 만드는 게임 서버</title>
       <link>https://kasworld.github.io/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/</link>
       <pubDate>Wed, 16 Apr 2014 17:02:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-04-16-go4gamego%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84/</guid>
       <description>몇 년 전부터 생각하고 있던 go언어를 사용한 게임 서버의 개발을 시작했습니다.
 일단 첫 번째 작동 버전은 언제나처럼 github에 있습니다. 지금까지 만들어진 것은 서버를 구성하기 위한 가장 기본 적인 구조들 GameService, World, Team, GameObject 과 client 와 tcp 로 패킷을 주고 받을 수 있는 구조들 정도 입니다. 지금 사용하는 패킷은 int32 len + json 형태의 패킷입니다.
 참고로 그동안 제가 적은 go 관련 스터디 포스트 들입니다. The Go Programming Language : 2009년 글입니다.</description>
     </item>
-    
     <item>
       <title>아키에이지를 보며 (mmorpg 에 대한 단상)</title>
       <link>https://kasworld.github.io/posts/2013-01-14-%EC%95%84%ED%82%A4%EC%97%90%EC%9D%B4%EC%A7%80%EB%A5%BC%EB%B3%B4%EB%A9%B0mmorpg%EC%97%90%EB%8C%80%ED%95%9C%EB%8B%A8%EC%83%81/</link>
       <pubDate>Mon, 14 Jan 2013 16:16:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-14-%EC%95%84%ED%82%A4%EC%97%90%EC%9D%B4%EC%A7%80%EB%A5%BC%EB%B3%B4%EB%A9%B0mmorpg%EC%97%90%EB%8C%80%ED%95%9C%EB%8B%A8%EC%83%81/</guid>
       <description>요즘 흥하는(?) 게임인 아키에이지를 옆에서 보며 든 생각들입니다. 와이프가 하고 있기 때문에 정말 옆에서 보고 있습니다. ^^;; 일단 저는 0시간 정도( 한자리수 시간) 해 보았는데 재미 없더군요. 인터페이스는 불편하고 불친절하며 반응은 느리고 키보드 조작은 짜증납니다. 퀘스트, 사냥은 낡았으며 그래픽 비주얼도 그저 그랬습니다. 그런데 제 처는 재미있다고 열심히 합니다. 아마 유료화된 이후도 계속할듯 합니다. ( 테라는 하다 말더니 ;;; ) 그래서 와이프랑 수다를 떨면서 이런저런 생각이 들었습니다. 1. 아키에이지가 mmorpg는 월드 시뮬레이션이라는 근본으로 제대로 돌아가서 어쩌면 원시시대?</description>
     </item>
-    
   </channel>
 </rss>

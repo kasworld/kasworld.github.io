@@ -6,12 +6,12 @@
     <description>Recent content in webassembly on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 06 Jan 2020 11:21:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/webassembly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2020 11:21:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/webassembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2020년 현재 goguelike의 상태 정리 </title>
       <link>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</guid>
       <description>goguelike - mmo-roguelike golang, websocket, webassembly, htmlcanvas (가능한한) 혼자서 만드는 MMO 서버 관리 서버 ( ground server )
 다중 서버 지원
@@ -24,12 +24,10 @@ websocket을 사용 연결 유지형 클라이언트
 클라이언트 설치 불필요
 webassembly/html5 canvas를 지원하는 web browser 라면 플랫폼 불문하고 플레이 가능</description>
     </item>
-    
     <item>
       <title>그저 3d 공간에 공들이 돌아다닐 뿐인 프로젝트</title>
       <link>https://kasworld.github.io/posts/2019-12-15-%EA%B7%B8%EC%A0%803d%EA%B3%B5%EA%B0%84%EC%97%90%EA%B3%B5%EB%93%A4%EC%9D%B4%EB%8F%8C%EC%95%84%EB%8B%A4%EB%8B%90%EB%BF%90%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</link>
       <pubDate>Sun, 15 Dec 2019 14:45:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2019-12-15-%EA%B7%B8%EC%A0%803d%EA%B3%B5%EA%B0%84%EC%97%90%EA%B3%B5%EB%93%A4%EC%9D%B4%EB%8F%8C%EC%95%84%EB%8B%A4%EB%8B%90%EB%BF%90%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</guid>
       <description>https://github.com/kasworld/gowasm3dgame
 꽤 예전에 서버 기반 게임 프레임웍 으로 만들었던 go4game을 remake 한 프로젝트 입니다.
@@ -42,12 +40,10 @@ log : 전용 log package의 생성, 사용
 signalhandle : signal을 관리해서 프로그램의 linux 서비스화, start,stop,forcestart,
 들을 사용해서 만들어 봤습니다.</description>
     </item>
-    
     <item>
       <title>go 언어로 만든 배경이 있는 시계/달력 </title>
       <link>https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/</link>
       <pubDate>Fri, 06 Dec 2019 14:49:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2019-12-06-go%EC%96%B8%EC%96%B4%EB%A1%9C%EB%A7%8C%EB%93%A0%EB%B0%B0%EA%B2%BD%EC%9D%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EA%B3%84%EB%8B%AC%EB%A0%A5/</guid>
       <description>https://github.com/kasworld/wasmclockcal
 go언어의 webassembly 생성 기능을 사용해서 만든 시계/달력 입니다.
@@ -60,6 +56,5 @@ open bgclock http://localhost:8080/?bgimg=image open youtube clock http://localh
 클라이언트 접속 URL 에
 bgimg=이미지이름(url) 을 주면 배경그림이 설정되고</description>
     </item>
-    
   </channel>
 </rss>

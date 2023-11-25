@@ -6,27 +6,24 @@
     <description>Recent content in rails on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 30 Aug 2012 12:02:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Aug 2012 12:02:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> GVIM으로 IDE 처럼 사용하기 </title>
       <link>https://kasworld.github.io/posts/2012-08-30-gvim%EC%9C%BC%EB%A1%9Cide%EC%B2%98%EB%9F%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
       <pubDate>Thu, 30 Aug 2012 12:02:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2012-08-30-gvim%EC%9C%BC%EB%A1%9Cide%EC%B2%98%EB%9F%BC%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       <description>요즘 하고 있는 일이 많은 파일과 폴더들을 돌아다니면서 소스를 분석하고 수정해야 하는 일이라 (rails 프로젝트가 그렇더군요. ) 기존에 사용하고 있던 vim에 NERDtree plugin을 추가하여 사용하고 있습니다 http://www.vim.org/scripts/script.php?script_id=1658 taglist plugin과 조합아면 위와같은 화면을 보며 작업할수 있게 되더군요. ^^ http://www.vim.org/scripts/script.php?script_id=273 추가로 vim-rails 를 추천 받아서 사용중인데 취향을 타는 건지 그렇게 엄청 좋은지는 잘모르겠습니다. https://github.com/tpope/vim-rails
 참고로 스크린샷은 web2py 작업 화면 예 입니다.</description>
     </item>
-    
     <item>
       <title>ruby 삽질기</title>
       <link>https://kasworld.github.io/posts/2012-08-13-ruby%EC%82%BD%EC%A7%88%EA%B8%B0/</link>
       <pubDate>Mon, 13 Aug 2012 20:54:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2012-08-13-ruby%EC%82%BD%EC%A7%88%EA%B8%B0/</guid>
       <description>어쩌다 팔자에 없는 Ruby on rails 작업을 하게 되었습니다. ( 새 프로젝트를 하는게 아니고 넘들이 만든 프로젝트의 customizing , 문서화 , 유지보수 입니다. )
 하게된 사유야 구구절절하지만 생략하고. ( 깊이 알면 다칩니다. ^^)
 루비야 예전에 조금 공부해둔게 있는 관계로 뭐 별거 있겠어 하고 생각한데다가 rails 역시 python 에 있는 web framework 들이 대놓고 저희는 rails를 베꼈어요! 하는 것들을 여럿 써 본 관계로 오오 드디어 원조 를 써보는건가 하고 딩가딩가한 마인드로 시작을 했습니다.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,18 +6,17 @@
     <description>Recent content in 공격방식 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 06 Sep 2020 16:16:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EA%B3%B5%EA%B2%A9%EB%B0%A9%EC%8B%9D/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Sep 2020 16:16:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EA%B3%B5%EA%B2%A9%EB%B0%A9%EC%8B%9D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>goguelike 에서  가칭 LightHouse 와 GateKeeper fieldobj 의 동작.</title>
       <link>https://kasworld.github.io/posts/2020-09-06-goguelike%EC%97%90%EC%84%9C%EA%B0%80%EC%B9%ADlighthouse%EC%99%80gatekeeperfieldobj%EC%9D%98%EB%8F%99%EC%9E%91/</link>
       <pubDate>Sun, 06 Sep 2020 16:16:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-09-06-goguelike%EC%97%90%EC%84%9C%EA%B0%80%EC%B9%ADlighthouse%EC%99%80gatekeeperfieldobj%EC%9D%98%EB%8F%99%EC%9E%91/</guid>
       <description>공격방식의 개선을 통해서 fieldobj 가 AO를 공격하는 것이 가능해졌습니다. 오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
 오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
 추가로 lighthouse와 gatekeeper를 사용한 플로어의 플레이 테스트
 오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.</description>
     </item>
-    
   </channel>
 </rss>

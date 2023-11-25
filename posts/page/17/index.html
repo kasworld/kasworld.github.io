@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,25 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2014-10-17-goguelikemapeditor/" class="link black dim">
+        goguelike map editor 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      지난 주 부터 작업해오고 있던 맵 에디터가 일단 작동하는 수준 까지 만들어 졌습니다. 에디터에는 여러가지 gui component 가 필요해서 무엇을 사용할까 계속 고민 하고 있었습니다만, 아무리 찾아보고 고민해봐도 클라이언트 라이브러리가 적당한 것이 없어서 결국 웹으로 만들어 보기로 결정하는 데 까지도 꽤 오래 걸렸습니다.
+에디터가 아닌 클라이언트는 sdl 기반 라이브러리를 사용하였는데 이 것은 그야말로 간단한 그래픽 기능만 있는 것으로 각종 gui control을 지원 하지 않습니다.
+게다가 이 sdl 라이브러리는 go의 goroutine 사용에도 여러 제약이 있는 관계로 서버 기능을 사용해야 하는 에디터용으로는 부적합하더군요.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -254,27 +274,6 @@ AP에 따른 행동 제약 - @ 끼리의 진로 방해 가능 + faction-skill �
       표준 - 필드 타입 플로어 에서의 random walk
 다른 윈도우로 맵을 보려니 불편해서 미니맵을 추가 했습니다. 그리고 동영상을 보시면 지형에 따라 이동속도가 다른 것을 보실수 있습니다.
 준비하고 있는 플로어 타입은 도시, 마을, 필드 , 미로 표준, 불, 물 , 얼음, 땅, 공백 타입입니다. 조합해서 24 가지 파라메터를 기본으로 지형을 생성합니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2014-08-28-goguelikeadventureof/" class="link black dim">
-        goguelike - adventure of @ 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      가제 goguelike - adventure of @ 의 스샷입니다.
-추가된 미니? 맵
-창을 통해서 집내부를 보는 상황 + 불 지형에서 가시거리가 제한 되는 상황
-20개의 faction ( 동일 성향 집단 )을 만들었고, 그 faction에 따라 타 active object(user) 과의 관계가 형성되며 , passive object에도 faction을 부여하여 강화 또는 방해 효과를 줄수 있도록 했습니다.
-동영상 ( 좀 깁니다. ) 과 동영상 촬영시 만들어진 미니맵
     </div>
   </div>
 </div>

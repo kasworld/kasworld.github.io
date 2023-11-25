@@ -6,12 +6,12 @@
     <description>Recent content in imagemagick on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 08 May 2015 18:29:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/imagemagick/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 May 2015 18:29:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/imagemagick/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>texture image file을 쪼개서 여러개의 tile file로 만들고 싶을 때.</title>
       <link>https://kasworld.github.io/posts/2015-05-08-textureimagefile%EC%9D%84%EC%AA%BC%EA%B0%9C%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98tilefile%EB%A1%9C%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/</link>
       <pubDate>Fri, 08 May 2015 18:29:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-08-textureimagefile%EC%9D%84%EC%AA%BC%EA%B0%9C%EC%84%9C%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98tilefile%EB%A1%9C%EB%A7%8C%EB%93%A4%EA%B3%A0%EC%8B%B6%EC%9D%84%EB%95%8C/</guid>
       <description>ImageMagick 을 사용하면 좋다.
 &amp;ndash; 끝 &amp;ndash; 이라고 쓰고 말면 ( 미래의 나 로부터 ) 욕먹을테니&amp;hellip;
@@ -20,6 +20,5 @@ tile 들을 가져다 쓰고 있었습니다만. ( 라이선스도 자유 이용
 역시 부족한 타일들이 좀 있어서 몇개는 되도 않는 손놀림으로 gimp를 사용해 어떻게 만들어 쓰고 있었습니다만 ..
 역시 어설픈 관계로 구할수 있는 큰 크기의 texture들을 쪼개서 (32x32 png ) 만들어 보기로 하고 역시 gimp로 노가다를 하고 있자니 한숨만 나오고.</description>
     </item>
-    
   </channel>
 </rss>

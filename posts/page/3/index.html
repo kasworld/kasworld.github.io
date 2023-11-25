@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,27 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8/" class="link black dim">
+        goguelike map script 업데이트 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      map script를 업데이트 했습니다. tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을 tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게 되었습니다.
+기존에는 tile로는 못하고 resource tile로만 가능했었습니다.
+위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
+보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
+tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -247,23 +269,6 @@ tile들이 모두 3D 로 만들어 지고 타일 들이 높이 맞게 Fieldobj �
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       캐릭터 (activeobj) item(CarryObj) 상점,계단,함정들(FieldObj) , 벽,문,창(Wall, Door, Window) 을 3D 화 했습니다.
 미로 지형에서 가장 극적으로 보이기에 화면 캡처를 해봤습니다.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-06-16-goguelike%EC%9D%98webglclient%EC%9E%91%EC%97%85/" class="link black dim">
-        goguelike 의 webgl client 작업
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      webgl 의 CanvasTexture 를 사용한 PlaneBufferGeometry 를 terrain표시용으로 사용하는 gl client 입니다. canvas 만 사용할때는 wrap around 되는 field의 표시를 위해 귀찮은 작업(계산) 을 해야 했는데 CanvasTexture 의 RepeatWrapping 과 repeat 기능을 사용하니 간단히 해결되는 군요. 역시 신기술이 좋은 겁니다. ㅠㅠ
     </div>
   </div>
 </div>

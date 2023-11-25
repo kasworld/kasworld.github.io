@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
 서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -37,6 +37,7 @@
 <meta property="og:url" content="https://kasworld.github.io/posts/2020-12-04-250kpacketsec%EB%8B%AC%EC%84%B1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-12-04T14:16:00+09:00" />
 <meta property="article:modified_time" content="2020-12-04T14:16:00+09:00" />
+
 <meta itemprop="name" content="250k packet/sec 달성 ">
 <meta itemprop="description" content="이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
 서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0."><meta itemprop="datePublished" content="2020-12-04T14:16:00+09:00" />

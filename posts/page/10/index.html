@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,27 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2017-05-09-%EC%96%B4%EB%96%A4%EC%A7%88%EB%AC%B8%EC%A7%80%EC%9D%98%EB%8B%B5%EB%B3%80%EB%AC%B8%EC%84%9C/" class="link black dim">
+        어떤 질문지의 답변문서
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      어쩌다 쓰게된 질문지의 답변을 적다보니 재밌어서 (허락을 얻은후) 블로그에도 공유해봅니다. 1. 자기 소개를 해주세요. – 경력이어도 좋고 그냥 자신이 생각하는 자기 얘기여도 좋습니다.
+** **
+프로그래밍이란걸 시작한지 30년이 좀 넘은 낡은 프로그래머로 유부남 - SINK 족 ( single income no kid ) 이며 돈많이 벌어서 은퇴해서 프로그램 짜며 여생을 보내고 싶어하는 사람 입니다. ** **
+2. 지금 무슨 일을 하고 계신가요?
+조그마한 게임 회사(40명정도?) 에서 모바일 게임 서버 개발을 하고 있습니다.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -268,33 +290,6 @@ linux 64bit에서 빌드 하려면
 벤치비따위는 쓰고 싶지 않아서 ( 실은 테스트 하러 갔는데 로그인 하란 소리에 관뒀습니다. )
 설치후 구글에서 적당히 internet benchmark 로 검색해서 나온 사이트에서 테스트한 결과입니다.
 다만 문제인게 기사님이 난감해 하면서 이야기 해주셨는데 .
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2016-04-30-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4%ED%99%94%EB%A9%B4%EA%BA%BC%EC%A7%90%EB%A7%89%EA%B8%B0%EB%A9%94%EB%AA%A8/" class="link black dim">
-        라즈베리 파이 화면 꺼짐 막기 메모
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      rpi 2에서는
-/etc/xdg/lxsession/LXDE-pi/autostart 파일에
-@xset s off @xset -dpms @xset s noblank
-추가 하는 것으로 가능했는데 이상하게도 rpi 3에서는 통하지 않는다.
-rpi 3에서는
-/etc/lightdm/lightdm.conf 파일의 SeatDefaults section 에
-[SeatDefaults] xserver-command=X -s 0 -dpms
-을 추가하는 것으로 화면 꺼짐을 막을수 있다. 확인은 xset -q 를 실행해서 가능
-xset이 설치되어 있지 않은경우 sudo apt-get install x11-xserver-utils 로 설치 가능.
-http://raspberrypi.stackexchange.com/questions/2059/disable-screen-blanking-in-x-windows-on-raspbian
-링크에 있는 방법중 성공한 방법 임.
     </div>
   </div>
 </div>

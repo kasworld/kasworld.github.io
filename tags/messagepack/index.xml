@@ -6,12 +6,12 @@
     <description>Recent content in messagepack on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 29 Nov 2020 12:10:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/messagepack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Nov 2020 12:10:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/messagepack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>150000 (150k) packet/sec 를 처리하는 서버 </title>
       <link>https://kasworld.github.io/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/</link>
       <pubDate>Sun, 29 Nov 2020 12:10:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-11-29-150000150kpacketsec%EB%A5%BC%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94%EC%84%9C%EB%B2%84/</guid>
       <description>https://github.com/kasworld/massecho
 를 조금 더 이리 저리 수정해 봤습니다. 각 connection이 보내는 초당 패킷수를 100으로 고정한 상태에서 connection 수를 1000 과 1500으로 바꿔가며 테스트 할때 marshaler로 표준 라이브러리의 json 이나 gob를 사용하면 AMD Ryzen 3700X (8c16t) 에서 간단한 echo protocol 을 사용해도 // Echo simple echo
@@ -24,6 +24,5 @@ Msg string
 }
 98000 (98k) packet/sec정도가 한계입니다. 이를 messagepack (https://github.com/tinylib/msgp) 으로 바꾸면 처리량이 150000 (150k) packet/sec 정도로 증가합니다.</description>
     </item>
-    
   </channel>
 </rss>

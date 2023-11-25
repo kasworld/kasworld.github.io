@@ -6,12 +6,12 @@
     <description>Recent content in uwsgi on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 08 Jul 2011 11:25:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/uwsgi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jul 2011 11:25:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/uwsgi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>uwsgi 사용시 주의점</title>
       <link>https://kasworld.github.io/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/</link>
       <pubDate>Fri, 08 Jul 2011 11:25:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2011-07-08-uwsgi%EC%82%AC%EC%9A%A9%EC%8B%9C%EC%A3%BC%EC%9D%98%EC%A0%90/</guid>
       <description>uwsgi 사용시 (http://projects.unbit.it/uwsgi/wiki)
 post data를 처리 하고 싶으면 결과 return/yield 를 내보내기 전에 읽어 와야 한다.
@@ -20,6 +20,5 @@ post data를 처리 하고 싶으면 결과 return/yield 를 내보내기 전에
 아 그리고 web service 개발할때 curl 이 정말 편하다. command line으로 http post를 할수 있으니 코드 테스트가 정말 편하게 이루어지더라. ;;;
 역시 인간은 검색을 생활화 해야 하는 것이었다 ;;;</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,18 +6,17 @@
     <description>Recent content in gpl on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 01 Aug 2015 15:18:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/gpl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Aug 2015 15:18:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/gpl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>netis WF2881 유무선공유기 일주일 사용 감상기. </title>
       <link>https://kasworld.github.io/posts/2015-08-01-netiswf2881%EC%9C%A0%EB%AC%B4%EC%84%A0%EA%B3%B5%EC%9C%A0%EA%B8%B0%EC%9D%BC%EC%A3%BC%EC%9D%BC%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/</link>
       <pubDate>Sat, 01 Aug 2015 15:18:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-08-01-netiswf2881%EC%9C%A0%EB%AC%B4%EC%84%A0%EA%B3%B5%EC%9C%A0%EA%B8%B0%EC%9D%BC%EC%A3%BC%EC%9D%BC%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/</guid>
       <description>2015-11-08추가 이후 설정/삽질에 대한 글이 있습니다. http://kasw.blogspot.kr/2015/11/wf2881-intel-7260.html
 지난 금요일 ( 7월 24일) ipTIME N8004R 유무선공유기 의 펌웨어를 업데이트 하던중 공유기가 사망했습니다.
 같은날 처의 와이브로 에그도 사망한 관계로 네트웍적으로 아주 빈궁한 주말을 보낼수 밖에 없었는데. ( 주말내내 lte를 물쓰듯 사용하며보냈습니다. 나중에 확인해보니 2일간 3Gbyte를 썼더군요. )
 하필 금요일 밤(불금!)인 관계로 인터넷 주문을 해도 바로 받아보기 힘든 상황이었습니다. 그래서 조금 비싸더라도 급한대로 살 생각으로 집근처 마트를 갔더니 2세대전 물건 만이 있고 가격도 인터넷 가격의 2배를 받더군요.</description>
     </item>
-    
   </channel>
 </rss>

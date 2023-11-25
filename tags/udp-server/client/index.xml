@@ -5,12 +5,12 @@
     <link>https://kasworld.github.io/tags/udp-server/client/</link>
     <description>Recent content in udp server/client on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language><atom:link href="https://kasworld.github.io/tags/udp-server/client/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-KR</language>
+    <atom:link href="https://kasworld.github.io/tags/udp-server/client/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>udp와 network jitter </title>
       <link>https://kasworld.github.io/posts/2018-04-06-udp%EC%99%80networkjitter/</link>
       <pubDate>Fri, 06 Apr 2018 14:36:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2018-04-06-udp%EC%99%80networkjitter/</guid>
       <description>지난글 http://kasw.blogspot.com/2018/01/tcp-udp.html
 이후로 goguelike2에 udp 지원을 넣기 위해 작업을 계속하고 있었는데 드디어 오늘 udp로 goguelike2 server 와client을 연결 tcp와 똑같이 작동시키는데 성공했습니다.
@@ -19,6 +19,5 @@ udp 작업만 한것은 아니고 필요한 다른 작업들도 동시에 하고
 그리고 부산물로 tcp 와 udp 를 동시에 지원 가능한 net 라이브러리가 생겼습니다. ^^
 udp를 지원 하도록 바꾸면 tcp와의 차이를 비교 하는 것이 힘들 것 같아서 고민하다가 두가지를 거의 같은 구조로 지원 할수 있게 기반 작업들이 이루어지고 나니 그러면 동시에 지원하게 하면 좋겠네?</description>
     </item>
-    
   </channel>
 </rss>

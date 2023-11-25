@@ -14,7 +14,7 @@ const DataVersion = `&quot;${Data_VERSION}`&rdquo;
 식으로 파일을 생성하면 만들어진 파일이 build가 안됩니다.
 이유를 찾아보니 powershell 5.x에서는 당연하게도 utf-8 이아닌 utf16le 파일을 생성하기 때문이고 golang은 당연히 입력으로 utf-8을 요구하니 컴파일 에러를 내는 거지요.
 디렉토리 구분자로 \ 를 쓰는 것도 그렇고 표준 encoding으로 utf-16le 를 쓰는 것도 그렇고 이리저리 참 불편하게 하는 군요.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -49,6 +49,7 @@ const DataVersion = `&quot;${Data_VERSION}`&rdquo;
 <meta property="og:url" content="https://kasworld.github.io/posts/2020-12-25-powershell7xvspowershell5x/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-12-25T15:45:00+09:00" />
 <meta property="article:modified_time" content="2020-12-25T15:45:00+09:00" />
+
 <meta itemprop="name" content="powershell 7.x vs powershell 5.x ">
 <meta itemprop="description" content="방금 겪은 황당한(하지만 생각해보면 당연한 )일 build용으로 잘 실행되던 powershell script가 갑자기 문제를 일으킵니다.
 결론만 말하면 linux, powershell 7.x에선 문제가 없는데 powershell 5.1에선

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="1. struct embedding 한 경우 embeded struct에 exported filed 가 없으면 embeding한 struct를 gob encode를 할수 없다. ( type xxx has no exported fields 에러가남 ) 간단한 해결책은 dummy exported field를 추가 하는 것이다. ( 좀 보기 싫긴 하지만 )
 type AAA BBB 형태로 정의한 경우 AAA 형 변수와 BBB 형 변수는 대입조차 안되지만 ( 에러가 남 ) 함수 인자로는 사용할수 있다. 즉 AAA를 받는 함수에 BBB 형 변수를 인자로 사용 할수 있다.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -37,6 +37,7 @@ type AAA BBB 형태로 정의한 경우 AAA 형 변수와 BBB 형 변수는 대�
 <meta property="og:url" content="https://kasworld.github.io/posts/2015-01-31-go%EC%96%B8%EC%96%B4%EB%A5%BC%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C%EC%A3%BC%EC%9D%98%ED%95%A0%EB%B6%80%EB%B6%84/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-01-31T14:26:00+09:00" />
 <meta property="article:modified_time" content="2015-01-31T14:26:00+09:00" />
+
 <meta itemprop="name" content="go언어를 사용하면서 주의 할 부분 ">
 <meta itemprop="description" content="1. struct embedding 한 경우 embeded struct에 exported filed 가 없으면 embeding한 struct를 gob encode를 할수 없다. ( type xxx has no exported fields 에러가남 ) 간단한 해결책은 dummy exported field를 추가 하는 것이다. ( 좀 보기 싫긴 하지만 )
 type AAA BBB 형태로 정의한 경우 AAA 형 변수와 BBB 형 변수는 대입조차 안되지만 ( 에러가 남 ) 함수 인자로는 사용할수 있다. 즉 AAA를 받는 함수에 BBB 형 변수를 인자로 사용 할수 있다."><meta itemprop="datePublished" content="2015-01-31T14:26:00+09:00" />

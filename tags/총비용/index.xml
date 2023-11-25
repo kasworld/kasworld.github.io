@@ -6,17 +6,16 @@
     <description>Recent content in 총비용 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 20 Mar 2008 15:32:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%B4%9D%EB%B9%84%EC%9A%A9/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Mar 2008 15:32:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%B4%9D%EB%B9%84%EC%9A%A9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>과연 컴퓨터 가격은 내려 가고 있는가?</title>
       <link>https://kasworld.github.io/posts/2008-03-20-%EA%B3%BC%EC%97%B0%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B0%80%EA%B2%A9%EC%9D%80%EB%82%B4%EB%A0%A4%EA%B0%80%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B0%80/</link>
       <pubDate>Thu, 20 Mar 2008 15:32:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2008-03-20-%EA%B3%BC%EC%97%B0%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B0%80%EA%B2%A9%EC%9D%80%EB%82%B4%EB%A0%A4%EA%B0%80%EA%B3%A0%EC%9E%88%EB%8A%94%EA%B0%80/</guid>
       <description>오늘 점심 먹다가 기술의 발전이 컴퓨터의 가격을 내리고 있다는 이야기가 나왔는데.. 과연 그런가 하는 이야기 입니다.
 컴퓨터라는 것이 장식용이 아니고 무엇인가 하기 위한 도구라는 측면을 생각해 볼때 하드웨어의 각격만을 놓고 생각하는 것은 오류겠지요. 위의 표를 보시면 금방 이해 되실겁니다.
 과거에 비해서 소프트웨어 가격은 오르고 있었던겁니다. 결국 총 비용(TCO = h/w + s/w )는 줄기는 커녕 늘고 있는 셈입니다. ( 60만원 짜리 하드웨어에 280만원 어치 소프트웨어가 필요한거지요. ) ( 여기서 불법 복사니.</description>
     </item>
-    
   </channel>
 </rss>

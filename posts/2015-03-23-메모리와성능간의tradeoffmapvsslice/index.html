@@ -12,7 +12,7 @@ idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데
 기존 구현은 pos2objs map[[2]int]idposi.IDPosIList 과 같이 map을 사용해서 구현 하고 있었습니다.
 그런데 프로파일링을 해보니 map access에서 대량의 시간이 소비되고 있다는 것을 깨닿고 ( 25% 정도의 cpu 가 사용되고 있었습니다. ) map들을 가능한 줄인 pos2objs []idposi.IDPosIList
 내부적으론 [2]int를 int로 변환하는 (xlen*y &#43;x ) hash 함수를 사용하는 slice 기반으로 수정하였습니다.">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -45,6 +45,7 @@ idpos는 object의 위치를 저장하고 관리하는 목적의 패키지인데
 <meta property="og:url" content="https://kasworld.github.io/posts/2015-03-23-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%99%80%EC%84%B1%EB%8A%A5%EA%B0%84%EC%9D%98tradeoffmapvsslice/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-03-23T14:48:00+09:00" />
 <meta property="article:modified_time" content="2015-03-23T14:48:00+09:00" />
+
 <meta itemprop="name" content="메모리와 성능간의 trade-off , map vs slice">
 <meta itemprop="description" content="(업데이트)2d slice 를 추가하고 수정하였습니다.
 기존 idpos 라이브러리를 대대적?으로 정리 했습니다.

@@ -6,23 +6,21 @@
     <description>Recent content in 옵티이이 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 20 Jan 2013 12:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jan 2013 12:48:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>옵티이이 감상기(사용, 루팅기)</title>
       <link>https://kasworld.github.io/posts/2013-01-20-%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4%EA%B0%90%EC%83%81%EA%B8%B0%EC%82%AC%EC%9A%A9%EB%A3%A8%ED%8C%85%EA%B8%B0/</link>
       <pubDate>Sun, 20 Jan 2013 12:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-20-%EC%98%B5%ED%8B%B0%EC%9D%B4%EC%9D%B4%EA%B0%90%EC%83%81%EA%B8%B0%EC%82%AC%EC%9A%A9%EB%A3%A8%ED%8C%85%EA%B8%B0/</guid>
       <description>넥서스4와 옵티머스G 그리고 옵티머스 lte2를 놓고 무엇을 살까 고민하다가 AS 문제와 가격적인 문제로 ( 옵티이이가 그래도 좀 쌌습니다. ) 옵티이이를 선택했습니다.
 그리고 이제 2주가 약간 넘어가니 사용기? 내지는 감상기를 적어 봅니다.
 장점 교환식 배터리 외장메모리 지원 배터리를 빼지 않고 외장 메모리 교체 가능 - 즉 핫 스왑 가능 ( 뒷 판을 열여야 하긴 하지만 뒷판만 열면 바로 넣고 뺄수 있습니다. ) 최신 OS 지원 ( 4.1.2) 꽤나 넉넉한 램 ( 2G) 적당한?</description>
     </item>
-    
     <item>
       <title>지름은 지름을 부릅니다. 역시;;;</title>
       <link>https://kasworld.github.io/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/</link>
       <pubDate>Fri, 18 Jan 2013 19:21:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-18-%EC%A7%80%EB%A6%84%EC%9D%80%EC%A7%80%EB%A6%84%EC%9D%84%EB%B6%80%EB%A6%85%EB%8B%88%EB%8B%A4%EC%97%AD%EC%8B%9C/</guid>
       <description>옵티머스 lte2(옵티이이) 로 바꾼후에 언제나 처럼 이런 저런 테스트를 했습니다.
 집에 사용하는 공유기가 몇년 전에 꽤 비싸게 주고산 802.11n에 Chanel bonding이 되는 (된다고 주장하는 - 지원하는 디바이스가 없어서 한번도 테스트를 못해봤으니.. ) dlink dir-655 였기때문에 신나요. 하고 네트웍 벤치마크 프로그램을 설치하고 실행해 봤습니다.
@@ -33,12 +31,10 @@ mmorpg를 하는 와이프는 서버에서 팅겨서 &amp;ldquo;뭐지?&amp;rdqu
 공유기를 재부팅하니 다시 인터넷이 됩니다. ;;
 한번더 해보고 똑같은 증상이 일어 나는 것을 확인한후.. 조용히 다음날 새벽 까지 기다렸습니다.</description>
     </item>
-    
     <item>
       <title>휴대폰을 바꿨습니다. </title>
       <link>https://kasworld.github.io/posts/2013-01-16-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%9D%84%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Wed, 16 Jan 2013 20:23:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-16-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%9D%84%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>올초에 그동안 잘 써오던 레이(휴대폰)를 옵티머스 lte2로 바꿨습니다.
 약정이 3개월 정도 남아 있었고 딱히 새로 약정을 걸고 싶지 않아서 그냥 공기계를 구매해서 유심기변을 했지요.
@@ -46,6 +42,5 @@ mmorpg를 하는 와이프는 서버에서 팅겨서 &amp;ldquo;뭐지?&amp;rdqu
 기존의 잘쓰던 레이는 이상하게도 가끔 멋대로 재부팅을 하는 증상을 보이기 시작했었고, 게다가 노안^^;;; 이 오고 있어서 다음에는 큰화면ㅠㅠ 으로 바꿔야 겠다고 생각하고 있었지요.
 전 아몰레드는 싫어 하기때문에(아직 시기 상조인 기술을 억지로 내고 있다고 생각합니다.) 넥서스 4나 옵티머스 g 정도를 생각하고 있었는데 가격적인 면에서 옵티머스lte2가 그나마 적당하더군요.</description>
     </item>
-    
   </channel>
 </rss>

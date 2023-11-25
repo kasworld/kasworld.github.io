@@ -6,24 +6,22 @@
     <description>Recent content in 노키아 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 24 Feb 2010 08:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%85%B8%ED%82%A4%EC%95%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Feb 2010 08:48:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%85%B8%ED%82%A4%EC%95%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>내가 원하던 진정한 리눅스폰은</title>
       <link>https://kasworld.github.io/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/</link>
       <pubDate>Wed, 24 Feb 2010 08:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2010-02-24-%EB%82%B4%EA%B0%80%EC%9B%90%ED%95%98%EB%8D%98%EC%A7%84%EC%A0%95%ED%95%9C%EB%A6%AC%EB%88%85%EC%8A%A4%ED%8F%B0%EC%9D%80/</guid>
       <description>Heaven&amp;rsquo;s Door :: N900 짧막한 사용기
 이게 아닐까 하는 생각이 들기도 하네요.
 하지만 전 돈이 없다는거 ㅎㅎ
 국내에 정발 되면 지를것 같다는거 ..;;;</description>
     </item>
-    
     <item>
       <title>5800용 인코딩을 위해서 우분투 9.10에서 추가해줘야 하는 일.</title>
       <link>https://kasworld.github.io/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/</link>
       <pubDate>Tue, 23 Feb 2010 21:01:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2010-02-23-5800%EC%9A%A9%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%84%9C%EC%9A%B0%EB%B6%84%ED%88%AC910%EC%97%90%EC%84%9C%EC%B6%94%EA%B0%80%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%98%EB%8A%94%EC%9D%BC/</guid>
       <description>HOWTO: Easily enable MP3, MPEG4, AAC, and other restricted encoding in FFmpeg - Ubuntu Forums
 sudo wget http://www.medibuntu.org/sources.list.d/`lsb_release -cs`.list &amp;ndash;output-document=/etc/apt/sources.list.d/medibuntu.list &amp;amp;&amp;amp; sudo apt-get -q update &amp;amp;&amp;amp; sudo apt-get &amp;ndash;yes -q &amp;ndash;allow-unauthenticated install medibuntu-keyring &amp;amp;&amp;amp; sudo apt-get -q update
@@ -33,12 +31,10 @@ faac 지원이 법적인 문제로 9.10의 ffmpeg에서 빠졌기때문에 추�
 변환 스크립트는
 mencoder -of lavf -lavfopts format=mp4 -oac lavc -ovc lavc -lavcopts aglobal=1:vglobal=1:acodec=libfaac:abitrate=128:vcodec=mpeg4:keyint=25 -af lavcresample=44100 -vf harddup,scale=640:360 -mc 0 -noskip &amp;ldquo;$FILE&amp;rdquo; -o &amp;ldquo;${FILE}_5800.</description>
     </item>
-    
     <item>
       <title>모두가 아이폰을 외칠때..</title>
       <link>https://kasworld.github.io/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/</link>
       <pubDate>Thu, 11 Feb 2010 22:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2010-02-11-%EB%AA%A8%EB%91%90%EA%B0%80%EC%95%84%EC%9D%B4%ED%8F%B0%EC%9D%84%EC%99%B8%EC%B9%A0%EB%95%8C/</guid>
       <description>홀로 안드로이드를 외치다..
 노키아 5800을 샀습니다. (참고로 심비안폰입니다. ^^;;; )
@@ -54,12 +50,10 @@ mencoder -of lavf -lavfopts format=mp4 -oac lavc -ovc lavc -lavcopts aglobal=1:v
 필요한 것은 모두 할수 있는 신기한폰입니다.
 기존에 노트북과 연계해 쓰던 에그(와이브로)와 연계하면 환상의 궁합을 보여 줍니다.</description>
     </item>
-    
     <item>
       <title>노키아 n5800 의 카메라 화질(압축율) 올리기.</title>
       <link>https://kasworld.github.io/posts/2010-02-11-%EB%85%B8%ED%82%A4%EC%95%84n5800%EC%9D%98%EC%B9%B4%EB%A9%94%EB%9D%BC%ED%99%94%EC%A7%88%EC%95%95%EC%B6%95%EC%9C%A8%EC%98%AC%EB%A6%AC%EA%B8%B0/</link>
       <pubDate>Thu, 11 Feb 2010 13:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2010-02-11-%EB%85%B8%ED%82%A4%EC%95%84n5800%EC%9D%98%EC%B9%B4%EB%A9%94%EB%9D%BC%ED%99%94%EC%A7%88%EC%95%95%EC%B6%95%EC%9C%A8%EC%98%AC%EB%A6%AC%EA%B8%B0/</guid>
       <description>Nokia 5800 Tips and Tricks Thread:
 1- Copy z:\private\10202BE9\10282EDC.txt to c:\private\10202BE9
@@ -68,6 +62,5 @@ to: 0x3001A string &amp;lsquo;QualitySetLevel=306,ImageFileMimeType=image/jpeg,I
 3- Save and restart.
 The photos (at the 5MP settings) now are an average of 900KB instead of 600KB, which means less JPEG compression, which means theoretically better quality.&amp;quot;</description>
     </item>
-    
   </channel>
 </rss>

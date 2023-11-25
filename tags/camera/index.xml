@@ -6,16 +6,15 @@
     <description>Recent content in camera on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 12 Jul 2020 17:25:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/camera/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jul 2020 17:25:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/camera/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>goguelike에 카메라 기울임 기능 추가 </title>
       <link>https://kasworld.github.io/posts/2020-07-12-goguelike%EC%97%90%EC%B9%B4%EB%A9%94%EB%9D%BC%EA%B8%B0%EC%9A%B8%EC%9E%84%EA%B8%B0%EB%8A%A5%EC%B6%94%EA%B0%80/</link>
       <pubDate>Sun, 12 Jul 2020 17:25:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-07-12-goguelike%EC%97%90%EC%B9%B4%EB%A9%94%EB%9D%BC%EA%B8%B0%EC%9A%B8%EC%9E%84%EA%B8%B0%EB%8A%A5%EC%B6%94%EA%B0%80/</guid>
       <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
 카메라 기울임과 줌 기능을 테스트한 동영상입니다.</description>
     </item>
-    
   </channel>
 </rss>

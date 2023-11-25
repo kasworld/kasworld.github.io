@@ -6,12 +6,12 @@
     <description>Recent content in factory on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 12 Sep 2015 16:24:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/factory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Sep 2015 16:24:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/factory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serial ID 생성기 - 두번째 글 </title>
       <link>https://kasworld.github.io/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/</link>
       <pubDate>Sat, 12 Sep 2015 16:24:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-09-12-serialid%EC%83%9D%EC%84%B1%EA%B8%B0%EB%91%90%EB%B2%88%EC%A7%B8%EA%B8%80/</guid>
       <description>이전에 go 언어용 serial id generator 에 대한 글을 올린적이 있었는데. http://kasw.blogspot.kr/2015/01/go-serial-id.html
 그 내용의 개량판에 대한 이야기입니다.
@@ -20,6 +20,5 @@
 그래서 기존의 idgen 을 수정/업데이트 했습니다.
 주 변경점은 여러 생성기를 만들수있도록 factory 함수를 만들고 인자로 시작 값을 받도록 했습니다.</description>
     </item>
-    
   </channel>
 </rss>

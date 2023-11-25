@@ -6,12 +6,12 @@
     <description>Recent content in 스터디 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 13 Apr 2013 20:31:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%8A%A4%ED%84%B0%EB%94%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Apr 2013 20:31:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%8A%A4%ED%84%B0%EB%94%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>web2py 소개 </title>
       <link>https://kasworld.github.io/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/</link>
       <pubDate>Sat, 13 Apr 2013 20:31:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-04-13-web2py%EC%86%8C%EA%B0%9C/</guid>
       <description>회사에서 세미나 용으로 작성한 글인데 쓰고 보니 이것 만으로도 web2py의 소개 용으로는 충분 할 것 같아서 그리고 블로그에 올려도 좋을 듯한 내용이어서 올려 봅니다.
 원문은 http://web2py.com/books/default/chapter/29/03 이며 번역을 한 것이 아니고 업무에 필요한/필요할 것 같은 것들을 정리한 글이라 원문과 같이 놓고 보셔야 이해가 될 듯 합니다. 제가 맡은 부분인 Overview 부분 만 입니다. ^^
@@ -19,6 +19,5 @@ web2py 개요 - overview
 ** **
 시작하기 - startup web2py는 윈도우와 맥에선 실행 프로그램으로도 제공되기 때문에 따로 python 이 필요하지 않다.</description>
     </item>
-    
   </channel>
 </rss>

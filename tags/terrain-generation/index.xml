@@ -6,12 +6,12 @@
     <description>Recent content in terrain generation on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 09 Apr 2015 09:29:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/terrain-generation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Apr 2015 09:29:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/terrain-generation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>goguelike의 지형 생성 부분을 완전 재작업 하고 있습니다. </title>
       <link>https://kasworld.github.io/posts/2015-04-09-goguelike%EC%9D%98%EC%A7%80%ED%98%95%EC%83%9D%EC%84%B1%EB%B6%80%EB%B6%84%EC%9D%84%EC%99%84%EC%A0%84%EC%9E%AC%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Thu, 09 Apr 2015 09:29:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-04-09-goguelike%EC%9D%98%EC%A7%80%ED%98%95%EC%83%9D%EC%84%B1%EB%B6%80%EB%B6%84%EC%9D%84%EC%99%84%EC%A0%84%EC%9E%AC%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>기존의 지형 시스템의 부족함이 느껴저서 새로 작업을 진행하고 있습니다.
 기존과 같이 terrainscript+ random 을 사용해서 생성하는 것은 같으나 더 많은 구성 요소들과 더 정교한 로직을 사용하도록 바꿨습니다.
@@ -20,6 +20,5 @@
 작업중인 동영상
 그렇데 이런 구조라면 AI를 만드는 것이 더욱더 힘들어 질것 같습니다. (특히 client AI는 많이 힘들어 질듯 .</description>
     </item>
-    
   </channel>
 </rss>

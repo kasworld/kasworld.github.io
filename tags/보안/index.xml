@@ -6,28 +6,25 @@
     <description>Recent content in 보안 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 13 Sep 2015 12:24:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%B3%B4%EC%95%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Sep 2015 12:24:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%B3%B4%EC%95%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Asus Zenfone 2  사용, 감상기 </title>
       <link>https://kasworld.github.io/posts/2015-09-13-asuszenfone2%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/</link>
       <pubDate>Sun, 13 Sep 2015 12:24:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-09-13-asuszenfone2%EC%82%AC%EC%9A%A9%EA%B0%90%EC%83%81%EA%B8%B0/</guid>
       <description>기존에 쓰고 있는 LG 옵티머스 LTE2는 더 이상의 희망이 없기에 ( 안드로이드의 보안 문제가 계속 생기는 중에 업그레이드를 해줄 가능성이 전무. ) 폰을 바꿔야만 하는 상황이 되었습니다. ( 아니 정말로요.. ) 망가진 곳도 없는 멀쩡한 폰을 놔두고 생돈을 들여 폰을 사려니 (정말로!) 억울하긴하지만 내 다시는 LG 폰을 사나 봐라 라고 투덜거리며
 무슨 폰을 사야하나 꽤 오랬동안 고민했습니다.
 (열받는 )이 참에 아예 iphone으로 가볼까도 고민하고 (제 주변은 다 iphone으로 갔더군요. ) 아니면 윈도 폰?</description>
     </item>
-    
     <item>
       <title>결국 nas를 샀습니다.</title>
       <link>https://kasworld.github.io/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Mon, 17 Feb 2014 18:09:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-02-17-%EA%B2%B0%EA%B5%ADnas%EB%A5%BC%EC%83%80%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>우분투/리눅스 민트에서 클라우드 스토리지 사용하기.
 같은 글이나 이곳 저곳에서 개인데이터를 안전하게 접근 사용하기.
 같은 글도 쓰긴 했지만.. mini-itx 보드에 리눅스를 설치해서 만들어볼까 하는 생각도 있었으나 비용 문제도 있고 게으름은 모든 것을 이긴다고 결국 완제품 NAS를 샀습니다. NAS 중에서도 유명한 여러 브랜드도 있지만 역시 귀찮음이란.. 그냥 iptime nas2 로 결정했습니다. &amp;ldquo;값도 싸고 하니 외장 하드 사는 셈 치고 쓰지&amp;rdquo; 란 자기 합리화도 있습니다. 와이프의 설득에는 슬슬 (와이프) 하드 용량도 다 차가고, 또 오래 되서 하드 수명도 불안 불안 하니 백업도 할 겸 용량도 늘일 겸 이란 핑계로 성공 했구요.</description>
     </item>
-    
   </channel>
 </rss>

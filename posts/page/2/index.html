@@ -7,7 +7,7 @@
     <title>취미로 프로그래밍을 하는 사람입니다.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.120.4">
     
     
     
@@ -38,6 +38,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kasworld.github.io/posts/" />
+
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -87,6 +88,24 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2020-12-04-250kpacketsec%EB%8B%AC%EC%84%B1/" class="link black dim">
+        250k packet/sec 달성 
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이런 저런 오버헤드들을 좀 줄이고 성능위주로 설정해서 250k packet/sec 을 달성했습니다. 클라이언트 실행 인자 go run .\multiclient.go -ConnectToServer=localhost:8081 -Concurrent=100 -NetType=tcp -PacketIntervalMS=0 *main.MultiClientConfig main.MultiClientConfig ConnectToServer: string localhost:8081 NetType: string tcp PlayerNameBase: string MC_ Concurrent: int 100 AccountPool: int 0 AccountOverlap: int 0 LimitStartCount: int 0 LimitEndCount: int 0 PacketIntervalMS: int 0 exit status 2
+서버 실행 결과 *main.ServerConfig main.ServerConfig TcpPort: string :8081 HttpPort: string :8080 HttpFolder: string www http server dir=www port=:8080 , http://localhost:8080/ tcp server port=:8081 Connection:0 Send:total[0 0.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -262,27 +281,6 @@ towerserver, multiclient, textclient, wasmclient(이건 포팅이 필요없는 �
       리눅스만 사용한다는 녀석이 왜 이리 윈도우가 많아? 라고 하시면 가족들이 쓰는 것이고
 새로 구매한 windows 10은 &ldquo;WSL2 를 써보고 싶어서&rdquo; 라고 대답하겠습니다.
 그리고 핑계김에 (게다가 새 그래픽 카드도 샀으니 ) flight simulator 도 돌려 보고 싶어서 입니다. ^^
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/2020-08-19-goguelikemapscript%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8/" class="link black dim">
-        goguelike map script 업데이트 
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      map script를 업데이트 했습니다. tile을 사용한 draw 기능들이 추가 되었는데 선, 원, 사각형, 미로 등을 tile로 그릴수 있게 되어 본격적으로 tile을 사용해서 그림을 그릴수 있게 되었습니다.
-기존에는 tile로는 못하고 resource tile로만 가능했었습니다.
-위 그림에서 첫째, 둘째는 resource tile로 그린 것이고 , 셋째 는 tile로 그린 것입니다.
-보기에 비슷해 보이지만 terrain ageing을 할경우 두 지형은 서로 다른 반응을 보입니다.
-tile로 그린 경우는 변화된 지형에 tile로 그린 모습이 덧 씌워 지며 resource로 그린 경우는 각 resource의 풍화 로직에 따라 지형이 변화해 갑니다.
     </div>
   </div>
 </div>

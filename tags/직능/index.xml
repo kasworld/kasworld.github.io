@@ -6,16 +6,15 @@
     <description>Recent content in 직능 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 08 Jan 2014 10:42:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%A7%81%EB%8A%A5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jan 2014 10:42:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%A7%81%EB%8A%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>게임프로그래밍이라는 주제로 </title>
       <link>https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/</link>
       <pubDate>Wed, 08 Jan 2014 10:42:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-01-08-%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9D%BC%EB%8A%94%EC%A3%BC%EC%A0%9C%EB%A1%9C/</guid>
       <description>지인으로 부터 뜬금 없이 &amp;ldquo;게임프로그래밍&amp;quot;라는 주제로 특강을 해달라는 부탁을 받아서 ( 아직 할지 말지는 미정이긴 하지만 ) 이런 저런 생각이 들어 적어보고 있는( 즉 아직 작성중인 ) 문서입니다.
 &amp;ldquo;게임을 만든다는 것은 무엇일까?&amp;rdquo; 게임이란 무엇일까? 게임의 정의를 논하는 것은 프로그래머 입장에선 쓸데없는 것일 테니 무시하기로 하고 ^^;;; 게임을 만드는 회사를 10년 넘게 다녔던 프로그래머로서 게임을 만든다는 것을 생각해보면 게임을 만들기 위한 직능을 준비하고 그 실무를 진행하는 것으로 정의해볼 수 있을 것 같습니다.</description>
     </item>
-    
   </channel>
 </rss>

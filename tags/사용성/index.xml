@@ -6,12 +6,12 @@
     <description>Recent content in 사용성 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 18 Feb 2013 10:45:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EC%82%AC%EC%9A%A9%EC%84%B1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Feb 2013 10:45:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EC%82%AC%EC%9A%A9%EC%84%B1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>베가 넘버 6가 제법 쓸만하다기에. </title>
       <link>https://kasworld.github.io/posts/2013-02-18-%EB%B2%A0%EA%B0%80%EB%84%98%EB%B2%846%EA%B0%80%EC%A0%9C%EB%B2%95%EC%93%B8%EB%A7%8C%ED%95%98%EB%8B%A4%EA%B8%B0%EC%97%90/</link>
       <pubDate>Mon, 18 Feb 2013 10:45:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-02-18-%EB%B2%A0%EA%B0%80%EB%84%98%EB%B2%846%EA%B0%80%EC%A0%9C%EB%B2%95%EC%93%B8%EB%A7%8C%ED%95%98%EB%8B%A4%EA%B8%B0%EC%97%90/</guid>
       <description>어딘가에서 지금 제가 쓰고 있는 옵티머스 lte2와 베가 넘버 6를 같이 놓고 찍은 사진을 보고 그 크기 차이에 황당했습니다. 실제로(사진이지만) 비교해 보니 많이 크더군요.
 그래서 이전부터 만들어 유지해 오고 있던 화면 크기(대각선)와 실제 화면의 가로 세로 크기 비교 용 계산 표를 링크합니다.
@@ -19,6 +19,5 @@
 https://docs.google.com/spreadsheet/ccc?key=0AquLscSY1Co_dFpycnJFUFcyYkUybUJQQ19VR0NIVVE&amp;amp;usp=sharing
 화면 가로 세로 비가 다를 경우 대각선 길이가 같다고 같은 크기가 될리가 없기 때문에 같은 5인치 화면이어도 옵티머스 뷰/뷰2의 4:3화면과 5인치16:9 화면은 전혀 다른 가로 세로 길이를 가지며 또 화면의 총 면적도 전혀 다르게 됩니다.</description>
     </item>
-    
   </channel>
 </rss>

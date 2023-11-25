@@ -6,12 +6,12 @@
     <description>Recent content in NAT on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 21 May 2016 21:48:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/nat/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2016 21:48:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/nat/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sk 기가 라이트 설치, 포기, 재시도, 설정, 사용기. </title>
       <link>https://kasworld.github.io/posts/2016-05-21-sk%EA%B8%B0%EA%B0%80%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%84%A4%EC%B9%98%ED%8F%AC%EA%B8%B0%EC%9E%AC%EC%8B%9C%EB%8F%84%EC%84%A4%EC%A0%95%EC%82%AC%EC%9A%A9%EA%B8%B0/</link>
       <pubDate>Sat, 21 May 2016 21:48:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2016-05-21-sk%EA%B8%B0%EA%B0%80%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%84%A4%EC%B9%98%ED%8F%AC%EA%B8%B0%EC%9E%AC%EC%8B%9C%EB%8F%84%EC%84%A4%EC%A0%95%EC%82%AC%EC%9A%A9%EA%B8%B0/</guid>
       <description>기존에 sk 의 100M 인터넷 회선을 사용하고 있었습니다. 별 불만이 없었기에 가끔 기가 인터넷으로 바꿔준다는 전화를 무시하다가. 되면 좋지뭐. 란 생각으로 해보기로 했습니다.
 제가 집에 있어야 했기에 토요일인 오늘 기사님이 오셨고.
@@ -20,6 +20,5 @@
 설치후 구글에서 적당히 internet benchmark 로 검색해서 나온 사이트에서 테스트한 결과입니다.
 다만 문제인게 기사님이 난감해 하면서 이야기 해주셨는데 .</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,12 +6,12 @@
     <description>Recent content in 레이 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 30 Jun 2015 16:20:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/%EB%A0%88%EC%9D%B4/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jun 2015 16:20:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/%EB%A0%88%EC%9D%B4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>사용중이던 디바이스들이 이틀사이에 줄줄이 사망하는 군요. </title>
       <link>https://kasworld.github.io/posts/2015-06-30-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B4%EB%8D%98%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%EB%93%A4%EC%9D%B4%EC%9D%B4%ED%8B%80%EC%82%AC%EC%9D%B4%EC%97%90%EC%A4%84%EC%A4%84%EC%9D%B4%EC%82%AC%EB%A7%9D%ED%95%98%EB%8A%94%EA%B5%B0%EC%9A%94/</link>
       <pubDate>Tue, 30 Jun 2015 16:20:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-06-30-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B4%EB%8D%98%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%EB%93%A4%EC%9D%B4%EC%9D%B4%ED%8B%80%EC%82%AC%EC%9D%B4%EC%97%90%EC%A4%84%EC%A4%84%EC%9D%B4%EC%82%AC%EB%A7%9D%ED%95%98%EB%8A%94%EA%B5%B0%EC%9A%94/</guid>
       <description>어제는 asus A500 태블릿이 사망하더니 ( 배터리가 부풀어서 무서워서 버렸습니다. )
 오늘은 오랫만에 테스트를 위해 켜본 X61T가 사망했군요.
@@ -19,12 +19,10 @@
 A500은 http://kasw.blogspot.kr/2011/09/a500.html 2011년 9월에 구입해서 3년 10개월 정도 사용했습니다.
 다음은 어떤 장비일까 생각해보니 아직 잘 작동하고 있는 ipad 1 도 있고 ( 2010년 1월 공개 ) 역시 가끔 켜보면 잘 작동하는 소니 엑스페리아 레이도 있습니다.</description>
     </item>
-    
     <item>
       <title>소니 엑스페리아 레이에 안드로이드 L (5.1.x)를 설치하기. </title>
       <link>https://kasworld.github.io/posts/2015-05-30-%EC%86%8C%EB%8B%88%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%97%90%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9Cl51x%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
       <pubDate>Sat, 30 May 2015 16:52:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-30-%EC%86%8C%EB%8B%88%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%97%90%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9Cl51x%EB%A5%BC%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
       <description>http://forum.xda-developers.com/xperia-mini/ray-development/rom-cyanidel-rc-115-1-1-t3105417
 일종의 취미 생활인 가끔 생각나면 레이가지고 장난치기 입니다.
@@ -37,12 +35,10 @@ A500은 http://kasw.blogspot.kr/2011/09/a500.html 2011년 9월에 구입해서 3
 cyanide-5.1-RC-11.0-urushi.zip 안의 boot.img 를 풀어내고 .
 fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼륨 위쪽 버튼을 누른 채로 pc 와 usb 케이블로 연결하면 됩니다. 홈 버튼 주변 이 파란색으로 빛나면 제대로 진입한 것입니다.</description>
     </item>
-    
     <item>
       <title>호기심에서 레이에 4.4 키캣을 올렸습니다. </title>
       <link>https://kasworld.github.io/posts/2014-03-06-%ED%98%B8%EA%B8%B0%EC%8B%AC%EC%97%90%EC%84%9C%EB%A0%88%EC%9D%B4%EC%97%9044%ED%82%A4%EC%BA%A3%EC%9D%84%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Thu, 06 Mar 2014 19:26:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-03-06-%ED%98%B8%EA%B8%B0%EC%8B%AC%EC%97%90%EC%84%9C%EB%A0%88%EC%9D%B4%EC%97%9044%ED%82%A4%EC%BA%A3%EC%9D%84%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>4.2를 올린지 얼마 됐다고 업데이트 했냐고 하면 할 말은 없지만 ^^;;
 이왕이면 최신 버전인 거지요.
@@ -52,12 +48,10 @@ fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼
 잠깐 헤맨 것이 gapps 가 기본으로 없어서 고민 했는데 ( 구글 계정 설정이 안 생깁니다. ) ( 위 링크에서도 다운로드 링크가 없습니다 )
 다른 커펌 문서 에서 4.</description>
     </item>
-    
     <item>
       <title>엑스페리아 레이를 4.2로 업그레이드 하기 </title>
       <link>https://kasworld.github.io/posts/2014-02-21-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EB%A5%BC42%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%ED%95%98%EA%B8%B0/</link>
       <pubDate>Fri, 21 Feb 2014 21:46:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2014-02-21-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EB%A5%BC42%EB%A1%9C%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
       <description>마음 같아선 키켓으로 업그레이드 하고 싶었지만
 레이의 키켓 포팅 상태를 보니 아직 인 듯 하여
@@ -69,12 +63,10 @@ fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼
 그럼 그냥 메모리 카드에 넣고 CWM 모드에서 업데이트 하면 되는 거겠군 하고
 딩가 딩가 하면서 설치를 했습니다.</description>
     </item>
-    
     <item>
       <title>엑스페리아 레이의 활용을 위해 최신 젤리빈으로 업데이트를 했습니다. </title>
       <link>https://kasworld.github.io/posts/2013-09-28-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%9D%98%ED%99%9C%EC%9A%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%B5%9C%EC%8B%A0%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%9C%BC%EB%A1%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sat, 28 Sep 2013 14:00:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-09-28-%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%9D%98%ED%99%9C%EC%9A%A9%EC%9D%84%EC%9C%84%ED%95%B4%EC%B5%9C%EC%8B%A0%EC%A0%A4%EB%A6%AC%EB%B9%88%EC%9C%BC%EB%A1%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%A5%BC%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>오래전에 펌웨어를 ics로 업데이트 하고 옵티이이로 바꾼후에는 책상속에서 얌전히 잠자고 있던 레이를 꺼낼 생각이 든 것은 크기 때문입니다.
 간단히 산책을 나가거나 운동을 할 때 주머니속 옵티이이는 생각보다 꽤 부담이 됩니다.
@@ -83,12 +75,10 @@ fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼
 일단 예전에 제가 써둔 블로그 글을 읽어보고 (기억을 되살리는 겸.. ) http://kasw.blogspot.kr/search/label/%EB%A0%88%EC%9D%B4
 내용이 별게 없군. 하고 생각하면서.. ;;;</description>
     </item>
-    
     <item>
       <title>휴대폰을 바꿨습니다. </title>
       <link>https://kasworld.github.io/posts/2013-01-16-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%9D%84%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Wed, 16 Jan 2013 20:23:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2013-01-16-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%9D%84%EB%B0%94%EA%BF%A8%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>올초에 그동안 잘 써오던 레이(휴대폰)를 옵티머스 lte2로 바꿨습니다.
 약정이 3개월 정도 남아 있었고 딱히 새로 약정을 걸고 싶지 않아서 그냥 공기계를 구매해서 유심기변을 했지요.
@@ -96,17 +86,14 @@ fastboot모드로 진입합니다. ( 방법은 기계가 꺼진 상태에서 볼
 기존의 잘쓰던 레이는 이상하게도 가끔 멋대로 재부팅을 하는 증상을 보이기 시작했었고, 게다가 노안^^;;; 이 오고 있어서 다음에는 큰화면ㅠㅠ 으로 바꿔야 겠다고 생각하고 있었지요.
 전 아몰레드는 싫어 하기때문에(아직 시기 상조인 기술을 억지로 내고 있다고 생각합니다.) 넥서스 4나 옵티머스 g 정도를 생각하고 있었는데 가격적인 면에서 옵티머스lte2가 그나마 적당하더군요.</description>
     </item>
-    
     <item>
       <title>기다리다 지쳐서 엑스페리아 레이에 커펌을 올렸습니다.</title>
       <link>https://kasworld.github.io/posts/2012-07-25-%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%8B%A4%EC%A7%80%EC%B3%90%EC%84%9C%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%97%90%EC%BB%A4%ED%8E%8C%EC%9D%84%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Wed, 25 Jul 2012 13:17:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2012-07-25-%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%8B%A4%EC%A7%80%EC%B3%90%EC%84%9C%EC%97%91%EC%8A%A4%ED%8E%98%EB%A6%AC%EC%95%84%EB%A0%88%EC%9D%B4%EC%97%90%EC%BB%A4%ED%8E%8C%EC%9D%84%EC%98%AC%EB%A0%B8%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>소니에서 아이스크림 샌드위치를 올려준다고 약속한 날짜가 5월달에서 7월로 밀리더니 아직도 소식이 없어서 포기하고 XDA 를 뒤적뒤적 해서 ICS 커펌을 올려버렸습니다.
 이 글은 그 기록입니다.
 소니 안드로이드 폰은 모두(?) 부트로더 락이 걸려 있는 관계로 커펌을 올리려면 언락 과정을 거쳐야 합니다. http://optimistsc.tistory.com/22 위 링크 내용을 간단 요약하면 소니 언락 홈페이지 가서 내 폰의 IMEI 를 입력 언락 코드를 받는다. ( 이과정에서 AS 보장 포기등을 동의 해야 합니다 ) 이 코드를 사용해서 fastboot 틀로 언락을 한다.</description>
     </item>
-    
   </channel>
 </rss>

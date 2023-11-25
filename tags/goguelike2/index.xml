@@ -6,12 +6,12 @@
     <description>Recent content in goguelike2 on 취미로 프로그래밍을 하는 사람입니다.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 06 Jan 2020 11:21:00 +0900</lastBuildDate><atom:link href="https://kasworld.github.io/tags/goguelike2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2020 11:21:00 +0900</lastBuildDate>
+    <atom:link href="https://kasworld.github.io/tags/goguelike2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2020년 현재 goguelike의 상태 정리 </title>
       <link>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 06 Jan 2020 11:21:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2020-01-06-2020%EB%85%84%ED%98%84%EC%9E%ACgoguelike%EC%9D%98%EC%83%81%ED%83%9C%EC%A0%95%EB%A6%AC/</guid>
       <description>goguelike - mmo-roguelike golang, websocket, webassembly, htmlcanvas (가능한한) 혼자서 만드는 MMO 서버 관리 서버 ( ground server )
 다중 서버 지원
@@ -24,12 +24,10 @@ websocket을 사용 연결 유지형 클라이언트
 클라이언트 설치 불필요
 webassembly/html5 canvas를 지원하는 web browser 라면 플랫폼 불문하고 플레이 가능</description>
     </item>
-    
     <item>
       <title>goguelike 2를 개발하면서 만들어진 라이브러리들의 일부를  공개/업데이트 합니다. </title>
       <link>https://kasworld.github.io/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Wed, 08 May 2019 11:12:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2019-05-08-goguelike2%EB%A5%BC%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A7%84%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%93%A4%EC%9D%98%EC%9D%BC%EB%B6%80%EB%A5%BC%EA%B3%B5%EA%B0%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%A9%EB%8B%88%EB%8B%A4/</guid>
       <description>제 깃허브 https://github.com/kasworld?tab=repositories 에 올리고 있습니다.
 기존에 공개한 라이브러리의 업데이트도 있고 새로 공개한 것들도 있습니다.
@@ -37,22 +35,18 @@ webassembly/html5 canvas를 지원하는 web browser 라면 플랫폼 불문하�
 설명이 거의 없는 것들이 많은데 설명이 필요 없을 정도로 간단한 것들도 많고 아니면 테스트 코드로 사용 법을 알수 있는 코드들도 있습니다.
 그 이상의 설명이 필요하다 싶은 것들은 기분 내키는 대로 이 블로그에 간단히 포스팅 하도록 하겠습니다.</description>
     </item>
-    
     <item>
       <title>goguelike2에 sound effect를 추가 했습니다. </title>
       <link>https://kasworld.github.io/posts/2018-05-31-goguelike2%EC%97%90soundeffect%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Thu, 31 May 2018 18:05:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2018-05-31-goguelike2%EC%97%90soundeffect%EB%A5%BC%EC%B6%94%EA%B0%80%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>그냥 링크를 들어가서 버튼만 누르면 게임 화면을 볼수 있다고 생각해서 그림한장 없이 소개글을 썼더라구요. 그래서 간단한 스샷 입니다. 사용한 사운드 파일들은 ( 19개나 됩니다. ) 적당한 것을 ( 라이선스 문제도 있고 해서 ) 찾기 힘들어서 일단 리눅스 민트에 있는 효과음들을 사용했습니다. 그래도 어울리는 곳에 사용하긴 했는데 역시 어설픕니다. 그리고 소리 파일들 때문에 접속시 다운받는 용량이 500kbyte정도 늘어났습니다.
 플레이 링크는 여전히 http://goguelike.iptime.org/?authkey=659b63f3-4c3d-9327-5c29-069de2d8b4f0 입니다.</description>
     </item>
-    
     <item>
       <title>udp와 network jitter </title>
       <link>https://kasworld.github.io/posts/2018-04-06-udp%EC%99%80networkjitter/</link>
       <pubDate>Fri, 06 Apr 2018 14:36:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2018-04-06-udp%EC%99%80networkjitter/</guid>
       <description>지난글 http://kasw.blogspot.com/2018/01/tcp-udp.html
 이후로 goguelike2에 udp 지원을 넣기 위해 작업을 계속하고 있었는데 드디어 오늘 udp로 goguelike2 server 와client을 연결 tcp와 똑같이 작동시키는데 성공했습니다.
@@ -61,12 +55,10 @@ udp 작업만 한것은 아니고 필요한 다른 작업들도 동시에 하고
 그리고 부산물로 tcp 와 udp 를 동시에 지원 가능한 net 라이브러리가 생겼습니다. ^^
 udp를 지원 하도록 바꾸면 tcp와의 차이를 비교 하는 것이 힘들 것 같아서 고민하다가 두가지를 거의 같은 구조로 지원 할수 있게 기반 작업들이 이루어지고 나니 그러면 동시에 지원하게 하면 좋겠네?</description>
     </item>
-    
     <item>
       <title>tcp 와 udp </title>
       <link>https://kasworld.github.io/posts/2018-01-28-tcp%EC%99%80udp/</link>
       <pubDate>Sun, 28 Jan 2018 20:11:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2018-01-28-tcp%EC%99%80udp/</guid>
       <description>goguelike2는 서버 클라이언트간 패킷전송을 초당 2 번, 즉 2 frame / sec 로 하고 있습니다.
 사용자 행동(입력)은 각 frame 마다 서버로 전송되고
@@ -76,57 +68,47 @@ local 이 아닌 wifi로 연결된 서버와 클라이언트에서 테스트라 
 서버 - 클라이언트간 전송 latency가 들쑥날쑥해서 클라이언트가 처리하기가 애매 했습니다.
 frame jitter(?) 가 100% 가 넘는 경우가 생기더군요.</description>
     </item>
-    
     <item>
       <title>go sdl gui 의 새버전을 작업하고 있습니다. </title>
       <link>https://kasworld.github.io/posts/2017-05-28-gosdlgui%EC%9D%98%EC%83%88%EB%B2%84%EC%A0%84%EC%9D%84%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Sun, 28 May 2017 14:40:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2017-05-28-gosdlgui%EC%9D%98%EC%83%88%EB%B2%84%EC%A0%84%EC%9D%84%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
 https://github.com/veandco/go-sdl2 를 기반으로 만들었던
 https://github.com/kasworld/go-sdlgui 가 별로 맘에 안들어서 아예 새로 작업을 조금씩 해보고 있습니다.
 go-sdlgui 와는 기반이 되는 design decision 이 달라서 아예 다른 형태의 구현이 될것 같습니다.</description>
     </item>
-    
     <item>
       <title>연휴를 뜻있게 보내기</title>
       <link>https://kasworld.github.io/posts/2017-05-05-%EC%97%B0%ED%9C%B4%EB%A5%BC%EB%9C%BB%EC%9E%88%EA%B2%8C%EB%B3%B4%EB%82%B4%EA%B8%B0/</link>
       <pubDate>Fri, 05 May 2017 19:59:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2017-05-05-%EC%97%B0%ED%9C%B4%EB%A5%BC%EB%9C%BB%EC%9E%88%EA%B2%8C%EB%B3%B4%EB%82%B4%EA%B8%B0/</guid>
       <description>어쩌다보니 9일의 연휴를 얻게되어 ( 감사합니다. 대표님 - 우리회사 좋은 회사 ^^)
 어떻게 보내면 좋을까 잠시 고민하다 2년간 손대지 못하고 밀려 있던 goguelike2를 재 정비 하기로 했습니다. 이 글을 쓰는 시점이 (주말만이남은) 금요일 저녁 시간이라 그동안의 진행 결과를 정리하는 글입니다.
 지금 회사에 합류할때 조건으로 건 것이 개인 프로젝트인 goguelike는 시간 나는 대로 계속하겠다. 는 것과 goguelike의 권리는 계속 내가 가지겠다. 였는데 대표님께서 혼쾌히 동의해 주셔서 안심하고 합류했었는데. 정작 회사 일을 시작하니 시간이 전혀 없어서 손을 거의 대지 못하고 있었습니다.</description>
     </item>
-    
     <item>
       <title>goguelike2의 AI에 상전이 엔진을 적용했습니다. </title>
       <link>https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Fri, 19 Jun 2015 08:32:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-06-19-goguelike2%EC%9D%98ai%EC%97%90%EC%83%81%EC%A0%84%EC%9D%B4%EC%97%94%EC%A7%84%EC%9D%84%EC%A0%81%EC%9A%A9%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>상전이 엔진은 농담이고 실은 finite-state machine을 적용했습니다. 그래도 &amp;ldquo;유한 상태 기계&amp;quot;같은 심심한 이름 보다는 상전이 엔진( Phase Transition Engine )쪽이 있어보이기도 하고 의미상으로도 크게 다르지 않으니 좋아보이는 군요.
 상전이엔진에 대한 설명.. 아시는 분이 적더라는;;; http://namu.mirror.wiki/wiki/%EC%83%81%EC%A0%84%EC%9D%B4%20%EC%97%94%EC%A7%84
 오류가 발생했습니다. www.youtube.com에서 동영상을 시청하거나 브라우저에서 자바스크립트가 사용 중지된 경우 사용 설정하세요.
 3.3배속 AI 플레이 동영상 goguelike2의 기존 AI를 완전히 재작성해서 상전이엔진 stack-based FSM을 사용하도록 완전히 재작성하였습니다. AI를 새로 재작성한것이 이번으로 거의 5번째 정도 되는 것 같은데 이제야 겨우 좀 쓸만한 형태 ( 깔끔하고 수정, 확장하기 좋은 구조 )로 정리된것 같아 만족해 하고 있습니다.</description>
     </item>
-    
     <item>
       <title>goguelike2에 소비성아이템, 버프 추가 </title>
       <link>https://kasworld.github.io/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/</link>
       <pubDate>Thu, 11 Jun 2015 18:50:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-06-11-goguelike2%EC%97%90%EC%86%8C%EB%B9%84%EC%84%B1%EC%95%84%EC%9D%B4%ED%85%9C%EB%B2%84%ED%94%84%EC%B6%94%EA%B0%80/</guid>
       <description>세계 최초?의 MMORLG(MMO roguelike game) 인^^;; goguelike2의 최근 작업진행사항입니다.
 간단히 말하면 potion을 추가 하려고 했는데 일이 커져서 약 한달 넘게 bag (== 인벤토리 , 기존에는 장착 슬롯만 있었습니다. ) 돈(과 지갑), 무게 ( 아직 제한은 없습니다만.. ) 그리고 포션의 존재이유인 status effect 과 affected statues effect 등을 작업했습니다. status effect는 간단히 말해서 buff 와 de-buff 입니다. 그리고 이 모든것들을 지원하기위한 시스템의 수정과 업데이트;; 그래서 그 결과물이 위의 스크린 샷 입니다.</description>
     </item>
-    
     <item>
       <title>goguelike2 의 몇몇 스크린 샷들. 작업 진행 사항. </title>
       <link>https://kasworld.github.io/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</link>
       <pubDate>Sat, 09 May 2015 17:47:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-05-09-goguelike2%EC%9D%98%EB%AA%87%EB%AA%87%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%EB%93%A4%EC%9E%91%EC%97%85%EC%A7%84%ED%96%89%EC%82%AC%ED%95%AD/</guid>
       <description>(거의) 재작성한 goguelike는 일단 goguelike2로 부르고 있습니다.
 goguelike : version 0.x ~ goguelike2 : version 1.x ~
@@ -134,12 +116,10 @@ goguelike : version 0.x ~ goguelike2 : version 1.x ~
 진도가 잘 안나가는 관계로 기분전환삼아 작성하는 포스트 입니다. ;; 일단 실시간 서버모니터링 툴인 towerviewer 의 스샷들입니다. 최근 새로한 texture가 적용된 플레이맵 - observer mode라 시야 제한이 없는 view입니다. 층 전체가 보이는 map view
 또다른 playmap</description>
     </item>
-    
     <item>
       <title>MMO를 만드는 것에 로망이 있다면 .</title>
       <link>https://kasworld.github.io/posts/2015-04-21-mmo%EB%A5%BC%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%83%EC%97%90%EB%A1%9C%EB%A7%9D%EC%9D%B4%EC%9E%88%EB%8B%A4%EB%A9%B4/</link>
       <pubDate>Tue, 21 Apr 2015 13:33:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-04-21-mmo%EB%A5%BC%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%83%EC%97%90%EB%A1%9C%EB%A7%9D%EC%9D%B4%EC%9E%88%EB%8B%A4%EB%A9%B4/</guid>
       <description>세상을 만들고 그 세상의 규칙을 정하는 경험을 해볼수 있다는 점일 것입니다.
 goguelike도 일단 MMO의 범주에 들어가기때문에 ( MMORLG - mmo RogueLike Game ^^ ) 그런 경험을 즐길수 있습니다.
@@ -147,12 +127,10 @@ goguelike도 일단 MMO의 범주에 들어가기때문에 ( MMORLG - mmo RogueL
 기존의 webinfo 페이지 이외에 실시간으로 서버내 상황을 볼수 있는 viewer를 만들었습니다.
 최근에 만들었던 terrainviewer를 확장해서 terrain만이 아니고 그 속의 AO/PO 들까지 볼수 있게 확장 한것입니다.</description>
     </item>
-    
     <item>
       <title>goguelike의 지형 생성 부분을 완전 재작업 하고 있습니다. </title>
       <link>https://kasworld.github.io/posts/2015-04-09-goguelike%EC%9D%98%EC%A7%80%ED%98%95%EC%83%9D%EC%84%B1%EB%B6%80%EB%B6%84%EC%9D%84%EC%99%84%EC%A0%84%EC%9E%AC%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</link>
       <pubDate>Thu, 09 Apr 2015 09:29:00 +0900</pubDate>
-      
       <guid>https://kasworld.github.io/posts/2015-04-09-goguelike%EC%9D%98%EC%A7%80%ED%98%95%EC%83%9D%EC%84%B1%EB%B6%80%EB%B6%84%EC%9D%84%EC%99%84%EC%A0%84%EC%9E%AC%EC%9E%91%EC%97%85%ED%95%98%EA%B3%A0%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4/</guid>
       <description>기존의 지형 시스템의 부족함이 느껴저서 새로 작업을 진행하고 있습니다.
 기존과 같이 terrainscript+ random 을 사용해서 생성하는 것은 같으나 더 많은 구성 요소들과 더 정교한 로직을 사용하도록 바꿨습니다.
@@ -161,6 +139,5 @@ goguelike도 일단 MMO의 범주에 들어가기때문에 ( MMORLG - mmo RogueL
 작업중인 동영상
 그렇데 이런 구조라면 AI를 만드는 것이 더욱더 힘들어 질것 같습니다. (특히 client AI는 많이 힘들어 질듯 .</description>
     </item>
-    
   </channel>
 </rss>
